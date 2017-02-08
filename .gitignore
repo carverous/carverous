@@ -1,0 +1,5 @@
+# JetBrains Preferences
+.idea
+
+# Gulp Packages
+node_modules

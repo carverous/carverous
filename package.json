@@ -1,0 +1,22 @@
+{
+  "name": "carverous",
+  "version": "1.0.0",
+  "description": "Note: A banner image is gonna be added here to replace this title.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cefjoeii/carverous.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cefjoeii/carverous/issues"
+  },
+  "homepage": "https://github.com/cefjoeii/carverous#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
