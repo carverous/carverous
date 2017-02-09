@@ -1,0 +1,26 @@
+$default: #263238;
+$danger: #c62828;
+$info: #64B5F6;
+$primary: #3F51B5;
+$secondary: #fff;
+$success: #9CCC65;
+$warning: #FFCA28;
+
+$theme-colors:
+                (default, $default),
+                (danger, $danger),
+                (info, $info),
+                (primary, $primary),
+                (secondary, $secondary),
+                (success, $success),
+                (warning, $warning);
+
+$font-default: 12px 'Roboto', sans-serif;
+
+$font-weights:
+                (thin, 100),
+                (light, 300),
+                (regular, 400),
+                (medium, 500),
+                (bold, 700),
+                (black, 900);
