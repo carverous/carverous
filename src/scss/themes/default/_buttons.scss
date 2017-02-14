@@ -5,9 +5,13 @@
   border: none;
   border-radius: 2px;
   color: if($bgColor == #fff, #000, #fff);
+  display: inline-block;
   font: $font-default;
+  overflow: hidden;
   padding: 10px 15px;
+  position: relative;
   text-decoration: none;
+  transition: all .25s;
 
   &:hover {
     background-color: lighten($bgColor, 5%);
@@ -15,7 +19,12 @@
   }
   &:active {
     background-color: darken($bgColor, 5%);
+    transition: all .25s;
   }
+}
+
+.btn {
+    @include btn($default);
 }
 
 .btn {
@@ -32,5 +41,32 @@
         color: if($value == #FFF, #000, #FFF);
       }
     }
+    &-#{$name}-round {
+      @include btn($value);
+      background-color: transparent;
+      border: 1px solid $value;
+      border-radius: 50%;
+      color: $value;
+      &:hover {
+        color: if($value == #FFF, #000, #FFF);
+      }
+    }
+  }
+}
+
+.btn .ripple {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
   }
 }

@@ -13,10 +13,10 @@ gulp.task('sass', function() {
 });
 
 gulp.task('sass:watch', function() {
-   gulp.watch('src/scss/**/*.scss', ['sass']); // ['sass'] watches the sass task
+   gulp.watch('src/scss/**/*.scss', ['sass']); // ['sass'] watches the 'sass' task
 });
 
-gulp.task('distCSS', function() { // deploy to dist
+gulp.task('css', function() { // deploy to dist
     return gulp.src('src/css/main.css')
         .pipe(rename('carverous.css'))
         .pipe(gulp.dest('dist/css/'));
