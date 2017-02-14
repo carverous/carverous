@@ -1,0 +1,36 @@
+@import "variables";
+
+@mixin btn($bgColor) {
+  background-color: $bgColor;
+  border: none;
+  border-radius: 2px;
+  color: if($bgColor == #fff, #000, #fff);
+  font: $font-default;
+  padding: 10px 15px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: lighten($bgColor, 5%);
+    cursor: pointer;
+  }
+  &:active {
+    background-color: darken($bgColor, 5%);
+  }
+}
+
+.btn {
+  @each $name, $value in $theme-colors {
+    &-#{$name} {
+      @include btn($value);
+    }
+    &-#{$name}-outline {
+      @include btn($value);
+      background-color: transparent;
+      border: 1px solid $value;
+      color: $value;
+      &:hover {
+        color: if($value == #FFF, #000, #FFF);
+      }
+    }
+  }
+}
