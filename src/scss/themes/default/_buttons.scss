@@ -11,6 +11,7 @@
   padding: 10px 15px;
   position: relative;
   text-decoration: none;
+  text-transform: uppercase;
   transition: all .25s;
 
   &:hover {
@@ -36,16 +37,6 @@
       @include btn($value);
       background-color: transparent;
       border: 1px solid $value;
-      color: $value;
-      &:hover {
-        color: if($value == #FFF, #000, #FFF);
-      }
-    }
-    &-#{$name}-round {
-      @include btn($value);
-      background-color: transparent;
-      border: 1px solid $value;
-      border-radius: 50%;
       color: $value;
       &:hover {
         color: if($value == #FFF, #000, #FFF);
