@@ -1,15 +1,15 @@
 @import "variables";
 
-.notification {
+.notif {
   color: #fff;
   margin: 4px 0;
   padding: 12px 12px;
 }
 
 @each $name, $value in $theme-colors {
-  .notification-#{$name} {
-    @extend .notification;
+  .notif-#{$name} {
+    @extend .notif;
     background-color: lighten($value, 10%);
-    color: darken($value, 20%);
+    color: if($name == primary, #fff, if($name == inverse, $text-color-default, darken($value, 20%)));
   }
 }

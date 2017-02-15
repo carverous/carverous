@@ -4,7 +4,7 @@
   background-color: $bgColor;
   border: none;
   border-radius: 2px;
-  color: if($bgColor == #fff, #000, #fff);
+  color: if($bgColor == #fff, $text-color-default, #fff);
   display: inline-block;
   font: $font-default;
   font-size: 14px;

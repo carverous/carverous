@@ -166,7 +166,7 @@
   background-color: #fff;
   border: none;
   border-radius: 2px;
-  color: #000;
+  color: #404040;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
   font-size: 14px;
@@ -187,7 +187,7 @@
   background-color: #fff;
   border: none;
   border-radius: 2px;
-  color: #000;
+  color: #404040;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
   font-size: 14px;
@@ -411,42 +411,98 @@
     transform: scale(2.5);
     opacity: 0; } }
 
-.notification, .notification-default, .notification-danger, .notification-info, .notification-inverse, .notification-primary, .notification-secondary, .notification-success, .notification-warning {
+.notif, .notif-default, .notif-danger, .notif-info, .notif-inverse, .notif-primary, .notif-secondary, .notif-success, .notif-warning {
   color: #fff;
   margin: 4px 0;
   padding: 12px 12px; }
 
-.notification-default {
+.notif-default {
   background-color: #e0e0e0;
   color: #939393; }
 
-.notification-danger {
+.notif-danger {
   background-color: #f3817f;
   color: #c71612; }
 
-.notification-info {
+.notif-info {
   background-color: #c0e1fc;
   color: #2f9cf4; }
 
-.notification-inverse {
+.notif-inverse {
   background-color: white;
-  color: #cccccc; }
+  color: #404040; }
 
-.notification-primary {
+.notif-primary {
   background-color: #46637f;
-  color: #10161c; }
+  color: #fff; }
 
-.notification-secondary {
+.notif-secondary {
   background-color: #f9bdd1;
   color: #eb3270; }
 
-.notification-success {
+.notif-success {
   background-color: #b5d98b;
   color: #699833; }
 
-.notification-warning {
+.notif-warning {
   background-color: #ffcc80;
   color: #e68900; }
+
+.progress-container {
+  background-color: #f5f5f5;
+  height: 1.3em;
+  margin: 4px 0;
+  overflow: hidden; }
+  .progress-container .progress, .progress-container .progress-default, .progress-container .progress-danger, .progress-container .progress-info, .progress-container .progress-inverse, .progress-container .progress-primary, .progress-container .progress-secondary, .progress-container .progress-success, .progress-container .progress-warning {
+    color: #fff;
+    font-size: 0.9em;
+    height: 100%;
+    line-height: 1.2em;
+    padding: 0.1em 0;
+    text-align: center; }
+  .progress-container .progress-default {
+    background-color: #e0e0e0;
+    color: #939393; }
+  .progress-container .progress-danger {
+    background-color: #f3817f;
+    color: #c71612; }
+  .progress-container .progress-info {
+    background-color: #c0e1fc;
+    color: #2f9cf4; }
+  .progress-container .progress-inverse {
+    background-color: white;
+    color: #404040; }
+  .progress-container .progress-primary {
+    background-color: #46637f;
+    color: #fff; }
+  .progress-container .progress-secondary {
+    background-color: #f9bdd1;
+    color: #eb3270; }
+  .progress-container .progress-success {
+    background-color: #b5d98b;
+    color: #699833; }
+  .progress-container .progress-warning {
+    background-color: #ffcc80;
+    color: #e68900; }
+
+table {
+  background-color: #fff;
+  border-collapse: collapse;
+  width: 100%; }
+  table tr .table-cell, table tr th, table tr td {
+    padding: 6px 8px;
+    text-align: left; }
+  table tr th {
+    border-bottom: 1px solid #f5f5f5; }
+
+.table-sm tr th, .table-sm tr td {
+  padding: 4px 4px; }
+
+.table-lg tr th, .table-lg tr td {
+  padding: 12px 8px; }
+
+.table-striped tr:nth-of-type(even) {
+  background-color: #f5f5f5; }
 
 .text-default {
   color: #c6c6c6; }

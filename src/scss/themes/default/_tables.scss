@@ -1,0 +1,45 @@
+@import "variables";
+
+table {
+  background-color: #fff;
+  border-collapse: collapse;
+  width: 100%;
+  tr {
+    .table-cell {
+      padding: 6px 8px;
+      text-align: left;
+    }
+    
+    th {
+      @extend .table-cell;
+      border-bottom: 1px solid $grey-light;
+    }
+    td {
+      @extend .table-cell;
+    }
+  }
+}
+
+.table-sm {
+  tr {
+    th, td {
+      padding: 4px 4px;
+    }
+  }
+}
+
+.table-lg {
+  tr {
+    th, td {
+      padding: 12px 8px;
+    }
+  }
+}
+
+
+.table-striped tr:nth-of-type(odd) {
+  //background-color: #fff;
+}
+.table-striped tr:nth-of-type(even) {
+  background-color: $grey-light;
+}
