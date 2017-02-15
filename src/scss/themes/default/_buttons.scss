@@ -5,9 +5,10 @@
   border: none;
   border-radius: 2px;
   color: if($bgColor == #fff, $text-color-default, #fff);
+  //color: darken($bgColor, 20%);
   display: inline-block;
   font: $font-default;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;

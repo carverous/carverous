@@ -1,3 +1,5 @@
+
+// Theme colours
 $default: #c6c6c6;
 $danger: #ef5350;
 $info: #90CAF9;
@@ -17,15 +19,19 @@ $theme-colors:
                 (success, $success),
                 (warning, $warning);
 
+// Shades of grey
 $grey-light: #f5f5f5;
 $grey: #f1f1f1;
 $grey-dark: #c6c6c6;
 
-$text-color-default: #404040;
+// Font stuff
+$text-color-default: #545454;
 $text-color-inverse: #fff;
-$font-family: 'Open Sans';
-$font-weight: 400;
-$font-default: $font-weight 16px $font-family, sans-serif;
+
+$font-family-default: 'Open Sans';
+$font-size-default: 16px;
+$font-weight-default: 400;
+$font-default: $font-weight-default $font-size-default $font-family-default, sans-serif;
 
 $font-weights:
                 (thin, 100),

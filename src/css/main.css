@@ -7,7 +7,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -28,7 +28,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -49,7 +49,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -75,7 +75,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -96,7 +96,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -122,7 +122,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -143,7 +143,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -166,10 +166,10 @@
   background-color: #fff;
   border: none;
   border-radius: 2px;
-  color: #404040;
+  color: #545454;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -187,10 +187,10 @@
   background-color: #fff;
   border: none;
   border-radius: 2px;
-  color: #404040;
+  color: #545454;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -216,7 +216,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -237,7 +237,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -263,7 +263,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -284,7 +284,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -310,7 +310,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -331,7 +331,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -357,7 +357,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -378,7 +378,7 @@
   color: #fff;
   display: inline-block;
   font: 400 16px "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -411,40 +411,40 @@
     transform: scale(2.5);
     opacity: 0; } }
 
-.notif, .notif-default, .notif-danger, .notif-info, .notif-inverse, .notif-primary, .notif-secondary, .notif-success, .notif-warning {
+.notification, .notification-default, .notification-danger, .notification-info, .notification-inverse, .notification-primary, .notification-secondary, .notification-success, .notification-warning {
   color: #fff;
   margin: 4px 0;
   padding: 12px 12px; }
 
-.notif-default {
+.notification-default {
   background-color: #e0e0e0;
   color: #939393; }
 
-.notif-danger {
+.notification-danger {
   background-color: #f3817f;
   color: #c71612; }
 
-.notif-info {
+.notification-info {
   background-color: #c0e1fc;
   color: #2f9cf4; }
 
-.notif-inverse {
+.notification-inverse {
   background-color: white;
-  color: #404040; }
+  color: #545454; }
 
-.notif-primary {
+.notification-primary {
   background-color: #46637f;
   color: #fff; }
 
-.notif-secondary {
+.notification-secondary {
   background-color: #f9bdd1;
   color: #eb3270; }
 
-.notif-success {
+.notification-success {
   background-color: #b5d98b;
   color: #699833; }
 
-.notif-warning {
+.notification-warning {
   background-color: #ffcc80;
   color: #e68900; }
 
@@ -471,7 +471,7 @@
     color: #2f9cf4; }
   .progress-container .progress-inverse {
     background-color: white;
-    color: #404040; }
+    color: #545454; }
   .progress-container .progress-primary {
     background-color: #46637f;
     color: #fff; }
@@ -493,15 +493,15 @@ table {
     padding: 6px 8px;
     text-align: left; }
   table tr th {
-    border-bottom: 1px solid #f5f5f5; }
+    border-bottom: 1px solid #f1f1f1; }
 
 .table-sm tr th, .table-sm tr td {
-  padding: 4px 4px; }
+  padding: 3px 8px; }
 
 .table-lg tr th, .table-lg tr td {
   padding: 12px 8px; }
 
-.table-striped tr:nth-of-type(even) {
+tbody.table-striped tr:nth-of-type(even) {
   background-color: #f5f5f5; }
 
 .text-default {
@@ -917,10 +917,14 @@ textarea {
 
 body {
   font: 400 16px "Open Sans", sans-serif;
-  color: #404040; }
+  color: #545454; }
+
+.container {
+  margin: 0 auto;
+  width: 1280px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 5px; }
 
 h1 {

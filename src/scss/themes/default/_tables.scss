@@ -9,10 +9,9 @@ table {
       padding: 6px 8px;
       text-align: left;
     }
-    
     th {
       @extend .table-cell;
-      border-bottom: 1px solid $grey-light;
+      border-bottom: 1px solid $grey;
     }
     td {
       @extend .table-cell;
@@ -23,7 +22,7 @@ table {
 .table-sm {
   tr {
     th, td {
-      padding: 4px 4px;
+      padding: 3px 8px;
     }
   }
 }
@@ -36,10 +35,6 @@ table {
   }
 }
 
-
-.table-striped tr:nth-of-type(odd) {
-  //background-color: #fff;
-}
-.table-striped tr:nth-of-type(even) {
+tbody.table-striped tr:nth-of-type(even) {
   background-color: $grey-light;
 }

@@ -7,40 +7,87 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-    <h3>Tables</h3>
-    <h4>Regular</h4>
-    <table>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>John</td>
-            <td>Smith</td>
-            <td>32</td>
-        </tr>
-        <tr>
-            <td>Ariana</td>
-            <td>Perry</td>
-            <td>21</td>
-        </tr>
-        <tr>
-            <td>Willy</td>
-            <td>Cover</td>
-            <td>23</td>
-        </tr>
-    </table>
-    <h4>Striped</h4>
-    <table class="table-sm">
-        <thead>
+    <div class="container">
+        <h3>Tables</h3>
+        <h4>Regular</h4>
+        <table>
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
             </tr>
-        </thead>
-        <tbody class="table-striped">
+            <tr>
+                <td>John</td>
+                <td>Smith</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Ariana</td>
+                <td>Perry</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Willy</td>
+                <td>Cover</td>
+                <td>23</td>
+            </tr>
+        </table>
+        <h4>Small</h4>
+        <table class="table-sm">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Smith</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Ariana</td>
+                <td>Perry</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Willy</td>
+                <td>Cover</td>
+                <td>23</td>
+            </tr>
+        </table>
+        <h4>Large</h4>
+        <table class="table-lg">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Smith</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Ariana</td>
+                <td>Perry</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Willy</td>
+                <td>Cover</td>
+                <td>23</td>
+            </tr>
+        </table>
+        <h4>Striped</h4>
+        <table>
+            <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            </thead>
+            <tbody class="table-striped">
             <tr>
                 <td>John</td>
                 <td>Smith</td>
@@ -61,124 +108,123 @@
                 <td>Davidson</td>
                 <td>44</td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+        <h3>Paragraph</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque distinctio dolorem doloremque eos, error, et ex expedita harum magnam molestias obcaecati odit optio perferendis perspiciatis ratione rem, sapiente tempore!
+        </p>
+        <h3>Progress Bars</h3>
+        <div class="progress-container"><div class="progress-default" style="width: 30%">Default</div></div>
+        <div class="progress-container"><div class="progress-inverse" style="width: 70%">Inverse</div></div>
+        <div class="progress-container"><div class="progress-primary" style="width: 90%">Primary</div></div>
+        <div class="progress-container"><div class="progress-secondary" style="width: 50%">Secondary</div></div>
+        <div class="progress-container"><div class="progress-danger" style="width: 60%">Danger</div></div>
+        <div class="progress-container"><div class="progress-info" style="width: 70%">Info</div></div>
+        <div class="progress-container"><div class="progress-success" style="width: 50%">Success</div></div>
+        <div class="progress-container"><div class="progress-warning" style="width: 40%">Warning</div></div>
 
-
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque distinctio dolorem doloremque eos, error, et ex expedita harum magnam molestias obcaecati odit optio perferendis perspiciatis ratione rem, sapiente tempore!
-    </p>
-    <h3>Progress Bars</h3>
-    <div class="progress-container"><div class="progress-default" style="width: 30%">Default</div></div>
-    <div class="progress-container"><div class="progress-danger" style="width: 50%">Danger</div></div>
-    <div class="progress-container"><div class="progress-info" style="width: 70%">Info</div></div>
-    <div class="progress-container"><div class="progress-inverse" style="width: 70%">Inverse</div></div>
-    <div class="progress-container"><div class="progress-primary" style="width: 90%">Primary</div></div>
-    <div class="progress-container"><div class="progress-secondary" style="width: 90%">Secondary</div></div>
-    <div class="progress-container"><div class="progress-success" style="width: 70%">Success</div></div>
-    <div class="progress-container"><div class="progress-warning" style="width: 50%">Warning</div></div>
-
-    <h3 class="text-danger">Buttons</h3>
-    <h4 class="text-secondary">Regular</h4>
-    <div>
-        <button class="btn btn-default">Default</button>
-        <button class="btn btn-danger"><i class="fa fa-heart"></i> Danger</button>
-        <button class="btn btn-info">Info</button>
-        <button class="btn btn-inverse">Inverse</button>
-        <button class="btn btn-primary">Primary</button>
-        <button class="btn btn-secondary">Secondary</button>
-        <button class="btn btn-success">Success</button>
-        <button class="btn btn-warning">Warning</button>
-    </div>
-    <h4>Outline</h4>
-    <div>
-        <button class="btn btn-default-outline">Default</button>
-        <button class="btn btn-danger-outline"><i class="fa fa-heart"></i> Danger</button>
-        <button class="btn btn-info-outline">Info</button>
-        <button class="btn btn-inverse-outline">Inverse</button>
-        <button class="btn btn-primary-outline">Primary</button>
-        <button class="btn btn-secondary-outline">Secondary</button>
-        <button class="btn btn-success-outline">Success</button>
-        <button class="btn btn-warning-outline">Warning</button>
-    </div>
-    <!--<h3>Rubbish Tests</h3>-->
-    <!--<div>-->
+        <h3 class="text-danger">Buttons</h3>
+        <h4 class="text-success">Regular</h4>
+        <div>
+            <button class="btn btn-default">Default</button>
+            <button class="btn btn-inverse">Inverse</button>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-danger"><i class="fa fa-heart"></i> Danger</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-warning">Warning</button>
+        </div>
+        <h4>Outline</h4>
+        <div>
+            <button class="btn btn-default-outline">Default</button>
+            <button class="btn btn-inverse-outline">Inverse</button>
+            <button class="btn btn-primary-outline">Primary</button>
+            <button class="btn btn-secondary-outline">Secondary</button>
+            <button class="btn btn-danger-outline"><i class="fa fa-heart"></i> Danger</button>
+            <button class="btn btn-info-outline">Info</button>
+            <button class="btn btn-success-outline">Success</button>
+            <button class="btn btn-warning-outline">Warning</button>
+        </div>
+        <!--<h3>Rubbish Tests</h3>-->
+        <!--<div>-->
         <!--<div class="btn">Div Button</div>-->
         <!--<button>Regular Button</button>-->
-    <!--</div>-->
+        <!--</div>-->
 
-    <h3>Notifications</h3>
-    <div class="notif-default">Default</div>
-    <div class="notif-danger">Danger</div>
-    <div class="notif-info">Info</div>
-    <div class="notif-inverse">Inverse</div>
-    <div class="notif-primary">Primary</div>
-    <div class="notif-secondary">Secondary</div>
-    <div class="notif-success">Success</div>
-    <div class="notif-warning">Warning</div>
+        <h3>Notifications</h3>
+        <div class="notification-default">Default</div>
+        <div class="notification-inverse">Inverse</div>
+        <div class="notification-primary">Primary</div>
+        <div class="notification-secondary">Secondary</div>
+        <div class="notification-danger">Danger</div>
+        <div class="notification-info">Info</div>
+        <div class="notification-success">Success</div>
+        <div class="notification-warning">Warning</div>
 
-    <h3>Text Colours</h3>
-    <div class="text-default">Default text</div>
-    <div class="text-danger">Danger text</div>
-    <div class="text-info">Info text</div>
-    <div class="text-inverse">Inverse text</div>
-    <div class="text-primary">Primary text</div>
-    <div class="text-secondary">Secondary text</div>
-    <div class="text-success">Success text</div>
-    <div class="text-warning">Warning text</div>
+        <h3>Text Colours</h3>
+        <div class="text-default">Default text</div>
+        <div class="text-danger">Danger text</div>
+        <div class="text-info">Info text</div>
+        <div class="text-inverse">Inverse text</div>
+        <div class="text-primary">Primary text</div>
+        <div class="text-secondary">Secondary text</div>
+        <div class="text-success">Success text</div>
+        <div class="text-warning">Warning text</div>
 
-    <h3>Headings</h3>
-    <div class="container">
-        <div class="col-sm-3">
-            <h1 class="text-black">Heading h1 Black</h1>
-            <h2 class="text-black">Heading h2 Black</h2>
-            <h3 class="text-black">Heading h3 Black</h3>
-            <h4 class="text-black">Heading h4 Black</h4>
-            <h5 class="text-black">Heading h5 Black</h5>
-            <h6 class="text-black">Heading h6 Black</h6>
-        </div>
-        <div class="col-sm-3">
-            <h1 class="text-bold">Heading h1 Bold</h1>
-            <h2 class="text-bold">Heading h2 Bold</h2>
-            <h3 class="text-bold">Heading h3 Bold</h3>
-            <h4 class="text-bold">Heading h4 Bold</h4>
-            <h5 class="text-bold">Heading h5 Bold</h5>
-            <h6 class="text-bold">Heading h6 Bold</h6>
-        </div>
-        <div class="col-sm-3">
-            <h1 class="text-medium">Heading h1 Medium</h1>
-            <h2 class="text-medium">Heading h2 Medium</h2>
-            <h3 class="text-medium">Heading h3 Medium</h3>
-            <h4 class="text-medium">Heading h4 Medium</h4>
-            <h5 class="text-medium">Heading h5 Medium</h5>
-            <h6 class="text-medium">Heading h6 Medium</h6>
-        </div>
-        <div class="col-sm-3">
-            <h1 class="text-normal">Heading h1 Normal</h1>
-            <h2 class="text-normal">Heading h2 Normal</h2>
-            <h3 class="text-normal">Heading h3 Normal</h3>
-            <h4 class="text-normal">Heading h4 Normal</h4>
-            <h5 class="text-normal">Heading h5 Normal</h5>
-            <h6 class="text-normal">Heading h6 Normal</h6>
-        </div>
-        <div class="col-sm-3">
-            <h1 class="text-light">Heading h1 Light</h1>
-            <h2 class="text-light">Heading h2 Light</h2>
-            <h3 class="text-light">Heading h3 Light</h3>
-            <h4 class="text-light">Heading h4 Light</h4>
-            <h5 class="text-light">Heading h5 Light</h5>
-            <h6 class="text-light">Heading h6 Light</h6>
-        </div>
-        <div class="col-sm-3">
-            <h1 class="text-thin">Heading h1 Thin</h1>
-            <h2 class="text-thin">Heading h2 Thin</h2>
-            <h3 class="text-thin">Heading h3 Thin</h3>
-            <h4 class="text-thin">Heading h4 Thin</h4>
-            <h5 class="text-thin">Heading h5 Thin</h5>
-            <h6 class="text-thin">Heading h6 Thin</h6>
+        <h3>Headings</h3>
+        <div class="container">
+            <div class="col-sm-3">
+                <h1 class="text-black">Heading h1 Black</h1>
+                <h2 class="text-black">Heading h2 Black</h2>
+                <h3 class="text-black">Heading h3 Black</h3>
+                <h4 class="text-black">Heading h4 Black</h4>
+                <h5 class="text-black">Heading h5 Black</h5>
+                <h6 class="text-black">Heading h6 Black</h6>
+            </div>
+            <div class="col-sm-3">
+                <h1 class="text-bold">Heading h1 Bold</h1>
+                <h2 class="text-bold">Heading h2 Bold</h2>
+                <h3 class="text-bold">Heading h3 Bold</h3>
+                <h4 class="text-bold">Heading h4 Bold</h4>
+                <h5 class="text-bold">Heading h5 Bold</h5>
+                <h6 class="text-bold">Heading h6 Bold</h6>
+            </div>
+            <div class="col-sm-3">
+                <h1 class="text-medium">Heading h1 Medium</h1>
+                <h2 class="text-medium">Heading h2 Medium</h2>
+                <h3 class="text-medium">Heading h3 Medium</h3>
+                <h4 class="text-medium">Heading h4 Medium</h4>
+                <h5 class="text-medium">Heading h5 Medium</h5>
+                <h6 class="text-medium">Heading h6 Medium</h6>
+            </div>
+            <div class="col-sm-3">
+                <h1 class="text-normal">Heading h1 Normal</h1>
+                <h2 class="text-normal">Heading h2 Normal</h2>
+                <h3 class="text-normal">Heading h3 Normal</h3>
+                <h4 class="text-normal">Heading h4 Normal</h4>
+                <h5 class="text-normal">Heading h5 Normal</h5>
+                <h6 class="text-normal">Heading h6 Normal</h6>
+            </div>
+            <div class="col-sm-3">
+                <h1 class="text-light">Heading h1 Light</h1>
+                <h2 class="text-light">Heading h2 Light</h2>
+                <h3 class="text-light">Heading h3 Light</h3>
+                <h4 class="text-light">Heading h4 Light</h4>
+                <h5 class="text-light">Heading h5 Light</h5>
+                <h6 class="text-light">Heading h6 Light</h6>
+            </div>
+            <div class="col-sm-3">
+                <h1 class="text-thin">Heading h1 Thin</h1>
+                <h2 class="text-thin">Heading h2 Thin</h2>
+                <h3 class="text-thin">Heading h3 Thin</h3>
+                <h4 class="text-thin">Heading h4 Thin</h4>
+                <h5 class="text-thin">Heading h5 Thin</h5>
+                <h6 class="text-thin">Heading h6 Thin</h6>
+            </div>
         </div>
     </div>
-
     <script src="js/buttons.js"></script>
 </body>
 </html>
