@@ -6,7 +6,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -26,7 +27,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -46,7 +48,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -71,7 +74,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -91,7 +95,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -116,7 +121,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -136,7 +142,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -161,7 +168,8 @@
   border-radius: 2px;
   color: #000;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -181,7 +189,8 @@
   border-radius: 2px;
   color: #000;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -206,7 +215,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -226,7 +236,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -251,7 +262,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -271,7 +283,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -296,7 +309,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -316,7 +330,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -341,7 +356,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -361,7 +377,8 @@
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  font: 13px "Roboto", sans-serif;
+  font: 400 16px "Open Sans", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -393,6 +410,43 @@
   to {
     transform: scale(2.5);
     opacity: 0; } }
+
+.notification, .notification-default, .notification-danger, .notification-info, .notification-inverse, .notification-primary, .notification-secondary, .notification-success, .notification-warning {
+  color: #fff;
+  margin: 4px 0;
+  padding: 12px 12px; }
+
+.notification-default {
+  background-color: #e0e0e0;
+  color: #939393; }
+
+.notification-danger {
+  background-color: #f3817f;
+  color: #c71612; }
+
+.notification-info {
+  background-color: #c0e1fc;
+  color: #2f9cf4; }
+
+.notification-inverse {
+  background-color: white;
+  color: #cccccc; }
+
+.notification-primary {
+  background-color: #46637f;
+  color: #10161c; }
+
+.notification-secondary {
+  background-color: #f9bdd1;
+  color: #eb3270; }
+
+.notification-success {
+  background-color: #b5d98b;
+  color: #699833; }
+
+.notification-warning {
+  background-color: #ffcc80;
+  color: #e68900; }
 
 .text-default {
   color: #c6c6c6; }
@@ -806,10 +860,11 @@ textarea {
   outline: none; }
 
 body {
-  font: 13px "Roboto", sans-serif; }
+  font: 400 16px "Open Sans", sans-serif;
+  color: #404040; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 5px; }
 
 h1 {

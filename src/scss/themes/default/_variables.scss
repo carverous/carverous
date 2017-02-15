@@ -17,7 +17,10 @@ $theme-colors:
                 (success, $success),
                 (warning, $warning);
 
-$font-default: 13px 'Roboto', sans-serif;
+$text-color: #404040;
+$font-family: 'Open Sans';
+$font-default: 400 16px $font-family, sans-serif;
+
 
 $font-weights:
                 (thin, 100),

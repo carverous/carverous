@@ -7,6 +7,7 @@
   color: if($bgColor == #fff, #000, #fff);
   display: inline-block;
   font: $font-default;
+  font-size: 14px;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
