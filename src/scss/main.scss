@@ -11,9 +11,15 @@ body {
   //background-color: #333;
 }
 
-.container {
-  margin: 0 auto;
-  width: 1280px;
+a, a:visited {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline; //temporary
+  }
+  &.active {
+
+  }
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -38,4 +44,9 @@ h5 {
 }
 h6 {
   font-size: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1280px;
 }

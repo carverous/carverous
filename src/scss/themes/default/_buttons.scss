@@ -41,7 +41,15 @@
       border: 1px solid $value;
       color: $value;
       &:hover {
+        border: 1px solid lighten($value, 5%);
         color: if($value == #FFF, #000, #FFF);
+      }
+    }
+    &-#{$name}-transparent {
+      background: transparent;
+      color: #fff;
+      &:hover {
+        background: rgba($value, .5);
       }
     }
   }

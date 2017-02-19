@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+blockquote {
+  border-left: 3px solid #f1f1f1;
+  margin: 0;
+  padding-left: 15px; }
+  blockquote cite {
+    color: #c6c6c6;
+    display: block;
+    margin-top: 8px; }
+
 .btn {
-  background-color: #c6c6c6;
+  background-color: #90A4AE;
   border: none;
   border-radius: 2px;
   color: #fff;
@@ -15,14 +24,14 @@
   text-transform: uppercase;
   transition: all .25s; }
   .btn:hover {
-    background-color: lightgray;
+    background-color: #9fb0b9;
     cursor: pointer; }
   .btn:active {
-    background-color: #b9b9b9;
+    background-color: #8198a3;
     transition: all .25s; }
 
 .btn-default {
-  background-color: #c6c6c6;
+  background-color: #90A4AE;
   border: none;
   border-radius: 2px;
   color: #fff;
@@ -36,14 +45,14 @@
   text-transform: uppercase;
   transition: all .25s; }
   .btn-default:hover {
-    background-color: lightgray;
+    background-color: #9fb0b9;
     cursor: pointer; }
   .btn-default:active {
-    background-color: #b9b9b9;
+    background-color: #8198a3;
     transition: all .25s; }
 
 .btn-default-outline {
-  background-color: #c6c6c6;
+  background-color: #90A4AE;
   border: none;
   border-radius: 2px;
   color: #fff;
@@ -57,16 +66,23 @@
   text-transform: uppercase;
   transition: all .25s;
   background-color: transparent;
-  border: 1px solid #c6c6c6;
-  color: #c6c6c6; }
+  border: 1px solid #90A4AE;
+  color: #90A4AE; }
   .btn-default-outline:hover {
-    background-color: lightgray;
+    background-color: #9fb0b9;
     cursor: pointer; }
   .btn-default-outline:active {
-    background-color: #b9b9b9;
+    background-color: #8198a3;
     transition: all .25s; }
   .btn-default-outline:hover {
+    border: 1px solid #9fb0b9;
     color: #FFF; }
+
+.btn-default-transparent {
+  background: transparent;
+  color: #fff; }
+  .btn-default-transparent:hover {
+    background: rgba(144, 164, 174, 0.5); }
 
 .btn-danger {
   background-color: #ef5350;
@@ -113,7 +129,14 @@
     background-color: #ed3c39;
     transition: all .25s; }
   .btn-danger-outline:hover {
+    border: 1px solid #f16a67;
     color: #FFF; }
+
+.btn-danger-transparent {
+  background: transparent;
+  color: #fff; }
+  .btn-danger-transparent:hover {
+    background: rgba(239, 83, 80, 0.5); }
 
 .btn-info {
   background-color: #90CAF9;
@@ -160,7 +183,14 @@
     background-color: #78bef8;
     transition: all .25s; }
   .btn-info-outline:hover {
+    border: 1px solid #a8d6fa;
     color: #FFF; }
+
+.btn-info-transparent {
+  background: transparent;
+  color: #fff; }
+  .btn-info-transparent:hover {
+    background: rgba(144, 202, 249, 0.5); }
 
 .btn-inverse {
   background-color: #fff;
@@ -207,7 +237,14 @@
     background-color: #f2f2f2;
     transition: all .25s; }
   .btn-inverse-outline:hover {
+    border: 1px solid white;
     color: #000; }
+
+.btn-inverse-transparent {
+  background: transparent;
+  color: #fff; }
+  .btn-inverse-transparent:hover {
+    background: rgba(255, 255, 255, 0.5); }
 
 .btn-primary {
   background-color: #34495e;
@@ -254,7 +291,14 @@
     background-color: #2b3c4e;
     transition: all .25s; }
   .btn-primary-outline:hover {
+    border: 1px solid #3d566e;
     color: #FFF; }
+
+.btn-primary-transparent {
+  background: transparent;
+  color: #fff; }
+  .btn-primary-transparent:hover {
+    background: rgba(52, 73, 94, 0.5); }
 
 .btn-secondary {
   background-color: #F48FB1;
@@ -301,7 +345,14 @@
     background-color: #f278a1;
     transition: all .25s; }
   .btn-secondary-outline:hover {
+    border: 1px solid #f6a6c1;
     color: #FFF; }
+
+.btn-secondary-transparent {
+  background: transparent;
+  color: #fff; }
+  .btn-secondary-transparent:hover {
+    background: rgba(244, 143, 177, 0.5); }
 
 .btn-success {
   background-color: #9CCC65;
@@ -348,7 +399,14 @@
     background-color: #90c652;
     transition: all .25s; }
   .btn-success-outline:hover {
+    border: 1px solid #a8d278;
     color: #FFF; }
+
+.btn-success-transparent {
+  background: transparent;
+  color: #fff; }
+  .btn-success-transparent:hover {
+    background: rgba(156, 204, 101, 0.5); }
 
 .btn-warning {
   background-color: #FFB74D;
@@ -395,7 +453,14 @@
     background-color: #ffad34;
     transition: all .25s; }
   .btn-warning-outline:hover {
+    border: 1px solid #ffc167;
     color: #FFF; }
+
+.btn-warning-transparent {
+  background: transparent;
+  color: #fff; }
+  .btn-warning-transparent:hover {
+    background: rgba(255, 183, 77, 0.5); }
 
 .btn .ripple {
   width: 100px;
@@ -417,8 +482,8 @@
   padding: 12px 12px; }
 
 .notification-default {
-  background-color: #e0e0e0;
-  color: #939393; }
+  background-color: #adbcc4;
+  color: #5b727d; }
 
 .notification-danger {
   background-color: #f3817f;
@@ -448,6 +513,22 @@
   background-color: #ffcc80;
   color: #e68900; }
 
+.pagination {
+  display: inline-flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .pagination li {
+    display: inline-block; }
+    .pagination li a {
+      background: #f1f1f1;
+      color: #545454;
+      padding: 8px 16px;
+      text-decoration: none; }
+      .pagination li a:hover, .pagination li a.selected {
+        background-color: #34495e;
+        color: #fff; }
+
 .progress-container {
   background-color: #f5f5f5;
   height: 1.3em;
@@ -461,8 +542,8 @@
     padding: 0.1em 0;
     text-align: center; }
   .progress-container .progress-default {
-    background-color: #e0e0e0;
-    color: #939393; }
+    background-color: #adbcc4;
+    color: #5b727d; }
   .progress-container .progress-danger {
     background-color: #f3817f;
     color: #c71612; }
@@ -505,7 +586,7 @@ tbody.table-striped tr:nth-of-type(even) {
   background-color: #f5f5f5; }
 
 .text-default {
-  color: #c6c6c6; }
+  color: #90A4AE; }
 
 .text-danger {
   color: #ef5350; }
@@ -919,9 +1000,11 @@ body {
   font: 400 16px "Open Sans", sans-serif;
   color: #545454; }
 
-.container {
-  margin: 0 auto;
-  width: 1280px; }
+a, a:visited {
+  color: #50abe0;
+  text-decoration: none; }
+  a:hover, a:visited:hover {
+    text-decoration: underline; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
@@ -944,3 +1027,7 @@ h5 {
 
 h6 {
   font-size: 1rem; }
+
+.container {
+  margin: 0 auto;
+  width: 1280px; }
