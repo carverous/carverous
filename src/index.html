@@ -2,32 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Demo</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Carverous Demo</title>
+    <link rel="stylesheet" href="css/carverous.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
+
+        <h3>Text Colours</h3>
+        <div class="text-default">Default text</div>
+        <div class="text-danger">Danger text</div>
+        <div class="text-info">Info text</div>
+        <div class="text-inverse">Inverse text</div>
+        <div class="text-primary">Primary text</div>
+        <div class="text-secondary">Secondary text</div>
+        <div class="text-success">Success text</div>
+        <div class="text-warning">Warning text</div>
+
+        <h3>Breadcrumbs</h3>
+        <div class="breadcrumbs">
+            <a href="#">Home</a> ·
+            <a href="#">Computers</a> ·
+            <a href="#">Laptops</a>
+        </div>
+        <div class="breadcrumbs">
+            <a href="#">Home</a> /
+            <a href="#">Computers</a> /
+            <a href="#">Laptops</a>
+        </div>
+
         <h3>Pagination</h3>
-        <ul class="pagination">
-            <li><a href="#">&laquo; Previous</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#" class="selected">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">Next &raquo;</a></li>
-        </ul>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
         <h3>Link</h3>
-        This is a sample sentence with a <a href="#">link</a> in it. Click <a href="#">here</a>.
+        This is a sample sentence with a <a href="https://facebook.com">link</a> in it. Click <a href="#">here</a>.
 
         <h3>Blockquotes</h3>
         <blockquote>
+            Work hard in silence, let your success be your noise.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur at cupiditate dignissimos,
             laudantium mollitia nobis porro reiciendis repudiandae similique totam ullam? Alias, aperiam aut
             consectetur debitis fugiat omnis similique.
-            <cite>- Albert Einstein</cite>
+            <cite>- Frank Ocean</cite>
         </blockquote>
 
         <h3>Tables</h3>
@@ -187,25 +221,7 @@
         <!--<button>Regular Button</button>-->
         <!--</div>-->
 
-        <h3>Notifications</h3>
-        <div class="notification-default">Default</div>
-        <div class="notification-inverse">Inverse</div>
-        <div class="notification-primary">Primary</div>
-        <div class="notification-secondary">Secondary</div>
-        <div class="notification-danger">Danger</div>
-        <div class="notification-info">Info</div>
-        <div class="notification-success">Success</div>
-        <div class="notification-warning">Warning</div>
 
-        <h3>Text Colours</h3>
-        <div class="text-default">Default text</div>
-        <div class="text-danger">Danger text</div>
-        <div class="text-info">Info text</div>
-        <div class="text-inverse">Inverse text</div>
-        <div class="text-primary">Primary text</div>
-        <div class="text-secondary">Secondary text</div>
-        <div class="text-success">Success text</div>
-        <div class="text-warning">Warning text</div>
 
         <h3>Headings</h3>
         <div class="container">
@@ -259,6 +275,5 @@
             </div>
         </div>
     </div>
-    <script src="js/buttons.js"></script>
 </body>
 </html>

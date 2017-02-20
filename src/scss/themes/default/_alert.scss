@@ -1,0 +1,23 @@
+// Alerts
+// TODO: Dismissable Alerts!
+
+@mixin alert-alt($name, $value) {
+  background-color: lighten($value, 10%);
+  color: if($name == primary, #fff, if($name == inverse, $text-color-default, darken($value, 20%)));
+
+  .alert-link {
+    font-weight: 700;
+    color: if($name == primary, #fff, if($name == inverse, $text-color-default, darken($value, 30%)));
+  }
+}
+
+.alert {
+  margin-bottom: $margin-y-default;
+  padding: $padding-default;
+
+  @each $name, $value in $theme-colors {
+    &-#{$name} {
+      @include alert-alt($name, $value);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "variables";
+
+.breadcrumbs {
+  color: $sasha-dark;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+
+  a {
+    color: $sasha-dark;
+    margin: 0 1px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      color: $link-color;
+      font-weight: 600;
+    }
+
+    &:hover {
+      //color: $grey;
+      //text-decoration: underline;
+    }
+  }
+
+}

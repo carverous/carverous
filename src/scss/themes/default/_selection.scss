@@ -1,0 +1,10 @@
+@mixin selection {
+  background-color: lighten($primary, 50%);
+  color: #000;
+}
+::selection {
+  @include selection;
+}
+::-moz-selection {
+  @include selection;
+}

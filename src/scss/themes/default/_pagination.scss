@@ -1,24 +1,24 @@
 @import "variables";
 
 .pagination {
-  display: inline-flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+   display: inline-flex;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
 
-  li {
-    display: inline-block;
+   li {
+     display: inline-block;
 
-    a {
-      background: $grey;
-      color: $text-color-default;
-      padding: 8px 16px;
-      text-decoration: none;
+     a {
+       background: $sasha-default;
+       color: $text-color-default;
+       padding: 6px 14px;
+       text-decoration: none;
 
-      &:hover, &.selected {
-        background-color: $primary;
-        color: #fff;
-      }
-    }
-  }
-}
+       &:hover, &.selected {
+         background-color: $primary;
+         color: #fff;
+       }
+     }
+   }
+ }
