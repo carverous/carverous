@@ -37,6 +37,7 @@ $link-color: #50abe0;
 $font-family-default: 'Open Sans', sans-serif;
 $font-size-default: 16px;
 $font-weight-default: 400;
+
 $font-default: $font-weight-default $font-size-default $font-family-default;
 
 $font-weights:
@@ -46,6 +47,9 @@ $font-weights:
                 (medium, 500),
                 (bold, 700),
                 (black, 900);
+
+$font-size-sm: 12px;
+$font-size-lg: 24px;
 
 // Margin
 $margin-y-default: 15px;

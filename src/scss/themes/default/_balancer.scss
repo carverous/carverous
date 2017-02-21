@@ -3,8 +3,9 @@
 // Further normalisation of HTML elements. Normalize.css will be forked manually soon
 // to set everything here.
 
+
 * {
-  outline: none;
+  outline: none; // TODO: fix outline stuff
 }
 body {
   background-color: $body-bg;

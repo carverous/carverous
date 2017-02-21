@@ -464,6 +464,27 @@ a {
     .alert-warning .alert-link {
       font-weight: 700;
       color: #b36b00; }
+  .alert .alert-dismissible .close {
+    position: relative;
+    top: -15px;
+    right: -15px;
+    padding: 15px 15px; }
+
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: .85;
+  color: #000;
+  opacity: .3; }
+  .close:hover {
+    opacity: 1;
+    cursor: pointer; }
+
+button.close {
+  padding: 0;
+  background: transparent;
+  border: 0; }
 
 .btn {
   background-color: #90A4AE;

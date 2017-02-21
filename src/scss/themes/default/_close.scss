@@ -1,0 +1,22 @@
+// Close button
+
+.close {
+  float: right;
+  font-size: $font-size-lg;
+  font-weight: 700;
+  line-height: .85;
+  color: #000;
+  opacity: .3;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+button.close {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  //-webkit-appearance: none;
+}

@@ -5,10 +5,12 @@
   background-color: lighten($value, 10%);
   color: if($name == primary, #fff, if($name == inverse, $text-color-default, darken($value, 20%)));
 
+  // Inside mixin to change the link colour under each theme-color
   .alert-link {
     font-weight: 700;
     color: if($name == primary, #fff, if($name == inverse, $text-color-default, darken($value, 30%)));
   }
+
 }
 
 .alert {
@@ -20,4 +22,14 @@
       @include alert-alt($name, $value);
     }
   }
+
+  .alert-dismissible {
+    .close {
+      position: relative;
+      top: -$padding-y-default;
+      right: -$padding-x-default;
+      padding: $padding-y-default $padding-x-default;
+    }
+  }
 }
+
