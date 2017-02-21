@@ -11,7 +11,7 @@ table {
     }
     th {
       @extend .table-cell;
-      border-bottom: 1px solid $sasha-default;
+      border-bottom: 1px solid $sasha-grey;
     }
     td {
       @extend .table-cell;

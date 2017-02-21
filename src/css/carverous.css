@@ -1,4 +1,4 @@
-/*
+/*!
  * Carverous (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 CEF
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
@@ -415,60 +415,122 @@ a {
 
 .alert {
   margin-bottom: 15px;
-  padding: 15px 15px; }
+  padding: 15px 15px;
+  /*.alert-dismissible {
+    .close {
+      position: relative;
+      top: -$padding-y;
+      right: -$padding-x;
+      padding: $padding-y $padding-x;
+    }
+  }*/ }
   .alert-default {
     background-color: #adbcc4;
-    color: #5b727d; }
+    color: set-color(#90A4AE); }
     .alert-default .alert-link {
       font-weight: 700;
-      color: #46575f; }
+      color: set-color(#90A4AE); }
   .alert-danger {
     background-color: #f3817f;
-    color: #c71612; }
+    color: set-color(#ef5350); }
     .alert-danger .alert-link {
       font-weight: 700;
-      color: #98110e; }
+      color: set-color(#ef5350); }
   .alert-info {
     background-color: #c0e1fc;
-    color: #2f9cf4; }
+    color: set-color(#90CAF9); }
     .alert-info .alert-link {
       font-weight: 700;
-      color: #0c83e4; }
+      color: set-color(#90CAF9); }
   .alert-inverse {
     background-color: white;
-    color: #545454; }
+    color: set-color(#fff); }
     .alert-inverse .alert-link {
       font-weight: 700;
-      color: #545454; }
+      color: set-color(#fff); }
   .alert-primary {
     background-color: #46637f;
-    color: #fff; }
+    color: set-color(#34495e); }
     .alert-primary .alert-link {
       font-weight: 700;
-      color: #fff; }
+      color: set-color(#34495e); }
   .alert-secondary {
     background-color: #f9bdd1;
-    color: #eb3270; }
+    color: set-color(#F48FB1); }
     .alert-secondary .alert-link {
       font-weight: 700;
-      color: #d51556; }
+      color: set-color(#F48FB1); }
   .alert-success {
     background-color: #b5d98b;
-    color: #699833; }
+    color: set-color(#9CCC65); }
     .alert-success .alert-link {
       font-weight: 700;
-      color: #4f7226; }
+      color: set-color(#9CCC65); }
   .alert-warning {
     background-color: #ffcc80;
-    color: #e68900; }
+    color: set-color(#FFB74D); }
     .alert-warning .alert-link {
       font-weight: 700;
-      color: #b36b00; }
-  .alert .alert-dismissible .close {
-    position: relative;
-    top: -15px;
-    right: -15px;
-    padding: 15px 15px; }
+      color: set-color(#FFB74D); }
+
+.badge {
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin-top: -0.38em;
+  padding: 3px 6px 4px;
+  vertical-align: middle; }
+  .badge-default {
+    background-color: #90A4AE;
+    color: #fff; }
+    .badge-default[href]:hover {
+      background-color: #738c98;
+      text-decoration: none; }
+  .badge-danger {
+    background-color: #ef5350;
+    color: #fff; }
+    .badge-danger[href]:hover {
+      background-color: #eb2521;
+      text-decoration: none; }
+  .badge-info {
+    background-color: #90CAF9;
+    color: #fff; }
+    .badge-info[href]:hover {
+      background-color: #60b3f6;
+      text-decoration: none; }
+  .badge-inverse {
+    background-color: #fff;
+    color: #545454; }
+    .badge-inverse[href]:hover {
+      background-color: #e6e6e6;
+      text-decoration: none; }
+  .badge-primary {
+    background-color: #34495e;
+    color: #fff; }
+    .badge-primary[href]:hover {
+      background-color: #22303d;
+      text-decoration: none; }
+  .badge-secondary {
+    background-color: #F48FB1;
+    color: #fff; }
+    .badge-secondary[href]:hover {
+      background-color: #ef6191;
+      text-decoration: none; }
+  .badge-success {
+    background-color: #9CCC65;
+    color: #fff; }
+    .badge-success[href]:hover {
+      background-color: #83bf3f;
+      text-decoration: none; }
+  .badge-warning {
+    background-color: #FFB74D;
+    color: #fff; }
+    .badge-warning[href]:hover {
+      background-color: #ffa21a;
+      text-decoration: none; }
+  .badge-pill {
+    border-radius: 500px; }
 
 .close {
   float: right;

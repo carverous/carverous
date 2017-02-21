@@ -4,9 +4,9 @@
   background-color: $bgColor;
   border: none;
   border-radius: 2px;
-  color: if($bgColor == #fff, $text-color-default, #fff);
+  color: if($bgColor == #fff, $text-color, #fff);
   display: inline-block;
-  font: $font-default;
+  font: $font;
   font-size: 0.9em;
   overflow: hidden;
   padding: 10px 15px;

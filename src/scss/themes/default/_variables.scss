@@ -1,4 +1,4 @@
-// Theme colours
+// Theme Colours
 $default: #90A4AE;
 $danger: #ef5350;
 $info: #90CAF9;
@@ -19,26 +19,37 @@ $theme-colors:
                 (success, $success),
                 (warning, $warning);
 
-// Shades of grey
-$sasha-default: #f1f1f1;
+// Shades of Grey
+$sasha-grey: #f1f1f1;
 $sasha-light: #f5f5f5;
 $sasha-dark: #c6c6c6;
 
 // Body
 $body-bg: #fff;
 
-//Text colour
-$text-color-default: #545454;
+// Text Colour
+$text-color: #545454;
 
-// Link colour
+// Link Colour
 $link-color: #50abe0;
 
-// Font stuff
-$font-family-default: 'Open Sans', sans-serif;
-$font-size-default: 16px;
-$font-weight-default: 400;
+// Fonts
+$font-family: 'Open Sans', sans-serif;
+$font-family-alt: 'Roboto', sans-serif;
 
-$font-default: $font-weight-default $font-size-default $font-family-default;
+$font-size-sm: 12px;
+$font-size: 16px;
+$font-size-lg: 24px;
+
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+
+$font: $font-weight $font-size $font-family;
 
 $font-weights:
                 (thin, 100),
@@ -48,35 +59,48 @@ $font-weights:
                 (bold, 700),
                 (black, 900);
 
-$font-size-sm: 12px;
-$font-size-lg: 24px;
+// Border Radius
+$border-radius-sm: 2px;
+$border-radius: 6px;
+$border-radius-lg: 15px;
+
+$border-radius-pill: 500px;
 
 // Margin
-$margin-y-default: 15px;
-$margin-x-default: 15px;
-$margin-y-sm: 5px;
-$margin-x-sm: 5px;
+$margin-y-sm: 4px;
+$margin-x-sm: 4px;
+$margin-y: 15px;
+$margin-x: 15px;
 $margin-y-lg: 25px;
 $margin-x-lg: 25px;
 
 $margin-sm: $margin-y-sm $margin-x-sm;
-$margin-default: $margin-y-default $margin-x-default;
+$margin: $margin-y $margin-x;
 $margin-lg: $margin-y-lg $margin-x-lg;
 
-
 // Padding
-$padding-y-default: 15px;
-$padding-x-default: 15px;
-$padding-y-sm: 5px;
-$padding-x-sm: 5px;
+$padding-y-sm: 4px;
+$padding-x-sm: 4px;
+$padding-y: 15px;
+$padding-x: 15px;
 $padding-y-lg: 25px;
 $padding-x-lg: 25px;
 
 $padding-sm: $padding-y-sm $padding-x-sm;
-$padding-default: $padding-y-default $padding-x-default;
+$padding: $padding-y $padding-x;
 $padding-lg: $padding-y-lg $padding-x-lg;
 
-// Border radius
-$border-radius-sm: 2px;
-$border-radius: 4px;
+
+// Alerts
+$alert-margin-bottom: $margin-y;
+$alert-padding: $padding;
+
+// Badges
+$badge-padding: 3px 6px 4px;
+$badge-border-radius: $border-radius-sm;
+$badge-font-size: .7em;
+
+
+
+
 

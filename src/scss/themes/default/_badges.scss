@@ -1,0 +1,31 @@
+// Badges
+
+@mixin badge-mix($theme-color) {
+  background-color: $theme-color;
+  color: if($theme-color == #fff, $text-color, #fff);
+  
+  &[href]:hover {
+    background-color: darken($theme-color, 10%);
+    text-decoration: none;
+  }
+}
+
+.badge {
+  border-radius: $badge-border-radius;
+  display: inline-block;
+  font-size: $badge-font-size;
+  font-weight: $font-weight-bold;
+  margin-top: -0.38em;
+  padding: $badge-padding;
+  vertical-align: middle;
+
+  @each $name, $value in $theme-colors {
+    &-#{$name} {
+      @include badge-mix($value);
+    }
+  }
+
+  &-pill {
+    border-radius: $border-radius-pill;
+  }
+}

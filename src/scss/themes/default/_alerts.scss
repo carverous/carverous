@@ -1,0 +1,33 @@
+// Alerts
+
+@mixin alert-mix($theme-color) {
+  background-color: lighten($theme-color, 10%);
+  color: set-color($theme-color);
+
+  .alert-link {
+    font-weight: $font-weight-bold;
+    color: set-color($theme-color);
+  }
+}
+
+.alert {
+  margin-bottom: $alert-margin-bottom;
+  padding: $alert-padding;
+
+  @each $name, $value in $theme-colors {
+    &-#{$name} {
+      @include alert-mix($value);
+    }
+  }
+
+  // TODO: Figure out if this one is needed
+  /*.alert-dismissible {
+    .close {
+      position: relative;
+      top: -$padding-y;
+      right: -$padding-x;
+      padding: $padding-y $padding-x;
+    }
+  }*/
+}
+
