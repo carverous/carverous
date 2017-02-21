@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/cefjoeii/carverous#readme",
   "devDependencies": {
+    "autoprefixer": "^6.7.4",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.2",
     "gulp-flatten": "^0.3.1",
+    "gulp-postcss": "^6.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0"
   }
