@@ -20,9 +20,10 @@ $theme-colors:
                 (warning, $warning);
 
 // Shades of Grey
-$sasha-light: #f5f5f5;
-$sasha-grey: #f1f1f1;
-$sasha-dark: #c6c6c6;
+
+$sasha-light: #f1f1f1;
+$sasha-grey: #c6c6c6;
+$sasha-dark: #aaa;
 
 // Body
 $body-bg: #fff;
@@ -51,13 +52,14 @@ $font-weight-black: 900;
 
 $font: $font-weight $font-size $font-family;
 
-$font-weights:
-                (thin, 100),
-                (light, 300),
-                (normal, 400),
-                (medium, 500),
-                (bold, 700),
-                (black, 900);
+// TODO: Figure out if this is needed
+//$font-weights:
+//                (thin, 100),
+//                (light, 300),
+//                (normal, 400),
+//                (medium, 500),
+//                (bold, 700),
+//                (black, 900);
 
 // Border Radius
 $border-radius-sm: 2px;
@@ -90,7 +92,6 @@ $padding-sm: $padding-y-sm $padding-x-sm;
 $padding: $padding-y $padding-x;
 $padding-lg: $padding-y-lg $padding-x-lg;
 
-
 // Alerts
 $alert-margin-bottom: $margin-y;
 $alert-padding: $padding;
@@ -100,7 +101,8 @@ $badge-padding: 3px 6px 4px;
 $badge-border-radius: $border-radius-sm;
 $badge-font-size: .7em;
 
-
-
-
-
+// Breadcrumbs
+$breadcrumb-color: $sasha-grey;
+$breadcrumb-color-active: $sasha-dark;
+$breadcrumb-divider: "/";
+$breadcrumb-font-size: .9em;

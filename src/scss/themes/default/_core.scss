@@ -12,16 +12,40 @@ body {
   font: $font;
   color: $text-color;
 }
-.container {
-  margin: 0 auto;
-  width: 960px;
-}
 
 a {
   color: $link-color;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+    color: red;
   }
 }
 
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}

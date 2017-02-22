@@ -1,12 +1,12 @@
-@import "variables";
+
 
 blockquote {
-  border-left: 3px solid $sasha-grey;
+  border-left: 3px solid $sasha-light;
   margin: 0;
   padding-left: 15px;
 
   cite {
-    color: $sasha-dark;
+    color: $sasha-grey;
     display: block;
     margin-top: 8px;
   }

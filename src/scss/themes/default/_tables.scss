@@ -11,7 +11,7 @@ table {
     }
     th {
       @extend .table-cell;
-      border-bottom: 1px solid $sasha-grey;
+      border-bottom: 1px solid $sasha-light;
     }
     td {
       @extend .table-cell;
@@ -36,5 +36,5 @@ table {
 }
 
 tbody.table-striped tr:nth-of-type(even) {
-  background-color: $sasha-light;
+  background-color: $sasha-dark;
 }
