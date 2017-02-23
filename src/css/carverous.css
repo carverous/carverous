@@ -548,6 +548,10 @@ p {
   padding: 10px 15px;
   text-align: center;
   text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
   .btn-default {
@@ -854,29 +858,6 @@ p {
     color: #fff; }
     .btn-warning-semi-transparent:hover {
       background: rgba(255, 183, 77, 0.5); }
-
-.btn .ripple {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation: ripple 0.6s linear;
-          animation: ripple 0.6s linear; }
-
-@-webkit-keyframes ripple {
-  to {
-    -webkit-transform: scale(2.5);
-            transform: scale(2.5);
-    opacity: 0; } }
-
-@keyframes ripple {
-  to {
-    -webkit-transform: scale(2.5);
-            transform: scale(2.5);
-    opacity: 0; } }
 
 .close {
   float: right;

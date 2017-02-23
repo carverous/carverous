@@ -30,7 +30,10 @@ gulp.task('watch', function() {
     gulp.watch('./src/css/**/carverous.css', ['autoPrefix']);
 });
 
-gulp.task('deployCSS', function() { // Deploy to the dist directory
-    return gulp.src('./src/css/carverous.css')
-        .pipe(gulp.dest('dist/css/'));
+gulp.task('deploy', function() { // Deploy to the dist directory
+    return gulp.src([
+        './src/css/**/*.css',
+        './src/js/**/*.js'
+        ], {base: './src/'})
+        .pipe(gulp.dest('dist/'));
 });

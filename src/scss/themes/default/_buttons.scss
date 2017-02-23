@@ -23,6 +23,7 @@
   padding: 10px 15px;
   text-align: center;
   text-transform: uppercase;
+  user-select: none; // To prevent highlight the text inside the buttons
   vertical-align: middle;
   white-space: nowrap; // To prevent from wrapping or placing text on the new line
 
@@ -54,22 +55,5 @@
         background: rgba($value, .5);
       }
     }
-  }
-}
-
-.btn .ripple {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  transform: scale(0);
-  animation: ripple 0.6s linear;
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(2.5);
-    opacity: 0;
   }
 }
