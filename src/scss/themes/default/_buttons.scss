@@ -1,21 +1,12 @@
-@mixin btn($bgColor) {
+// Buttons
+
+@mixin btn-mix($bgColor) {
   background-color: $bgColor;
-  border: none;
-  border-radius: 2px;
   color: if($bgColor == #fff, $text-color, #fff);
-  display: inline-block;
-  font: $font;
-  font-size: 0.9em;
-  overflow: hidden;
-  padding: 10px 15px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all .25s;
 
   &:hover {
     background-color: lighten($bgColor, 5%);
-    cursor: pointer;
+    transition: all .25s;
   }
   &:active {
     background-color: darken($bgColor, 5%);
@@ -24,16 +15,23 @@
 }
 
 .btn {
-    @include btn($default);
-}
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: $btn-font-weight;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap; // To prevent from wrapping or placing text on the new line
 
-.btn {
   @each $name, $value in $theme-colors {
     &-#{$name} {
-      @include btn($value);
+      @include btn-mix($value);
     }
     &-#{$name}-outline {
-      @include btn($value);
+      @include btn-mix($value);
       background-color: transparent;
       border: 1px solid $value;
       color: $value;
@@ -43,6 +41,13 @@
       }
     }
     &-#{$name}-transparent {
+      background: transparent;
+      color: #fff;
+      &:hover {
+        background: rgba($value, .5);
+      }
+    }
+    &-#{$name}-semi-transparent {
       background: transparent;
       color: #fff;
       &:hover {

@@ -20,10 +20,11 @@ $theme-colors:
                 (warning, $warning);
 
 // Shades of Grey
-
+$sasha-white: #fff;
 $sasha-light: #f1f1f1;
 $sasha-grey: #c6c6c6;
 $sasha-dark: #aaa;
+$sasha-black: #000;
 
 // Body
 $body-bg: #fff;
@@ -52,14 +53,6 @@ $font-weight-black: 900;
 
 $font: $font-weight $font-size $font-family;
 
-// TODO: Figure out if this is needed
-//$font-weights:
-//                (thin, 100),
-//                (light, 300),
-//                (normal, 400),
-//                (medium, 500),
-//                (bold, 700),
-//                (black, 900);
 
 // Border Radius
 $border-radius-sm: 2px;
@@ -106,3 +99,7 @@ $breadcrumb-color: $sasha-grey;
 $breadcrumb-color-active: $sasha-dark;
 $breadcrumb-divider: "/";
 $breadcrumb-font-size: .9em;
+
+// Buttons
+$btn-font-size: $font-size;
+$btn-font-weight: $font-weight;

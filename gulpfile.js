@@ -12,25 +12,25 @@ var autoPrefixer = require('autoprefixer');
 
 // Tasks
 gulp.task('sass', function() {
-    return gulp.src('src/scss/**/*.scss')
+    return gulp.src('./src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError)) // Show on the console if there's an error while transpiling
         .pipe(flatten())
         // .pipe(cleanCSS({keepSpecialComments : 0}))
-        .pipe(gulp.dest('src/css/'));
+        .pipe(gulp.dest('./src/css/'));
 });
 
 gulp.task('autoPrefix', function() {
-    return gulp.src('src/css/carverous.css')
+    return gulp.src('./src/css/carverous.css')
         .pipe(postCSS([ autoPrefixer() ]))
-        .pipe(gulp.dest('src/css/'));
+        .pipe(gulp.dest('./src/css/'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('src/scss/**/*.scss', ['sass']);
-    // gulp.watch('src/css/**/carverous.css', ['autoPrefix']);
+    gulp.watch('./src/scss/**/*.scss', ['sass']);
+    gulp.watch('./src/css/**/carverous.css', ['autoPrefix']);
 });
 
 gulp.task('deployCSS', function() { // Deploy to the dist directory
-    return gulp.src('/src/css/carverous.css')
+    return gulp.src('./src/css/carverous.css')
         .pipe(gulp.dest('dist/css/'));
 });
