@@ -1,6 +1,6 @@
 // Functions
 
-// Check if the theme-color is light or dark and then set it appropriately
+// Check if the theme-color is light or dark and then contrast it appropriately
 @function set-color($theme-color) {
   @if (lightness($theme-color) > 50) {
     @return darken($theme-color, 20%);

@@ -1,7 +1,7 @@
-// Balancer
+// Global
 //
 // Further normalisation of HTML elements. Normalize.css will be forked manually soon
-// to set everything here.
+// to merge everything here.
 
 
 * {
@@ -9,12 +9,12 @@
 }
 body {
   background-color: $body-bg;
-  font: $font;
-  color: $text-color;
+  font: $font-default;
+  color: $color-default;
 }
 
 a {
-  color: $link-color;
+  color: $link-color-default;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -26,17 +26,6 @@ p {
   margin: 0;
   line-height: 1.5;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

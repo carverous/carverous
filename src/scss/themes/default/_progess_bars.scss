@@ -19,7 +19,7 @@
     .progress-#{$name} {
       @extend .progress;
       background-color: lighten($value, 10%);
-      color: if($name == primary, #fff, if($name == inverse, $text-color, darken($value, 20%)));
+      color: if($name == primary, #fff, if($name == inverse, $color-default, darken($value, 20%)));
     }
   }
 }

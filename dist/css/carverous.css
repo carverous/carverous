@@ -7,8 +7,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 1. Change the default font-default family in all browsers (opinionated).
+ * 2. Prevent adjustments of font-default size after orientation changes in IE and iOS.
  */
 html {
   font-family: sans-serif;
@@ -19,7 +19,7 @@ html {
   /* 2 */ }
 
 /**
- * Remove the margin in all browsers (opinionated).
+ * Remove the margin-default in all browsers (opinionated).
  */
 body {
   margin: 0; }
@@ -131,7 +131,7 @@ dfn {
   font-style: italic; }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
+ * Correct the font size and margin-default on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
@@ -185,8 +185,8 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
+ * 1. Correct the inheritance and scaling of font-default size in all browsers.
+ * 2. Correct the odd `em` font-default sizing in all browsers.
  */
 code,
 kbd,
@@ -198,7 +198,7 @@ samp {
   /* 2 */ }
 
 /**
- * Add the correct margin in IE 8.
+ * Add the correct margin-default in IE 8.
  */
 figure {
   margin: 1em 40px; }
@@ -219,7 +219,7 @@ hr {
    ========================================================================== */
 /**
  * 1. Change font properties to `inherit` in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
+ * 2. Remove the margin-default in Firefox and Safari.
  */
 button,
 input,
@@ -267,7 +267,7 @@ html [type="button"],
   /* 2 */ }
 
 /**
- * Remove the inner border and padding in Firefox.
+ * Remove the inner border and padding-default in Firefox.
  */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -286,7 +286,7 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText; }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Change the border, margin-default, and padding-default in all browsers (opinionated).
  */
 fieldset {
   border: 1px solid #c0c0c0;
@@ -296,7 +296,7 @@ fieldset {
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
+ * 3. Remove the padding-default so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
 legend {
@@ -321,7 +321,7 @@ textarea {
 
 /**
  * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
+ * 2. Remove the padding-default in IE 10-.
  */
 [type="checkbox"],
 [type="radio"] {
@@ -348,7 +348,7 @@ textarea {
   /* 2 */ }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ * Remove the inner padding-default and cancel buttons in Chrome and Safari on OS X.
  */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
@@ -402,9 +402,9 @@ p {
   /*.alert-dismissible {
     .close {
       position: relative;
-      top: -$padding-y;
-      right: -$padding-x;
-      padding: $padding-y $padding-x;
+      top: -$padding-default-y-default;
+      right: -$padding-default-x-default;
+      padding-default: $padding-default-y-default $padding-default-x-default;
     }
   }*/ }
   .alert-default {
@@ -438,11 +438,11 @@ p {
       font-weight: 700;
       color: #fff; }
   .alert-secondary {
-    background-color: #f9bdd1;
-    color: #eb3270; }
+    background-color: #79dce8;
+    color: #1d9bab; }
     .alert-secondary .alert-link {
       font-weight: 700;
-      color: #eb3270; }
+      color: #1d9bab; }
   .alert-success {
     background-color: #b5d98b;
     color: #699833; }
@@ -495,10 +495,10 @@ p {
       background-color: #22303d;
       text-decoration: none; }
   .badge-secondary {
-    background-color: #F48FB1;
+    background-color: #4DD0E1;
     color: #fff; }
     .badge-secondary[href]:hover {
-      background-color: #ef6191;
+      background-color: #24c2d7;
       text-decoration: none; }
   .badge-success {
     background-color: #9CCC65;
@@ -540,324 +540,513 @@ p {
     font-weight: 700; }
 
 .btn {
-  border: none;
-  border-radius: 2px;
   display: inline-block;
   font-size: 0.9em;
   font-weight: 400;
   padding: 10px 15px;
   text-align: center;
   text-transform: uppercase;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
   .btn-default {
-    background-color: #90A4AE;
+    border-radius: 2px;
+    background-color: #90a4ae;
+    border: none;
     color: #fff; }
     .btn-default:hover {
       background-color: #9fb0b9;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-default:active {
       background-color: #8198a3;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-default[href]:hover {
+      text-decoration: none; }
   .btn-default-outline {
-    background-color: #90A4AE;
+    border-radius: 2px;
+    background-color: rgba(144, 164, 174, 0);
+    border: 2px solid #90A4AE;
     color: #fff;
-    background-color: transparent;
-    border: 1px solid #90A4AE;
     color: #90A4AE; }
     .btn-default-outline:hover {
       background-color: #9fb0b9;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-default-outline:active {
       background-color: #8198a3;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-default-outline[href]:hover {
+      text-decoration: none; }
     .btn-default-outline:hover {
-      border: 1px solid #9fb0b9;
+      border-color: #9fb0b9;
       color: #FFF; }
   .btn-default-transparent {
-    background: transparent;
-    color: #fff; }
+    border-radius: 2px;
+    background-color: rgba(144, 164, 174, 0);
+    border: none;
+    color: #fff;
+    color: #90A4AE; }
     .btn-default-transparent:hover {
-      background: rgba(144, 164, 174, 0.5); }
+      background-color: #9fb0b9;
+      transition: all .25s; }
+    .btn-default-transparent:active {
+      background-color: #8198a3;
+      transition: all .25s; }
+    .btn-default-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-default-transparent:hover {
+      background: rgba(144, 164, 174, 0.3); }
   .btn-default-semi-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(144, 164, 174, 0.2);
+    border: 2px solid #90A4AE;
+    color: #fff;
     color: #fff; }
     .btn-default-semi-transparent:hover {
-      background: rgba(144, 164, 174, 0.5); }
+      background-color: #9fb0b9;
+      transition: all .25s; }
+    .btn-default-semi-transparent:active {
+      background-color: #8198a3;
+      transition: all .25s; }
+    .btn-default-semi-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-default-semi-transparent:hover {
+      background: rgba(144, 164, 174, 0.4); }
   .btn-danger {
+    border-radius: 2px;
     background-color: #ef5350;
+    border: none;
     color: #fff; }
     .btn-danger:hover {
       background-color: #f16a67;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-danger:active {
       background-color: #ed3c39;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-danger[href]:hover {
+      text-decoration: none; }
   .btn-danger-outline {
-    background-color: #ef5350;
+    border-radius: 2px;
+    background-color: rgba(239, 83, 80, 0);
+    border: 2px solid #ef5350;
     color: #fff;
-    background-color: transparent;
-    border: 1px solid #ef5350;
     color: #ef5350; }
     .btn-danger-outline:hover {
       background-color: #f16a67;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-danger-outline:active {
       background-color: #ed3c39;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-danger-outline[href]:hover {
+      text-decoration: none; }
     .btn-danger-outline:hover {
-      border: 1px solid #f16a67;
+      border-color: #f16a67;
       color: #FFF; }
   .btn-danger-transparent {
-    background: transparent;
-    color: #fff; }
+    border-radius: 2px;
+    background-color: rgba(239, 83, 80, 0);
+    border: none;
+    color: #fff;
+    color: #ef5350; }
     .btn-danger-transparent:hover {
-      background: rgba(239, 83, 80, 0.5); }
+      background-color: #f16a67;
+      transition: all .25s; }
+    .btn-danger-transparent:active {
+      background-color: #ed3c39;
+      transition: all .25s; }
+    .btn-danger-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-danger-transparent:hover {
+      background: rgba(239, 83, 80, 0.3); }
   .btn-danger-semi-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(239, 83, 80, 0.2);
+    border: 2px solid #ef5350;
+    color: #fff;
     color: #fff; }
     .btn-danger-semi-transparent:hover {
-      background: rgba(239, 83, 80, 0.5); }
+      background-color: #f16a67;
+      transition: all .25s; }
+    .btn-danger-semi-transparent:active {
+      background-color: #ed3c39;
+      transition: all .25s; }
+    .btn-danger-semi-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-danger-semi-transparent:hover {
+      background: rgba(239, 83, 80, 0.4); }
   .btn-info {
-    background-color: #90CAF9;
+    border-radius: 2px;
+    background-color: #90caf9;
+    border: none;
     color: #fff; }
     .btn-info:hover {
       background-color: #a8d6fa;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-info:active {
       background-color: #78bef8;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-info[href]:hover {
+      text-decoration: none; }
   .btn-info-outline {
-    background-color: #90CAF9;
+    border-radius: 2px;
+    background-color: rgba(144, 202, 249, 0);
+    border: 2px solid #90CAF9;
     color: #fff;
-    background-color: transparent;
-    border: 1px solid #90CAF9;
     color: #90CAF9; }
     .btn-info-outline:hover {
       background-color: #a8d6fa;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-info-outline:active {
       background-color: #78bef8;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-info-outline[href]:hover {
+      text-decoration: none; }
     .btn-info-outline:hover {
-      border: 1px solid #a8d6fa;
+      border-color: #a8d6fa;
       color: #FFF; }
   .btn-info-transparent {
-    background: transparent;
-    color: #fff; }
+    border-radius: 2px;
+    background-color: rgba(144, 202, 249, 0);
+    border: none;
+    color: #fff;
+    color: #90CAF9; }
     .btn-info-transparent:hover {
-      background: rgba(144, 202, 249, 0.5); }
+      background-color: #a8d6fa;
+      transition: all .25s; }
+    .btn-info-transparent:active {
+      background-color: #78bef8;
+      transition: all .25s; }
+    .btn-info-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-info-transparent:hover {
+      background: rgba(144, 202, 249, 0.3); }
   .btn-info-semi-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(144, 202, 249, 0.2);
+    border: 2px solid #90CAF9;
+    color: #fff;
     color: #fff; }
     .btn-info-semi-transparent:hover {
-      background: rgba(144, 202, 249, 0.5); }
+      background-color: #a8d6fa;
+      transition: all .25s; }
+    .btn-info-semi-transparent:active {
+      background-color: #78bef8;
+      transition: all .25s; }
+    .btn-info-semi-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-info-semi-transparent:hover {
+      background: rgba(144, 202, 249, 0.4); }
   .btn-inverse {
-    background-color: #fff;
+    border-radius: 2px;
+    background-color: white;
+    border: none;
     color: #545454; }
     .btn-inverse:hover {
       background-color: white;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-inverse:active {
       background-color: #f2f2f2;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-inverse[href]:hover {
+      text-decoration: none; }
   .btn-inverse-outline {
-    background-color: #fff;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #fff;
     color: #545454;
-    background-color: transparent;
-    border: 1px solid #fff;
     color: #fff; }
     .btn-inverse-outline:hover {
       background-color: white;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-inverse-outline:active {
       background-color: #f2f2f2;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-inverse-outline[href]:hover {
+      text-decoration: none; }
     .btn-inverse-outline:hover {
-      border: 1px solid white;
+      border-color: white;
       color: #000; }
   .btn-inverse-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #545454;
     color: #fff; }
     .btn-inverse-transparent:hover {
-      background: rgba(255, 255, 255, 0.5); }
+      background-color: white;
+      transition: all .25s; }
+    .btn-inverse-transparent:active {
+      background-color: #f2f2f2;
+      transition: all .25s; }
+    .btn-inverse-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-inverse-transparent:hover {
+      background: rgba(255, 255, 255, 0.3); }
   .btn-inverse-semi-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    color: #545454;
     color: #fff; }
     .btn-inverse-semi-transparent:hover {
-      background: rgba(255, 255, 255, 0.5); }
+      background-color: white;
+      transition: all .25s; }
+    .btn-inverse-semi-transparent:active {
+      background-color: #f2f2f2;
+      transition: all .25s; }
+    .btn-inverse-semi-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-inverse-semi-transparent:hover {
+      background: rgba(255, 255, 255, 0.4); }
   .btn-primary {
+    border-radius: 2px;
     background-color: #34495e;
+    border: none;
     color: #fff; }
     .btn-primary:hover {
       background-color: #3d566e;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-primary:active {
       background-color: #2b3c4e;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-primary[href]:hover {
+      text-decoration: none; }
   .btn-primary-outline {
-    background-color: #34495e;
+    border-radius: 2px;
+    background-color: rgba(52, 73, 94, 0);
+    border: 2px solid #34495e;
     color: #fff;
-    background-color: transparent;
-    border: 1px solid #34495e;
     color: #34495e; }
     .btn-primary-outline:hover {
       background-color: #3d566e;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-primary-outline:active {
       background-color: #2b3c4e;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-primary-outline[href]:hover {
+      text-decoration: none; }
     .btn-primary-outline:hover {
-      border: 1px solid #3d566e;
+      border-color: #3d566e;
       color: #FFF; }
   .btn-primary-transparent {
-    background: transparent;
-    color: #fff; }
+    border-radius: 2px;
+    background-color: rgba(52, 73, 94, 0);
+    border: none;
+    color: #fff;
+    color: #34495e; }
     .btn-primary-transparent:hover {
-      background: rgba(52, 73, 94, 0.5); }
+      background-color: #3d566e;
+      transition: all .25s; }
+    .btn-primary-transparent:active {
+      background-color: #2b3c4e;
+      transition: all .25s; }
+    .btn-primary-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-primary-transparent:hover {
+      background: rgba(52, 73, 94, 0.3); }
   .btn-primary-semi-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(52, 73, 94, 0.2);
+    border: 2px solid #34495e;
+    color: #fff;
     color: #fff; }
     .btn-primary-semi-transparent:hover {
-      background: rgba(52, 73, 94, 0.5); }
+      background-color: #3d566e;
+      transition: all .25s; }
+    .btn-primary-semi-transparent:active {
+      background-color: #2b3c4e;
+      transition: all .25s; }
+    .btn-primary-semi-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-primary-semi-transparent:hover {
+      background: rgba(52, 73, 94, 0.4); }
   .btn-secondary {
-    background-color: #F48FB1;
+    border-radius: 2px;
+    background-color: #4dd0e1;
+    border: none;
     color: #fff; }
     .btn-secondary:hover {
-      background-color: #f6a6c1;
-      -webkit-transition: all .25s;
+      background-color: #63d6e5;
       transition: all .25s; }
     .btn-secondary:active {
-      background-color: #f278a1;
-      -webkit-transition: all .25s;
+      background-color: #37cadd;
       transition: all .25s; }
+    .btn-secondary[href]:hover {
+      text-decoration: none; }
   .btn-secondary-outline {
-    background-color: #F48FB1;
+    border-radius: 2px;
+    background-color: rgba(77, 208, 225, 0);
+    border: 2px solid #4DD0E1;
     color: #fff;
-    background-color: transparent;
-    border: 1px solid #F48FB1;
-    color: #F48FB1; }
+    color: #4DD0E1; }
     .btn-secondary-outline:hover {
-      background-color: #f6a6c1;
-      -webkit-transition: all .25s;
+      background-color: #63d6e5;
       transition: all .25s; }
     .btn-secondary-outline:active {
-      background-color: #f278a1;
-      -webkit-transition: all .25s;
+      background-color: #37cadd;
       transition: all .25s; }
+    .btn-secondary-outline[href]:hover {
+      text-decoration: none; }
     .btn-secondary-outline:hover {
-      border: 1px solid #f6a6c1;
+      border-color: #63d6e5;
       color: #FFF; }
   .btn-secondary-transparent {
-    background: transparent;
-    color: #fff; }
+    border-radius: 2px;
+    background-color: rgba(77, 208, 225, 0);
+    border: none;
+    color: #fff;
+    color: #4DD0E1; }
     .btn-secondary-transparent:hover {
-      background: rgba(244, 143, 177, 0.5); }
+      background-color: #63d6e5;
+      transition: all .25s; }
+    .btn-secondary-transparent:active {
+      background-color: #37cadd;
+      transition: all .25s; }
+    .btn-secondary-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-secondary-transparent:hover {
+      background: rgba(77, 208, 225, 0.3); }
   .btn-secondary-semi-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(77, 208, 225, 0.2);
+    border: 2px solid #4DD0E1;
+    color: #fff;
     color: #fff; }
     .btn-secondary-semi-transparent:hover {
-      background: rgba(244, 143, 177, 0.5); }
+      background-color: #63d6e5;
+      transition: all .25s; }
+    .btn-secondary-semi-transparent:active {
+      background-color: #37cadd;
+      transition: all .25s; }
+    .btn-secondary-semi-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-secondary-semi-transparent:hover {
+      background: rgba(77, 208, 225, 0.4); }
   .btn-success {
-    background-color: #9CCC65;
+    border-radius: 2px;
+    background-color: #9ccc65;
+    border: none;
     color: #fff; }
     .btn-success:hover {
       background-color: #a8d278;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-success:active {
       background-color: #90c652;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-success[href]:hover {
+      text-decoration: none; }
   .btn-success-outline {
-    background-color: #9CCC65;
+    border-radius: 2px;
+    background-color: rgba(156, 204, 101, 0);
+    border: 2px solid #9CCC65;
     color: #fff;
-    background-color: transparent;
-    border: 1px solid #9CCC65;
     color: #9CCC65; }
     .btn-success-outline:hover {
       background-color: #a8d278;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-success-outline:active {
       background-color: #90c652;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-success-outline[href]:hover {
+      text-decoration: none; }
     .btn-success-outline:hover {
-      border: 1px solid #a8d278;
+      border-color: #a8d278;
       color: #FFF; }
   .btn-success-transparent {
-    background: transparent;
-    color: #fff; }
+    border-radius: 2px;
+    background-color: rgba(156, 204, 101, 0);
+    border: none;
+    color: #fff;
+    color: #9CCC65; }
     .btn-success-transparent:hover {
-      background: rgba(156, 204, 101, 0.5); }
+      background-color: #a8d278;
+      transition: all .25s; }
+    .btn-success-transparent:active {
+      background-color: #90c652;
+      transition: all .25s; }
+    .btn-success-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-success-transparent:hover {
+      background: rgba(156, 204, 101, 0.3); }
   .btn-success-semi-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(156, 204, 101, 0.2);
+    border: 2px solid #9CCC65;
+    color: #fff;
     color: #fff; }
     .btn-success-semi-transparent:hover {
-      background: rgba(156, 204, 101, 0.5); }
+      background-color: #a8d278;
+      transition: all .25s; }
+    .btn-success-semi-transparent:active {
+      background-color: #90c652;
+      transition: all .25s; }
+    .btn-success-semi-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-success-semi-transparent:hover {
+      background: rgba(156, 204, 101, 0.4); }
   .btn-warning {
-    background-color: #FFB74D;
+    border-radius: 2px;
+    background-color: #ffb74d;
+    border: none;
     color: #fff; }
     .btn-warning:hover {
       background-color: #ffc167;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-warning:active {
       background-color: #ffad34;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-warning[href]:hover {
+      text-decoration: none; }
   .btn-warning-outline {
-    background-color: #FFB74D;
+    border-radius: 2px;
+    background-color: rgba(255, 183, 77, 0);
+    border: 2px solid #FFB74D;
     color: #fff;
-    background-color: transparent;
-    border: 1px solid #FFB74D;
     color: #FFB74D; }
     .btn-warning-outline:hover {
       background-color: #ffc167;
-      -webkit-transition: all .25s;
       transition: all .25s; }
     .btn-warning-outline:active {
       background-color: #ffad34;
-      -webkit-transition: all .25s;
       transition: all .25s; }
+    .btn-warning-outline[href]:hover {
+      text-decoration: none; }
     .btn-warning-outline:hover {
-      border: 1px solid #ffc167;
+      border-color: #ffc167;
       color: #FFF; }
   .btn-warning-transparent {
-    background: transparent;
-    color: #fff; }
+    border-radius: 2px;
+    background-color: rgba(255, 183, 77, 0);
+    border: none;
+    color: #fff;
+    color: #FFB74D; }
     .btn-warning-transparent:hover {
-      background: rgba(255, 183, 77, 0.5); }
+      background-color: #ffc167;
+      transition: all .25s; }
+    .btn-warning-transparent:active {
+      background-color: #ffad34;
+      transition: all .25s; }
+    .btn-warning-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-warning-transparent:hover {
+      background: rgba(255, 183, 77, 0.3); }
   .btn-warning-semi-transparent {
-    background: transparent;
+    border-radius: 2px;
+    background-color: rgba(255, 183, 77, 0.2);
+    border: 2px solid #FFB74D;
+    color: #fff;
     color: #fff; }
     .btn-warning-semi-transparent:hover {
-      background: rgba(255, 183, 77, 0.5); }
+      background-color: #ffc167;
+      transition: all .25s; }
+    .btn-warning-semi-transparent:active {
+      background-color: #ffad34;
+      transition: all .25s; }
+    .btn-warning-semi-transparent[href]:hover {
+      text-decoration: none; }
+    .btn-warning-semi-transparent:hover {
+      background: rgba(255, 183, 77, 0.4); }
+  .btn-pill {
+    border-radius: 500px; }
 
 .close {
   float: right;

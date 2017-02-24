@@ -2,7 +2,7 @@
 
 @mixin badge-mix($theme-color) {
   background-color: $theme-color;
-  color: if($theme-color == #fff, $text-color, #fff);
+  color: if($theme-color == #fff, $color-default, #fff);
   
   &[href]:hover {
     background-color: darken($theme-color, 10%);

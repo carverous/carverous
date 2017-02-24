@@ -13,7 +13,7 @@
 
 // Core CSS
 @import "normalize";
-@import "core";
+@import "global";
 @import "clearfix";
 
 @import "functions";
@@ -21,6 +21,7 @@
 // Components
 @import "alerts";
 @import "badges";
+@import "border-radius";
 @import "breadcrumbs";
 @import "buttons";
 @import "close";

@@ -24,9 +24,9 @@
   /*.alert-dismissible {
     .close {
       position: relative;
-      top: -$padding-y;
-      right: -$padding-x;
-      padding: $padding-y $padding-x;
+      top: -$padding-default-y-default;
+      right: -$padding-default-x-default;
+      padding-default: $padding-default-y-default $padding-default-x-default;
     }
   }*/
 }

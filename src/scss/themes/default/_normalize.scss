@@ -1,8 +1,8 @@
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
 /**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 1. Change the default font-default family in all browsers (opinionated).
+ * 2. Prevent adjustments of font-default size after orientation changes in IE and iOS.
  */
 
 html {
@@ -12,7 +12,7 @@ html {
 }
 
 /**
- * Remove the margin in all browsers (opinionated).
+ * Remove the margin-default in all browsers (opinionated).
  */
 
 body {
@@ -145,7 +145,7 @@ dfn {
 }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
+ * Correct the font size and margin-default on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
@@ -215,8 +215,8 @@ svg:not(:root) {
    ========================================================================== */
 
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
+ * 1. Correct the inheritance and scaling of font-default size in all browsers.
+ * 2. Correct the odd `em` font-default sizing in all browsers.
  */
 
 code,
@@ -228,7 +228,7 @@ samp {
 }
 
 /**
- * Add the correct margin in IE 8.
+ * Add the correct margin-default in IE 8.
  */
 
 figure {
@@ -251,7 +251,7 @@ hr {
 
 /**
  * 1. Change font properties to `inherit` in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
+ * 2. Remove the margin-default in Firefox and Safari.
  */
 
 button,
@@ -304,7 +304,7 @@ html [type="button"], /* 1 */
 }
 
 /**
- * Remove the inner border and padding in Firefox.
+ * Remove the inner border and padding-default in Firefox.
  */
 
 button::-moz-focus-inner,
@@ -327,7 +327,7 @@ button:-moz-focusring,
 }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Change the border, margin-default, and padding-default in all browsers (opinionated).
  */
 
 fieldset {
@@ -339,7 +339,7 @@ fieldset {
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
+ * 3. Remove the padding-default so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
 
@@ -362,7 +362,7 @@ textarea {
 
 /**
  * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
+ * 2. Remove the padding-default in IE 10-.
  */
 
 [type="checkbox"],
@@ -391,7 +391,7 @@ textarea {
 }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ * Remove the inner padding-default and cancel buttons in Chrome and Safari on OS X.
  */
 
 [type="search"]::-webkit-search-cancel-button,

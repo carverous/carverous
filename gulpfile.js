@@ -25,15 +25,21 @@ gulp.task('autoPrefix', function() {
         .pipe(gulp.dest('./src/css/'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch('./src/scss/**/*.scss', ['sass']);
-    gulp.watch('./src/css/**/carverous.css', ['autoPrefix']);
-});
-
 gulp.task('deploy', function() { // Deploy to the dist directory
     return gulp.src([
         './src/css/**/*.css',
         './src/js/**/*.js'
-        ], {base: './src/'})
+    ], {base: './src/'})
         .pipe(gulp.dest('dist/'));
 });
+
+gulp.task('watch', function() {
+    gulp.watch('./src/scss/**/*.scss', ['sass']);
+    gulp.watch('./src/css/**/carverous.css', ['autoPrefix']);
+    gulp.watch(
+        ['./src/css/**/*.css', './src/js/**/*.js'],
+        {base: './src/'},
+        ['deploy']
+    );
+});
+

@@ -1,13 +1,14 @@
-// Theme Colours
-$default: #90A4AE;
-$danger: #ef5350;
-$info: #90CAF9;
-$inverse: #fff;
-$primary: #34495e;
-$secondary: #F48FB1;
-//$secondary: #4DD0E1;
-$success: #9CCC65;
-$warning: #FFB74D;
+// Variables
+
+// Colours
+$default: #90A4AE !default;
+$danger: #ef5350 !default;
+$info: #90CAF9 !default;
+$inverse: #fff !default;
+$primary: #34495e !default;
+$secondary: #4DD0E1 !default; // #F48FB1;
+$success: #9CCC65 !default;
+$warning: #FFB74D !default;
 
 $theme-colors:
                 (default, $default),
@@ -20,86 +21,86 @@ $theme-colors:
                 (warning, $warning);
 
 // Shades of Grey
-$sasha-white: #fff;
-$sasha-light: #f1f1f1;
-$sasha-grey: #c6c6c6;
-$sasha-dark: #aaa;
-$sasha-black: #000;
+$sasha-white: #fff !default;
+$sasha-light: #f1f1f1 !default;
+$sasha-grey: #c6c6c6 !default;
+$sasha-dark: #aaa !default;
+$sasha-black: #000 !default;
+
+// Options
+$enable-rounded: true !default;
 
 // Body
-$body-bg: #fff;
-
-// Text Colour
-$text-color: #545454;
+$body-bg: #fff !default;
+$color-default: #545454 !default;
 
 // Link Colour
-$link-color: #50abe0;
+$link-color-default: #50abe0 !default;
 
 // Fonts
-$font-family: 'Open Sans', sans-serif;
-$font-family-alt: 'Roboto', sans-serif;
+$font-family-default: 'Open Sans', sans-serif !default;
+$font-family-alt: 'Roboto', sans-serif !default;
 
-$font-size-sm: 12px;
-$font-size: 16px;
-$font-size-lg: 24px;
+$font-size-sm: 12px !default;
+$font-size-default: 16px !default;
+$font-size-lg: 24px !default;
 
-$font-weight-thin: 100;
-$font-weight-light: 300;
-$font-weight: 400;
-$font-weight-medium: 500;
-$font-weight-bold: 700;
-$font-weight-black: 900;
+$font-weight-thin: 100 !default;
+$font-weight-light: 300 !default;
+$font-weight-default: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+$font-weight-black: 900 !default;
 
-
-$font: $font-weight $font-size $font-family;
-
+$font-default: $font-weight-default $font-size-default $font-family-default !default;
 
 // Border Radius
-$border-radius-sm: 2px;
-$border-radius: 6px;
-$border-radius-lg: 15px;
+$border-radius-sm: 2px !default;
+$border-radius-default: 6px !default;
+$border-radius-lg: 15px !default;
 
-$border-radius-pill: 500px;
+$border-radius-pill: 500px !default;
 
 // Margin
-$margin-y-sm: 4px;
-$margin-x-sm: 4px;
-$margin-y: 15px;
-$margin-x: 15px;
-$margin-y-lg: 25px;
-$margin-x-lg: 25px;
+$margin-y-sm: 4px !default;
+$margin-x-sm: 4px !default;
+$margin-y-default: 15px !default;
+$margin-x-default: 15px !default;
+$margin-y-lg: 25px !default;
+$margin-x-lg: 25px !default;
 
-$margin-sm: $margin-y-sm $margin-x-sm;
-$margin: $margin-y $margin-x;
-$margin-lg: $margin-y-lg $margin-x-lg;
+$margin-sm: $margin-y-sm $margin-x-sm !default;
+$margin-default: $margin-y-default $margin-x-default !default;
+$margin-lg: $margin-y-lg $margin-x-lg !default;
 
 // Padding
-$padding-y-sm: 4px;
-$padding-x-sm: 4px;
-$padding-y: 15px;
-$padding-x: 15px;
-$padding-y-lg: 25px;
-$padding-x-lg: 25px;
+$padding-y-sm: 4px !default;
+$padding-x-sm: 4px !default;
+$padding-y-default: 15px !default;
+$padding-x-default: 15px !default;
+$padding-y-lg: 25px !default;
+$padding-x-lg: 25px !default;
 
-$padding-sm: $padding-y-sm $padding-x-sm;
-$padding: $padding-y $padding-x;
-$padding-lg: $padding-y-lg $padding-x-lg;
+$padding-sm: $padding-y-sm $padding-x-sm !default;
+$padding-default: $padding-y-default $padding-x-default !default;
+$padding-lg: $padding-y-lg $padding-x-lg !default;
 
 // Alerts
-$alert-margin-bottom: $margin-y;
-$alert-padding: $padding;
+$alert-margin-bottom: $margin-y-default !default;
+$alert-padding: $padding-default !default;
 
 // Badges
-$badge-padding: 3px 6px 4px;
-$badge-border-radius: $border-radius-sm;
-$badge-font-size: .7em;
+$badge-padding: 3px 6px 4px !default;
+$badge-border-radius: $border-radius-sm !default;
+$badge-font-size: .7em !default;
 
 // Breadcrumbs
-$breadcrumb-color: $sasha-grey;
-$breadcrumb-color-active: $sasha-dark;
-$breadcrumb-divider: "/";
-$breadcrumb-font-size: .9em;
+$breadcrumb-color: $sasha-grey !default;
+$breadcrumb-color-active: $sasha-dark !default;
+$breadcrumb-divider: "/" !default;
+$breadcrumb-font-size: .9em !default;
 
 // Buttons
-$btn-font-size: $font-size;
-$btn-font-weight: $font-weight;
+$btn-border-width: 2px !default;
+$btn-font-size: $font-size-default !default;
+$btn-font-weight: $font-weight-default !default;
