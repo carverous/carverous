@@ -6,6 +6,7 @@
   
   &[href]:hover {
     background-color: darken($theme-color, 10%);
+    color: if($theme-color == #fff, $color-default, #fff);
     text-decoration: none;
   }
 }

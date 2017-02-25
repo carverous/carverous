@@ -1,80 +1,105 @@
 // Buttons
-// TODO: Find a way to prevent transition on page load without JS
+// TODO: Find a way to prevent transition on page load without JS (Chrome Bug!)
 
-@mixin btn-mix($theme-color, $alpha, $hasBorder) {
-  background-color: rgba($theme-color, $alpha);
-  border: if($hasBorder, $btn-border-width solid $theme-color, none);
-  color: if($theme-color == #fff, $color-default, #fff);
+@mixin btn-mix($theme-color, $border-color, $color) {
+  background: $theme-color;
+  border: $btn-border-width solid $border-color;
+  color: $color;
+}
 
-  &:hover {
-    background-color: lighten($theme-color, 5%);
-    transition: all .25s;
-  }
-  &:active {
-    background-color: darken($theme-color, 5%);
-    transition: all .25s;
-  }
+@mixin btn-focus($theme-color) {
   &:focus {
-
-  }
-  &[href]:hover {
-    text-decoration: none;
+    box-shadow: 0 0 0 2px lighten($theme-color, 15%);
   }
 }
 
-@mixin btn-size($btn-padding-y, $btn-padding-x) {
-
+@mixin btn-size($font-size, $padding-y, $padding-x) {
+  font-size: $font-size;
+  padding: $padding-y $padding-x;
 }
 
 .btn {
+  @include border-radius($border-radius-sm);
+  @include btn-size($btn-font-size-default, $btn-padding-y-default, $btn-padding-x-default);
   display: inline-block;
-  font-size: 0.9em;
   font-weight: $btn-font-weight;
-  padding: 10px 15px;
+  outline: none;
   text-align: center;
   text-transform: uppercase;
+  transition: all .5s;
   user-select: none; // To prevent highlight the text inside the buttons
   vertical-align: middle;
   white-space: nowrap; // To prevent from wrapping or placing text on the new line
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @each $name, $value in $theme-colors {
 
     &-#{$name} {
-      @include border-radius($border-radius-sm);
-      @include btn-mix($value, 1, false);
+      $color: if($name == 'inverse', $color-default, #fff);
+      @include btn-mix($value, $value, $color);
+
+      &:hover {
+        background: lighten($value, 5%);
+        border-color: lighten($value, 5%);
+        color: $color;
+        text-decoration: none;
+      }
+
+      &:active {
+        background: darken($value, 5%);
+        border-color: darken($value, 5%);
+      }
+
+      @include btn-focus($value);
     }
 
     &-#{$name}-outline {
-      @include border-radius($border-radius-sm);
-      @include btn-mix($value, 0, true);
-      color: $value;
+      @include btn-mix(none, $value, $value);
 
-      &:hover {
+      &:hover, &:focus {
+        background: lighten($value, 5%);
         border-color: lighten($value, 5%);
-        color: if($value == #FFF, #000, #FFF);
+        color: if($name == 'inverse', $color-default, #fff);
+        text-decoration: none;
       }
+
+      &:active {
+        background: darken($value, 5%);
+        border-color: darken($value, 5%);
+      }
+
+      @include btn-focus($value);
     }
 
     &-#{$name}-transparent {
-      @include border-radius($border-radius-sm);
-      @include btn-mix($value, 0, false);
-      color: $value;
+      @include btn-mix(none, rgba($value, 0), $value);
 
-      &:hover {
+      &:hover, &:focus {
         background: rgba($value, .3);
+        color: $value;
+        text-decoration: none;
       }
-    }
-    &-#{$name}-semi-transparent {
-      @include border-radius($border-radius-sm);
-      @include btn-mix($value, .2, true);
-      color: #fff;
-      &:hover {
-        background: rgba($value, .4);
+
+      &:active {
+        background: rgba($value, .5);
       }
+
+      @include btn-focus($value);
     }
   }
 
+  &-sm {
+    @include btn-size($font-size-sm, $btn-padding-y-sm, $btn-padding-x-sm);
+  }
+
+  &-lg {
+    @include btn-size($font-size-lg, $btn-padding-y-lg, $btn-padding-x-lg);
+  }
+
   &-pill {
-    @include border-radius($border-radius-pill);
+    border-radius: $border-radius-pill;
   }
 }

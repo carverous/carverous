@@ -19,14 +19,4 @@
       @include alert-mix($value);
     }
   }
-
-  // TODO: Figure out if this one is needed
-  /*.alert-dismissible {
-    .close {
-      position: relative;
-      top: -$padding-default-y-default;
-      right: -$padding-default-x-default;
-      padding-default: $padding-default-y-default $padding-default-x-default;
-    }
-  }*/
 }
