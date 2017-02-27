@@ -7,8 +7,28 @@
   color: $color;
 }
 
+@mixin btn-hover($theme-color, $border-color, $color) {
+  &:not(.disabled):not([disabled]):hover {
+    background: $theme-color;
+    border-color: $border-color;
+    color: $color;
+    text-decoration: none;
+  }
+  &:hover {
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+@mixin btn-active($theme-color, $border-color) {
+  &:not(.disabled):not([disabled]):active {
+      background: $theme-color;
+      border-color: $border-color;
+  }
+}
+
 @mixin btn-focus($theme-color) {
-  &:focus {
+  &:not(.disabled):not([disabled]):focus {
     box-shadow: 0 0 0 2px lighten($theme-color, 15%);
   }
 }
@@ -26,68 +46,47 @@
   outline: none;
   text-align: center;
   text-transform: uppercase;
-  transition: all .5s;
+  transition: all .25s;
   user-select: none; // To prevent highlight the text inside the buttons
   vertical-align: middle;
   white-space: nowrap; // To prevent from wrapping or placing text on the new line
-
-  &:hover {
-    cursor: pointer;
-  }
 
   @each $name, $value in $theme-colors {
 
     &-#{$name} {
       $color: if($name == 'inverse', $color-default, #fff);
       @include btn-mix($value, $value, $color);
+      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color);
+      @include btn-active(darken($value, 5%), darken($value, 5%));
+      @include btn-focus($value);
+    }
 
-      &:hover {
+    &-#{$name}-outline {
+      $color: if($name == 'inverse', $color-default, #fff);
+      @include btn-mix(none, $value, $value);
+      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color);
+      @include btn-active(darken($value, 5%), darken($value, 5%));
+      @include btn-focus($value);
+
+      &:not(.disabled):not([disabled]):focus {
         background: lighten($value, 5%);
         border-color: lighten($value, 5%);
         color: $color;
         text-decoration: none;
       }
-
-      &:active {
-        background: darken($value, 5%);
-        border-color: darken($value, 5%);
-      }
-
-      @include btn-focus($value);
-    }
-
-    &-#{$name}-outline {
-      @include btn-mix(none, $value, $value);
-
-      &:hover, &:focus {
-        background: lighten($value, 5%);
-        border-color: lighten($value, 5%);
-        color: if($name == 'inverse', $color-default, #fff);
-        text-decoration: none;
-      }
-
-      &:active {
-        background: darken($value, 5%);
-        border-color: darken($value, 5%);
-      }
-
-      @include btn-focus($value);
     }
 
     &-#{$name}-transparent {
       @include btn-mix(none, rgba($value, 0), $value);
+      @include btn-hover(rgba($value, .3), rgba($value, 0), $value);
+      @include btn-active(rgba($value, .5), rgba($value, 0));
+      @include btn-focus($value);
 
-      &:hover, &:focus {
+      &:not(.disabled):not([disabled]):focus {
         background: rgba($value, .3);
         color: $value;
         text-decoration: none;
       }
-
-      &:active {
-        background: rgba($value, .5);
-      }
-
-      @include btn-focus($value);
     }
   }
 
@@ -99,7 +98,34 @@
     @include btn-size($font-size-lg, $btn-padding-y-lg, $btn-padding-x-lg);
   }
 
+  &-block {
+    display: block;
+    width: 100%;
+  }
+
+  &-block + &-block {
+    margin-top: $btn-block-margin-y;
+  }
+
   &-pill {
     border-radius: $border-radius-pill;
+  }
+
+  &.disabled, &:disabled {
+    cursor: default;
+    opacity: .5;
+  }
+}
+
+// Disable click event on <a> elements
+a.btn.disabled, fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
   }
 }
