@@ -42,4 +42,3 @@ gulp.task('watch', function() {
         ['deploy']
     );
 });
-

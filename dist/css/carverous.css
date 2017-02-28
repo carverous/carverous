@@ -584,9 +584,6 @@ h6 {
       border-color: #9fb0b9;
       color: #fff;
       text-decoration: none; }
-    .btn-default:hover {
-      color: #fff;
-      text-decoration: none; }
     .btn-default:not(.disabled):not([disabled]):active {
       background: #8198a3;
       border-color: #8198a3; }
@@ -599,9 +596,6 @@ h6 {
     .btn-default-outline:not(.disabled):not([disabled]):hover {
       background: #9fb0b9;
       border-color: #9fb0b9;
-      color: #fff;
-      text-decoration: none; }
-    .btn-default-outline:hover {
       color: #fff;
       text-decoration: none; }
     .btn-default-outline:not(.disabled):not([disabled]):active {
@@ -623,9 +617,6 @@ h6 {
       border-color: rgba(144, 164, 174, 0);
       color: #90A4AE;
       text-decoration: none; }
-    .btn-default-transparent:hover {
-      color: #90A4AE;
-      text-decoration: none; }
     .btn-default-transparent:not(.disabled):not([disabled]):active {
       background: rgba(144, 164, 174, 0.5);
       border-color: rgba(144, 164, 174, 0); }
@@ -644,9 +635,6 @@ h6 {
       border-color: #f16a67;
       color: #fff;
       text-decoration: none; }
-    .btn-danger:hover {
-      color: #fff;
-      text-decoration: none; }
     .btn-danger:not(.disabled):not([disabled]):active {
       background: #ed3c39;
       border-color: #ed3c39; }
@@ -659,9 +647,6 @@ h6 {
     .btn-danger-outline:not(.disabled):not([disabled]):hover {
       background: #f16a67;
       border-color: #f16a67;
-      color: #fff;
-      text-decoration: none; }
-    .btn-danger-outline:hover {
       color: #fff;
       text-decoration: none; }
     .btn-danger-outline:not(.disabled):not([disabled]):active {
@@ -683,9 +668,6 @@ h6 {
       border-color: rgba(239, 83, 80, 0);
       color: #ef5350;
       text-decoration: none; }
-    .btn-danger-transparent:hover {
-      color: #ef5350;
-      text-decoration: none; }
     .btn-danger-transparent:not(.disabled):not([disabled]):active {
       background: rgba(239, 83, 80, 0.5);
       border-color: rgba(239, 83, 80, 0); }
@@ -704,9 +686,6 @@ h6 {
       border-color: #a8d6fa;
       color: #fff;
       text-decoration: none; }
-    .btn-info:hover {
-      color: #fff;
-      text-decoration: none; }
     .btn-info:not(.disabled):not([disabled]):active {
       background: #78bef8;
       border-color: #78bef8; }
@@ -719,9 +698,6 @@ h6 {
     .btn-info-outline:not(.disabled):not([disabled]):hover {
       background: #a8d6fa;
       border-color: #a8d6fa;
-      color: #fff;
-      text-decoration: none; }
-    .btn-info-outline:hover {
       color: #fff;
       text-decoration: none; }
     .btn-info-outline:not(.disabled):not([disabled]):active {
@@ -743,9 +719,6 @@ h6 {
       border-color: rgba(144, 202, 249, 0);
       color: #90CAF9;
       text-decoration: none; }
-    .btn-info-transparent:hover {
-      color: #90CAF9;
-      text-decoration: none; }
     .btn-info-transparent:not(.disabled):not([disabled]):active {
       background: rgba(144, 202, 249, 0.5);
       border-color: rgba(144, 202, 249, 0); }
@@ -764,9 +737,6 @@ h6 {
       border-color: white;
       color: #545454;
       text-decoration: none; }
-    .btn-inverse:hover {
-      color: #545454;
-      text-decoration: none; }
     .btn-inverse:not(.disabled):not([disabled]):active {
       background: #f2f2f2;
       border-color: #f2f2f2; }
@@ -779,9 +749,6 @@ h6 {
     .btn-inverse-outline:not(.disabled):not([disabled]):hover {
       background: white;
       border-color: white;
-      color: #545454;
-      text-decoration: none; }
-    .btn-inverse-outline:hover {
       color: #545454;
       text-decoration: none; }
     .btn-inverse-outline:not(.disabled):not([disabled]):active {
@@ -803,9 +770,6 @@ h6 {
       border-color: rgba(255, 255, 255, 0);
       color: #fff;
       text-decoration: none; }
-    .btn-inverse-transparent:hover {
-      color: #fff;
-      text-decoration: none; }
     .btn-inverse-transparent:not(.disabled):not([disabled]):active {
       background: rgba(255, 255, 255, 0.5);
       border-color: rgba(255, 255, 255, 0); }
@@ -824,9 +788,6 @@ h6 {
       border-color: #3d566e;
       color: #fff;
       text-decoration: none; }
-    .btn-primary:hover {
-      color: #fff;
-      text-decoration: none; }
     .btn-primary:not(.disabled):not([disabled]):active {
       background: #2b3c4e;
       border-color: #2b3c4e; }
@@ -839,9 +800,6 @@ h6 {
     .btn-primary-outline:not(.disabled):not([disabled]):hover {
       background: #3d566e;
       border-color: #3d566e;
-      color: #fff;
-      text-decoration: none; }
-    .btn-primary-outline:hover {
       color: #fff;
       text-decoration: none; }
     .btn-primary-outline:not(.disabled):not([disabled]):active {
@@ -863,9 +821,6 @@ h6 {
       border-color: rgba(52, 73, 94, 0);
       color: #34495e;
       text-decoration: none; }
-    .btn-primary-transparent:hover {
-      color: #34495e;
-      text-decoration: none; }
     .btn-primary-transparent:not(.disabled):not([disabled]):active {
       background: rgba(52, 73, 94, 0.5);
       border-color: rgba(52, 73, 94, 0); }
@@ -884,9 +839,6 @@ h6 {
       border-color: #63d6e5;
       color: #fff;
       text-decoration: none; }
-    .btn-secondary:hover {
-      color: #fff;
-      text-decoration: none; }
     .btn-secondary:not(.disabled):not([disabled]):active {
       background: #37cadd;
       border-color: #37cadd; }
@@ -899,9 +851,6 @@ h6 {
     .btn-secondary-outline:not(.disabled):not([disabled]):hover {
       background: #63d6e5;
       border-color: #63d6e5;
-      color: #fff;
-      text-decoration: none; }
-    .btn-secondary-outline:hover {
       color: #fff;
       text-decoration: none; }
     .btn-secondary-outline:not(.disabled):not([disabled]):active {
@@ -923,9 +872,6 @@ h6 {
       border-color: rgba(77, 208, 225, 0);
       color: #4DD0E1;
       text-decoration: none; }
-    .btn-secondary-transparent:hover {
-      color: #4DD0E1;
-      text-decoration: none; }
     .btn-secondary-transparent:not(.disabled):not([disabled]):active {
       background: rgba(77, 208, 225, 0.5);
       border-color: rgba(77, 208, 225, 0); }
@@ -944,9 +890,6 @@ h6 {
       border-color: #a8d278;
       color: #fff;
       text-decoration: none; }
-    .btn-success:hover {
-      color: #fff;
-      text-decoration: none; }
     .btn-success:not(.disabled):not([disabled]):active {
       background: #90c652;
       border-color: #90c652; }
@@ -959,9 +902,6 @@ h6 {
     .btn-success-outline:not(.disabled):not([disabled]):hover {
       background: #a8d278;
       border-color: #a8d278;
-      color: #fff;
-      text-decoration: none; }
-    .btn-success-outline:hover {
       color: #fff;
       text-decoration: none; }
     .btn-success-outline:not(.disabled):not([disabled]):active {
@@ -983,9 +923,6 @@ h6 {
       border-color: rgba(156, 204, 101, 0);
       color: #9CCC65;
       text-decoration: none; }
-    .btn-success-transparent:hover {
-      color: #9CCC65;
-      text-decoration: none; }
     .btn-success-transparent:not(.disabled):not([disabled]):active {
       background: rgba(156, 204, 101, 0.5);
       border-color: rgba(156, 204, 101, 0); }
@@ -1004,9 +941,6 @@ h6 {
       border-color: #ffc167;
       color: #fff;
       text-decoration: none; }
-    .btn-warning:hover {
-      color: #fff;
-      text-decoration: none; }
     .btn-warning:not(.disabled):not([disabled]):active {
       background: #ffad34;
       border-color: #ffad34; }
@@ -1019,9 +953,6 @@ h6 {
     .btn-warning-outline:not(.disabled):not([disabled]):hover {
       background: #ffc167;
       border-color: #ffc167;
-      color: #fff;
-      text-decoration: none; }
-    .btn-warning-outline:hover {
       color: #fff;
       text-decoration: none; }
     .btn-warning-outline:not(.disabled):not([disabled]):active {
@@ -1043,9 +974,6 @@ h6 {
       border-color: rgba(255, 183, 77, 0);
       color: #FFB74D;
       text-decoration: none; }
-    .btn-warning-transparent:hover {
-      color: #FFB74D;
-      text-decoration: none; }
     .btn-warning-transparent:not(.disabled):not([disabled]):active {
       background: rgba(255, 183, 77, 0.5);
       border-color: rgba(255, 183, 77, 0); }
@@ -1059,7 +987,7 @@ h6 {
     font-size: 12px;
     padding: 4px 8px; }
   .btn-lg {
-    font-size: 18px;
+    font-size: 16px;
     padding: 16px 18px; }
   .btn-block {
     display: block;
@@ -1082,7 +1010,7 @@ input[type="button"].btn-block {
 
 .close {
   float: right;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   line-height: .85;
   color: #000;

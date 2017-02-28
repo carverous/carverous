@@ -14,10 +14,12 @@
     color: $color;
     text-decoration: none;
   }
-  &:hover {
-    color: $color;
-    text-decoration: none;
-  }
+
+  // TODO: wtf is this for?
+  //&:hover {
+  //  color: $color;
+  //  text-decoration: none;
+  //}
 }
 
 @mixin btn-active($theme-color, $border-color) {
@@ -91,11 +93,11 @@
   }
 
   &-sm {
-    @include btn-size($font-size-sm, $btn-padding-y-sm, $btn-padding-x-sm);
+    @include btn-size($btn-font-size-sm, $btn-padding-y-sm, $btn-padding-x-sm);
   }
 
   &-lg {
-    @include btn-size($font-size-lg, $btn-padding-y-lg, $btn-padding-x-lg);
+    @include btn-size($btn-font-size-lg, $btn-padding-y-lg, $btn-padding-x-lg);
   }
 
   &-block {
