@@ -453,11 +453,11 @@ h6 {
       font-weight: 700;
       color: #fff; }
   .alert-secondary {
-    background-color: #79dce8;
-    color: #1d9bab; }
+    background-color: #f9bdd1;
+    color: #eb3270; }
     .alert-secondary .alert-link {
       font-weight: 700;
-      color: #1d9bab; }
+      color: #eb3270; }
   .alert-success {
     background-color: #b5d98b;
     color: #699833; }
@@ -515,10 +515,10 @@ h6 {
       color: #fff;
       text-decoration: none; }
   .badge-secondary {
-    background-color: #4DD0E1;
+    background-color: #F48FB1;
     color: #fff; }
     .badge-secondary[href]:hover {
-      background-color: #24c2d7;
+      background-color: #ef6191;
       color: #fff;
       text-decoration: none; }
   .badge-success {
@@ -554,31 +554,7 @@ h6 {
   background: #34495e; }
 
 .bg-secondary {
-  background: #4DD0E1; }
-
-.bg-success {
-  background: #9CCC65; }
-
-.bg-warning {
-  background: #FFB74D; }
-
-.bg-default {
-  background: #90A4AE; }
-
-.bg-danger {
-  background: #ef5350; }
-
-.bg-info {
-  background: #90CAF9; }
-
-.bg-inverse {
-  background: #fff; }
-
-.bg-primary {
-  background: #34495e; }
-
-.bg-secondary {
-  background: #4DD0E1; }
+  background: #F48FB1; }
 
 .bg-success {
   background: #9CCC65; }
@@ -838,47 +814,47 @@ h6 {
     .btn-primary-transparent:not(.disabled):not([disabled]):focus {
       box-shadow: 0 0 0 2px #4f6f8f; }
   .btn-secondary {
-    background: #4DD0E1;
-    border: 2px solid #4DD0E1;
+    background: #F48FB1;
+    border: 2px solid #F48FB1;
     color: #fff; }
     .btn-secondary:not(.disabled):not([disabled]):hover {
-      background: #63d6e5;
-      border-color: #63d6e5;
+      background: #f6a6c1;
+      border-color: #f6a6c1;
       color: #fff;
       text-decoration: none; }
     .btn-secondary:not(.disabled):not([disabled]):active {
-      background: #37cadd;
-      border-color: #37cadd; }
+      background: #f278a1;
+      border-color: #f278a1; }
     .btn-secondary:not(.disabled):not([disabled]):focus {
-      box-shadow: 0 0 0 2px #8ee1ec; }
+      box-shadow: 0 0 0 2px #fbd5e2; }
   .btn-secondary-outline {
     background: none;
-    border: 2px solid #4DD0E1;
-    color: #4DD0E1; }
+    border: 2px solid #F48FB1;
+    color: #F48FB1; }
     .btn-secondary-outline:not(.disabled):not([disabled]):hover {
-      background: #63d6e5;
-      border-color: #63d6e5;
+      background: #f6a6c1;
+      border-color: #f6a6c1;
       color: #fff;
       text-decoration: none; }
     .btn-secondary-outline:not(.disabled):not([disabled]):active {
-      background: #37cadd;
-      border-color: #37cadd; }
+      background: #f278a1;
+      border-color: #f278a1; }
     .btn-secondary-outline:not(.disabled):not([disabled]):focus {
-      box-shadow: 0 0 0 2px #8ee1ec; }
+      box-shadow: 0 0 0 2px #fbd5e2; }
   .btn-secondary-transparent {
     background: none;
-    border: 2px solid rgba(77, 208, 225, 0);
-    color: #4DD0E1; }
+    border: 2px solid rgba(244, 143, 177, 0);
+    color: #F48FB1; }
     .btn-secondary-transparent:not(.disabled):not([disabled]):hover {
-      background: rgba(77, 208, 225, 0.3);
-      border-color: rgba(77, 208, 225, 0);
-      color: #4DD0E1;
+      background: rgba(244, 143, 177, 0.3);
+      border-color: rgba(244, 143, 177, 0);
+      color: #F48FB1;
       text-decoration: none; }
     .btn-secondary-transparent:not(.disabled):not([disabled]):active {
-      background: rgba(77, 208, 225, 0.5);
-      border-color: rgba(77, 208, 225, 0); }
+      background: rgba(244, 143, 177, 0.5);
+      border-color: rgba(244, 143, 177, 0); }
     .btn-secondary-transparent:not(.disabled):not([disabled]):focus {
-      box-shadow: 0 0 0 2px #8ee1ec; }
+      box-shadow: 0 0 0 2px #fbd5e2; }
   .btn-success {
     background: #9CCC65;
     border: 2px solid #9CCC65;
@@ -1003,3 +979,42 @@ button.close {
   padding: 0;
   background: transparent;
   border: 0; }
+
+.progress {
+  background: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.9em;
+  line-height: 1.3rem;
+  overflow: hidden;
+  text-align: center; }
+  .progress .progress-bar {
+    height: 1.3rem;
+    line-height: 1.3rem; }
+    .progress .progress-bar-default {
+      background: #9fb0b9;
+      color: #5b727d; }
+    .progress .progress-bar-danger {
+      background: #f16a67;
+      color: #c71612; }
+    .progress .progress-bar-info {
+      background: #a8d6fa;
+      color: #2f9cf4; }
+    .progress .progress-bar-inverse {
+      background: white;
+      color: #cccccc; }
+    .progress .progress-bar-primary {
+      background: #3d566e;
+      color: #fff; }
+    .progress .progress-bar-secondary {
+      background: #f6a6c1;
+      color: #eb3270; }
+    .progress .progress-bar-success {
+      background: #a8d278;
+      color: #699833; }
+    .progress .progress-bar-warning {
+      background: #ffc167;
+      color: #e68900; }
+  .progress + .progress {
+    margin-top: 15px; }

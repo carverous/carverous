@@ -1,0 +1,25 @@
+@import "variables";
+
+.progress {
+  background: $progress-bg;
+  display: flex;
+  font-size: $progress-font-size;
+  line-height: $progress-height;
+  overflow: hidden;
+  text-align: center;
+
+  .progress-bar {
+    @each $name, $value in $theme-colors {
+      &-#{$name} {
+        background: lighten($value, 5%);
+        color: set-color($value);
+      }
+    }
+    height: $progress-height;
+    line-height: $progress-height;
+  }
+
+  & + & {
+    margin-top: 15px;
+  }
+}
