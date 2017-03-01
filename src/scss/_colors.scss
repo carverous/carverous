@@ -1,0 +1,27 @@
+// Colours
+
+$default: #90A4AE !default;
+$danger: #ef5350 !default;
+$info: #90CAF9 !default;
+$inverse: #fff !default;
+$primary: #34495e !default;
+$secondary: #4DD0E1 !default; // #F48FB1
+$success: #9CCC65 !default; // #02B875
+$warning: #FFB74D !default;
+
+$theme-colors:
+                (default, $default),
+                (danger, $danger),
+                (info, $info),
+                (inverse, $inverse),
+                (primary, $primary),
+                (secondary, $secondary),
+                (success, $success),
+                (warning, $warning);
+
+// Shades of Grey
+$sasha-white: #fff !default;
+$sasha-light: #f1f1f1 !default;
+$sasha-grey: #c6c6c6 !default;
+$sasha-dark: #aaa !default;
+$sasha-black: #000 !default;

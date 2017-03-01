@@ -1,0 +1,14 @@
+// Backgrounds
+
+.bg {
+  @each $name, $value in $theme-colors {
+    &-#{$name} {
+      background: $value;
+    }
+  }
+  @each $name, $value in $theme-colors {
+    &-#{$name} {
+      background: $value;
+    }
+  }
+}

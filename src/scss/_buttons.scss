@@ -15,7 +15,7 @@
     text-decoration: none;
   }
 
-  // TODO: wtf is this for?
+  // TODO: What is this for again? Lol
   //&:hover {
   //  color: $color;
   //  text-decoration: none;
@@ -70,12 +70,12 @@
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
 
-      &:not(.disabled):not([disabled]):focus {
-        background: lighten($value, 5%);
-        border-color: lighten($value, 5%);
-        color: $color;
-        text-decoration: none;
-      }
+      //&:not(.disabled):not([disabled]):focus {
+      //  background: $value;
+      //  border-color: $value;
+      //  color: $color;
+      //  text-decoration: none;
+      //}
     }
 
     &-#{$name}-transparent {
@@ -84,11 +84,11 @@
       @include btn-active(rgba($value, .5), rgba($value, 0));
       @include btn-focus($value);
 
-      &:not(.disabled):not([disabled]):focus {
-        background: rgba($value, .3);
-        color: $value;
-        text-decoration: none;
-      }
+      //&:not(.disabled):not([disabled]):focus {
+      //  background: rgba($value, .3);
+      //  color: $value;
+      //  text-decoration: none;
+      //}
     }
   }
 
