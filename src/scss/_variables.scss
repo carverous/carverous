@@ -6,10 +6,10 @@
 $enable-rounded: true !default;
 
 // Body
-$body-bg: #fff !default;
+$body-bg: $sasha-white !default;
 $color-default: #545454 !default;
 
-// Link Colour
+// Link Color
 $link-color-default: #50abe0 !default;
 
 // Fonts
@@ -20,6 +20,18 @@ $font-size-sm: 12px !default;
 $font-size-default: 16px !default;
 $font-size-lg: 24px !default;
 
+$font-size-h1: 3.5rem !default;
+$font-size-h2: 3rem !default;
+$font-size-h3: 2.5rem !default;
+$font-size-h4: 2rem !default;
+$font-size-h5: 1.5rem !default;
+$font-size-h6: 1rem !default;
+
+$font-size-lg-1: 6rem !default;
+$font-size-lg-2: 5.5rem !default;
+$font-size-lg-3: 4.5rem !default;
+$font-size-lg-4: 4rem !default;
+
 $font-weight-thin: 100 !default;
 $font-weight-light: 300 !default;
 $font-weight-default: 400 !default;
@@ -28,6 +40,15 @@ $font-weight-bold: 700 !default;
 $font-weight-black: 900 !default;
 
 $font-default: $font-weight-default $font-size-default $font-family-default !default;
+
+$font-weights:
+                (thin, 100),
+                (light, 300),
+                (normal, 400),
+                (medium, 500),
+                (bold, 700),
+                (black, 900);
+
 
 // Border Radius
 $border-radius-sm: 2px !default;
@@ -65,9 +86,15 @@ $alert-margin-bottom: $margin-y-default !default;
 $alert-padding: $padding-default !default;
 
 // Badges
-$badge-padding: 3px 6px 4px !default;
+$badge-padding: 2px 6px 3px !default;
 $badge-border-radius: $border-radius-sm !default;
-$badge-font-size: .7em !default;
+$badge-font-size: .8em !default;
+
+//Blockquotes
+$blockquote-border-color: $sasha-light;
+$blockquote-border-width: 3px;
+$blockquote-font-size: $font-size-default;
+$blockquote-footer-color: $sasha-grey;
 
 // Breadcrumbs
 $breadcrumb-color: $sasha-grey !default;
@@ -88,15 +115,14 @@ $btn-padding-y-sm: 4px !default;
 $btn-padding-x-sm: 8px !default;
 
 $btn-padding-y-default: 8px !default;
-$btn-padding-x-default: 12px !default;
+$btn-padding-x-default: 16px !default;
 
 $btn-padding-y-lg: 16px !default;
-$btn-padding-x-lg: 18px !default;
+$btn-padding-x-lg: 26px !default;
 
 $btn-font-weight: $font-weight-default !default;
 
 // Progress
-
 $progress-bg: $sasha-light;
 $progress-bar-bg: $primary;
 $progress-font-size: 0.9em;

@@ -1,7 +1,8 @@
 @import "variables";
 
-.progress {
+.progress-container {
   background: $progress-bg;
+  @include border-radius($border-radius-sm);
   display: flex;
   font-size: $progress-font-size;
   line-height: $progress-height;
@@ -17,6 +18,10 @@
     }
     height: $progress-height;
     line-height: $progress-height;
+  }
+
+  &-pill {
+    @include border-radius($border-radius-pill);
   }
 
   & + & {

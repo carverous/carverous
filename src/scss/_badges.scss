@@ -15,9 +15,10 @@
   border-radius: $badge-border-radius;
   display: inline-block;
   font-size: $badge-font-size;
-  font-weight: $font-weight-bold;
-  margin-top: -0.38em;
+  font-weight: $font-weight-default;
+  margin-top: -0.3em;
   padding: $badge-padding;
+  //text-transform: uppercase;
   vertical-align: middle;
 
   @each $name, $value in $theme-colors {
@@ -27,6 +28,6 @@
   }
 
   &-pill {
-    border-radius: $border-radius-pill;
+    @include border-radius($border-radius-pill);
   }
 }
