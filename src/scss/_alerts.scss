@@ -1,22 +1,27 @@
 // Alerts
 
-@mixin alert-mix($theme-color) {
-  background-color: lighten($theme-color, 10%);
-  color: set-color($theme-color);
+@mixin alert-mix($theme) {
+  background-color: lighten($theme, 10%);
+  color: contrast-color($theme);
 
   .alert-link {
-    font-weight: $font-weight-bold;
-    color: set-color($theme-color);
+    font-weight: $alert-link-font-weight;
+    color: contrast-color($theme);
   }
 }
 
 .alert {
-  margin-bottom: $alert-margin-bottom;
   padding: $alert-padding;
 
   @each $name, $value in $theme-colors {
     &-#{$name} {
       @include alert-mix($value);
     }
+  }
+
+  // It doesn't make sense adding the default and inverse in alerts
+
+  & + & {
+    margin-top: $alert-margin-y;
   }
 }

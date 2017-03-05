@@ -1,7 +1,7 @@
 @import "variables";
 
 .progress-container {
-  background: $progress-bg;
+  background: $progress-container-bg;
   @include border-radius($border-radius-sm);
   display: flex;
   font-size: $progress-font-size;
@@ -10,21 +10,21 @@
   text-align: center;
 
   .progress-bar {
+
     @each $name, $value in $theme-colors {
       &-#{$name} {
         background: lighten($value, 5%);
-        color: set-color($value);
+        color: contrast-color($value);
       }
     }
+
+    // It doesn't make sense adding the default and inverse in progress
+
     height: $progress-height;
     line-height: $progress-height;
   }
 
-  &-pill {
-    @include border-radius($border-radius-pill);
-  }
-
   & + & {
-    margin-top: 15px;
+    margin-top: $progress-margin-y;
   }
 }

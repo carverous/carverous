@@ -35,7 +35,7 @@ $font-size-lg-4: 4rem !default;
 $font-weight-thin: 100 !default;
 $font-weight-light: 300 !default;
 $font-weight-default: 400 !default;
-$font-weight-medium: 500 !default;
+$font-weight-medium: 600 !default;
 $font-weight-bold: 700 !default;
 $font-weight-black: 900 !default;
 
@@ -45,7 +45,7 @@ $font-weights:
                 (thin, 100),
                 (light, 300),
                 (normal, 400),
-                (medium, 500),
+                (medium, 600),
                 (bold, 700),
                 (black, 900);
 
@@ -57,38 +57,32 @@ $border-radius-lg: 15px !default;
 
 $border-radius-pill: 500px !default;
 
-// Margin
-$margin-y-sm: 4px !default;
-$margin-x-sm: 4px !default;
-$margin-y-default: 15px !default;
-$margin-x-default: 15px !default;
-$margin-y-lg: 25px !default;
-$margin-x-lg: 25px !default;
+// Margin and Padding
+$spacer-y-sm: 4px !default;
+$spacer-x-sm: 4px !default;
+$spacer-y-default: 10px !default;
+$spacer-x-default: 10px !default;
+$spacer-y-lg: 15px !default;
+$spacer-x-lg: 15px !default;
+$spacer-y-xl: 25px !default;
+$spacer-x-xl: 25px !default;
 
-$margin-sm: $margin-y-sm $margin-x-sm !default;
-$margin-default: $margin-y-default $margin-x-default !default;
-$margin-lg: $margin-y-lg $margin-x-lg !default;
-
-// Padding
-$padding-y-sm: 4px !default;
-$padding-x-sm: 4px !default;
-$padding-y-default: 15px !default;
-$padding-x-default: 15px !default;
-$padding-y-lg: 25px !default;
-$padding-x-lg: 25px !default;
-
-$padding-sm: $padding-y-sm $padding-x-sm !default;
-$padding-default: $padding-y-default $padding-x-default !default;
-$padding-lg: $padding-y-lg $padding-x-lg !default;
+$spacer-sm: $spacer-y-sm $spacer-x-sm !default;
+$spacer-default: $spacer-y-default $spacer-x-default !default;
+$spacer-lg: $spacer-y-lg $spacer-x-lg !default;
+$spacer-xl: $spacer-y-xl $spacer-x-xl !default;
 
 // Alerts
-$alert-margin-bottom: $margin-y-default !default;
-$alert-padding: $padding-default !default;
+$alert-margin-y: $spacer-y-default !default;
+$alert-padding: $spacer-lg !default;
+$alert-link-font-weight: $font-weight-bold;
 
 // Badges
-$badge-padding: 2px 6px 3px !default;
 $badge-border-radius: $border-radius-sm !default;
 $badge-font-size: .8em !default;
+$badge-font-weight: $font-weight-default !default;
+$badge-margin-top: -0.3em !default;
+$badge-padding: 2px 8px 3px !default;
 
 //Blockquotes
 $blockquote-border-color: $sasha-light;
@@ -101,6 +95,7 @@ $breadcrumb-color: $sasha-grey !default;
 $breadcrumb-color-active: $sasha-dark !default;
 $breadcrumb-divider: "/" !default;
 $breadcrumb-font-size: .9em !default;
+$breadcrumb-font-weight-active: $font-weight-bold;
 
 // Buttons
 $btn-border-width: 2px !default;
@@ -109,7 +104,7 @@ $btn-font-size-sm: $font-size-sm !default;
 $btn-font-size-default: 0.9em !default;
 $btn-font-size-lg: 16px !default;
 
-$btn-block-margin-y: 10px;
+$btn-block-margin-y: $spacer-y-default;
 
 $btn-padding-y-sm: 4px !default;
 $btn-padding-x-sm: 8px !default;
@@ -122,8 +117,14 @@ $btn-padding-x-lg: 26px !default;
 
 $btn-font-weight: $font-weight-default !default;
 
+// Close
+$close-color: $sasha-black;
+$close-font-size: $font-size-lg;
+$close-font-weight: $font-weight-bold;
+
 // Progress
-$progress-bg: $sasha-light;
+$progress-container-bg: $sasha-light;
 $progress-bar-bg: $primary;
 $progress-font-size: 0.9em;
 $progress-height: 1.3rem;
+$progress-margin-y: $spacer-y-default;

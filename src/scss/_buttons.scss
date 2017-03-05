@@ -1,37 +1,32 @@
 // Buttons
 // TODO: Find a way to prevent transition on page load without JS (Chrome Bug!)
 
-@mixin btn-mix($theme-color, $border-color, $color) {
-  background: $theme-color;
+@mixin btn-mix($background, $border-color, $color) {
+  background: $background;
   border: $btn-border-width solid $border-color;
   color: $color;
 }
 
-@mixin btn-hover($theme-color, $border-color, $color) {
+@mixin btn-hover($background, $border-color, $color) {
   &:not(.disabled):not([disabled]):hover {
-    background: $theme-color;
+    background: $background;
     border-color: $border-color;
     color: $color;
+    cursor: pointer;
     text-decoration: none;
   }
-
-  // TODO: What is this for again? Lol
-  //&:hover {
-  //  color: $color;
-  //  text-decoration: none;
-  //}
 }
 
-@mixin btn-active($theme-color, $border-color) {
+@mixin btn-active($background, $border-color) {
   &:not(.disabled):not([disabled]):active {
-      background: $theme-color;
+      background: $background;
       border-color: $border-color;
   }
 }
 
-@mixin btn-focus($theme-color) {
+@mixin btn-focus($theme) {
   &:not(.disabled):not([disabled]):focus {
-    box-shadow: 0 0 0 2px lighten($theme-color, 15%);
+    box-shadow: 0 0 0 2px lighten($theme, 15%);
   }
 }
 
@@ -49,46 +44,56 @@
   text-align: center;
   text-transform: uppercase;
   transition: all .25s;
-  user-select: none; // To prevent highlight the text inside the buttons
+  user-select: none; // To prevent highlighting the text inside the buttons
   vertical-align: middle;
-  white-space: nowrap; // To prevent from wrapping or placing text on the new line
+  white-space: nowrap; // To prevent from wrapping or placing text on a new line
 
+
+  // theme-colors
   @each $name, $value in $theme-colors {
-
     &-#{$name} {
-      $color: if($name == 'inverse', $color-default, #fff);
+      $color: #fff;
       @include btn-mix($value, $value, $color);
       @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color);
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
     }
-
     &-#{$name}-outline {
-      $color: if($name == 'inverse', $color-default, #fff);
+      $color: #fff;
       @include btn-mix(none, $value, $value);
       @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color);
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
-
-      //&:not(.disabled):not([disabled]):focus {
-      //  background: $value;
-      //  border-color: $value;
-      //  color: $color;
-      //  text-decoration: none;
-      //}
     }
-
     &-#{$name}-transparent {
       @include btn-mix(none, rgba($value, 0), $value);
       @include btn-hover(rgba($value, .3), rgba($value, 0), $value);
       @include btn-active(rgba($value, .5), rgba($value, 0));
       @include btn-focus($value);
+    }
+  }
 
-      //&:not(.disabled):not([disabled]):focus {
-      //  background: rgba($value, .3);
-      //  color: $value;
-      //  text-decoration: none;
-      //}
+  // theme-extra
+  // We're adding the default and inverse buttons cause it makes sense
+  @each $name, $value in $theme-extra {
+    &-#{$name} {
+      @include btn-mix($value, $value, $color-default);
+      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color-default);
+      @include btn-active(darken($value, 5%), darken($value, 5%));
+      @include btn-focus($value);
+    }
+    &-#{$name}-outline {
+      @include btn-mix(none, $value, $value);
+      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color-default);
+      @include btn-active(darken($value, 5%), darken($value, 5%));
+      @include btn-focus($value);
+    }
+    &-#{$name}-transparent {
+      $color: if($name == 'default', $color-default, $value);
+      @include btn-mix(none, rgba($value, 0), $color);
+      @include btn-hover($value, rgba($value, 0), $color-default);
+      @include btn-active(rgba($value, .5), rgba($value, 0));
+      @include btn-focus($value);
     }
   }
 
@@ -103,14 +108,12 @@
   &-block {
     display: block;
     width: 100%;
+    box-sizing: border-box;
   }
 
+  // To give space to multiple block buttons
   &-block + &-block {
     margin-top: $btn-block-margin-y;
-  }
-
-  &-pill {
-    border-radius: $border-radius-pill;
   }
 
   &.disabled, &:disabled {
@@ -124,6 +127,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   pointer-events: none;
 }
 
+// Ensure that block buttons will work
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {

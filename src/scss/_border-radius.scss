@@ -32,3 +32,8 @@
     border-top-left-radius: $radius;
   }
 }
+
+// Whether $enable-rounded or not, pills will still have borders!
+.pill {
+  border-radius: $border-radius-pill !important;
+}

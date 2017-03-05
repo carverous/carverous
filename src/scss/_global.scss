@@ -1,7 +1,7 @@
 // Global
 //
-// Further normalisation of HTML elements. Normalize.css will be forked manually soon
-// to merge everything here.
+// Further normalization of HTML elements. Normalize.css will be forked manually soon
+// to customise and merge everything here.
 
 * {
 
@@ -17,7 +17,7 @@ a {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
-    color: red;
+    color: red; // Temporary
   }
 }
 
@@ -26,6 +26,7 @@ p {
   line-height: 1.5;
 }
 
+// Temporary
 .container {
   margin: 0 auto;
   width: 960px;

@@ -2,10 +2,10 @@
 
 .close {
   float: right;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-bold;
+  font-size: $close-font-size;
+  font-weight: $close-font-weight;
   line-height: .85;
-  color: #000;
+  color: $close-color;
   opacity: .3;
 
   &:hover {

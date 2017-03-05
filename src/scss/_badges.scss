@@ -1,33 +1,34 @@
 // Badges
 
-@mixin badge-mix($theme-color) {
-  background-color: $theme-color;
-  color: if($theme-color == #fff, $color-default, #fff);
+@mixin badge-mix($name, $theme) {
+  background: $theme;
+  color: if($name == 'default' or $name == 'inverse', $color-default, #fff);
   
   &[href]:hover {
-    background-color: darken($theme-color, 10%);
-    color: if($theme-color == #fff, $color-default, #fff);
+    background-color: darken($theme, 5%);
+    color: if($name == 'default' or $name == 'inverse', $color-default, #fff);
     text-decoration: none;
   }
 }
 
 .badge {
-  border-radius: $badge-border-radius;
+  @include border-radius($border-radius-sm);
   display: inline-block;
   font-size: $badge-font-size;
-  font-weight: $font-weight-default;
-  margin-top: -0.3em;
+  font-weight: $badge-font-weight;
+  margin-top: $badge-margin-top;
   padding: $badge-padding;
-  //text-transform: uppercase;
   vertical-align: middle;
 
   @each $name, $value in $theme-colors {
     &-#{$name} {
-      @include badge-mix($value);
+      @include badge-mix($name, $value);
     }
   }
 
-  &-pill {
-    @include border-radius($border-radius-pill);
+  @each $name, $value in $theme-extra {
+    &-#{$name} {
+      @include badge-mix($name, $value);
+    }
   }
 }
