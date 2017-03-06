@@ -387,6 +387,9 @@ p {
   margin: 0;
   line-height: 1.5; }
 
+ul, ol, dl {
+  margin-top: 0; }
+
 .container {
   margin: 0 auto;
   width: 960px; }
@@ -399,7 +402,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: 5px; }
+  margin-bottom: 15px; }
 
 h1 {
   font-size: 3.5rem; }
