@@ -8,9 +8,13 @@ $enable-rounded: true !default;
 // Body
 $body-bg: $sasha-white !default;
 $color-default: #545454 !default;
+$color-muted: $sasha-grey;
 
-// Link Color
-$link-color-default: #50abe0 !default;
+// Links
+$link-color: #50abe0 !default;
+$link-color-hover: red; // Debugger
+$link-decoration: none;
+$link-decoration-hover: underline;
 
 // Fonts
 $font-family-default: 'Open Sans', sans-serif !default;
@@ -49,6 +53,8 @@ $font-weights:
                 (bold, 700),
                 (black, 900);
 
+$line-height-default: 1.5 !default;
+
 
 // Border Radius
 $border-radius-sm: 2px !default;
@@ -60,21 +66,18 @@ $border-radius-pill: 500px !default;
 // Margin and Padding
 $spacer-y-sm: 4px !default;
 $spacer-x-sm: 4px !default;
-$spacer-y-default: 10px !default;
-$spacer-x-default: 10px !default;
-$spacer-y-lg: 15px !default;
-$spacer-x-lg: 15px !default;
-$spacer-y-xl: 25px !default;
-$spacer-x-xl: 25px !default;
+$spacer-y-default: 15px !default;
+$spacer-x-default: 15px !default;
+$spacer-y-lg: 25px !default;
+$spacer-x-lg: 25px !default;
 
 $spacer-sm: $spacer-y-sm $spacer-x-sm !default;
 $spacer-default: $spacer-y-default $spacer-x-default !default;
 $spacer-lg: $spacer-y-lg $spacer-x-lg !default;
-$spacer-xl: $spacer-y-xl $spacer-x-xl !default;
 
 // Alerts
 $alert-margin-y: $spacer-y-default !default;
-$alert-padding: $spacer-lg !default;
+$alert-padding: $spacer-y-default !default;
 $alert-link-font-weight: $font-weight-bold;
 
 // Badges
@@ -109,7 +112,7 @@ $btn-block-margin-y: $spacer-y-default;
 $btn-padding-y-sm: 4px !default;
 $btn-padding-x-sm: 8px !default;
 
-$btn-padding-y-default: 8px !default;
+$btn-padding-y-default: 6px !default;
 $btn-padding-x-default: 16px !default;
 
 $btn-padding-y-lg: 16px !default;
@@ -128,3 +131,8 @@ $progress-bar-bg: $primary;
 $progress-font-size: 0.9em;
 $progress-height: 1.3rem;
 $progress-margin-y: $spacer-y-default;
+
+// Tables and Data
+$dt-font-weight: $font-weight-bold !default;
+$table-cell-padding:            .75rem !default;
+$table-cell-padding-sm:         .3rem !default;
