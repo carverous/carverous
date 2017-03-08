@@ -17,8 +17,9 @@ $link-decoration: none;
 $link-decoration-hover: underline;
 
 // Fonts
-$font-family-default: 'Open Sans', sans-serif !default;
 $font-family-alt: 'Roboto', sans-serif !default;
+$font-family-default: 'Open Sans', sans-serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-size-sm: 12px !default;
 $font-size-default: 16px !default;
@@ -64,7 +65,7 @@ $border-radius-lg: 15px !default;
 $border-radius-pill: 500px !default;
 
 // Margin and Padding
-$spacer-y-sm: 4px !default;
+$spacer-y-sm: 2px !default;
 $spacer-x-sm: 4px !default;
 $spacer-y-default: 15px !default;
 $spacer-x-default: 15px !default;
@@ -92,6 +93,7 @@ $blockquote-border-color: $sasha-light;
 $blockquote-border-width: 3px;
 $blockquote-font-size: $font-size-default;
 $blockquote-footer-color: $sasha-grey;
+$blockquote-margin-bottom: $spacer-y-default;
 
 // Breadcrumbs
 $breadcrumb-color: $sasha-grey !default;
@@ -120,19 +122,35 @@ $btn-padding-x-lg: 26px !default;
 
 $btn-font-weight: $font-weight-default !default;
 
+// Codes, Keyboards, & Pres
+$code-color: #3363bd; // bd4147
+$code-bg: lighten($code-color, 40%) !default;
+$code-font-size: $font-size-default !default;
+$code-padding-y: $spacer-y-sm !default;
+$code-padding-x: $spacer-x-sm !default;
+$kbd-bg: lighten($sasha-black, 20%) !default;
+$kbd-color: $sasha-white !default;
+$kbd-border-radius: 4px;
+$kbd-nested-font-weight: $font-weight-bold !default;
+$pre-color: $color-default;
+
 // Close
-$close-color: $sasha-black;
-$close-font-size: $font-size-lg;
-$close-font-weight: $font-weight-bold;
+$close-color: $sasha-black !default;
+$close-font-size: $font-size-lg !default;
+$close-font-weight: $font-weight-bold !default;
 
 // Progress
-$progress-container-bg: $sasha-light;
-$progress-bar-bg: $primary;
-$progress-font-size: 0.9em;
-$progress-height: 1.3rem;
-$progress-margin-y: $spacer-y-default;
+$progress-container-bg: $sasha-light !default;
+$progress-bar-bg: $primary !default;
+$progress-font-size: 0.9em !default;
+$progress-height: 1.3rem !default;
+$progress-margin-y: $spacer-y-default !default;
 
 // Tables and Data
 $dt-font-weight: $font-weight-bold !default;
-$table-cell-padding:            .75rem !default;
-$table-cell-padding-sm:         .3rem !default;
+$table-cell-padding: .75rem !default;
+$table-cell-padding-sm: .3rem !default;
+
+// Texts
+$mark-bg: #fcf6cf !default;
+$mark-padding: $spacer-sm !default;

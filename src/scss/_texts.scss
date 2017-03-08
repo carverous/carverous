@@ -1,0 +1,26 @@
+// Texts
+
+// Text Colors
+.color {
+  @each $name, $value in $theme-colors {
+    &-#{$name} {
+      color: $value;
+    }
+  }
+  // It doesn't make sense adding the default and inverse in text colors
+}
+
+// Remove the margin-bottom for <p> elements by calling this class
+.below-zero {
+  margin-bottom: 0;
+}
+
+// Enlarge the text in <p> elements by calling this class
+.lead {
+  font-size: 1.25em;
+}
+
+mark, .mark {
+  background: $mark-bg;
+  padding: $mark-padding;
+}
