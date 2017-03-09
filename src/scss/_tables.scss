@@ -1,40 +1,65 @@
-@import "variables";
+// Tables
 
-table {
-  background-color: #fff;
-  border-collapse: collapse;
+.table {
+  background: $table-bg;
+  max-width: 100%;
+  // table-layout: fixed; // To prevent long text from affecting the table-width
   width: 100%;
-  tr {
-    .table-cell {
-      padding: 6px 8px;
-      text-align: left;
+
+  th, td {
+    // border-top: $table-border-width solid $table-border-color; // Borders in each column are ugly (opinion)
+    padding: $table-cell-padding;
+    vertical-align: top; // When each row contains only single, this makes it ugly (opinion)
+  }
+
+  thead th {
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    vertical-align: bottom;
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  .table {
+    background: $body-bg; // TODO: Figure out if this is really needed
+  }
+  
+  // Condensed Table
+  &-sm {
+    th, td {
+      padding: $table-cell-padding-sm;
     }
-    th {
-      @extend .table-cell;
-      border-bottom: 1px solid $sasha-light;
-    }
+  }
+  
+  // Bordered Table
+  &-bordered {
+    border: $table-border-width solid $table-border-color;
+
+    th,
     td {
-      @extend .table-cell;
+      border: $table-border-width solid $table-border-color;
+    }
+
+    thead {
+      th,
+      td {
+        border-bottom-width: (2 * $table-border-width);
+      }
+    }
+  }
+
+  // Striped Tables
+  &-striped {
+    tbody tr:nth-of-type(odd) {
+      background-color: $table-stripe-bg;
+    }
+  }
+  
+  &-hover {
+    tbody tr:hover {
+      background: $table-hover-bg;
     }
   }
 }
 
-.table-sm {
-  tr {
-    th, td {
-      padding: 3px 8px;
-    }
-  }
-}
-
-.table-lg {
-  tr {
-    th, td {
-      padding: 12px 8px;
-    }
-  }
-}
-
-tbody.table-striped tr:nth-of-type(even) {
-  background-color: $sasha-dark;
-}

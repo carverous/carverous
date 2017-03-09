@@ -26,7 +26,16 @@ $theme-extra:
 
 // Shades of Grey
 $sasha-white: #fff !default;
-$sasha-light: #f1f1f1 !default;
-$sasha-grey: #c6c6c6 !default;
-$sasha-dark: #aaa !default;
+$sasha-light: #fafafa !default;
+$sasha-grey: #f1f1f1 !default;
+$sasha-dark: #bbbbbb !default;
+$sasha-darker: #1d1d1d !default;
 $sasha-black: #000 !default;
+
+$theme-sasha:
+                (sasha-white, $sasha-white),
+                (sasha-light, $sasha-light),
+                (sasha-grey, $sasha-grey),
+                (sasha-dark, $sasha-dark),
+                (sasha-darker, $sasha-darker),
+                (sasha-black, $sasha-black);

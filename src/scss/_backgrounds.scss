@@ -1,7 +1,14 @@
 // Backgrounds
+// Setting the color of the text is not the scope of bg-* classes
 
 .bg {
   @each $name, $value in $theme-colors {
+    &-#{$name} {
+      background: $value;
+    }
+  }
+  
+  @each $name, $value in $theme-sasha {
     &-#{$name} {
       background: $value;
     }

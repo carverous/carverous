@@ -7,7 +7,9 @@
       color: $value;
     }
   }
-  // It doesn't make sense adding the default and inverse in text colors
+  &-inverse {
+    color: $inverse;
+  }
 }
 
 // Remove the margin-bottom for <p> elements by calling this class
@@ -18,6 +20,7 @@
 // Enlarge the text in <p> elements by calling this class
 .lead {
   font-size: 1.25em;
+  font-weight: $font-weight-default;
 }
 
 mark, .mark {

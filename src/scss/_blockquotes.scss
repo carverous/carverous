@@ -3,7 +3,7 @@
 .blockquote {
   border-left: $blockquote-border-width solid $blockquote-border-color;
   font-size: $blockquote-font-size;
-  margin: 0 0 $blockquote-margin-bottom;
+  margin: 0 0 $spacer-y-default;
   padding-left: 15px;
 
   &-footer {

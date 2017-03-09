@@ -8,7 +8,7 @@ $enable-rounded: true !default;
 // Body
 $body-bg: $sasha-white !default;
 $color-default: #545454 !default;
-$color-muted: $sasha-grey;
+$color-muted: $sasha-dark;
 
 // Links
 $link-color: #50abe0 !default;
@@ -21,9 +21,9 @@ $font-family-alt: 'Roboto', sans-serif !default;
 $font-family-default: 'Open Sans', sans-serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
-$font-size-sm: 12px !default;
+$font-size-sm: 12px !default; // 12px
 $font-size-default: 16px !default;
-$font-size-lg: 24px !default;
+$font-size-lg: 24px !default; // 24px
 
 $font-size-h1: 3.5rem !default;
 $font-size-h2: 3rem !default;
@@ -89,14 +89,13 @@ $badge-margin-top: -0.3em !default;
 $badge-padding: 2px 8px 3px !default;
 
 //Blockquotes
-$blockquote-border-color: $sasha-light;
+$blockquote-border-color: $sasha-grey;
 $blockquote-border-width: 3px;
 $blockquote-font-size: $font-size-default;
-$blockquote-footer-color: $sasha-grey;
-$blockquote-margin-bottom: $spacer-y-default;
+$blockquote-footer-color: $sasha-dark;
 
 // Breadcrumbs
-$breadcrumb-color: $sasha-grey !default;
+$breadcrumb-color: $sasha-dark !default;
 $breadcrumb-color-active: $sasha-dark !default;
 $breadcrumb-divider: "/" !default;
 $breadcrumb-font-size: .9em !default;
@@ -140,7 +139,7 @@ $close-font-size: $font-size-lg !default;
 $close-font-weight: $font-weight-bold !default;
 
 // Progress
-$progress-container-bg: $sasha-light !default;
+$progress-container-bg: $sasha-grey !default;
 $progress-bar-bg: $primary !default;
 $progress-font-size: 0.9em !default;
 $progress-height: 1.3rem !default;
@@ -148,8 +147,14 @@ $progress-margin-y: $spacer-y-default !default;
 
 // Tables and Data
 $dt-font-weight: $font-weight-bold !default;
-$table-cell-padding: .75rem !default;
-$table-cell-padding-sm: .3rem !default;
+$table-bg: $sasha-white !default;
+$table-border-width: 1px !default;
+$table-border-color: $sasha-grey;
+$table-cell-padding: .75rem 1rem !default;
+$table-cell-padding-sm: .3rem .75rem !default;
+$table-hover-bg: $sasha-grey !default;
+$table-stripe-bg: $sasha-light !default;
+
 
 // Texts
 $mark-bg: #fcf6cf !default;
