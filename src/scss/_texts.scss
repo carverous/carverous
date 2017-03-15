@@ -1,5 +1,6 @@
 // Texts
 
+// TODO: Refactor this from color-* to text-*
 // Text Colors
 .color {
   @each $name, $value in $theme-colors {

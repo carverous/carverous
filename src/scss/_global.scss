@@ -65,6 +65,7 @@ hr {
   box-sizing: content-box; // 1
   height: 0; // 1
   overflow: visible; // 2
+  margin: $spacer-y-default 0;
 }
 
 

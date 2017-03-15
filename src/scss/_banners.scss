@@ -1,0 +1,26 @@
+// Banners
+// Works like a cover banner / jumbotron
+
+.banner {
+  background: $banner-bg;
+  margin-bottom: $banner-margin-bottom;
+  padding: $banner-padding;
+  @include border-radius($border-radius-default);
+
+  //@include media-breakpoint-up(sm) {
+  //  padding: $banner-padding;
+  //}
+
+  // This 3D-look is an experimental feature
+  &-hr {
+    border: 0;
+    border-top: 1px solid darken($banner-bg, 10%);
+    border-bottom: 1px solid $sasha-white;
+  }
+
+  &-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    @include border-radius(0);
+  }
+}

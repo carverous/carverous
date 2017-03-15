@@ -69,8 +69,8 @@ $spacer-y-sm: 2px !default;
 $spacer-x-sm: 4px !default;
 $spacer-y-default: 15px !default;
 $spacer-x-default: 15px !default;
-$spacer-y-lg: 25px !default;
-$spacer-x-lg: 25px !default;
+$spacer-y-lg: 35px !default;
+$spacer-x-lg: 35px !default;
 
 $spacer-sm: $spacer-y-sm $spacer-x-sm !default;
 $spacer-default: $spacer-y-default $spacer-x-default !default;
@@ -86,7 +86,12 @@ $badge-border-radius: $border-radius-sm !default;
 $badge-font-size: .8em !default;
 $badge-font-weight: $font-weight-default !default;
 $badge-margin-top: -0.3em !default;
-$badge-padding: 2px 8px 3px !default;
+$badge-padding: 0 8px 1px !default;
+
+// Banners
+$banner-bg: $sasha-grey;
+$banner-margin-bottom: $spacer-y-default;
+$banner-padding: $spacer-lg;
 
 //Blockquotes
 $blockquote-border-color: $sasha-grey;
@@ -159,7 +164,6 @@ $table-cell-padding: .75rem 1rem !default;
 $table-cell-padding-sm: .3rem .75rem !default;
 $table-hover-bg: $sasha-grey !default;
 $table-stripe-bg: $sasha-light !default;
-
 
 // Texts
 $mark-bg: #fcf6cf !default;

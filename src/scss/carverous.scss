@@ -6,9 +6,11 @@
 
 // NOTES:
 // American English is mostly used for the naming convention.
-// Customizing the default tags directly breaks lots of third-party widgets
-// It is decided to invoke classes for each instead.
-// Most property-value pairs are arranged alphabetically
+// Customizing the default tags directly breaks lots of third-party widgets.
+// Most are designed to be opt-in, meaning the original elements are not
+// changed unless you explicitly invoke the class on the html.
+// Most property-value pairs are arranged alphabetically.
+// Margin-bottom is chosen over margin-top. (opinionated)
 
 
 // TODO: Use the offline fonts once done with most of the stuff
@@ -31,6 +33,7 @@
 @import "border-radius";
 @import "alerts";
 @import "badges";
+@import "banners";
 @import "backgrounds";
 @import "blockquotes";
 @import "breadcrumbs";

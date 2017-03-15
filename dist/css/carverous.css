@@ -35,7 +35,8 @@ body {
 hr {
   box-sizing: content-box;
   height: 0;
-  overflow: visible; }
+  overflow: visible;
+  margin: 15px 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -268,20 +269,16 @@ h6 {
   font-size: 1rem; }
 
 .font-size-lg-1 {
-  font-size: 6rem;
-  font-weight: 300; }
+  font-size: 6rem; }
 
 .font-size-lg-2 {
-  font-size: 5.5rem;
-  font-weight: 300; }
+  font-size: 5.5rem; }
 
 .font-size-lg-3 {
-  font-size: 4.5rem;
-  font-weight: 300; }
+  font-size: 4.5rem; }
 
 .font-size-lg-4 {
-  font-size: 4rem;
-  font-weight: 300; }
+  font-size: 4rem; }
 
 .font-weight-thin {
   font-weight: 100; }
@@ -351,7 +348,7 @@ h6 {
   font-size: 0.8em;
   font-weight: 400;
   margin-top: -0.3em;
-  padding: 2px 8px 3px;
+  padding: 0 8px 1px;
   vertical-align: middle; }
   .badge-danger {
     background: #ef5350;
@@ -410,6 +407,20 @@ h6 {
       color: #545454;
       text-decoration: none; }
 
+.banner {
+  background: #ECEEEF;
+  margin-bottom: 15px;
+  padding: 35px 35px;
+  border-radius: 6px; }
+  .banner-hr {
+    border: 0;
+    border-top: 1px solid #d0d5d8;
+    border-bottom: 1px solid #fff; }
+  .banner-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0; }
+
 .bg-danger {
   background: #ef5350; }
 
@@ -432,10 +443,10 @@ h6 {
   background: #fff; }
 
 .bg-sasha-light {
-  background: #fafafa; }
+  background: #f7f9fa; }
 
 .bg-sasha-grey {
-  background: #f1f1f1; }
+  background: #ECEEEF; }
 
 .bg-sasha-dark {
   background: #bbbbbb; }
@@ -450,7 +461,7 @@ h6 {
   background: #000; }
 
 .blockquote {
-  border-left: 3px solid #f1f1f1;
+  border-left: 3px solid #ECEEEF;
   font-size: 16px;
   margin: 0 0 15px;
   padding-left: 15px; }
@@ -462,7 +473,7 @@ h6 {
       content: "\2014 \00A0"; }
   .blockquote-reverse {
     border-left: 0;
-    border-right: 3px solid #f1f1f1;
+    border-right: 3px solid #ECEEEF;
     padding-left: 0;
     padding-right: 15px;
     text-align: right; }
@@ -958,7 +969,7 @@ button.close {
   text-align: center; }
 
 .progress-container {
-  background: #f1f1f1;
+  background: #ECEEEF;
   border-radius: 2px;
   display: flex;
   font-size: 0.9em;
@@ -997,28 +1008,28 @@ button.close {
     padding: 0.75rem 1rem;
     vertical-align: top; }
   .table thead th {
-    border-bottom: 2px solid #f1f1f1;
+    border-bottom: 2px solid #ECEEEF;
     vertical-align: bottom; }
   .table .no-th-border th {
     border: none; }
   .table tbody + tbody {
-    border-top: 2px solid #f1f1f1; }
+    border-top: 2px solid #ECEEEF; }
   .table .table {
     background: #fff; }
   .table-sm th, .table-sm td {
     padding: 0.3rem 0.75rem; }
   .table-bordered {
-    border: 1px solid #f1f1f1; }
+    border: 1px solid #ECEEEF; }
     .table-bordered th,
     .table-bordered td {
-      border: 1px solid #f1f1f1; }
+      border: 1px solid #ECEEEF; }
     .table-bordered thead th,
     .table-bordered thead td {
       border-bottom-width: 2px; }
   .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #fafafa; }
+    background-color: #f7f9fa; }
   .table-hover tbody tr:hover {
-    background: #f1f1f1; }
+    background: #ECEEEF; }
 
 .color-danger {
   color: #ef5350; }
@@ -1042,10 +1053,10 @@ button.close {
   color: #fff; }
 
 .color-sasha-light {
-  color: #fafafa; }
+  color: #f7f9fa; }
 
 .color-sasha-grey {
-  color: #f1f1f1; }
+  color: #ECEEEF; }
 
 .color-sasha-dark {
   color: #bbbbbb; }
