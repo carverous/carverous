@@ -4,6 +4,14 @@
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
 
+// NOTES:
+// American English is mostly used for the naming convention.
+// Customizing the default tags directly breaks lots of third-party widgets
+// It is decided to invoke classes for each instead.
+// Most property-value pairs are arranged alphabetically
+
+
+// TODO: Use the offline fonts once done with most of the stuff
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
@@ -29,6 +37,7 @@
 @import "buttons";
 @import "codes";
 @import "close";
+@import "images";
 @import "progess";
 @import "tables";
 @import "texts";

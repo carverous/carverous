@@ -3,18 +3,22 @@
 .table {
   background: $table-bg;
   max-width: 100%;
-  // table-layout: fixed; // To prevent long text from affecting the table-width
   width: 100%;
 
   th, td {
-    // border-top: $table-border-width solid $table-border-color; // Borders in each column are ugly (opinion)
+    // border-top: $table-border-width solid $table-border-color; // Borders in each column are ugly (opinionated)
     padding: $table-cell-padding;
-    vertical-align: top; // When each row contains only single, this makes it ugly (opinion)
+    vertical-align: top; // When each row contains only single, this makes it ugly (opinionated)
   }
 
   thead th {
+    //background: $table-border-color;
     border-bottom: (2 * $table-border-width) solid $table-border-color;
     vertical-align: bottom;
+  }
+
+  .no-th-border th {
+    border: none;
   }
 
   tbody + tbody {
@@ -62,4 +66,3 @@
     }
   }
 }
-

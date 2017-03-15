@@ -1,0 +1,32 @@
+// Images
+
+// Stop scaling beyond the width of their parent elemnent
+@mixin img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-fluid {
+  @include img-fluid;
+}
+
+// TODO: Create image thumbnails based on ceferinojoseii.com's thumbnails
+//.img-thumbnail {
+//
+//}
+
+// Figures
+.figure {
+  display: inline-block; // Align the caption with the image
+}
+
+.figure-img {
+  margin-bottom: $figure-img-border-bottom;
+}
+
+// The default alignment for the caption is center (opinionated)
+.figure-caption {
+  color: $figure-caption-color;
+  font-size: $figure-caption-font-size;
+  text-align: center;
+}

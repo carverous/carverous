@@ -442,7 +442,10 @@ h6 {
   background: #bbbbbb; }
 
 .bg-sasha-darker {
-  background: #1d1d1d; }
+  background: #757575; }
+
+.bg-sasha-darkest {
+  background: #2a2a2a; }
 
 .bg-sasha-black {
   background: #000; }
@@ -944,6 +947,21 @@ button.close {
   background: transparent;
   border: 0; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
+.figure {
+  display: inline-block; }
+
+.figure-img {
+  margin-bottom: 7.5px; }
+
+.figure-caption {
+  color: #757575;
+  font-size: 0.9em;
+  text-align: center; }
+
 .progress-container {
   background: #f1f1f1;
   border-radius: 2px;
@@ -988,6 +1006,8 @@ button.close {
   .table thead th {
     border-bottom: 2px solid #f1f1f1;
     vertical-align: bottom; }
+  .table .no-th-border th {
+    border: none; }
   .table tbody + tbody {
     border-top: 2px solid #f1f1f1; }
   .table .table {
@@ -1025,15 +1045,42 @@ button.close {
 .color-warning {
   color: #FFB74D; }
 
-.color-inverse {
+.color-sasha-white {
   color: #fff; }
+
+.color-sasha-light {
+  color: #fafafa; }
+
+.color-sasha-grey {
+  color: #f1f1f1; }
+
+.color-sasha-dark {
+  color: #bbbbbb; }
+
+.color-sasha-darker {
+  color: #757575; }
+
+.color-sasha-darkest {
+  color: #2a2a2a; }
+
+.color-sasha-black {
+  color: #000; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
 
 .below-zero {
   margin-bottom: 0; }
 
 .lead {
   font-size: 1.25em;
-  font-weight: 400; }
+  font-weight: 300; }
 
 mark, .mark {
   background: #fcf6cf;

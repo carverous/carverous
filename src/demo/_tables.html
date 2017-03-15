@@ -43,11 +43,14 @@
 
         <h4>Small Table</h4>
         <table class="table table-sm table-hover">
+            <thead>
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>John</td>
                 <td>Smith</td>
@@ -63,6 +66,7 @@
                 <td>Cover</td>
                 <td>23</td>
             </tr>
+            </tbody>
         </table>
 
         <h4>Regular Striped Table</h4>
@@ -242,8 +246,10 @@
             </tr>
             </tbody>
         </table>
+
+        <h4>Table Using Background And Color Classes</h4>
         <table class="table">
-            <thead class="thead-inverse">
+            <thead class="bg-secondary color-sasha-light no-th-border">
             <tr>
                 <th>#</th>
                 <th>First Name</th>
@@ -273,40 +279,9 @@
             </tbody>
         </table>
 
-        <table class="table">
-            <thead class="thead-default">
-            <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            </tbody>
-        </table>
-
-        <h4>Regular Striped Table With Small Buttons</h4>
+        <h4>Regular Striped Table With Buttons</h4>
         <table class="table table-striped">
-            <thead>
+            <thead class="bg-sasha-darker color-sasha-light no-th-border">
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
@@ -350,12 +325,15 @@
 
         <h4>Small Striped Table With Buttons</h4>
         <table class="table table-sm table-striped">
+            <thead>
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
                 <th>Option</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>John</td>
                 <td>Smith</td>
@@ -386,16 +364,20 @@
                     <a href="#" class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
+            </tbody>
         </table>
 
         <h4>Small Striped Table With Links</h4>
         <table class="table table-sm table-striped">
+            <thead class="bg-primary color-sasha-white">
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
                 <th>Option</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>John</td>
                 <td>Smith</td>
@@ -426,6 +408,7 @@
                     <a href="#">Delete</a>
                 </td>
             </tr>
+            </tbody>
         </table>
     </div>
 </body>

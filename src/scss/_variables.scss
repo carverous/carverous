@@ -99,7 +99,7 @@ $breadcrumb-color: $sasha-dark !default;
 $breadcrumb-color-active: $sasha-dark !default;
 $breadcrumb-divider: "/" !default;
 $breadcrumb-font-size: .9em !default;
-$breadcrumb-font-weight-active: $font-weight-bold;
+$breadcrumb-font-weight-active: $font-weight-bold !default;
 
 // Buttons
 $btn-border-width: 2px !default;
@@ -108,7 +108,7 @@ $btn-font-size-sm: $font-size-sm !default;
 $btn-font-size-default: 0.9em !default;
 $btn-font-size-lg: 16px !default;
 
-$btn-block-margin-y: $spacer-y-default;
+$btn-block-margin-y: $spacer-y-default !default;
 
 $btn-padding-y-sm: 4px !default;
 $btn-padding-x-sm: 8px !default;
@@ -137,6 +137,11 @@ $pre-color: $color-default;
 $close-color: $sasha-black !default;
 $close-font-size: $font-size-lg !default;
 $close-font-weight: $font-weight-bold !default;
+
+// Images
+$figure-img-border-bottom: $spacer-y-default / 2 !default;
+$figure-caption-font-size: .9em !default;
+$figure-caption-color: $sasha-darker;
 
 // Progress
 $progress-container-bg: $sasha-grey !default;
