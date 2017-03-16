@@ -148,6 +148,33 @@ $figure-img-border-bottom: $spacer-y-default / 2 !default;
 $figure-caption-font-size: .9em !default;
 $figure-caption-color: $sasha-darker;
 
+//Pagination
+$pagination-bg: $sasha-grey;
+$pagination-bg-active: $primary;
+$pagination-bg-disabled: $sasha-grey;
+$pagination-bg-hover: $primary;
+
+$pagination-border-active: none;
+$pagination-border-color: $sasha-dark;
+$pagination-border-disabled: none;
+$pagination-border-hover: none;
+$pagination-border-width: 0;
+
+$pagination-color: $color-default;
+$pagination-color-active: $sasha-white;
+$pagination-color-disabled: $sasha-dark;
+$pagination-color-hover: $sasha-white;
+
+$pagination-font-size: 1em !default;
+$pagination-font-size-sm: .9em !default;
+
+$pagination-line-height: 1.25em !default;
+
+$pagination-padding-y: 6px;
+$pagination-padding-x: 14px;
+$pagination-padding-y-sm: 3px;
+$pagination-padding-x-sm: 10px;
+
 // Progress
 $progress-container-bg: $sasha-grey !default;
 $progress-bar-bg: $primary !default;

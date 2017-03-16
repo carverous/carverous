@@ -9,8 +9,9 @@
 // Customizing the default tags directly breaks lots of third-party widgets.
 // Most are designed to be opt-in, meaning the original elements are not
 // changed unless you explicitly invoke the class on the html.
-// Most property-value pairs are arranged alphabetically.
+// Most property-value pairs are arranged alphabetically unless alteration is needed.
 // Margin-bottom is chosen over margin-top. (opinionated)
+// Do stuff now! Refactor later.
 
 
 // TODO: Use the offline fonts once done with most of the stuff
@@ -41,10 +42,10 @@
 @import "codes";
 @import "close";
 @import "images";
+@import "pagination";
 @import "progess";
 @import "tables";
 @import "texts";
 
 // TODO: Do these!
-//@import "pagination";
 //@import "selection";
