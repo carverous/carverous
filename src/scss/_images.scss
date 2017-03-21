@@ -2,8 +2,9 @@
 
 // Stop scaling beyond the width of their parent elemnent
 @mixin img-fluid {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .img-fluid {

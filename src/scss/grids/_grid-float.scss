@@ -1,3 +1,60 @@
 // Float Grid
-// Create a grid based on the oldschool float technology
+// Create a grid based on the traditional float method
 
+// Phones (small)
+@media only screen and (min-width: $sm) {
+  .row {
+    .col-sm {
+      @for $i from 1 through $grid-col-max {
+        &-#{$i} {
+          width: $i / $grid-col-max * 100%;
+          float: left;
+        }
+      }
+    }
+    @include clearfix();
+  }
+}
+
+// Tablets (medium)
+@media only screen and (min-width: $md) {
+  .row {
+    .col-md {
+      @for $i from 1 through $grid-col-max {
+        &-#{$i} {
+          width: $i / $grid-col-max * 100%;
+          float: left;
+        }
+      }
+    }
+    @include clearfix();
+  }
+}
+
+// Desktops (large)
+@media only screen and (min-width: $lg) {
+  .row {
+    .col-lg {
+      @for $i from 1 through $grid-col-max {
+        &-#{$i} {
+          width: $i / $grid-col-max * 100%;
+          float: left;
+        }
+      }
+    }
+    @include clearfix();
+  }
+}
+
+// Larger Desktops (extra large)
+//@media only screen and (min-width: $xl) {
+//  .row {
+//    .col-xl {
+//      @for $i from 1 through $grid-col-max-col-num {
+//        &-#{$i} {
+//          width: $i / $grid-$grid-col-max-num * 100%;
+//        }
+//      }
+//    }
+//  }
+//}
