@@ -106,25 +106,29 @@ $breadcrumb-divider: "/" !default;
 $breadcrumb-font-size: .9em !default;
 $breadcrumb-font-weight-active: $font-weight-bold !default;
 
+// TODO: Change btn-padding format ($btn-padding-default: x x x x;)
 // Buttons
+$btn-block-margin-y: $spacer-y-default !default;
+
 $btn-border-width: 2px !default;
 
 $btn-font-size-sm: $font-size-sm !default;
-$btn-font-size-default: 0.9em !default;
+$btn-font-size-default: .9rem !default;
 $btn-font-size-lg: 16px !default;
 
-$btn-block-margin-y: $spacer-y-default !default;
+$btn-font-weight: $font-weight-default !default;
+
+//$btn-line-height: 1.5rem;
 
 $btn-padding-y-sm: 4px !default;
 $btn-padding-x-sm: 8px !default;
 
-$btn-padding-y-default: 6px !default;
+$btn-padding-y-default: 7px !default;
 $btn-padding-x-default: 16px !default;
 
-$btn-padding-y-lg: 16px !default;
-$btn-padding-x-lg: 26px !default;
+$btn-padding-y-lg: 14px !default;
+$btn-padding-x-lg: 24px !default;
 
-$btn-font-weight: $font-weight-default !default;
 
 // Codes, Keyboards, & Pres
 $code-color: #3363bd; // bd4147
@@ -143,10 +147,52 @@ $close-color: $sasha-black !default;
 $close-font-size: $font-size-lg !default;
 $close-font-weight: $font-weight-bold !default;
 
+// Grid Breakpoints
+$sm-screen-up: 577px !default;
+$md-screen-up: 769px !default;
+$lg-screen-up: 993px !default;
+$xl-screen-up: 1201px !default;
+$sm: 0px !default; // 576
+$md: 576px !default; // 768
+$lg: 768px !default; // 992
+$xl: 992px !default; // 1200
+
+
+$md-and-up: "only screen and (min-width : #{$sm-screen-up})" !default;
+$lg-and-up: "only screen and (min-width : #{$md-screen-up})" !default;
+$sm-and-down: "only screen and (max-width : #{$sm})" !default;
+$md-and-down: "only screen and (max-width : #{$md})" !default;
+$md-only: "only screen and (min-width : #{$sm-screen-up}) and (max-width : #{$md})" !default;
+
+
+$grid-col-max: 12 !default;
+
 // Images
 $figure-img-border-bottom: $spacer-y-default / 2 !default;
 $figure-caption-font-size: .9em !default;
 $figure-caption-color: $sasha-darker;
+
+// Inputs
+$input-bg: $sasha-white !default;
+$input-bg-disabled: $sasha-grey;
+$input-bg-focus: $input-bg !default;
+
+$input-border-color: $sasha-dark !default;
+$input-border-color-focus: lighten($primary, 5%) !default;
+
+$input-border-width: 1px;
+
+$input-color: $color-default;
+$input-color-focus: $input-color !default;
+$input-color-placeholder: $sasha-darker;
+
+$input-font-size: $font-size-default;
+
+$input-line-height: 1.25rem;
+
+$input-padding-y: .5rem;
+$input-padding-x: .75rem;
+
 
 //Pagination
 $pagination-bg: $sasha-grey;

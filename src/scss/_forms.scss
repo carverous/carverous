@@ -1,0 +1,47 @@
+// Forms
+
+@mixin form-control-focus() {
+  &:focus {
+    color: $input-color-focus;
+    background-color: $input-bg-focus;
+    border-color: $input-border-color-focus;
+    outline: none;
+  }
+}
+
+.form-control {
+  background: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style
+  background-clip: padding-box; // Reset unusual Firefox-on-Android default style
+  border: $input-border-width solid $input-border-color;
+  color: $input-color;
+  display: block;
+  font-size: $input-font-size;
+  // height: $input-height; // Make inputs at least the height of their button counterpart
+  line-height: $input-line-height;
+  padding: $input-padding-y $input-padding-x;
+  width: 100%;
+
+  // No effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  @include border-radius($border-radius-sm);
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  @include form-control-focus();
+
+  &::placeholder {
+    color: $input-color-placeholder;
+    opacity: 1; // Override Firefox's unusual default opacity.
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: $input-bg-disabled;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+}

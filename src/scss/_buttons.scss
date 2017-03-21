@@ -32,6 +32,8 @@
 
 @mixin btn-size($font-size, $padding-y, $padding-x) {
   font-size: $font-size;
+  font-weight: $btn-font-weight;
+  //line-height: $btn-line-height;
   padding: $padding-y $padding-x;
 }
 
@@ -44,7 +46,7 @@
   text-align: center;
   text-transform: uppercase;
   transition: all .25s;
-  user-select: none; // To prevent highlighting the text inside the buttons
+  // user-select: none; // To prevent highlighting the text inside the buttons
   vertical-align: middle;
   white-space: nowrap; // To prevent from wrapping or placing text on a new line
 

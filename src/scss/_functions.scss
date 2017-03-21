@@ -7,8 +7,10 @@
     @return darken($theme, 20%);
   }
   @else {
-    @return #fff;
+    @return lighten($theme, 50%);
+    //@return #fff;
   }
+
 
   @return $theme;
 }

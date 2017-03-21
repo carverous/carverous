@@ -1,0 +1,17 @@
+// Grid Initialize
+// The global stuff of the grid
+
+@mixin media-breakpoint($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  @include media-breakpoint($sm) {
+    padding-left: $spacer-y-default;
+    padding-right: $spacer-y-default;
+  }
+}
