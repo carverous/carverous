@@ -148,22 +148,10 @@ $close-font-size: $font-size-lg !default;
 $close-font-weight: $font-weight-bold !default;
 
 // Grid Breakpoints
-$sm-screen-up: 577px !default;
-$md-screen-up: 769px !default;
-$lg-screen-up: 993px !default;
-$xl-screen-up: 1201px !default;
 $sm: 0px !default; // 576
 $md: 576px !default; // 768
 $lg: 768px !default; // 992
 $xl: 992px !default; // 1200
-
-
-$md-and-up: "only screen and (min-width : #{$sm-screen-up})" !default;
-$lg-and-up: "only screen and (min-width : #{$md-screen-up})" !default;
-$sm-and-down: "only screen and (max-width : #{$sm})" !default;
-$md-and-down: "only screen and (max-width : #{$md})" !default;
-$md-only: "only screen and (min-width : #{$sm-screen-up}) and (max-width : #{$md})" !default;
-
 
 $grid-col-max: 12 !default;
 

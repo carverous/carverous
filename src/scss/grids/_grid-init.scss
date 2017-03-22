@@ -20,19 +20,12 @@
   max-width: 100%;
 }
 
-.row {
-  //background: $secondary;
-  //border: 5px solid red;
-  margin-left: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
-  margin-right: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
-}
-
-@import "grids/grid-flexbox";
-@import "grids/grid-float";
-
-.col-demo {
+.col-demo, .col-flex-demo {
   background: $sasha-grey;
   border-collapse: collapse;
   margin: 5px;
   padding: 10px;
 }
+
+@import "grids/grid-flexbox";
+@import "grids/grid-float";

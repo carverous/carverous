@@ -1,3 +1,60 @@
 // Flexbox Grid
-// Create a grid based on flexbox technology
+// Create a grid based on flexbox technology (No support for dinosaurs).
 
+[class*="row-flex"] {
+  //background: pink;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  // IE11 messes it up when it's just "flex: 1;"
+  // See: http://stackoverflow.com/questions/20122661/flexbox-columns-and-ie
+  flex: 1 0 auto;
+
+}
+
+// Phones (small)
+@media only screen and (min-width: $sm) {
+
+  .row-flex-sm {
+    flex-direction: row;
+  }
+
+  .row-flex-md {
+    flex-direction: column;
+  }
+
+  .row-flex-lg {
+    flex-direction: column;
+  }
+}
+
+// Tablets (medium)
+@media only screen and (min-width: $md) {
+
+  .row-flex-md {
+    flex-direction: row;
+  }
+
+}
+
+// Desktops (large)
+@media only screen and (min-width: $lg) {
+  .row-flex-lg {
+    flex-direction: row;
+  }
+}
+
+// Larger Desktops (extra large)
+//@media only screen and (min-width: $xl) {
+//  .row {
+//    .col-flex-xl {
+//      @for $i from 1 through $grid-col-max-col-num {
+//        &-#{$i} {
+//          width: $i / $grid-$grid-col-max-num * 100%;
+//        }
+//      }
+//    }
+//  }
+//}

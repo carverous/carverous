@@ -1,6 +1,13 @@
 // Float Grid
 // Create a grid based on the traditional float method
 
+.row {
+  //background: $secondary;
+  //border: 5px solid red;
+  margin-left: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
+  margin-right: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
+}
+
 // Phones (small)
 @media only screen and (min-width: $sm) {
   .row {

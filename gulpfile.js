@@ -1,3 +1,6 @@
+// Gulp is a toolkit for automating painful or time-consuming tasks in your
+// development workflow, so you can stop messing around and build something.
+
 "use strict";
 
 // Variables
@@ -7,7 +10,7 @@ var cleanCSS = require('gulp-clean-css');  // To minify and optionally remove co
 var rename = require("gulp-rename");
 var flatten = require("gulp-flatten"); // To place all the output files in the same directory
 var postCSS = require('gulp-postcss');
-var autoPrefixer = require('autoprefixer');
+var autoPrefixer = require('autoprefixer'); // PostCSS plugin to add vendor prefixes using values from http://caniuse.com/
 
 
 // Tasks
