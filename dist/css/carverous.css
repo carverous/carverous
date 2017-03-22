@@ -996,27 +996,29 @@ button.close {
   padding: 10px; }
 
 [class*="row-flex"] {
-  display: flex;
-  flex-wrap: wrap; }
+  margin-left: -15px;
+  margin-right: -15px; }
 
 .col {
-  flex: 1 0 auto; }
+  flex: 1; }
 
 @media only screen and (min-width: 0px) {
   .row-flex-sm {
-    flex-direction: row; }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
   .row-flex-md {
-    flex-direction: column; }
+    display: block; }
   .row-flex-lg {
-    flex-direction: column; } }
+    display: block; } }
 
 @media only screen and (min-width: 576px) {
   .row-flex-md {
-    flex-direction: row; } }
+    display: flex; } }
 
 @media only screen and (min-width: 768px) {
   .row-flex-lg {
-    flex-direction: row; } }
+    display: flex; } }
 
 .row {
   margin-left: -15px;

@@ -2,31 +2,34 @@
 // Create a grid based on flexbox technology (No support for dinosaurs).
 
 [class*="row-flex"] {
-  //background: pink;
-  display: flex;
-  flex-wrap: wrap;
+  //background: $primary;
+  margin-left: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
+  margin-right: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
 }
 
 .col {
   // IE11 messes it up when it's just "flex: 1;"
   // See: http://stackoverflow.com/questions/20122661/flexbox-columns-and-ie
-  flex: 1 0 auto;
+  // flex: 1 0 auto;
+  // The trick instead is use media query and set the display back to block;
 
+  flex: 1;
 }
 
 // Phones (small)
 @media only screen and (min-width: $sm) {
-
   .row-flex-sm {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .row-flex-md {
-    flex-direction: column;
+    display: block;
   }
 
   .row-flex-lg {
-    flex-direction: column;
+    display: block;
   }
 }
 
@@ -34,7 +37,7 @@
 @media only screen and (min-width: $md) {
 
   .row-flex-md {
-    flex-direction: row;
+    display: flex;
   }
 
 }
@@ -42,19 +45,6 @@
 // Desktops (large)
 @media only screen and (min-width: $lg) {
   .row-flex-lg {
-    flex-direction: row;
+    display: flex;
   }
 }
-
-// Larger Desktops (extra large)
-//@media only screen and (min-width: $xl) {
-//  .row {
-//    .col-flex-xl {
-//      @for $i from 1 through $grid-col-max-col-num {
-//        &-#{$i} {
-//          width: $i / $grid-$grid-col-max-num * 100%;
-//        }
-//      }
-//    }
-//  }
-//}
