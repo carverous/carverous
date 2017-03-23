@@ -11,8 +11,9 @@
   margin: 0 auto;
   max-width: 1200px;
   @include media-breakpoint($sm) {
-    padding-left: $spacer-y-default;
-    padding-right: $spacer-y-default;
+    //padding-left: $spacer-y-default;
+    //padding-right: $spacer-y-default;
+    padding: $spacer-y-default;
   }
 }
 

@@ -983,8 +983,7 @@ button.close {
   max-width: 1200px; }
   @media only screen and (min-width: 0px) {
     .container {
-      padding-left: 15px;
-      padding-right: 15px; } }
+      padding: 15px; } }
 
 .container-fluid {
   max-width: 100%; }
@@ -1321,12 +1320,34 @@ button.close {
 .text-right {
   text-align: right; }
 
-.below-zero {
-  margin-bottom: 0; }
-
 .lead {
   font-size: 1.25em; }
 
 mark, .mark {
   background: #fcf6cf;
   padding: 2px 4px; }
+
+.below-zero {
+  margin-bottom: 0; }
+
+.no-margin {
+  margin: 0; }
+  .no-margin-top {
+    margin-top: 0; }
+  .no-margin-right {
+    margin-right: 0; }
+  .no-margin-bottom {
+    margin-bottom: 0; }
+  .no-margin-left {
+    margin-left: 0; }
+
+.no-padding {
+  padding: 0; }
+  .no-padding-top {
+    padding-top: 0; }
+  .no-padding-right {
+    padding-right: 0; }
+  .no-padding-bottom {
+    padding-bottom: 0; }
+  .no-padding-left {
+    padding-left: 0; }
