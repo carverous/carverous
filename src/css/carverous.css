@@ -1378,3 +1378,38 @@ mark, .mark {
     padding-bottom: 0; }
   .no-padding-left {
     padding-left: 0; }
+
+.no-border {
+  border: none; }
+  .no-border-top {
+    border-top: none; }
+  .no-border-right {
+    border-right: none; }
+  .no-border-bottom {
+    border-bottom: none; }
+  .no-border-left {
+    border-left: none; }
+  .no-border-radius {
+    border-radius: 0; }
+
+.rounded {
+  border-radius: 6px; }
+
+.rounded-top {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px; }
+
+.rounded-right {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px; }
+
+.rounded-bottom {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px; }
+
+.rounded-left {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px; }
+
+.rounded-circle {
+  border-radius: 50%; }

@@ -11,7 +11,10 @@
 // changed unless you explicitly invoke the class on the html.
 // Most property-value pairs are arranged alphabetically unless alteration is needed.
 // Margin-bottom is chosen over margin-top. (opinionated)
+
 // Do stuff now! Refactor later.
+// Remind yourself to always end each file with a new line even if this is not C.
+// See: http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file
 
 
 // TODO: Use the offline fonts once done with most of the stuff
@@ -51,6 +54,7 @@
 
 // Utilities
 @import "utilities/spacing";
+@import "utilities/borders";
 
 // TODO: Do these!
 //@import "selection";
