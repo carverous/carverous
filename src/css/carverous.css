@@ -304,77 +304,104 @@ template {
   clear: both;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  margin-bottom: 15px;
-}
-
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2.5rem;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
-
-.font-size-lg-1 {
-  font-size: 6rem;
-}
-
-.font-size-lg-2 {
-  font-size: 5.5rem;
-}
-
-.font-size-lg-3 {
-  font-size: 4.5rem;
-}
-
-.font-size-lg-4 {
-  font-size: 4rem;
-}
-
-.font-weight-thin {
-  font-weight: 100;
-}
-
-.font-weight-light {
-  font-weight: 300;
-}
-
-.font-weight-normal {
-  font-weight: 400;
-}
-
-.font-weight-medium {
-  font-weight: 600;
-}
-
-.font-weight-bold {
-  font-weight: 700;
-}
-
-.font-weight-black {
-  font-weight: 900;
-}
-
 .pill {
   border-radius: 500px !important;
+}
+
+.no-border {
+  border: none;
+}
+
+.no-border-top {
+  border-top: none;
+}
+
+.no-border-right {
+  border-right: none;
+}
+
+.no-border-bottom {
+  border-bottom: none;
+}
+
+.no-border-left {
+  border-left: none;
+}
+
+.no-border-radius {
+  border-radius: 0;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+.rounded-top {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.rounded-right {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.rounded-left {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.below-zero {
+  margin-bottom: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-right {
+  margin-right: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.no-margin-left {
+  margin-left: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.no-padding-left {
+  padding-left: 0;
 }
 
 .alert {
@@ -1624,6 +1651,75 @@ button.close {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+.font-size-lg-1 {
+  font-size: 6rem;
+}
+
+.font-size-lg-2 {
+  font-size: 5.5rem;
+}
+
+.font-size-lg-3 {
+  font-size: 4.5rem;
+}
+
+.font-size-lg-4 {
+  font-size: 4rem;
+}
+
+.font-weight-thin {
+  font-weight: 100;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-normal {
+  font-weight: 400;
+}
+
+.font-weight-medium {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-weight-black {
+  font-weight: 900;
+}
+
 .img-fluid {
   height: auto;
   max-width: 100%;
@@ -1887,100 +1983,4 @@ button.close {
 mark, .mark {
   background: #fcf6cf;
   padding: 2px 4px;
-}
-
-.below-zero {
-  margin-bottom: 0;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.no-margin-top {
-  margin-top: 0;
-}
-
-.no-margin-right {
-  margin-right: 0;
-}
-
-.no-margin-bottom {
-  margin-bottom: 0;
-}
-
-.no-margin-left {
-  margin-left: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-padding-top {
-  padding-top: 0;
-}
-
-.no-padding-right {
-  padding-right: 0;
-}
-
-.no-padding-bottom {
-  padding-bottom: 0;
-}
-
-.no-padding-left {
-  padding-left: 0;
-}
-
-.no-border {
-  border: none;
-}
-
-.no-border-top {
-  border-top: none;
-}
-
-.no-border-right {
-  border-right: none;
-}
-
-.no-border-bottom {
-  border-bottom: none;
-}
-
-.no-border-left {
-  border-left: none;
-}
-
-.no-border-radius {
-  border-radius: 0;
-}
-
-.rounded {
-  border-radius: 6px;
-}
-
-.rounded-top {
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.rounded-right {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px;
-}
-
-.rounded-bottom {
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-
-.rounded-left {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.rounded-circle {
-  border-radius: 50%;
 }

@@ -26,15 +26,19 @@
 @import "variables";
 
 // Core CSS
-//@import "normalize";
 @import "global";
-@import "clearfix";
-@import "headings";
+
 
 @import "functions";
 
+// Utilities
+@import "utilities/clearfix";
+@import "utilities/border-radius";
+@import "utilities/borders";
+@import "utilities/spacing";
+
 // Components
-@import "border-radius";
+
 @import "alerts";
 @import "badges";
 @import "banners";
@@ -46,15 +50,13 @@
 @import "close";
 @import "forms";
 @import "grids/_grid";
+@import "headings";
 @import "images";
 @import "pagination";
 @import "progess";
 @import "tables";
 @import "texts";
 
-// Utilities
-@import "utilities/spacing";
-@import "utilities/borders";
 
 // TODO: Do these!
 //@import "selection";
