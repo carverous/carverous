@@ -4,8 +4,9 @@
 .row {
   //background: $secondary;
   //border: 5px solid red;
-  margin-left: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
-  margin-right: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
+  //margin-left: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
+  //margin-right: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
+  @include clearfix();
 }
 
 // Phones (small)
@@ -19,7 +20,6 @@
         }
       }
     }
-    @include clearfix();
   }
 }
 
@@ -34,7 +34,6 @@
         }
       }
     }
-    @include clearfix();
   }
 }
 
@@ -49,7 +48,6 @@
         }
       }
     }
-    @include clearfix();
   }
 }
 

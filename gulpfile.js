@@ -16,7 +16,7 @@ var autoPrefixer = require('autoprefixer'); // PostCSS plugin to add vendor pref
 // Tasks
 gulp.task('sass', function() {
     return gulp.src('./src/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError)) // Show on the console if there's an error while transpiling
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) // Show on the console if there's an error while transpiling
         .pipe(flatten())
         // .pipe(cleanCSS({keepSpecialComments : 0}))
         .pipe(gulp.dest('./src/css/'));
@@ -41,7 +41,7 @@ gulp.task('watch', function() {
     gulp.watch('./src/css/**/carverous.css', ['autoPrefix']);
     gulp.watch(
         ['./src/css/**/*.css', './src/js/**/*.js'],
-        {base: './src/'},
-        ['deploy']
+        {base: './src/'} //,
+        // ['deploy']
     );
 });

@@ -1,4 +1,5 @@
 // Variables
+// A place to put all the variables together for a more maintainable code.
 
 @import "colors";
 
@@ -8,13 +9,13 @@ $enable-rounded: true !default;
 // Body
 $body-bg: $sasha-white !default;
 $color-default: #545454 !default;
-$color-muted: $sasha-dark;
+$color-muted: $sasha-dark !default;
 
 // Links
 $link-color: #50abe0 !default;
-$link-color-hover: red; // Debugger
-$link-decoration: none;
-$link-decoration-hover: underline;
+$link-color-hover: red !default; // Debugger
+$link-decoration: none !default;
+$link-decoration-hover: underline !default;
 
 // Fonts
 $font-family-alt: 'Roboto', sans-serif !default;
@@ -79,7 +80,7 @@ $spacer-lg: $spacer-y-lg $spacer-x-lg !default;
 // Alerts
 $alert-margin-y: $spacer-y-default !default;
 $alert-padding: $spacer-y-default !default;
-$alert-link-font-weight: $font-weight-bold;
+$alert-link-font-weight: $font-weight-bold !default;
 
 // Badges
 $badge-border-radius: $border-radius-sm !default;
@@ -89,15 +90,15 @@ $badge-margin-top: -0.3em !default;
 $badge-padding: 0 8px 1px !default;
 
 // Banners
-$banner-bg: $sasha-grey;
-$banner-margin-bottom: $spacer-y-default;
-$banner-padding: $spacer-lg;
+$banner-bg: $sasha-grey !default;
+$banner-margin-bottom: $spacer-y-default !default;
+$banner-padding: $spacer-lg !default;
 
 //Blockquotes
-$blockquote-border-color: $sasha-grey;
-$blockquote-border-width: 3px;
-$blockquote-font-size: $font-size-default;
-$blockquote-footer-color: $sasha-dark;
+$blockquote-border-color: $sasha-grey !default;
+$blockquote-border-width: 3px !default;
+$blockquote-font-size: $font-size-default !default;
+$blockquote-footer-color: $sasha-dark !default;
 
 // Breadcrumbs
 $breadcrumb-color: $sasha-dark !default;
@@ -105,6 +106,14 @@ $breadcrumb-color-active: $sasha-dark !default;
 $breadcrumb-divider: "/" !default;
 $breadcrumb-font-size: .9em !default;
 $breadcrumb-font-weight-active: $font-weight-bold !default;
+
+// Breakpoints
+$sm: 0px !default; // 576
+$md: 576px !default; // 768
+$lg: 768px !default; // 992
+$xl: 992px !default; // 1200
+
+$grid-col-max: 12 !default;
 
 // TODO: Change btn-padding format ($btn-padding-default: x x x x;)
 // Buttons
@@ -138,31 +147,23 @@ $code-padding-y: $spacer-y-sm !default;
 $code-padding-x: $spacer-x-sm !default;
 $kbd-bg: lighten($sasha-black, 20%) !default;
 $kbd-color: $sasha-white !default;
-$kbd-border-radius: 4px;
+$kbd-border-radius: 4px !default;
 $kbd-nested-font-weight: $font-weight-bold !default;
-$pre-color: $color-default;
+$pre-color: $color-default !default;
 
 // Close
 $close-color: $sasha-black !default;
 $close-font-size: $font-size-lg !default;
 $close-font-weight: $font-weight-bold !default;
 
-// Grid Breakpoints
-$sm: 0px !default; // 576
-$md: 576px !default; // 768
-$lg: 768px !default; // 992
-$xl: 992px !default; // 1200
-
-$grid-col-max: 12 !default;
-
 // Images
 $figure-img-border-bottom: $spacer-y-default / 2 !default;
 $figure-caption-font-size: .9em !default;
-$figure-caption-color: $sasha-darker;
+$figure-caption-color: $sasha-darker !default;
 
 // Inputs
 $input-bg: $sasha-white !default;
-$input-bg-disabled: $sasha-grey;
+$input-bg-disabled: $sasha-grey !default;
 $input-bg-focus: $input-bg !default;
 
 $input-border-color: $sasha-dark !default;
@@ -170,44 +171,44 @@ $input-border-color-focus: lighten($primary, 5%) !default;
 
 $input-border-width: 1px;
 
-$input-color: $color-default;
+$input-color: $color-default !default;
 $input-color-focus: $input-color !default;
-$input-color-placeholder: $sasha-darker;
+$input-color-placeholder: $sasha-darker !default;
 
-$input-font-size: $font-size-default;
+$input-font-size: $font-size-default !default;
 
-$input-line-height: 1.25rem;
+$input-line-height: 1.25rem !default;
 
-$input-padding-y: .5rem;
-$input-padding-x: .75rem;
+$input-padding-y: .5rem !default;
+$input-padding-x: .75rem !default;
 
 
 //Pagination
-$pagination-bg: $sasha-grey;
-$pagination-bg-active: $primary;
-$pagination-bg-disabled: $sasha-grey;
-$pagination-bg-hover: $primary;
+$pagination-bg: $sasha-grey !default;
+$pagination-bg-active: $primary !default;
+$pagination-bg-disabled: $sasha-grey !default;
+$pagination-bg-hover: $primary !default;
 
-$pagination-border-active: none;
-$pagination-border-color: $sasha-dark;
-$pagination-border-disabled: none;
-$pagination-border-hover: none;
-$pagination-border-width: 0;
+$pagination-border-active: none !default;
+$pagination-border-color: $sasha-dark !default;
+$pagination-border-disabled: none !default;
+$pagination-border-hover: none !default;
+$pagination-border-width: 0 !default;
 
-$pagination-color: $color-default;
-$pagination-color-active: $sasha-white;
-$pagination-color-disabled: $sasha-dark;
-$pagination-color-hover: $sasha-white;
+$pagination-color: $color-default !default;
+$pagination-color-active: $sasha-white !default;
+$pagination-color-disabled: $sasha-dark !default;
+$pagination-color-hover: $sasha-white !default;
 
 $pagination-font-size: 1em !default;
 $pagination-font-size-sm: .9em !default;
 
 $pagination-line-height: 1.25em !default;
 
-$pagination-padding-y: 6px;
-$pagination-padding-x: 14px;
-$pagination-padding-y-sm: 3px;
-$pagination-padding-x-sm: 10px;
+$pagination-padding-y: 6px !default;
+$pagination-padding-x: 14px !default;
+$pagination-padding-y-sm: 3px !default;
+$pagination-padding-x-sm: 10px !default;
 
 // Progress
 $progress-container-bg: $sasha-grey !default;
