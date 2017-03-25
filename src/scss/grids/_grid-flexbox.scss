@@ -2,16 +2,15 @@
 // Create a grid based on flexbox technology (No support for dinosaurs).
 
 [class*="row-flex"] {
-  //background: $primary;
-  //margin-left: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
-  //margin-right: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
-  // margin: -1 * $spacer-y-default;
+  //background: $primary; // debug
 }
 
-.col {
+.col-flex {
+
   // IE11 messes it up when it's just "flex: 1;"
   // See: http://stackoverflow.com/questions/20122661/flexbox-columns-and-ie
   // flex: 1 0 auto;
+
   // The trick instead is use media query and set the display back to block;
 
   flex: 1;

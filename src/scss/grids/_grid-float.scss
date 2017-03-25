@@ -2,10 +2,8 @@
 // Create a grid based on the traditional float method
 
 .row {
-  //background: $secondary;
-  //border: 5px solid red;
-  //margin-left: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
-  //margin-right: -1 * $spacer-x-default; // Dirty trick to remove .container's padding
+  //background: $secondary; // debug
+  //border: 5px solid red; // debug
   @include clearfix();
 }
 
@@ -50,16 +48,3 @@
     }
   }
 }
-
-// Larger Desktops (extra large)
-//@media only screen and (min-width: $xl) {
-//  .row {
-//    .col-xl {
-//      @for $i from 1 through $grid-col-max-col-num {
-//        &-#{$i} {
-//          width: $i / $grid-$grid-col-max-num * 100%;
-//        }
-//      }
-//    }
-//  }
-//}

@@ -1,5 +1,5 @@
-// Grid Initialize
-// Here is where we decide whether to use float, flexbox, or both grid system
+// Grid
+// Here is where we decide whether to use float, flexbox, or both of the grid system
 
 @mixin media-breakpoint($breakpoint) {
   @media only screen and (min-width: $breakpoint) {
@@ -25,6 +25,7 @@
 }
 
 // LOL! I tried to only use 'col' and it affected other elements
+// This selector is risky
 [class*='col-'] {
   padding-left: $spacer-y-default;
   padding-right: $spacer-y-default;
@@ -32,9 +33,8 @@
 
 .col-demo, .col-flex-demo {
   background: $sasha-grey;
-  border-collapse: collapse;
-  margin: 5px;
-  padding: 10px;
+  border: 1px solid #fff;
+  padding: $spacer-y-default;
 }
 
 @import "grids/grid-flexbox";
