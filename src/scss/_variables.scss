@@ -95,10 +95,12 @@ $banner-margin-bottom: $spacer-y-default !default;
 $banner-padding: $spacer-lg !default;
 
 //Blockquotes
-$blockquote-border-color: $sasha-grey !default;
+$blockquote-background: $sasha-light !default;
+$blockquote-border-color: $primary !default;
 $blockquote-border-width: 3px !default;
-$blockquote-font-size: $font-size-default !default;
-$blockquote-footer-color: $sasha-dark !default;
+$blockquote-font-size: 1rem !default;
+$blockquote-footer-color: $color-default !default;
+$blockquote-padding: $spacer-y-default !default;
 
 // Breadcrumbs
 $breadcrumb-color: $sasha-dark !default;

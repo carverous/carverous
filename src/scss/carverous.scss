@@ -5,12 +5,13 @@
  */
 
 // NOTES:
-// American English is mostly used for the naming convention.
-// Customizing the default tags directly breaks lots of third-party widgets.
+// American English is mostly used for naming convention purposes.
+// Customizing the default tags directly breaks lots of third-party widgets
+// and affects the browser's performance in general.
 // Most are designed to be opt-in, meaning the original elements are not
 // changed unless you explicitly invoke the class on the html.
 // Most property-value pairs are arranged alphabetically unless alteration is needed.
-// Margin-bottom is chosen over margin-top. (opinionated)
+// Margin-bottom for h's, p's, & etc. was chosen over margin-top. (opinionated)
 
 // Do stuff now! Refactor later.
 // Remind yourself to always end each file with a new line even if this is not C.
@@ -22,22 +23,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
-// Core Variables
+
 @import "variables";
 
-// Core CSS
 @import "global";
-
-
 @import "functions";
+@import "clearfix";
+@import "border-radius";
 
-// Utilities
-@import "utilities/clearfix";
-@import "utilities/border-radius";
-@import "utilities/borders";
-@import "utilities/spacing";
-
-// Components
 
 @import "alerts";
 @import "badges";
@@ -52,10 +45,15 @@
 @import "grids/_grid";
 @import "headings";
 @import "images";
+@import "navigation";
 @import "pagination";
 @import "progess";
 @import "tables";
 @import "texts";
+
+// These go below to override others' properties
+@import "borders";
+@import "spacing";
 
 
 // TODO: Do these!

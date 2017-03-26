@@ -308,102 +308,6 @@ template {
   border-radius: 500px !important;
 }
 
-.no-border {
-  border: none;
-}
-
-.no-border-top {
-  border-top: none;
-}
-
-.no-border-right {
-  border-right: none;
-}
-
-.no-border-bottom {
-  border-bottom: none;
-}
-
-.no-border-left {
-  border-left: none;
-}
-
-.no-border-radius {
-  border-radius: 0;
-}
-
-.rounded {
-  border-radius: 6px;
-}
-
-.rounded-top {
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.rounded-right {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px;
-}
-
-.rounded-bottom {
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-
-.rounded-left {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.rounded-circle {
-  border-radius: 50%;
-}
-
-.below-zero {
-  margin-bottom: 0;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.no-margin-top {
-  margin-top: 0;
-}
-
-.no-margin-right {
-  margin-right: 0;
-}
-
-.no-margin-bottom {
-  margin-bottom: 0;
-}
-
-.no-margin-left {
-  margin-left: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-padding-top {
-  padding-top: 0;
-}
-
-.no-padding-right {
-  padding-right: 0;
-}
-
-.no-padding-bottom {
-  padding-bottom: 0;
-}
-
-.no-padding-left {
-  padding-left: 0;
-}
-
 .alert {
   padding: 15px;
 }
@@ -642,14 +546,15 @@ template {
 }
 
 .blockquote {
-  border-left: 3px solid #ECEEEF;
-  font-size: 16px;
+  background: #f7f9fa;
+  border-left: 3px solid #34495e;
+  font-size: 1rem;
   margin: 0 0 15px;
-  padding-left: 15px;
+  padding: 15px;
 }
 
 .blockquote-footer {
-  color: #bbbbbb;
+  color: #545454;
   display: block;
   margin-top: .8em;
 }
@@ -660,9 +565,7 @@ template {
 
 .blockquote-reverse {
   border-left: 0;
-  border-right: 3px solid #ECEEEF;
-  padding-left: 0;
-  padding-right: 15px;
+  border-right: 3px solid #34495e;
   text-align: right;
 }
 
@@ -1740,6 +1643,60 @@ h6 {
   text-align: center;
 }
 
+.nav-icon {
+  height: 70px;
+  width: 88px;
+  position: relative;
+}
+
+.nav-icon .span {
+  height: 6px;
+  width: 55px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #000;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.nav-icon .span::before, .nav-icon .span::after {
+  height: 6px;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  content: "";
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.nav-icon .span::after {
+  top: 20px;
+}
+
+.nav-icon .span::before {
+  top: -20px;
+}
+
+.nav-icon.active .span::after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-icon.active .span::before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.nav-icon.active .span {
+  background: none;
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1983,4 +1940,96 @@ h6 {
 mark, .mark {
   background: #fcf6cf;
   padding: 2px 4px;
+}
+
+.no-border {
+  border: none;
+}
+
+.no-border-top {
+  border-top: none;
+}
+
+.no-border-right {
+  border-right: none;
+}
+
+.no-border-bottom {
+  border-bottom: none;
+}
+
+.no-border-left {
+  border-left: none;
+}
+
+.no-border-radius {
+  border-radius: 0;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+.rounded-top {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.rounded-right {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.rounded-left {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-right {
+  margin-right: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.no-margin-left {
+  margin-left: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.no-padding-left {
+  padding-left: 0;
 }
