@@ -15,7 +15,7 @@
   padding: 15px;
 }
 
-.container [class*="row"] {
+.container .row, .container [class="row-flex"] {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -35,16 +35,17 @@
   padding: 15px;
 }
 
+[class*="row-flex"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .col-flex {
   flex: 1;
 }
 
 @media only screen and (min-width: 0px) {
-  .row-flex-sm {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
   .row-flex-md {
     display: block;
   }

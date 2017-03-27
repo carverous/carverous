@@ -8,8 +8,8 @@ $enable-rounded: true !default;
 
 // Body
 $body-bg: $sasha-white !default;
-$color-default: #545454 !default;
-$color-muted: $sasha-dark !default;
+$body-color: #545454 !default;
+$body-color-muted: $sasha-dark !default;
 
 // Links
 $link-color: #50abe0 !default;
@@ -99,7 +99,7 @@ $blockquote-background: $sasha-light !default;
 $blockquote-border-color: $primary !default;
 $blockquote-border-width: 3px !default;
 $blockquote-font-size: 1rem !default;
-$blockquote-footer-color: $color-default !default;
+$blockquote-footer-color: $body-color !default;
 $blockquote-padding: $spacer-y-default !default;
 
 // Breadcrumbs
@@ -151,7 +151,7 @@ $kbd-bg: lighten($sasha-black, 20%) !default;
 $kbd-color: $sasha-white !default;
 $kbd-border-radius: 4px !default;
 $kbd-nested-font-weight: $font-weight-bold !default;
-$pre-color: $color-default !default;
+$pre-color: $body-color !default;
 
 // Close
 $close-color: $sasha-black !default;
@@ -173,7 +173,7 @@ $input-border-color-focus: lighten($primary, 5%) !default;
 
 $input-border-width: 1px;
 
-$input-color: $color-default !default;
+$input-color: $body-color !default;
 $input-color-focus: $input-color !default;
 $input-color-placeholder: $sasha-darker !default;
 
@@ -183,6 +183,22 @@ $input-line-height: 1.25rem !default;
 
 $input-padding-y: .5rem !default;
 $input-padding-x: .75rem !default;
+
+// Navigation
+$nav-bg: $sasha-grey !default;
+$nav-bg-hover: darken($nav-bg, 5%) !default;
+
+$nav-color: $sasha-darkest !default;
+
+$nav-icon-color: $sasha-white;
+
+$nav-item-padding-left: 20px;
+$nav-item-padding-right: 20px;
+
+$nav-line-height: 60px !default;
+
+$nav-logo-color: $body-color !default;
+
 
 
 //Pagination
@@ -197,7 +213,7 @@ $pagination-border-disabled: none !default;
 $pagination-border-hover: none !default;
 $pagination-border-width: 0 !default;
 
-$pagination-color: $color-default !default;
+$pagination-color: $body-color !default;
 $pagination-color-active: $sasha-white !default;
 $pagination-color-disabled: $sasha-dark !default;
 $pagination-color-hover: $sasha-white !default;

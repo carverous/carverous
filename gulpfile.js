@@ -31,7 +31,7 @@ gulp.task('autoPrefix', function() {
 gulp.task('deploy', function() { // Deploy to the dist directory
     return gulp.src([
         './src/css/**/*.css',
-        './src/js/**/*.js'
+        './src/js/**/carverous.js' // './src/js/**/*.js'
     ], {base: './src/'})
         .pipe(gulp.dest('dist/'));
 });

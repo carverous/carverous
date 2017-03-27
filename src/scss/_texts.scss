@@ -1,8 +1,7 @@
 // Texts
 
-// TODO: Refactor this from color-* to text-*
 // Text Colors
-.color {
+.text {
   @each $name, $value in $theme-colors {
     &-#{$name} {
       color: $value;
@@ -13,17 +12,11 @@
       color: $value;
     }
   }
-}
 
-// Text Alignment
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
+  // Text Alignment
+  &-left { text-align: left; }
+  &-center { text-align: center; }
+  &-right { text-align: right; }
 }
 
 // Enlarge the text in <p> elements by calling this class

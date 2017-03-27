@@ -9,36 +9,118 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="../css/font-awesome.min.css">
 
-    <script src="../js/livereload.js"></script>
+    <script src="../js/live.js"></script>
 </head>
 <body>
-    <header>
+    <div class="container">
 
-    </header>
+        <nav class="nav">
+            <a href="#" class="nav-brand">BRAND</a>
 
-    <div class="nav-icon cross">
-        <div class="span"></div>
+            <div class="nav-toggler">
+                <!--MENU-->
+                <div class="nav-icon cross">
+                    <span></span>
+                </div>
+            </div>
+
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+        </p>
+
+        <div class="banner">
+            <h1>Awesome nav-icons!</h1>
+
+            <p class="lead">
+                Check out these cool animating hamburger icons!
+            </p>
+
+            <div>
+                <div class="nav-icon cross" style="float: left; margin-right: 10px;">
+                    <span></span>
+                </div>
+
+                <div class="nav-icon minus" style="float: left; margin-right: 10px;">
+                    <span></span>
+                </div>
+
+                <div class="nav-icon larrow" style="float: left; margin-right: 10px;">
+                    <span></span>
+                </div>
+
+                <div class="nav-icon rarrow" style="float: left;">
+                    <span></span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <br>
+
+            <p class="lead">
+                <a href="#" class="btn btn-primary btn-lg">Amazing!</a>
+            </p>
+        </div>
+
+        <div>
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis quos?
+            </p>
+        </div>
     </div>
 
-    <script>
-
-        var navIcon = document.querySelectorAll('.nav-icon');
-        for(var i = 0; i < navIcon.length; i++) {
-            var toggle = navIcon[i];
-            toggleSwitch(toggle);
-        }
-
-        function toggleSwitch(toggle) {
-            toggle.addEventListener('click', function () {
-                if(this.classList.contains('active')) {
-                    this.classList.remove('active');
-                }
-                else {
-                    this.classList.add('active');
-                }
-            })
-        }
-
-    </script>
+    <script src="../js/navigation.js"></script>
 </body>
 </html>

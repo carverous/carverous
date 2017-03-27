@@ -1,54 +1,200 @@
 // Navigation
 // A responsive navigation bar
 
+.container .nav {
+  margin-bottom: $spacer-y-default;
+}
 
+.nav {
+  background: $nav-bg;
+  line-height: $nav-line-height;
+
+  a.nav-brand {
+    background: orange; // debug
+    color: $nav-logo-color;
+    font-weight: $font-weight-bold;
+    margin: 0 auto;
+    padding-left: $spacer-y-default;
+    padding-right: $spacer-y-default;
+    text-decoration: none;
+  }
+
+  .nav-toggler {
+    background: lightblue; //debug
+    font-weight: $font-weight-bold;
+    float: right;
+    padding-left: $spacer-y-default;
+    padding-right: $spacer-y-default;
+    vertical-align: middle;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  ul li a {
+    background: pink; //debug
+    color: $nav-color;
+    padding: 0 $spacer-y-default;
+    text-decoration: none;
+    display: block;
+
+    &:hover, &.active {
+      background: $nav-bg-hover;
+    }
+  }
+
+  @include media-breakpoint($lg) {
+
+    a.nav-brand {
+      float: left;
+    }
+
+    .nav-toggler {
+      display: none;
+    }
+
+    li {
+      float: left;
+    }
+    li a {
+      display: block;
+    }
+  }
+
+  @include clearfix();
+}
 
 
 // Toggle Icons
+
+// Inspiration: http://codepen.io/Techno-Tut/pen/YXrYwa?editors=1100
+// They are outside .nav selector so we can use them somewhere else
+
 .nav-icon {
-  height: 70px;
-  width: 88px;
+  background: #333; // debug
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
   position: relative;
 
-  .span {
-    height: 6px;
-    width: 55px;
+  span {
+    background: $nav-icon-color;
+    height: 4px;
+    width: 30px;
+    margin: auto;
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
-    margin: auto;
-    background: #000;
-    transition: all .3s;
-
+    bottom: 0;
+    transform: rotate(0deg); // To enable video acceleration
+    transition: all .15s ease-in-out;
+    
     &::before, &::after {
-      height: 6px;
-      width: 100%;
-      background: #000;
-      position: absolute;
+      background: $nav-icon-color;
       content: "";
-      transition: all .3s;
+      height: 4px;
+      width: 100%;
+      position: absolute;
+      transition: all .15s ease-in-out;
     }
-    &::after {
-      top: 20px;
-    }
-    &::before {
-      top: -20px;
-    }
+    &::before { top: -10px; }
+    &::after { top: 10px; }
   }
+}
 
-  &.active .span::after {
-    top: 0;
-    transform: rotate(45deg);
-  }
-
-  &.active .span::before {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-
-  &.active .span {
+// Cross Effect
+.cross.active span {
+  & {
     background: none;
+  }
+  &::before {
+    transform:rotate(45deg);
+    top:0;
+  }
+  &::after {
+    transform:rotate(-45deg);
+    top: 0;
+  }
+}
+
+// Minus Effect
+.minus.active span {
+  & {
+    transform: scale(0.9);
+  }
+  &::before {
+    transform:scale(0.9);
+    top:0;
+  }
+  &::after {
+    transform:scale(0.9);
+    top:0;
+  }
+}
+
+// Left Arrow Effect
+.larrow.active span {
+  & {
+    //background: red; // debug
+    transform:translateX(0px);
+    width: 60%;
+  }
+  &::before, &::after {
+    transform-origin: top left;
+  }
+  &::before {
+    //background: lightgoldenrodyellow; // debug
+    width: 60%;
+    top: 0;
+    transform: translate(-3px, 2px) rotate(-45deg);
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+  }
+  &::after {
+    //background: deepskyblue; // debug
+    width: 60%;
+    top: 0;
+    transform: translate(0px, 0px) rotate(45deg);
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+  }
+}
+
+// Right Arrow Effect
+.rarrow.active span {
+  & {
+    //background: red; // debug
+    transform:translateX(0px);
+    width: 60%;
+  }
+  &::before, &::after {
+    transform-origin: top right;
+  }
+  &::before {
+    //background: lightgoldenrodyellow; // debug
+    width: 60%;
+    top: 0;
+    transform: translate(12px, 2px) rotate(45deg);
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  &::after {
+    //background: deepskyblue; // debug
+    width: 60%;
+    top: 0;
+    transform: translate(9px, 0px) rotate(-45deg);
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
   }
 }

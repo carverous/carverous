@@ -1,16 +1,17 @@
 // Backgrounds
 // Setting the color of the text is not the scope of bg-* classes
+// They are set to !important to give them super power.
 
 .bg {
   @each $name, $value in $theme-colors {
     &-#{$name} {
-      background: $value;
+      background: $value !important;
     }
   }
   
   @each $name, $value in $theme-sasha {
     &-#{$name} {
-      background: $value;
+      background: $value !important;
     }
   }
 }

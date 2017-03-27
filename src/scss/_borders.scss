@@ -1,17 +1,18 @@
 // Borders
+// They are set to !important to give them super power.
 
 // How 'bout a
 .no {
 
   &-border {
-    border: none;
+    border: none !important;
 
-    &-top { border-top: none; }
-    &-right { border-right: none; }
-    &-bottom { border-bottom: none; }
-    &-left { border-left: none; }
+    &-top { border-top: none !important; }
+    &-right { border-right: none !important; }
+    &-bottom { border-bottom: none !important; }
+    &-left { border-left: none !important; }
 
-    &-radius { border-radius: 0; }
+    &-radius { border-radius: 0 !important; }
   }
 }
 

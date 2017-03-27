@@ -3,6 +3,9 @@
 
 [class*="row-flex"] {
   // background: $primary; // debug
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .col-flex {
@@ -18,12 +21,6 @@
 
 // Phones (small)
 @media only screen and (min-width: $sm) {
-  .row-flex-sm {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   .row-flex-md {
     display: block;
   }

@@ -80,21 +80,21 @@
   // We're adding the default and inverse buttons cause it makes sense
   @each $name, $value in $theme-extra {
     &-#{$name} {
-      @include btn-mix($value, $value, $color-default);
-      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color-default);
+      @include btn-mix($value, $value, $body-color);
+      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $body-color);
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
     }
     &-#{$name}-outline {
       @include btn-mix(none, $value, $value);
-      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color-default);
+      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $body-color);
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
     }
     &-#{$name}-transparent {
-      $color: if($name == 'default', $color-default, $value);
+      $color: if($name == 'default', $body-color, $value);
       @include btn-mix(none, rgba($value, 0), $color);
-      @include btn-hover($value, rgba($value, 0), $color-default);
+      @include btn-hover($value, rgba($value, 0), $body-color);
       @include btn-active(rgba($value, .5), rgba($value, 0));
       @include btn-focus($value);
     }

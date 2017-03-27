@@ -14,7 +14,7 @@
 
   // Dirty trick to remove .container's padding when using col-
   // Only remove them if inside .container
-  [class*="row"] {
+  .row, [class="row-flex"] {
     margin-left: -1 * $spacer-x-default;
     margin-right: -1 * $spacer-x-default;
   }
