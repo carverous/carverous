@@ -36,12 +36,18 @@ var banner = `/*!
 
 // Tasks
 
+function handleError(err) {
+    console.log(err.toString());
+    this.emit('end');
+}
+
 // Transpile Sass to CSS
 gulp.task('sass', function() {
     return gulp.src('./src/scss/**/*.scss')
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) // Useful for debugging our Sass source code
         .pipe(flatten())
-        .pipe(gulp.dest('./src/css/'));
+        .pipe(gulp.dest('./src/css/'))
+        .on('error', handleError);
 });
 
 // Add Vendor Prefixes
@@ -52,7 +58,8 @@ gulp.task('autoprefix', function() {
         ])
         .pipe(postCSS([ autoPrefixer() ]))
         .pipe(insert.prepend(banner))
-        .pipe(gulp.dest('./src/css/'));
+        .pipe(gulp.dest('./src/css/'))
+        .on('error', handleError);
 });
 
 // Minify the prepended and autoPrefix-ed versions of css
@@ -64,6 +71,7 @@ gulp.task('minifycss', function () {
         .pipe(cleanCSS({keepSpecialComments : 1}))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./src/css/'))
+        .on('error', handleError);
 });
 
 // Bundle js files into a single file
@@ -77,6 +85,7 @@ gulp.task('bundlejs', function () {
         .pipe(concatJS(pkg.name + '.js'))
         .pipe(insert.prepend(banner))
         .pipe(gulp.dest('./src/js/'))
+        .on('error', handleError);
 });
 
 // Minify the prepended bundled js files
@@ -89,7 +98,8 @@ gulp.task('minifyjs', function () {
         .pipe(insert.prepend(banner))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./src/js/'))
-})
+        .on('error', handleError);
+});
 
 // Deploy - copy files to the dist directory
 gulp.task('deploy', function() {
@@ -98,11 +108,12 @@ gulp.task('deploy', function() {
         './src/js/**/' + pkg.name + '.js',
         './src/js/**/' + pkg.name + '.min.js'
         ], {base: './src/'})
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/'))
+        .on('error', handleError);
 });
 
 // Take control of all the tasks while we build awesome things!
-gulp.task('watch', function() {
+gulp.task('watch', function(w) {
 
     gulp.watch([
         './src/scss/**/*.scss'
@@ -127,3 +138,6 @@ gulp.task('watch', function() {
         }
     );
 });
+
+// So we don't have to explicitly type 'watch' after the 'gulp' command
+gulp.task('default', ['watch']);

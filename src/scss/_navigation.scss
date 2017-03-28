@@ -13,8 +13,8 @@
     margin: 0;
     font-size: 1.3rem;
     font-weight: $font-weight-bold;
-    padding-left: $spacer-y-default;
-    padding-right: $spacer-y-default;
+    padding-left: $spacer-default;
+    padding-right: $spacer-default;
     text-decoration: none;
   }
 
@@ -27,8 +27,8 @@
     background: lightblue; //debug
     font-weight: $font-weight-bold;
     float: right;
-    padding-left: $spacer-y-default;
-    padding-right: $spacer-y-default;
+    padding-left: $spacer-default;
+    padding-right: $spacer-default;
     //position: relative;
     //top: -55px;
     //right: 0;
@@ -55,7 +55,7 @@
   ul li a {
     background: pink; //debug
     color: $nav-color;
-    padding: 0 $spacer-y-default;
+    padding: 0 $spacer-default;
     text-decoration: none;
     display: block;
 
@@ -83,7 +83,7 @@
   }
 
   .container & {
-    margin-bottom: $spacer-y-default;
+    margin-bottom: $spacer-default;
   }
 
   @include clearfix();

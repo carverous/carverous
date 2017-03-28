@@ -1,7 +1,7 @@
 // Variables
 // A place to put all the variables together for a more maintainable code.
 
-@import "colors";
+@import "colors"; // Separate the colors file to make the code cleaner;
 
 // Options
 $enable-rounded: true !default;
@@ -66,20 +66,13 @@ $border-radius-lg: 15px !default;
 $border-radius-pill: 500px !default;
 
 // Margin and Padding
-$spacer-y-sm: 2px !default;
-$spacer-x-sm: 4px !default;
-$spacer-y-default: 15px !default;
-$spacer-x-default: 15px !default;
-$spacer-y-lg: 35px !default;
-$spacer-x-lg: 35px !default;
-
-$spacer-sm: $spacer-y-sm $spacer-x-sm !default;
-$spacer-default: $spacer-y-default $spacer-x-default !default;
-$spacer-lg: $spacer-y-lg $spacer-x-lg !default;
+$spacer-sm: 2px !default;
+$spacer-default: 15px !default;
+$spacer-lg: 35px !default;
 
 // Alerts
-$alert-margin-y: $spacer-y-default !default;
-$alert-padding: $spacer-y-default !default;
+$alert-margin-y: $spacer-default !default;
+$alert-padding: $spacer-default !default;
 $alert-link-font-weight: $font-weight-bold !default;
 
 // Badges
@@ -91,7 +84,7 @@ $badge-padding: 0 8px 1px !default;
 
 // Banners
 $banner-bg: $sasha-grey !default;
-$banner-margin-bottom: $spacer-y-default !default;
+$banner-margin-bottom: $spacer-default !default;
 $banner-padding: $spacer-lg !default;
 
 //Blockquotes
@@ -100,7 +93,7 @@ $blockquote-border-color: $primary !default;
 $blockquote-border-width: 3px !default;
 $blockquote-font-size: 1rem !default;
 $blockquote-footer-color: $body-color !default;
-$blockquote-padding: $spacer-y-default !default;
+$blockquote-padding: $spacer-default !default;
 
 // Breadcrumbs
 $breadcrumb-color: $sasha-dark !default;
@@ -119,7 +112,7 @@ $grid-col-max: 12 !default;
 
 // TODO: Change btn-padding format ($btn-padding-default: x x x x;)
 // Buttons
-$btn-block-margin-y: $spacer-y-default !default;
+$btn-block-margin-y: $spacer-default !default;
 
 $btn-border-width: 2px !default;
 
@@ -145,8 +138,8 @@ $btn-padding-x-lg: 24px !default;
 $code-color: #3363bd; // bd4147
 $code-bg: lighten($code-color, 40%) !default;
 $code-font-size: $font-size-default !default;
-$code-padding-y: $spacer-y-sm !default;
-$code-padding-x: $spacer-x-sm !default;
+$code-padding-y: $spacer-sm !default;
+$code-padding-x: $spacer-sm !default;
 $kbd-bg: lighten($sasha-black, 20%) !default;
 $kbd-color: $sasha-white !default;
 $kbd-border-radius: 4px !default;
@@ -159,7 +152,7 @@ $close-font-size: $font-size-lg !default;
 $close-font-weight: $font-weight-bold !default;
 
 // Images
-$figure-img-border-bottom: $spacer-y-default / 2 !default;
+$figure-img-border-bottom: $spacer-default / 2 !default;
 $figure-caption-font-size: .9em !default;
 $figure-caption-color: $sasha-darker !default;
 
@@ -235,7 +228,7 @@ $progress-container-bg: $sasha-grey !default;
 $progress-bar-bg: $primary !default;
 $progress-font-size: 0.9rem !default;
 $progress-height: 1.5rem !default;
-$progress-margin-y: $spacer-y-default !default;
+$progress-margin-y: $spacer-default !default;
 
 // Tables and Data
 $dt-font-weight: $font-weight-bold !default;

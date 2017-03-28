@@ -24,4 +24,8 @@
   & + & {
     margin-top: $alert-margin-y;
   }
+
+  .container & {
+    @include border-radius($border-radius-sm);
+  }
 }

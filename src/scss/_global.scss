@@ -65,7 +65,7 @@ hr {
   box-sizing: content-box; // 1
   height: 0; // 1
   overflow: visible; // 2
-  margin: $spacer-y-default 0;
+  margin: $spacer-default 0;
 }
 
 
@@ -229,7 +229,7 @@ a, area, button, [role="button"], input, label, select, summary, textarea {
 table {
   border-collapse: collapse; // Prevent double borders
   margin-top: 0;
-  margin-bottom: $spacer-y-default;
+  margin-bottom: $spacer-default;
 }
 
 caption {

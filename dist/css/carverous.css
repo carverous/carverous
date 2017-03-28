@@ -377,6 +377,10 @@ template {
   margin-top: 15px;
 }
 
+.container .alert {
+  border-radius: 2px;
+}
+
 .badge {
   border-radius: 2px;
   display: inline-block;
@@ -478,7 +482,7 @@ template {
 .banner {
   background: #ECEEEF;
   margin-bottom: 15px;
-  padding: 35px 35px;
+  padding: 35px;
   border-radius: 6px;
 }
 
@@ -1214,7 +1218,7 @@ code, kbd, pre, samp {
 }
 
 code {
-  padding: 2px 4px;
+  padding: 2px 2px;
   font-size: 16px;
   color: #3363bd;
   background-color: #cbd8f1;
@@ -1228,7 +1232,7 @@ a > code {
 }
 
 kbd {
-  padding: 2px 4px;
+  padding: 2px 2px;
   font-size: 16px;
   color: #fff;
   background-color: #333333;
@@ -2104,7 +2108,7 @@ h6 {
 
 mark, .mark {
   background: #fcf6cf;
-  padding: 2px 4px;
+  padding: 2px;
 }
 
 .no-border {
