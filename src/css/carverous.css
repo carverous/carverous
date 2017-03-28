@@ -1,8 +1,9 @@
 /*!
- * Carverous (https://github.com/cefjoeii/carverous)
+ * Carverous 0.0.8 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 CEF
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 html {
@@ -1644,23 +1645,25 @@ h6 {
   text-align: center;
 }
 
-.container .nav {
-  margin-bottom: 15px;
-}
-
 .nav {
   background: #ECEEEF;
-  line-height: 60px;
+  line-height: 55px;
 }
 
 .nav a.nav-brand {
   background: orange;
   color: #545454;
+  margin: 0;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
   text-decoration: none;
+}
+
+.nav .nav-brand img {
+  height: 35px;
+  margin-top: -2px;
 }
 
 .nav .nav-toggler {
@@ -1669,11 +1672,14 @@ h6 {
   float: right;
   padding-left: 15px;
   padding-right: 15px;
-  vertical-align: middle;
 }
 
 .nav .nav-toggler:hover {
   cursor: pointer;
+}
+
+.nav .nav-toggler .nav-icon {
+  margin: 8px auto 7px;
 }
 
 .nav ul {
@@ -1710,6 +1716,10 @@ h6 {
   .nav li a {
     display: block;
   }
+}
+
+.container .nav {
+  margin-bottom: 15px;
 }
 
 .nav::after {
@@ -1924,15 +1934,15 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.9em;
-  line-height: 1.3rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
   overflow: hidden;
   text-align: center;
 }
 
 .progress-container .progress-bar {
-  height: 1.3rem;
-  line-height: 1.3rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .progress-container .progress-bar-danger {

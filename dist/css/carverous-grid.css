@@ -1,8 +1,9 @@
 /*!
- * Carverous Grid Only (https://github.com/cefjoeii/carverous)
+ * Carverous 0.0.8 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 CEF
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
+
 .clearfix::after {
   display: block;
   content: "";
@@ -36,13 +37,21 @@
 }
 
 [class*="row-flex"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .col-flex {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @media only screen and (min-width: 0px) {
@@ -56,12 +65,16 @@
 
 @media only screen and (min-width: 576px) {
   .row-flex-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .row-flex-lg {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }

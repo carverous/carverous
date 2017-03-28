@@ -1,9 +1,6 @@
 // Navigation
 // A responsive navigation bar
 
-.container .nav {
-  margin-bottom: $spacer-y-default;
-}
 
 .nav {
   background: $nav-bg;
@@ -12,11 +9,18 @@
   a.nav-brand {
     background: orange; // debug
     color: $nav-logo-color;
+    //display: block;
+    margin: 0;
+    font-size: 1.3rem;
     font-weight: $font-weight-bold;
-    margin: 0 auto;
     padding-left: $spacer-y-default;
     padding-right: $spacer-y-default;
     text-decoration: none;
+  }
+
+  .nav-brand img {
+    height: 35px;
+    margin-top: -2px;
   }
 
   .nav-toggler {
@@ -25,10 +29,17 @@
     float: right;
     padding-left: $spacer-y-default;
     padding-right: $spacer-y-default;
-    vertical-align: middle;
+    //position: relative;
+    //top: -55px;
+    //right: 0;
+    //vertical-align: middle;
 
     &:hover {
       cursor: pointer;
+    }
+
+    & .nav-icon {
+      margin: 8px auto 7px;
     }
   }
 
@@ -69,6 +80,10 @@
     li a {
       display: block;
     }
+  }
+
+  .container & {
+    margin-bottom: $spacer-y-default;
   }
 
   @include clearfix();

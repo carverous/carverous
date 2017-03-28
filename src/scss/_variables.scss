@@ -195,7 +195,9 @@ $nav-icon-color: $sasha-white;
 $nav-item-padding-left: 20px;
 $nav-item-padding-right: 20px;
 
-$nav-line-height: 60px !default;
+$nav-height: 60px - 5 !default;
+
+$nav-line-height: 60px - 5 !default;
 
 $nav-logo-color: $body-color !default;
 
@@ -231,8 +233,8 @@ $pagination-padding-x-sm: 10px !default;
 // Progress
 $progress-container-bg: $sasha-grey !default;
 $progress-bar-bg: $primary !default;
-$progress-font-size: 0.9em !default;
-$progress-height: 1.3rem !default;
+$progress-font-size: 0.9rem !default;
+$progress-height: 1.5rem !default;
 $progress-margin-y: $spacer-y-default !default;
 
 // Tables and Data

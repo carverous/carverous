@@ -1,8 +1,9 @@
 /*!
- * Carverous (https://github.com/cefjoeii/carverous)
+ * Carverous 0.0.8 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 CEF
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 html {
@@ -149,7 +150,8 @@ svg:not(:root) {
 }
 
 a, area, button, [role="button"], input, label, select, summary, textarea {
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 table {
@@ -493,55 +495,55 @@ template {
 }
 
 .bg-danger {
-  background: #EA4858;
+  background: #EA4858 !important;
 }
 
 .bg-info {
-  background: #90CAF9;
+  background: #90CAF9 !important;
 }
 
 .bg-primary {
-  background: #305782;
+  background: #305782 !important;
 }
 
 .bg-secondary {
-  background: #669999;
+  background: #669999 !important;
 }
 
 .bg-success {
-  background: #81C784;
+  background: #81C784 !important;
 }
 
 .bg-warning {
-  background: #FFB74D;
+  background: #FFB74D !important;
 }
 
 .bg-sasha-white {
-  background: #fff;
+  background: #fff !important;
 }
 
 .bg-sasha-light {
-  background: #f7f9fa;
+  background: #f7f9fa !important;
 }
 
 .bg-sasha-grey {
-  background: #ECEEEF;
+  background: #ECEEEF !important;
 }
 
 .bg-sasha-dark {
-  background: #bbbbbb;
+  background: #bbbbbb !important;
 }
 
 .bg-sasha-darker {
-  background: #757575;
+  background: #757575 !important;
 }
 
 .bg-sasha-darkest {
-  background: #2a2a2a;
+  background: #2a2a2a !important;
 }
 
 .bg-sasha-black {
-  background: #000;
+  background: #000 !important;
 }
 
 .blockquote {
@@ -612,6 +614,7 @@ template {
   outline: none;
   text-align: center;
   text-transform: uppercase;
+  -webkit-transition: all .25s;
   transition: all .25s;
   vertical-align: middle;
   white-space: nowrap;
@@ -1300,6 +1303,21 @@ button.close {
   outline: none;
 }
 
+.form-control::-webkit-input-placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
 .form-control::placeholder {
   color: #757575;
   opacity: 1;
@@ -1337,13 +1355,21 @@ button.close {
 }
 
 [class*="row-flex"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .col-flex {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @media only screen and (min-width: 0px) {
@@ -1357,12 +1383,16 @@ button.close {
 
 @media only screen and (min-width: 576px) {
   .row-flex-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .row-flex-lg {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -1617,8 +1647,39 @@ h6 {
 
 .nav {
   background: #ECEEEF;
-  height: 60px;
-  line-height: 60px;
+  line-height: 55px;
+}
+
+.nav a.nav-brand {
+  background: orange;
+  color: #545454;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+}
+
+.nav .nav-brand img {
+  height: 35px;
+  margin-top: -2px;
+}
+
+.nav .nav-toggler {
+  background: lightblue;
+  font-weight: 700;
+  float: right;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.nav .nav-toggler:hover {
+  cursor: pointer;
+}
+
+.nav .nav-toggler .nav-icon {
+  margin: 8px auto 7px;
 }
 
 .nav ul {
@@ -1626,19 +1687,20 @@ h6 {
   padding: 0;
 }
 
-.nav li {
+.nav ul li {
   list-style: none;
-  float: none;
 }
 
-.nav li a {
+.nav ul li a {
+  background: pink;
   color: #2a2a2a;
-  padding: 19px;
+  padding: 0 15px;
   text-decoration: none;
+  display: block;
 }
 
-.nav li a:hover, .nav li a.active {
-  background: #d0d5d8;
+.nav ul li a:hover, .nav ul li a.active {
+  background: #dee2e3;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1651,73 +1713,157 @@ h6 {
   .nav li {
     float: left;
   }
+  .nav li a {
+    display: block;
+  }
 }
 
-.nav a.nav-brand {
-  color: #545454;
-  font-weight: 700;
-  height: 60px;
-  line-height: 60px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-decoration: none;
+.container .nav {
+  margin-bottom: 15px;
 }
 
-.nav .nav-icon {
-  float: left;
-  background: pink;
-  border: none;
+.nav::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.nav-icon {
+  background: #333;
+  cursor: pointer;
   height: 40px;
   width: 40px;
   position: relative;
 }
 
-.nav .nav-icon span {
-  height: 3px;
+.nav-icon span {
+  background: #fff;
+  height: 4px;
   width: 30px;
+  margin: auto;
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  margin: auto;
-  background: #fff;
-  transition: all .25s ease-in-out;
+  bottom: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
 }
 
-.nav .nav-icon span::before, .nav .nav-icon span::after {
-  height: 3px;
-  width: 100%;
+.nav-icon span::before, .nav-icon span::after {
   background: #fff;
-  position: absolute;
   content: "";
-  transition: all .25s ease-in-out;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
 }
 
-.nav .nav-icon span::after {
-  top: 10px;
-}
-
-.nav .nav-icon span::before {
+.nav-icon span::before {
   top: -10px;
 }
 
-.nav .nav-icon.active span::after {
-  top: 0;
-  transform: rotate(45deg);
+.nav-icon span::after {
+  top: 10px;
 }
 
-.nav .nav-icon.active span::before {
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-.nav .nav-icon.active span {
+.cross.active span {
   background: none;
 }
 
+.cross.active span::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+.cross.active span::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+}
+
+.minus.active span {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.minus.active span::before {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  top: 0;
+}
+
+.minus.active span::after {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  top: 0;
+}
+
+.larrow.active span {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  width: 60%;
+}
+
+.larrow.active span::before, .larrow.active span::after {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.larrow.active span::before {
+  width: 60%;
+  top: 0;
+  -webkit-transform: translate(-3px, 2px) rotate(-45deg);
+          transform: translate(-3px, 2px) rotate(-45deg);
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.larrow.active span::after {
+  width: 60%;
+  top: 0;
+  -webkit-transform: translate(0px, 0px) rotate(45deg);
+          transform: translate(0px, 0px) rotate(45deg);
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.rarrow.active span {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  width: 60%;
+}
+
+.rarrow.active span::before, .rarrow.active span::after {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.rarrow.active span::before {
+  width: 60%;
+  top: 0;
+  -webkit-transform: translate(12px, 2px) rotate(45deg);
+          transform: translate(12px, 2px) rotate(45deg);
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.rarrow.active span::after {
+  width: 60%;
+  top: 0;
+  -webkit-transform: translate(9px, 0px) rotate(-45deg);
+          transform: translate(9px, 0px) rotate(-45deg);
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
 .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   padding-left: 0;
@@ -1785,16 +1931,18 @@ h6 {
 .progress-container {
   background: #ECEEEF;
   border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  font-size: 0.9em;
-  line-height: 1.3rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
   overflow: hidden;
   text-align: center;
 }
 
 .progress-container .progress-bar {
-  height: 1.3rem;
-  line-height: 1.3rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .progress-container .progress-bar-danger {
@@ -1833,22 +1981,23 @@ h6 {
 
 .table {
   background: #fff;
+  border-collapse: collapse;
+  border: none;
   max-width: 100%;
   width: 100%;
+}
+
+.table thead {
+  border-bottom: 2px solid #ECEEEF;
+}
+
+.table thead th {
+  vertical-align: bottom;
 }
 
 .table th, .table td {
   padding: 0.75rem 1rem;
   vertical-align: top;
-}
-
-.table thead th {
-  border-bottom: 2px solid #ECEEEF;
-  vertical-align: bottom;
-}
-
-.table .no-th-border th {
-  border: none;
 }
 
 .table tbody + tbody {
@@ -1959,27 +2108,27 @@ mark, .mark {
 }
 
 .no-border {
-  border: none;
+  border: none !important;
 }
 
 .no-border-top {
-  border-top: none;
+  border-top: none !important;
 }
 
 .no-border-right {
-  border-right: none;
+  border-right: none !important;
 }
 
 .no-border-bottom {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .no-border-left {
-  border-left: none;
+  border-left: none !important;
 }
 
 .no-border-radius {
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 .rounded {
@@ -2011,41 +2160,41 @@ mark, .mark {
 }
 
 .no-margin {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .no-margin-top {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .no-margin-right {
-  margin-right: 0;
+  margin-right: 0 !important;
 }
 
 .no-margin-bottom {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .no-margin-left {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .no-padding {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .no-padding-top {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 
 .no-padding-right {
-  padding-right: 0;
+  padding-right: 0 !important;
 }
 
 .no-padding-bottom {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 
 .no-padding-left {
-  padding-left: 0;
+  padding-left: 0 !important;
 }

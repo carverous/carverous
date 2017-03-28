@@ -1,10 +1,21 @@
 {
   "name": "carverous",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "Responsive Front-end Framework",
   "author": "CEF",
   "license": "MIT",
-  "main": "index.js",
+  "licensepage": "https://github.com/cefjoeii/carverous/blob/master/LICENSE",
+  "main": "dist/js/carverous",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,14 +26,18 @@
   "bugs": {
     "url": "https://github.com/cefjoeii/carverous/issues"
   },
-  "homepage": "https://github.com/cefjoeii/carverous#readme",
+  "homepage": "https://github.com/cefjoeii/carverous",
   "devDependencies": {
     "autoprefixer": "^6.7.4",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-flatten": "^0.3.1",
+    "gulp-insert": "^0.5.0",
     "gulp-postcss": "^6.3.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^2.1.2"
   }
 }

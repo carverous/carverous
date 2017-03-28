@@ -1,3 +1,5 @@
+// Navigation Toggler
+
 var navIcon = document.querySelectorAll('.nav-icon');
 for(var i = 0; i < navIcon.length; i++) {
     var toggle = navIcon[i];
