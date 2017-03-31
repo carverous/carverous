@@ -18,7 +18,7 @@ $theme-colors:
                 (primary, $primary),
                 (secondary, $secondary),
                 (success, $success),
-                (warning, $warning);
+                (warning, $warning) !default;
 
 // theme-extra
 $default: #E0E0E0 !default; // 90A4AE
@@ -26,7 +26,7 @@ $inverse: #fff !default;
 
 $theme-extra:
                 (default, $default),
-                (inverse, $inverse);
+                (inverse, $inverse) !default;
 
 // theme-sasha
 // Shades of Grey
@@ -45,4 +45,4 @@ $theme-sasha:
                 (sasha-dark, $sasha-dark),
                 (sasha-darker, $sasha-darker),
                 (sasha-darkest, $sasha-darkest),
-                (sasha-black, $sasha-black);
+                (sasha-black, $sasha-black) !default;

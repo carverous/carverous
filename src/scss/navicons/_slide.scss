@@ -1,0 +1,47 @@
+// Slide
+
+@mixin slide-active($a, $b, $c) {
+  &.active {
+    .navicon-rod {
+      $y-offset: $navicon-rod-spacing + $navicon-rod-height;
+
+      transform: translate3d(0, $y-offset, 0) rotate($a);
+
+      &::before {
+        transform: rotate($b) translate3d($navicon-rod-width / -7, $navicon-rod-spacing * -1, 0);
+        opacity: 0;
+      }
+
+      &::after {
+        transform: translate3d(0, $y-offset * -2, 0) rotate($c);
+      }
+    }
+  }
+}
+
+%slide {
+  .navicon-rod {
+    top: $navicon-rod-height / 2;
+
+    &::before {
+      top: $navicon-rod-height + $navicon-rod-spacing;
+      transition-property: transform, opacity;
+      transition-timing-function: ease;
+      transition-duration: 0.15s;
+    }
+
+    &::after {
+      top: ($navicon-rod-height * 2) + ($navicon-rod-spacing * 2);
+    }
+  }
+}
+
+.navicon-slide {
+  @extend %slide;
+  @include slide-active(45deg, -45deg, -90deg);
+}
+
+.navicon-slide-r {
+  @extend %slide;
+  @include slide-active(-45deg, 45deg, 90deg);
+}

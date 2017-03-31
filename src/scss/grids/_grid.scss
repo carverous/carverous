@@ -1,5 +1,6 @@
 // Grid
 // Here is where we decide whether to use float, flexbox, or both of the grid system
+// TODO: Move this up one folder
 
 @mixin media-breakpoint($breakpoint) {
   @media only screen and (min-width: $breakpoint) {

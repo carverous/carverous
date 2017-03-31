@@ -1,0 +1,78 @@
+// Navicons
+// Animating hamburger icons
+
+.navicon {
+  cursor: pointer;
+  display: inline-block;
+  padding: $navicon-padding-x $navicon-padding-y;
+
+  transition-property: opacity, filter;
+  transition-duration: $navicon-hover-transition-duration;
+  transition-timing-function: $navicon-hover-transition-timing-function;
+
+  // Normalize (<button>)
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+
+  &:hover {
+    @if $navicon-hover-use-filter {
+      filter: $navicon-hover-filter;
+    }
+    @else {
+      opacity: $navicon-hover-opacity;
+    }
+  }
+
+  &-box {
+    // display: inline-block; // inline-block is always the culprit for the spacing underneath
+    height: $navicon-rod-height * 3 + $navicon-rod-spacing * 2;
+    width: $navicon-rod-width;
+    position: relative;
+  }
+
+  &-rod {
+    display: block;
+    margin-top: $navicon-rod-height / -2;
+    top: 50%;
+
+    &,
+    &::before,
+    &::after {
+      background: $navicon-rod-color;
+      border-radius: $navicon-rod-border-radius;
+      height: $navicon-rod-height;
+      width: $navicon-rod-width;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+    }
+
+    &::before {
+      top: ($navicon-rod-spacing + $navicon-rod-height) * -1;
+    }
+
+    &::after {
+      bottom: ($navicon-rod-spacing + $navicon-rod-height) * -1;
+    }
+  }
+}
+
+// Here is where we decide whether we include an animation or not (to save KB)
+@import "navicons/arrow";
+@import "navicons/elastic";
+@import "navicons/flip";
+@import "navicons/plain";
+@import "navicons/slide";
+@import "navicons/spin";
