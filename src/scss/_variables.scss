@@ -53,7 +53,7 @@ $font-weights:
                 (normal, 400),
                 (medium, 600),
                 (bold, 700),
-                (black, 900);
+                (black, 900) !default;
 
 $line-height-default: 1.5 !default;
 
@@ -135,7 +135,7 @@ $btn-padding-x-lg: 24px !default;
 
 
 // Codes, Keyboards, & Pres
-$code-color: #3363bd; // bd4147
+$code-color: #3363bd !default; // bd4147
 $code-bg: lighten($code-color, 40%) !default;
 $code-font-size: $font-size-default !default;
 $code-padding-y: $spacer-sm !default;
@@ -164,7 +164,7 @@ $input-bg-focus: $input-bg !default;
 $input-border-color: $sasha-dark !default;
 $input-border-color-focus: lighten($primary, 5%) !default;
 
-$input-border-width: 1px;
+$input-border-width: 1px !default;
 
 $input-color: $body-color !default;
 $input-color-focus: $input-color !default;
@@ -183,10 +183,8 @@ $nav-bg-hover: darken($nav-bg, 5%) !default;
 
 $nav-color: $sasha-darkest !default;
 
-$nav-icon-color: $sasha-white;
-
-$nav-item-padding-left: 20px;
-$nav-item-padding-right: 20px;
+$nav-item-padding-left: 20px !default;
+$nav-item-padding-right: 20px !default;
 
 $nav-height: 60px - 5 !default;
 
@@ -194,7 +192,20 @@ $nav-line-height: 60px - 5 !default;
 
 $nav-logo-color: $body-color !default;
 
+// Navigation Icons
+$navicon-hover-opacity: 0.7 !default;
+$navicon-hover-transition-duration: 0.15s !default; // 0.15s
+$navicon-hover-transition-timing-function: ease-in-out !default;
+$navicon-padding-x: $spacer-default / 2 !default;
+$navicon-padding-y: $spacer-default / 2 !default;
+$navicon-rod-border-radius: 4px !default;
+$navicon-rod-color: $sasha-black !default;
+$navicon-rod-height: 3px !default;
+$navicon-rod-width: 30px !default;
+$navicon-rod-spacing: 6px !default;
 
+$navicon-hover-use-filter: false !default;
+$navicon-hover-filter    : opacity(50%) !default;
 
 //Pagination
 $pagination-bg: $sasha-grey !default;

@@ -1,11 +1,3 @@
-/*!
- * Carverous 0.0.9 (https://github.com/cefjoeii/carverous)
- * Copyright (c) 2017 CEF
- * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
- */
-
-// Alert
-// Functions
 // Navicons
 // This is how simple it is to toggle in JS! (IE9+)
 // It is even possible to toggle using just the checkbox in CSS3!

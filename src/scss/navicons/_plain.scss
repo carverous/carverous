@@ -1,0 +1,27 @@
+// Plain
+
+.navicon-plain {
+  .navicon-rod {
+    &,
+    &::before,
+    &::after {
+      transition-property: none;
+    }
+  }
+
+  &.active {
+    .navicon-rod {
+      transform: rotate(45deg);
+
+      &::before {
+        top: 0;
+        opacity: 0;
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 /*!
- * Carverous Gulpfile
+ * Carverous's Gulpfile
  * https://github.com/cefjoeii/carverous
  * Copyright (c) 2017 CEF
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
@@ -11,10 +11,8 @@
 'use strict';
 
 // Variables
-var fs = require('fs'); // To re-read the file and parse it each time that the task is executed
-var pkg = JSON.parse(fs.readFileSync('./package.json')); // Couldn't find alternative to Grunt's readJSON at the monment.
 var gulp = require('gulp');
-var gulpSequence = require('gulp-sequence'); // To run the tasks sequentially instead of asynchronously
+var sequence = require('gulp-sequence'); // To run the tasks sequentially instead of asynchronously
 var insert =  require('gulp-insert');
 var rename = require("gulp-rename");
 var flatten = require("gulp-flatten"); // To place all the output files in the same single directory
@@ -23,7 +21,10 @@ var postCSS = require('gulp-postcss');
 var autoPrefixer = require('autoprefixer'); // PostCSS plugin to add vendor prefixes using values from http://caniuse.com/
 var cleanCSS = require('gulp-clean-css');  // To minify and optionally remove comments in CSS
 var concatJS = require('gulp-concat'); // To bundle all js files into a single file
-var uglifyJS = require('gulp-uglify'); // To minfy JS files
+var uglifyJS = require('gulp-uglify'); // To minify JS files
+
+var fs = require('fs'); // To re-read the file and parse it each time that the task is executed
+var pkg = JSON.parse(fs.readFileSync('./package.json')); // Couldn't find alternative to Grunt's readJSON at the moment.
 
 // Prepend author's banner on top of the main css and js files | ES6 Accepts this code baby!
 var banner = `/*!
@@ -32,9 +33,6 @@ var banner = `/*!
  * Licensed under ${pkg.license} (${pkg.licensepage})
  */\n\n`;
 
-
-
-// Tasks
 
 function handleError(err) {
     console.log(err.toString());
@@ -51,7 +49,7 @@ gulp.task('sass', function() {
 });
 
 // Add Vendor Prefixes
-gulp.task('autoprefix', function() {
+gulp.task('css:autoprefix', function() {
     return gulp.src([
         './src/css/*.css',
         '!./src/css/*.min.css' // Except .min.css files
@@ -63,10 +61,10 @@ gulp.task('autoprefix', function() {
 });
 
 // Minify the prepended and autoPrefix-ed versions of css
-gulp.task('minifycss', function () {
+gulp.task('css:minify', function () {
     return gulp.src([
         './src/css/*.css',
-        '!./src/css/*.min.css' // Except .min.css files of course | It would be problematic
+        '!./src/css/*.min.css' // Don't minify the minified files!
     ])
         .pipe(cleanCSS({keepSpecialComments : 1}))
         .pipe(rename({suffix: '.min'}))
@@ -75,7 +73,7 @@ gulp.task('minifycss', function () {
 });
 
 // Bundle js files into a single file
-gulp.task('bundlejs', function () {
+gulp.task('js:bundle', function () {
     return gulp.src([
         './src/js/*.js',
         '!./src/js/' + pkg.name + '.js', // Don't insert yourself to yourself!
@@ -89,7 +87,7 @@ gulp.task('bundlejs', function () {
 });
 
 // Minify the prepended bundled js files
-gulp.task('minifyjs', function () {
+gulp.task('js:minify', function () {
     return gulp.src([
         './src/js/' + pkg.name + '.js',
         '!./src/js/*.min.js'
@@ -101,8 +99,8 @@ gulp.task('minifyjs', function () {
         .on('error', handleError);
 });
 
-// Deploy - copy files to the dist directory
-gulp.task('deploy', function() {
+// Distribute - deploy files to the dist directory
+gulp.task('dist', function() {
     return gulp.src([
         './src/css/**/*.css',
         './src/js/**/' + pkg.name + '.js',
@@ -116,23 +114,25 @@ gulp.task('deploy', function() {
 gulp.task('watch', function(w) {
 
     gulp.watch([
-        './src/scss/**/*.scss'
+        'src/scss/**/*.scss'
         ],
+        {cwd:'./'},
         function(event) {
-            gulpSequence('sass', 'autoprefix', 'minifycss', 'deploy') (function(err) {
+            sequence('sass', 'css:autoprefix', 'css:minify') (function(err) {
                 if (err) console.log(err)
             })
         }
     );
 
     gulp.watch([
-            './src/js/**/*.js',
-            '!./src/js/' + pkg.name + '.js', // Ignore this to prevent re-running the task
-            '!./src/js/' + pkg.name + '.min.js', // Ignore this to prevent re-running the task
-            '!./src/js/live.js'
+            'src/js/**/*.js',
+            '!src/js/' + pkg.name + '.js', // Ignore this to prevent re-running the task
+            '!src/js/' + pkg.name + '.min.js', // Ignore this to prevent re-running the task
+            '!src/js/live.js'
         ],
+        {cwd:'./'},
         function(event) {
-            gulpSequence('bundlejs', 'minifyjs', 'deploy') (function(err) {
+            sequence('js:bundle', 'js:minify') (function(err) {
                 if (err) console.log(err)
             })
         }

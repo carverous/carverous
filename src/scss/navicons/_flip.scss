@@ -1,0 +1,54 @@
+// Flip
+
+@mixin flip-active($value) {
+  &.active {
+    .navicon-rod {
+      background-color: transparent;
+      transform: $value;
+
+      &::before {
+        transform: translate3d(0, $navicon-rod-height + $navicon-rod-spacing, 0) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate3d(0, ($navicon-rod-height + $navicon-rod-spacing) * -1, 0) rotate(-45deg);
+      }
+    }
+  }
+}
+
+%flip {
+  .navicon-box {
+    perspective: $navicon-rod-width * 2;
+  }
+
+  .navicon-rod {
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), // 0.15s
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &::before,
+    &::after {
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); // 0s 0.1s
+    }
+  }
+}
+
+.navicon-flip-x {
+  @extend %flip;
+  @include flip-active(rotateY(180deg));
+}
+
+.navicon-flip-x-r {
+  @extend %flip;
+  @include flip-active(rotateY(-180deg));
+}
+
+.navicon-flip-y {
+  @extend %flip;
+  @include flip-active(rotateX(-180deg));
+}
+
+.navicon-flip-y-r {
+  @extend %flip;
+  @include flip-active(rotateX(180deg));
+}

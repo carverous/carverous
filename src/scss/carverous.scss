@@ -11,7 +11,8 @@
 // Remind yourself to always end each file with a new line even if this is not C.
 // See: http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file
 
-// TODO: Rename all the source files in singular form
+// TODO: Rename all the source files in singular form!
+// TODO: Move the demo to the dist directory (or no?)
 
 // TODO: Use the offline fonts once done with most of the stuff
 // Fonts
@@ -37,9 +38,10 @@
 @import "codes";
 @import "close";
 @import "forms";
-@import "grids/_grid";
+@import "grids/grid";
 @import "headings";
 @import "images";
+@import "navicons";
 @import "navigation";
 @import "pagination";
 @import "progess";
