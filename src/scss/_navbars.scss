@@ -1,6 +1,10 @@
 // Navigation
 // A responsive navigation bar
 
+.hidden {
+  display: none;
+}
+
 .navbar {
 
   @include media-breakpoint($lg) {
@@ -35,31 +39,40 @@
       }
     }
 
-    ul:not(.has-children) {
+    ul {
       margin: 0;
       padding: 0;
       list-style: none;
+    }
+
+    .navmenu {
       float: right;
     }
 
-    ul:not(.has-children) li {
+    .navmenu > li {
       float: left;
     }
 
-    ul:not(.has-children) li a {
+    .navmenu > li a {
       color: $body-color;
       display: block;
       padding: 0 15px;
       text-decoration: none;
-      //position: relative;
 
       &:hover {
         color: $navbar-color-hover;
         box-shadow: inset 0 -4px 0 $navbar-color-hover;
-        transition: box-shadow .15s, color .15s;
+        transition: box-shadow .25s, color .15s;
       }
     }
 
+    .navmenu-dropdown {
+      background: $navbar-bg;
+      position: absolute;
+      //display: none;
+      z-index: 1;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    }
 
   }
 
