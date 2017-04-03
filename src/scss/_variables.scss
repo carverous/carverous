@@ -12,7 +12,7 @@ $body-color: #545454 !default;
 $body-color-muted: $sasha-dark !default;
 
 // Links
-$link-color: #50abe0 !default;
+$link-color: lighten($primary, 20%) !default;
 $link-color-hover: red !default; // Debugger
 $link-decoration: none !default;
 $link-decoration-hover: underline !default;
@@ -177,29 +177,36 @@ $input-line-height: 1.25rem !default;
 $input-padding-y: .5rem !default;
 $input-padding-x: .75rem !default;
 
-// Navigation
-$nav-bg: $sasha-grey !default;
-$nav-bg-hover: darken($nav-bg, 5%) !default;
+// Navbar
+$navbar-bg: $sasha-white !default;
+$navbar-bg-hover: darken($navbar-bg, 5%) !default;
 
-$nav-color: $sasha-darkest !default;
+$navbar-color: $body-color !default;
+$navbar-color-hover: lighten($primary, 10%);
 
-$nav-item-padding-left: 20px !default;
-$nav-item-padding-right: 20px !default;
+$navbar-font-weight: $font-weight-bold;
 
-$nav-height: 60px - 5 !default;
+$navbar-item-padding-left: 20px !default;
+$navbar-item-padding-right: 20px !default;
 
-$nav-line-height: 60px - 5 !default;
+$navbar-height: 60px !default;
 
-$nav-logo-color: $body-color !default;
+$navbar-line-height: 60px !default;
 
-// Navigation Icons
-$navicon-hover-opacity: 0.7 !default;
+$navbar-logo-color: $sasha-light !default;
+
+$navbar-padding-x: $spacer-default;
+$navbar-padding-y: $spacer-default;
+
+
+  // NavbarIcons
+$navicon-hover-opacity: 0.8 !default;
 $navicon-hover-transition-duration: 0.15s !default; // 0.15s
 $navicon-hover-transition-timing-function: ease-in-out !default;
-$navicon-padding-x: $spacer-default / 2 !default;
-$navicon-padding-y: $spacer-default / 2 !default;
+$navicon-padding-x: 5px !default;
+$navicon-padding-y: 4px !default;
 $navicon-rod-border-radius: 4px !default;
-$navicon-rod-color: $sasha-black !default;
+$navicon-rod-color: $sasha-white !default;
 $navicon-rod-height: 3px !default;
 $navicon-rod-width: 30px !default;
 $navicon-rod-spacing: 6px !default;

@@ -3,12 +3,15 @@
 
 .navicon {
   cursor: pointer;
+  border-radius: $border-radius-sm;
   display: inline-block;
   padding: $navicon-padding-x $navicon-padding-y;
 
   transition-property: opacity, filter;
   transition-duration: $navicon-hover-transition-duration;
   transition-timing-function: $navicon-hover-transition-timing-function;
+
+  vertical-align: middle; // wtf! this is the solution for the navbar problem!
 
   // Normalize (<button>)
   font: inherit;
@@ -29,7 +32,7 @@
   }
 
   &-box {
-    // display: inline-block; // inline-block is always the culprit for the spacing underneath
+    display: block; // inline-block is always the culprit for the spacing underneath
     height: $navicon-rod-height * 3 + $navicon-rod-spacing * 2;
     width: $navicon-rod-width;
     position: relative;

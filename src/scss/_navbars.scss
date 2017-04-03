@@ -1,0 +1,80 @@
+// Navigation
+// A responsive navigation bar
+
+.navbar {
+
+  @include media-breakpoint($lg) {
+
+    font-weight: $navbar-font-weight;
+    line-height: 60px;
+    width: 100%;
+    background: $navbar-bg;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+
+    .navbar-toggler {
+      display: none;
+      float: left;
+      margin-left: $spacer-default;
+
+      .navicon {
+        line-height: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    .navbar-logo {
+      color: $navbar-color;
+      float: left;
+      font-size: 1.3rem;
+      //margin-left: $spacer-default;
+      //margin-right: $spacer-default;
+      text-decoration: none;
+
+      img {
+        height: 30px;
+      }
+    }
+
+    ul:not(.has-children) {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      float: right;
+    }
+
+    ul:not(.has-children) li {
+      float: left;
+    }
+
+    ul:not(.has-children) li a {
+      color: $body-color;
+      display: block;
+      padding: 0 15px;
+      text-decoration: none;
+      //position: relative;
+
+      &:hover {
+        color: $navbar-color-hover;
+        box-shadow: inset 0 -4px 0 $navbar-color-hover;
+        transition: box-shadow .15s, color .15s;
+      }
+    }
+
+
+  }
+
+  & .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include clearfix();
+}
+
+.navbar-fixed {
+  position: fixed;
+}
+
+#wrapper {
+  padding-top: 75px;
+}
