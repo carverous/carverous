@@ -10,7 +10,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: $container-max-width;
   padding: $spacer-default;
 
   // Dirty trick to remove .container's padding when using col-

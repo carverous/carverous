@@ -110,6 +110,8 @@ $xl: 992px !default; // 1200
 
 $grid-col-max: 12 !default;
 
+$container-max-width: 1024px !default;
+
 // TODO: Change btn-padding format ($btn-padding-default: x x x x;)
 // Buttons
 $btn-block-margin-y: $spacer-default !default;
@@ -179,12 +181,13 @@ $input-padding-x: .75rem !default;
 
 // Navbar
 $navbar-bg: $sasha-white !default;
-$navbar-bg-hover: darken($navbar-bg, 5%) !default;
+$navbar-bg-hover: darken($navbar-bg, 3%) !default;
 
 $navbar-color: $body-color !default;
-$navbar-color-hover: lighten($primary, 0%);
+$navbar-color-hover: $primary;
 
-$navbar-font-weight: $font-weight-bold;
+$navbar-font-size: 1rem !default;
+$navbar-font-weight: $font-weight-bold !default;
 
 $navbar-item-padding-left: 20px !default;
 $navbar-item-padding-right: 20px !default;

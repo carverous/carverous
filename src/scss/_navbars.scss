@@ -5,12 +5,17 @@
   display: none;
 }
 
+.shown {
+  display: block;
+}
+
 .navbar {
 
   @include media-breakpoint($lg) {
-
+    font-size: $navbar-font-size;
     font-weight: $navbar-font-weight;
     line-height: 60px;
+    margin-bottom: $spacer-default;
     width: 100%;
     background: $navbar-bg;
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
@@ -45,33 +50,56 @@
       list-style: none;
     }
 
-    .navmenu {
+    .navbar-menu {
       float: right;
     }
 
-    .navmenu > li {
+    .navbar-menu > li {
       float: left;
+      position: relative;
     }
 
-    .navmenu > li a {
-      color: $body-color;
+    .navbar-menu > li > a {
+      color: $navbar-color;
       display: block;
       padding: 0 15px;
       text-decoration: none;
+      transition: box-shadow .25s, color .15s;
 
       &:hover {
-        color: $navbar-color-hover;
-        box-shadow: inset 0 -4px 0 $navbar-color-hover;
-        transition: box-shadow .25s, color .15s;
+        background: $navbar-bg-hover;
+        //box-shadow: inset 0 -4px 0 $navbar-color-hover;
+        //color: $navbar-color-hover;
       }
     }
 
-    .navmenu-dropdown {
+    .has-children.active ul {
+      display: unset;
+    }
+
+    .has-children ul {
       background: $navbar-bg;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
       position: absolute;
-      //display: none;
+      top: $navbar-line-height;
+      display: none;
       z-index: 1;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .has-children ul li a {
+      color: $body-color;
+      display: block;
+      font-weight: $font-weight-default;
+      line-height: 40px;
+      padding: 0 15px;
+      text-decoration: none;
+      width: 200px;
+
+      &:hover {
+        background: $navbar-bg-hover;
+        //box-shadow: inset 0 -4px 0 $navbar-color-hover;
+        //transition: box-shadow .25s, color .15s;
+      }
     }
 
   }
@@ -86,6 +114,7 @@
 
 .navbar-fixed {
   position: fixed;
+  z-index: 2;
 }
 
 #wrapper {

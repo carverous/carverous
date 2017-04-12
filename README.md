@@ -5,7 +5,7 @@ A responsive front-end framework I started off from scratch.
 It is developed having a mobile first approach in mind,
 meaning the code is designed to prioritise mobile devices first
 and then adjust the components as the screen scales up.
-It doesn't require any third-party JS lirbrary.
+It doesn't require any third-party JS library.
 
 ## Purpose
 Not only for learning purposes, but also to avoid the bloat from other frameworks
