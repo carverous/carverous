@@ -2,10 +2,10 @@
   "name": "carverous",
   "version": "0.0.9",
   "description": "Responsive Front-end Framework",
-  "author": "CEF",
+  "author": "Ceferino Jose II",
   "license": "MIT",
   "licensepage": "https://github.com/cefjoeii/carverous/blob/master/LICENSE",
-  "main": "dist/js/carverous",
+  "main": "gulpfile.js",
   "keywords": [
     "css",
     "sass",
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/cefjoeii/carverous",
   "devDependencies": {
     "autoprefixer": "^6.7.4",
+    "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.2",
     "gulp-concat": "^2.6.1",
