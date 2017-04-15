@@ -1,6 +1,5 @@
 // Grid
 // Here is where we decide whether to use float, flexbox, or both of the grid system
-// TODO: Move this up one folder
 
 @mixin media-breakpoint($breakpoint) {
   @media only screen and (min-width: $breakpoint) {
@@ -15,7 +14,8 @@
 
   // Dirty trick to remove .container's padding when using col-
   // Only remove them if inside .container
-  .row, [class="row-flex"] {
+  .row,
+  [class='row-flex'] {
     margin-left: -1 * $spacer-default;
     margin-right: -1 * $spacer-default;
   }
@@ -32,11 +32,12 @@
   padding-right: $spacer-default;
 }
 
-.col-demo, .col-flex-demo {
+.col-demo,
+.col-flex-demo {
   background: $sasha-grey;
-  border: 1px solid #fff;
+  border: 1px solid $sasha-white;
   padding: $spacer-default;
 }
 
-@import "grids/grid-flexbox";
-@import "grids/grid-float";
+@import 'grids/grid-flexbox';
+@import 'grids/grid-float';

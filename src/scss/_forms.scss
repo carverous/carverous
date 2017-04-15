@@ -1,6 +1,6 @@
 // Forms
 
-@mixin form-control-focus() {
+@mixin form-control-focus {
   &:focus {
     color: $input-color-focus;
     background-color: $input-bg-focus;
@@ -25,13 +25,16 @@
   // No effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @include border-radius($border-radius-sm);
 
+  // sass-lint:disable no-vendor-prefixes
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     background-color: transparent;
     border: 0;
   }
+  // sass-lint:enable no-vendor-prefixes
 
-  @include form-control-focus();
+
+  @include form-control-focus;
 
   &::placeholder {
     color: $input-color-placeholder;

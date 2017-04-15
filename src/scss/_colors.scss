@@ -5,23 +5,24 @@
 // theme-sasha  - typically used for text colors and accents
 
 // theme-colors
-$danger: #EA4858 !default; // ef5350 EA4858
-$info: #90CAF9 !default;
+$danger: #ea4858 !default; // ef5350 EA4858
+$info: #90caf9 !default;
 $primary: #305782 !default; // 34495e 305782
-$secondary: #669999 !default; // 4DD0E1 F48FB1 4DB6AC 2BBBAD 669999
-$success: #81C784 !default; // 9CCC65 02B875 4BC883 81C784
-$warning: #FFB74D !default;
+$secondary: #699 !default; // 4DD0E1 F48FB1 4DB6AC 2BBBAD 669999
+$success: #81c784 !default; // 9CCC65 02B875 4BC883 81C784
+$warning: #ffb74d !default;
 
+// sass-lint:disable indentation
 $theme-colors:
-                (danger, $danger),
-                (info, $info),
-                (primary, $primary),
-                (secondary, $secondary),
-                (success, $success),
-                (warning, $warning) !default;
+  (danger, $danger),
+  (info, $info),
+  (primary, $primary),
+  (secondary, $secondary),
+  (success, $success),
+  (warning, $warning) !default;
 
 // theme-extra
-$default: #E0E0E0 !default; // 90A4AE
+$default: #e0e0e0 !default; // 90A4AE
 $inverse: #fff !default;
 
 $theme-extra:
@@ -32,8 +33,8 @@ $theme-extra:
 // Shades of Grey
 $sasha-white: #fff !default;
 $sasha-light: #f7f9fa !default; // fafafa
-$sasha-grey: #ECEEEF !default; // ECEEEF f1f1f1
-$sasha-dark: #bbbbbb !default;
+$sasha-grey: #eceeef !default; // ECEEEF f1f1f1
+$sasha-dark: #bbb !default;
 $sasha-darker: #757575 !default;
 $sasha-darkest: #2a2a2a !default;
 $sasha-black: #000 !default;

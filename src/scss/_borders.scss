@@ -5,12 +5,12 @@
 .no {
 
   &-border {
-    border: none !important;
+    border: 0 !important;
 
-    &-top { border-top: none !important; }
-    &-right { border-right: none !important; }
-    &-bottom { border-bottom: none !important; }
-    &-left { border-left: none !important; }
+    &-top { border-top: 0 !important; }
+    &-right { border-right: 0 !important; }
+    &-bottom { border-bottom: 0 !important; }
+    &-left { border-left: 0 !important; }
 
     &-radius { border-radius: 0 !important; }
   }
@@ -19,15 +19,19 @@
 .rounded {
   @include border-radius($border-radius-default);
 }
+
 .rounded-top {
   @include border-top-radius($border-radius-default);
 }
+
 .rounded-right {
   @include border-right-radius($border-radius-default);
 }
+
 .rounded-bottom {
   @include border-bottom-radius($border-radius-default);
 }
+
 .rounded-left {
   @include border-left-radius($border-radius-default);
 }

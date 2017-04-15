@@ -46,8 +46,8 @@
   outline: none;
   text-align: center;
   text-transform: uppercase;
-  transition: all .25s;
-  // user-select: none; // To prevent highlighting the text inside the buttons
+  transition: background .25s, border .25s, box-shadow .25s;
+  user-select: none; // To prevent highlighting the text inside the buttons
   vertical-align: middle;
   white-space: nowrap; // To prevent from wrapping or placing text on a new line
 
@@ -61,6 +61,7 @@
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
     }
+
     &-#{$name}-outline {
       $color: #fff;
       @include btn-mix(none, $value, $value);
@@ -68,6 +69,7 @@
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
     }
+
     &-#{$name}-transparent {
       @include btn-mix(none, rgba($value, 0), $value);
       @include btn-hover(rgba($value, .3), rgba($value, 0), $value);
@@ -85,12 +87,14 @@
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
     }
+
     &-#{$name}-outline {
       @include btn-mix(none, $value, $value);
       @include btn-hover(lighten($value, 5%), lighten($value, 5%), $body-color);
       @include btn-active(darken($value, 5%), darken($value, 5%));
       @include btn-focus($value);
     }
+
     &-#{$name}-transparent {
       $color: if($name == 'default', $body-color, $value);
       @include btn-mix(none, rgba($value, 0), $color);
@@ -119,21 +123,23 @@
     margin-top: $btn-block-margin-y;
   }
 
-  &.disabled, &:disabled {
+  &.disabled,
+  &:disabled {
     cursor: default;
     opacity: .5;
   }
 }
 
 // Disable click event on <a> elements
-a.btn.disabled, fieldset[disabled] a.btn {
+a.btn.disabled,
+fieldset[disabled] a.btn {
   pointer-events: none;
 }
 
 // Ensure that block buttons will work
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   &.btn-block {
     width: 100%;
   }

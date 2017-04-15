@@ -1,7 +1,7 @@
 // Variables
 // A place to put all the variables together for a more maintainable code.
 
-@import "colors"; // Separate the colors file to make the code cleaner;
+@import 'colors'; // Separate the colors file to make the code cleaner;
 
 // Options
 $enable-rounded: true !default;
@@ -13,14 +13,14 @@ $body-color-muted: $sasha-dark !default;
 
 // Links
 $link-color: lighten($primary, 20%) !default;
-$link-color-hover: red !default; // Debugger
+$link-color-hover: #f00 !default; // Debugger
 $link-decoration: none !default;
 $link-decoration-hover: underline !default;
 
 // Fonts
 $font-family-alt: 'Roboto', sans-serif !default;
 $font-family-default: 'Open Sans', sans-serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 
 $font-size-sm: 12px !default; // 12px
 $font-size-default: 16px !default;
@@ -47,13 +47,18 @@ $font-weight-black: 900 !default;
 
 $font-default: $font-weight-default $font-size-default $font-family-default !default;
 
-$font-weights:
-                (thin, 100),
-                (light, 300),
-                (normal, 400),
-                (medium, 600),
-                (bold, 700),
-                (black, 900) !default;
+// TODO: Change the formatting of this. Ex: 'thin': 100
+// Disabling linters on the Sass/SCSS source files via special
+// comments works for me except for a file where I store all my variables.
+
+// sass-lint:disable indentation, no-color-keywords
+$font-weights: (thin, 100),
+  (light, 300),
+  (normal, 400),
+  (medium, 600),
+  (bold, 700),
+  (black, 900) !default;
+// sass-lint:enable indentation, no-color-keywords
 
 $line-height-default: 1.5 !default;
 
@@ -98,12 +103,12 @@ $blockquote-padding: $spacer-default !default;
 // Breadcrumbs
 $breadcrumb-color: $sasha-dark !default;
 $breadcrumb-color-active: $sasha-dark !default;
-$breadcrumb-divider: "/" !default;
+$breadcrumb-divider: '/' !default;
 $breadcrumb-font-size: .9em !default;
 $breadcrumb-font-weight-active: $font-weight-bold !default;
 
 // Breakpoints
-$sm: 0px !default; // 576
+$sm: 0 !default; // 576
 $md: 576px !default; // 768
 $lg: 768px !default; // 992
 $xl: 992px !default; // 1200
@@ -202,7 +207,7 @@ $navbar-padding-x: $spacer-default;
 $navbar-padding-y: $spacer-default;
 
 
-  // NavbarIcons
+// NavbarIcons
 $navicon-hover-opacity: 0.8 !default;
 $navicon-hover-transition-duration: 0.15s !default; // 0.15s
 $navicon-hover-transition-timing-function: ease-in-out !default;
@@ -215,7 +220,7 @@ $navicon-rod-width: 30px !default;
 $navicon-rod-spacing: 6px !default;
 
 $navicon-hover-use-filter: false !default;
-$navicon-hover-filter    : opacity(50%) !default;
+$navicon-hover-filter: opacity(50%) !default;
 
 //Pagination
 $pagination-bg: $sasha-grey !default;

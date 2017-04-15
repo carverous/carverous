@@ -3,7 +3,7 @@
 .table {
   background: $table-bg;
   border-collapse: collapse;
-  border: none;
+  border: 0;
   max-width: 100%;
   width: 100%;
 
@@ -17,7 +17,8 @@
     vertical-align: bottom;
   }
 
-  th, td {
+  th,
+  td {
     // border-top: $table-border-width solid $table-border-color; // Borders in each column are ugly (opinionated)
     padding: $table-cell-padding;
     vertical-align: top; // When each row contains only single line, this makes it ugly (opinionated)
@@ -30,14 +31,15 @@
   .table {
     background: $body-bg; // TODO: Figure out if this is really needed
   }
-  
+
   // Condensed Table
   &-sm {
-    th, td {
+    th,
+    td {
       padding: $table-cell-padding-sm;
     }
   }
-  
+
   // Bordered Table
   &-bordered {
     border: $table-border-width solid $table-border-color;
@@ -61,7 +63,7 @@
       background-color: $table-stripe-bg;
     }
   }
-  
+
   &-hover {
     tbody tr:hover {
       background: $table-hover-bg;

@@ -4,7 +4,7 @@
 .row {
   //background: $secondary; // debug
   //border: 5px solid red; // debug
-  @include clearfix();
+  @include clearfix;
 }
 
 // Phones (small)

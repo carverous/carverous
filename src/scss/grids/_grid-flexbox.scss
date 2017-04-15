@@ -1,7 +1,7 @@
 // Flexbox Grid
 // Create a grid based on flexbox technology (No support for dinosaurs).
 
-[class*="row-flex"] {
+[class*='row-flex'] {
   // background: $primary; // debug
   display: flex;
   flex-direction: row;

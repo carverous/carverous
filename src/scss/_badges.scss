@@ -2,11 +2,11 @@
 
 @mixin badge-mix($name, $theme) {
   background: $theme;
-  color: if($name == 'default' or $name == 'inverse', $body-color, #fff);
-  
+  color: if($name == 'default' or $name == 'inverse', $body-color, $sasha-white);
+
   &[href]:hover {
     background-color: darken($theme, 5%);
-    color: if($name == 'default' or $name == 'inverse', $body-color, #fff);
+    color: if($name == 'default' or $name == 'inverse', $body-color, $sasha-white);
     text-decoration: none;
   }
 }

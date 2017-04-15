@@ -1,17 +1,17 @@
 // NOTES:
-// American English is mostly used for naming convention purposes.
+// American English is mostly used for the naming convention.
 // Customizing the default tags directly breaks lots of third-party widgets
 // and affects the browser's performance in general.
 // Most are designed to be opt-in, meaning the original elements are not
 // changed unless you explicitly invoke a class on the html.
 // Most property-value pairs are arranged alphabetically unless alteration is needed.
-// Margin-bottom for h's, p's, & etc. was chosen over margin-top. (opinionated)
+// The margin-bottom for h's, p's, & etc. was chosen over margin-top. (opinionated)
 
 // Do stuff now! Refactor later.
-// Remind yourself to always end each file with a new line even if this is not C.
+// Set your IDE to always add a trailing new line each time you save even if this is not C.
 // See: http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file
 
-// TODO: Rename all the source files in singular form!
+// TODO: Rename all the source files in singular form?
 // TODO: Move the demo to the dist directory (or no?)
 
 // TODO: Use the offline fonts once done with most of the stuff
@@ -20,38 +20,37 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
 
-@import "variables";
+@import 'variables';
 
-@import "global";
-@import "functions";
-@import "clearfix";
-@import "border-radius";
+@import 'global';
+@import 'functions';
+@import 'clearfix';
+@import 'border-radius';
 
-
-@import "alerts";
-@import "badges";
-@import "banners";
-@import "backgrounds";
-@import "blockquotes";
-@import "breadcrumbs";
-@import "buttons";
-@import "codes";
-@import "close";
-@import "forms";
-@import "grids";
-@import "headings";
-@import "images";
-@import "navicons";
-@import "navbars";
-@import "pagination";
-@import "progess";
-@import "tables";
-@import "texts";
+@import 'alerts';
+@import 'badges';
+@import 'banners';
+@import 'backgrounds';
+@import 'blockquotes';
+@import 'breadcrumbs';
+@import 'buttons';
+@import 'codes';
+@import 'close';
+@import 'forms';
+@import 'grids';
+@import 'headings';
+@import 'images';
+@import 'navicons';
+@import 'navbars';
+@import 'pagination';
+@import 'progess';
+@import 'tables';
+@import 'texts';
 
 // These go below to override others' properties
-@import "borders";
-@import "spacing";
+@import 'borders';
+@import 'spacing';
 
 
-// TODO: Do these!
+// TODO: Pending...
 //@import "selection";

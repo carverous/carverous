@@ -18,11 +18,12 @@
     font-weight: $font-weight-default;
     padding-right: 5px;
     padding-left: 5px;
-    content: "#{$breadcrumb-divider}";
+    content: '#{$breadcrumb-divider}';
   }
 
   // Either <a> is inside .breadcrumb-item or the .breadcrumb-item is an <a> itself with an href attribute
-  a, &[href] {
+  a,
+  &[href] {
     color: $breadcrumb-color;
   }
 

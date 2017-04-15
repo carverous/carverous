@@ -58,7 +58,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       display: block;
     }
 
@@ -73,9 +73,9 @@
 }
 
 // Here is where we decide whether we include an animation or not (to save KB)
-@import "navicons/arrow";
-@import "navicons/elastic";
-@import "navicons/flip";
-@import "navicons/plain";
-@import "navicons/slide";
-@import "navicons/spin";
+@import 'navicons/arrow';
+@import 'navicons/elastic';
+@import 'navicons/flip';
+@import 'navicons/plain';
+@import 'navicons/slide';
+@import 'navicons/spin';
