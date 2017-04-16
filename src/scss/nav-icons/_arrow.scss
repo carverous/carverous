@@ -1,0 +1,29 @@
+// Arrow
+
+.nav-icon-arrow.active {
+
+  .nav-icon-rod {
+    &::before {
+      transform: translate3d($nav-icon-rod-width * -0.29, 4px, 0) rotate(-45deg) scale(0.5, 1);
+    }
+
+    &::after {
+      transform: translate3d($nav-icon-rod-width * -0.29, -4px, 0) rotate(45deg) scale(0.5, 1);
+    }
+  }
+
+}
+
+.nav-icon-arrow-r.active {
+
+  .nav-icon-rod {
+    &::before {
+      transform: translate3d($nav-icon-rod-width * 0.29, 4px, 0) rotate(45deg) scale(0.5, 1);
+    }
+
+    &::after {
+      transform: translate3d($nav-icon-rod-width * 0.29, -4px, 0) rotate(-45deg) scale(0.5, 1);
+    }
+  }
+
+}

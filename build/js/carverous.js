@@ -8,37 +8,37 @@
 
 // Alert
 
-// Functions
+// Navicons
+// This is how simple it is to toggle in JS! (IE9+)
+// It is even possible to toggle using just the checkbox in CSS3! (Maybe next time?)
 
-// Navbar
+var navIcons = document.querySelectorAll('.nav-icon');
 
-var navDropdowns = document.querySelectorAll('.navbar-menu > .has-children > a');
+for (var i = 0; i < navIcons.length; i++) {
+  var navIcon = navIcons[i];
+
+  navIcon.addEventListener('click', function () {
+    this.classList.toggle('active');
+  });
+}
+
+// Nav
+// IE10+ for the toggle
+
+var navDropdowns = document.querySelectorAll('.nav-dropdown > a');
 
 document.addEventListener('click', function (event) {
   // console.log(event.target);
 
-  for (var i = 0; i < navDropdowns.length; i++) {
+  for (var _i = 0; _i < navDropdowns.length; _i++) {
 
-    var navDropdown = navDropdowns[i];
+    var navDropdown = navDropdowns[_i];
 
     if (event.target === navDropdown) {
+      event.preventDefault();
       navDropdown.parentElement.classList.toggle('active');
     } else {
       navDropdown.parentElement.classList.remove('active');
     }
   }
 });
-
-// Navicons
-// This is how simple it is to toggle in JS! (IE9+)
-// It is even possible to toggle using just the checkbox in CSS3! (Maybe next time?)
-
-var navicons = document.querySelectorAll('.navicon');
-
-for (var i = 0; i < navicons.length; i++) {
-  var navicon = navicons[i];
-
-  navicon.addEventListener('click', function () {
-    this.classList.toggle('active');
-  });
-}

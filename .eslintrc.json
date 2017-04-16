@@ -30,6 +30,10 @@
     "space-before-function-paren": [
       "warn",
       "never"
+    ],
+    "brace-style": [
+      "error",
+      "stroustrup"
     ]
   }
 }

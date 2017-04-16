@@ -1,17 +1,17 @@
 // Navicons
 // Animating hamburger icons
 
-.navicon {
+.nav-icon {
   cursor: pointer;
   border-radius: $border-radius-sm;
   display: inline-block;
-  padding: $navicon-padding-x $navicon-padding-y;
+  padding: $nav-icon-padding-x $nav-icon-padding-y;
 
   transition-property: opacity, filter;
-  transition-duration: $navicon-hover-transition-duration;
-  transition-timing-function: $navicon-hover-transition-timing-function;
+  transition-duration: $nav-icon-hover-transition-duration;
+  transition-timing-function: $nav-icon-hover-transition-timing-function;
 
-  vertical-align: middle; // wtf! this is the solution for the navbar problem!
+  vertical-align: middle; // wtf! this is the solution for the nav problem!
 
   // Normalize (<button>)
   font: inherit;
@@ -27,29 +27,29 @@
       filter: $navicon-hover-filter;
     }
     @else {
-      opacity: $navicon-hover-opacity;
+      opacity: $nav-icon-hover-opacity;
     }
   }
 
   &-box {
     display: block; // inline-block is always the culprit for the spacing underneath
-    height: $navicon-rod-height * 3 + $navicon-rod-spacing * 2;
-    width: $navicon-rod-width;
+    height: $nav-icon-rod-height * 3 + $nav-icon-rod-spacing * 2;
+    width: $nav-icon-rod-width;
     position: relative;
   }
 
   &-rod {
     display: block;
-    margin-top: $navicon-rod-height / -2;
+    margin-top: $nav-icon-rod-height / -2;
     top: 50%;
 
     &,
     &::before,
     &::after {
-      background: $navicon-rod-color;
-      border-radius: $navicon-rod-border-radius;
-      height: $navicon-rod-height;
-      width: $navicon-rod-width;
+      background: $nav-icon-rod-color;
+      border-radius: $nav-icon-rod-border-radius;
+      height: $nav-icon-rod-height;
+      width: $nav-icon-rod-width;
       position: absolute;
       transition-property: transform;
       transition-duration: 0.15s;
@@ -63,19 +63,19 @@
     }
 
     &::before {
-      top: ($navicon-rod-spacing + $navicon-rod-height) * -1;
+      top: ($nav-icon-rod-spacing + $nav-icon-rod-height) * -1;
     }
 
     &::after {
-      bottom: ($navicon-rod-spacing + $navicon-rod-height) * -1;
+      bottom: ($nav-icon-rod-spacing + $nav-icon-rod-height) * -1;
     }
   }
 }
 
 // Here is where we decide whether we include an animation or not (to save KB)
-@import 'navicons/arrow';
-@import 'navicons/elastic';
-@import 'navicons/flip';
-@import 'navicons/plain';
-@import 'navicons/slide';
-@import 'navicons/spin';
+@import 'nav-icons/arrow';
+@import 'nav-icons/elastic';
+@import 'nav-icons/flip';
+@import 'nav-icons/plain';
+@import 'nav-icons/slide';
+@import 'nav-icons/spin';

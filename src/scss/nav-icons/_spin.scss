@@ -2,7 +2,7 @@
 
 @mixin spin-active($a, $b) {
   &.active {
-    .navicon-rod {
+    .nav-icon-rod {
       transform: rotate($a);
       transition-delay: 0.12s;
       transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -25,7 +25,7 @@
 }
 
 %spin {
-  .navicon-rod {
+  .nav-icon-rod {
     transition-duration: 0.22s;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
@@ -41,12 +41,12 @@
   }
 }
 
-.navicon-spin {
+.nav-icon-spin {
   @extend %spin;
   @include spin-active(225deg, -90deg);
 }
 
-.navicon-spin-r {
+.nav-icon-spin-r {
   @extend %spin;
   @include spin-active(-225deg, 90deg);
 }

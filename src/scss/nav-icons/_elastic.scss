@@ -2,8 +2,8 @@
 
 @mixin elastic-active($a, $b) {
   &.active {
-    .navicon-rod {
-      $y-offset: $navicon-rod-spacing + $navicon-rod-height;
+    .nav-icon-rod {
+      $y-offset: $nav-icon-rod-spacing + $nav-icon-rod-height;
 
       transition-delay: 0.075s;
       transform: translate3d(0, $y-offset, 0) rotate(135deg);
@@ -22,29 +22,29 @@
 }
 
 %elastic {
-  .navicon-rod {
-    top: $navicon-rod-height / 2;
+  .nav-icon-rod {
+    top: $nav-icon-rod-height / 2;
     transition-duration: 0.275s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     &::before {
-      top: $navicon-rod-height + $navicon-rod-spacing;
+      top: $nav-icon-rod-height + $nav-icon-rod-spacing;
       transition: opacity 0.125s 0.275s ease;
     }
 
     &::after {
-      top: ($navicon-rod-height * 2) + ($navicon-rod-spacing * 2);
+      top: ($nav-icon-rod-height * 2) + ($nav-icon-rod-spacing * 2);
       transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
 }
 
-.navicon-elastic {
+.nav-icon-elastic {
   @extend %elastic;
   @include elastic-active(135deg, -270deg);
 }
 
-.navicon-elastic-r {
+.nav-icon-elastic-r {
   @extend %elastic;
   @include elastic-active(-135deg, 270deg);
 }

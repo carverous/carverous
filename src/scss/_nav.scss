@@ -1,0 +1,212 @@
+// Navigation
+// A responsive navigation bar
+
+.nav {
+
+  @include media-breakpoint($lg) {
+    font-size: $nav-font-size;
+    font-weight: $nav-font-weight;
+    line-height: 60px;
+    margin-bottom: $spacer-default;
+    width: 100%;
+    background: $nav-bg;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1); // sass-lint:disable-line no-color-literals
+
+    .nav-toggler {
+      display: none;
+      float: left;
+      margin-left: $spacer-default;
+
+      .nav-icon {
+        line-height: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    .nav-logo {
+      color: $nav-logo-color;
+      float: left;
+      font-size: 1.3rem;
+      //margin-left: $spacer-default;
+      //margin-right: $spacer-default;
+      text-decoration: none;
+
+      img {
+        height: 30px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-menu {
+      float: right;
+    }
+
+    .nav-menu > li {
+      float: left;
+      position: relative;
+    }
+
+    .nav-menu > li > a {
+      color: $nav-color;
+      display: block;
+      padding: 0 15px;
+      text-decoration: none;
+      transition: box-shadow .25s, color .15s;
+
+      &:hover {
+        //background: $nav-bg-hover;
+        //box-shadow: inset 0 -4px 0 $nav-color-hover;
+        color: $nav-color-hover;
+      }
+    }
+
+    .nav-dropdown {
+
+      & > a {
+        &::after,
+        &:after {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: 6px;
+          margin-bottom: 4px;
+          //vertical-align: middle;
+          content: '';
+          border-top: 4px solid;
+          border-right: 4px solid transparent;
+          border-left: 4px solid transparent;
+        }
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid $sasha-grey;
+        margin: 5px 0;
+      }
+    }
+
+    .nav-dropdown.active  {
+
+      & > a {
+        //background: $nav-bg-hover;
+        //box-shadow: inset 0 -4px 0 $nav-color-hover;
+        color: $nav-color-hover;
+      }
+
+      & > a::after,
+      & > a:after {
+        //border-top: 4px solid transparent;
+        //border-bottom: 4px solid;
+      }
+
+      ul {
+        //display: inline;
+        visibility: visible; // IE screws it up with display // IE10+
+        padding: 5px 0;
+        transform-origin: right top;
+
+        animation: {
+          name: showDropdown;
+          duration: 250ms;
+          timing-function: cubic-bezier(.92, -0.23, .13, 1.36);
+          fill-mode: forwards;
+        }
+
+      }
+    }
+
+    .nav-dropdown ul {
+      background: $nav-dropdown-bg;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
+      position: absolute;
+      top: $nav-line-height - 5;
+      right: 0;
+      //display: none;
+      visibility: hidden; // IE screws it up with display // IE10+
+      z-index: 1;
+
+      &::before,
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -8px;
+        right: 12px;
+        //box-sizing: border-box;
+
+        border: 8px solid $nav-dropdown-bg;
+        border-color: transparent transparent $nav-dropdown-bg $nav-dropdown-bg;
+
+        //transform-origin: 0 0;
+        transform: rotate(135deg);
+
+        // box-shadow: -3px 3px 10px 0 rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .nav-dropdown ul li a {
+      color: $body-color;
+      display: block;
+      font-weight: $font-weight-default;
+      line-height: 40px;
+      padding: 0 15px;
+      text-decoration: none;
+      min-width: 200px;
+      max-width: 250px;
+      overflow: hidden;
+
+      &:hover {
+        background: $nav-dropdown-bg-hover;
+        //box-shadow: inset 0 -4px 0 $nav-color-hover;
+        //transition: box-shadow .25s, color .15s;
+      }
+    }
+
+  }
+
+  & .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include clearfix;
+}
+
+.nav-fixed {
+  position: fixed;
+  z-index: 2;
+}
+
+#wrapper {
+  padding-top: 75px;
+}
+
+
+
+
+// Keyframes should be outside of media-query!
+// I spent hours figuring this one out!
+// See: http://stackoverflow.com/questions/2040790/
+// defining-keyframe-animations-inside-media-queries
+
+@keyframes showDropdown {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

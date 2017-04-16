@@ -16,9 +16,10 @@
 
 // TODO: Use the offline fonts once done with most of the stuff
 // Fonts
+// sass-lint:disable no-url-protocols
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
-
+// sass-lint:enable no-url-protocols
 
 @import 'variables';
 
@@ -40,8 +41,8 @@
 @import 'grids';
 @import 'headings';
 @import 'images';
-@import 'navicons';
-@import 'navbars';
+@import 'nav-icon';
+@import 'nav';
 @import 'pagination';
 @import 'progess';
 @import 'tables';

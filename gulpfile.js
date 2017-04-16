@@ -37,7 +37,7 @@ let banner = `/*!
 
 function handleError(err) {
   console.log(err.toString());
-  // this.emit('end');
+  this.emit('end');
 }
 
 // Transpile Sass/SCSS to CSS
@@ -63,7 +63,7 @@ gulp.task('css:autoprefix', function () {
     '!build/css/**/*.min.css', // Except .min.css files
     '!build/css/**/font-awesome*'
   ])
-    .pipe(postCSS([autoprefixer()]))
+    .pipe(postCSS([autoprefixer({browsers: ['last 2 versions']})]))
     .on('error', handleError)
     .pipe(insert.prepend(banner))
     .pipe(gulp.dest('build/css/'));

@@ -2,13 +2,13 @@
 
 @mixin slide-active($a, $b, $c) {
   &.active {
-    .navicon-rod {
-      $y-offset: $navicon-rod-spacing + $navicon-rod-height;
+    .nav-icon-rod {
+      $y-offset: $nav-icon-rod-spacing + $nav-icon-rod-height;
 
       transform: translate3d(0, $y-offset, 0) rotate($a);
 
       &::before {
-        transform: rotate($b) translate3d($navicon-rod-width / -7, $navicon-rod-spacing * -1, 0);
+        transform: rotate($b) translate3d($nav-icon-rod-width / -7, $nav-icon-rod-spacing * -1, 0);
         opacity: 0;
       }
 
@@ -20,28 +20,28 @@
 }
 
 %slide {
-  .navicon-rod {
-    top: $navicon-rod-height / 2;
+  .nav-icon-rod {
+    top: $nav-icon-rod-height / 2;
 
     &::before {
-      top: $navicon-rod-height + $navicon-rod-spacing;
+      top: $nav-icon-rod-height + $nav-icon-rod-spacing;
       transition-property: transform, opacity;
       transition-timing-function: ease;
       transition-duration: 0.15s;
     }
 
     &::after {
-      top: ($navicon-rod-height * 2) + ($navicon-rod-spacing * 2);
+      top: ($nav-icon-rod-height * 2) + ($nav-icon-rod-spacing * 2);
     }
   }
 }
 
-.navicon-slide {
+.nav-icon-slide {
   @extend %slide;
   @include slide-active(45deg, -45deg, -90deg);
 }
 
-.navicon-slide-r {
+.nav-icon-slide-r {
   @extend %slide;
   @include slide-active(-45deg, 45deg, 90deg);
 }

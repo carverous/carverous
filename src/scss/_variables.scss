@@ -184,40 +184,43 @@ $input-line-height: 1.25rem !default;
 $input-padding-y: .5rem !default;
 $input-padding-x: .75rem !default;
 
-// Navbar
-$navbar-bg: $sasha-white !default;
-$navbar-bg-hover: darken($navbar-bg, 3%) !default;
+// Nav
+$nav-bg: $sasha-darkest !default;
+$nav-bg-hover: lighten($nav-bg, 3%) !default;
 
-$navbar-color: $body-color !default;
-$navbar-color-hover: $primary;
+$nav-color: $sasha-dark !default;
+$nav-color-hover: $sasha-white;
 
-$navbar-font-size: 1rem !default;
-$navbar-font-weight: $font-weight-bold !default;
+$nav-dropdown-bg: $sasha-white;
+$nav-dropdown-bg-hover: $sasha-grey;
 
-$navbar-item-padding-left: 20px !default;
-$navbar-item-padding-right: 20px !default;
+$nav-font-size: 1rem !default;
+$nav-font-weight: $font-weight-default !default;
 
-$navbar-height: 60px !default;
+$nav-item-padding-left: 20px !default;
+$nav-item-padding-right: 20px !default;
 
-$navbar-line-height: 60px !default;
+$nav-height: 60px !default;
 
-$navbar-logo-color: $sasha-light !default;
+$nav-line-height: 60px !default;
 
-$navbar-padding-x: $spacer-default;
-$navbar-padding-y: $spacer-default;
+$nav-logo-color: $sasha-light !default;
+
+$nav-padding-x: $spacer-default;
+$nav-padding-y: $spacer-default;
 
 
-// NavbarIcons
-$navicon-hover-opacity: 0.8 !default;
-$navicon-hover-transition-duration: 0.15s !default; // 0.15s
-$navicon-hover-transition-timing-function: ease-in-out !default;
-$navicon-padding-x: 5px !default;
-$navicon-padding-y: 4px !default;
-$navicon-rod-border-radius: 4px !default;
-$navicon-rod-color: $sasha-white !default;
-$navicon-rod-height: 3px !default;
-$navicon-rod-width: 30px !default;
-$navicon-rod-spacing: 6px !default;
+// Nav Icons
+$nav-icon-hover-opacity: 0.8 !default;
+$nav-icon-hover-transition-duration: 0.15s !default; // 0.15s
+$nav-icon-hover-transition-timing-function: ease-in-out !default;
+$nav-icon-padding-x: 5px !default;
+$nav-icon-padding-y: 4px !default;
+$nav-icon-rod-border-radius: 4px !default;
+$nav-icon-rod-color: $sasha-white !default;
+$nav-icon-rod-height: 3px !default;
+$nav-icon-rod-width: 30px !default;
+$nav-icon-rod-spacing: 6px !default;
 
 $navicon-hover-use-filter: false !default;
 $navicon-hover-filter: opacity(50%) !default;

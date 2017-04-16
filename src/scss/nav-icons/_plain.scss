@@ -1,7 +1,7 @@
 // Plain
 
-.navicon-plain {
-  .navicon-rod {
+.nav-icon-plain {
+  .nav-icon-rod {
     &,
     &::before,
     &::after {
@@ -10,7 +10,7 @@
   }
 
   &.active {
-    .navicon-rod {
+    .nav-icon-rod {
       transform: rotate(45deg);
 
       &::before {
