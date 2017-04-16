@@ -28,28 +28,28 @@
 @import 'clearfix';
 @import 'border-radius';
 
-@import 'alerts';
-@import 'badges';
-@import 'banners';
-@import 'backgrounds';
-@import 'blockquotes';
-@import 'breadcrumbs';
-@import 'buttons';
-@import 'codes';
+@import 'alert';
+@import 'badge';
+@import 'banner';
+@import 'background';
+@import 'blockquote';
+@import 'breadcrumb';
+@import 'button';
+@import 'code';
 @import 'close';
-@import 'forms';
-@import 'grids';
-@import 'headings';
-@import 'images';
+@import 'form';
+@import 'grid';
+@import 'heading';
+@import 'image';
 @import 'nav-icon';
 @import 'nav';
 @import 'pagination';
 @import 'progess';
-@import 'tables';
-@import 'texts';
+@import 'table';
+@import 'text';
 
 // These go below to override others' properties
-@import 'borders';
+@import 'border';
 @import 'spacing';
 
 
