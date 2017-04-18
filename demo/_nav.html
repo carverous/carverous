@@ -12,20 +12,19 @@
 </head>
 <body>
 <nav class="nav nav-fixed">
+
   <div class="container">
+
+    <a href="#" class="nav-logo"><img src="https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/cartman.svg" alt="">Carverous</a>
+
     <div class="nav-toggler">
-      <!--<span class="navbar-toggler-word">MENU</span>-->
+      <!--<span class="nav-toggler-word">MENU</span>-->
       <div class="nav-icon nav-icon-slide">
         <div class="nav-icon-box">
           <div class="nav-icon-rod"></div>
         </div>
       </div>
     </div>
-
-    <a href="#" class="nav-logo">
-      <img src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg" alt="">
-      CARVEROUS
-    </a>
 
     <ul class="nav-menu">
       <li><a class="active" href="#">Home</a></li>
@@ -63,18 +62,6 @@
 </nav>
 
 <div id="wrapper" class="container">
-  <p class="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora
-    voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis
-    quos?
-  </p>
-
-
-  <p class="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti numquam placeat, repellat sed tempora
-    voluptate? Architecto aut dolor dolorem ducimus enim exercitationem, iusto modi perferendis, praesentium quidem quis
-    quos?
-  </p>
 
   <div class="banner">
     <h1>Awesome Navigation Menu!</h1>
@@ -88,18 +75,18 @@
     <br>
 
     <p class="">
-      <a href="#" class="btn btn-primary btn-lg">Amazing!</a>
+      <a href="#" class="btn btn-success btn-lg">Amazing!</a>
     </p>
   </div>
 
   <nav class="nav">
     <div class="nav-toggler">
-      <!--<span class="navbar-toggler-word">MENU</span>-->
-      <div class="nav-icon nav-icon-slide">
-        <div class="nav-icon-box">
-          <div class="nav-icon-rod"></div>
-        </div>
-      </div>
+      <span class="nav-toggler-word">MENU</span>
+      <!--<div class="nav-icon nav-icon-slide">-->
+        <!--<div class="nav-icon-box">-->
+          <!--<div class="nav-icon-rod"></div>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
 
     <a href="#" class="nav-logo">
@@ -138,7 +125,7 @@
           </li>
         </ul>
       </li>
-      <li><a href="#">Contact <span class="badge badge-danger">3</span></a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
@@ -317,5 +304,10 @@
 </div>
 
 <script src="../build/js/carverous.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    nav();
+  });
+</script>
 </body>
 </html>

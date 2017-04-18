@@ -1,6 +1,5 @@
 // Buttons
-// TODO: Find a way to prevent transition on page load without JS (Chrome Bug!)
-// ^ Bugfix: transition: background, border, box-shadow .25s linear;
+// bugfix - transition: background, border, box-shadow .25s linear;
 
 @mixin btn-mix($background, $border-color, $color) {
   background: $background;

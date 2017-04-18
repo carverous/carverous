@@ -184,9 +184,9 @@ $input-line-height: 1.25rem !default;
 $input-padding-y: .5rem !default;
 $input-padding-x: .75rem !default;
 
-// Nav
+// Navigation
 $nav-bg: $sasha-darkest !default;
-$nav-bg-hover: lighten($nav-bg, 3%) !default;
+$nav-bg-hover: darken($nav-bg, 3%) !default;
 
 $nav-color: $sasha-dark !default;
 $nav-color-hover: $sasha-white;
@@ -194,7 +194,10 @@ $nav-color-hover: $sasha-white;
 $nav-dropdown-bg: $sasha-white;
 $nav-dropdown-bg-hover: $sasha-grey;
 
+$nav-dropdown-color: $body-color;
+
 $nav-font-size: 1rem !default;
+$nav-font-size-sm: .9rem !default;
 $nav-font-weight: $font-weight-default !default;
 
 $nav-item-padding-left: 20px !default;
@@ -203,8 +206,10 @@ $nav-item-padding-right: 20px !default;
 $nav-height: 60px !default;
 
 $nav-line-height: 60px !default;
+$nav-line-height-sm: 50px !default;
 
 $nav-logo-color: $sasha-light !default;
+$nav-logo-font-weight: $font-weight-default !default;
 
 $nav-padding-x: $spacer-default;
 $nav-padding-y: $spacer-default;
@@ -218,8 +223,8 @@ $nav-icon-padding-x: 5px !default;
 $nav-icon-padding-y: 4px !default;
 $nav-icon-rod-border-radius: 4px !default;
 $nav-icon-rod-color: $sasha-white !default;
-$nav-icon-rod-height: 3px !default;
-$nav-icon-rod-width: 30px !default;
+$nav-icon-rod-height: 2px !default;
+$nav-icon-rod-width: 26px !default;
 $nav-icon-rod-spacing: 6px !default;
 
 $navicon-hover-use-filter: false !default;

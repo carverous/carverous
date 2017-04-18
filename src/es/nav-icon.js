@@ -1,13 +1,18 @@
-// Navicons
-// This is how simple it is to toggle in JS! (IE9+)
-// It is even possible to toggle using just the checkbox in CSS3! (Maybe next time?)
+// Navigation Icons
 
-let navIcons = document.querySelectorAll('.nav-icon');
+function navIcon() {
 
-for (let i = 0; i < navIcons.length; i++) {
-  let navIcon = navIcons[i];
+  let navIcons = document.querySelectorAll('.nav-icon');
 
-  navIcon.addEventListener('click', function() {
-    this.classList.toggle('active');
+  document.addEventListener('click', function(event) {
+
+    for (let i = 0, n = navIcons.length; i < n; i++) {
+
+      let isInsideNavIcon = navIcons[i].contains(event.target);
+
+      if (isInsideNavIcon) {
+        navIcons[i].classList.toggle('active');
+      }
+    }
   });
 }

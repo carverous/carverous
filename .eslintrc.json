@@ -34,6 +34,18 @@
     "brace-style": [
       "error",
       "stroustrup"
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "after": true
+      }
+    ],
+    "no-unused-vars": [
+      "off"
+    ],
+    "no-undef": [
+      "off"
     ]
   }
 }

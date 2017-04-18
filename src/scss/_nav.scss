@@ -1,49 +1,168 @@
 // Navigation
-// A responsive navigation bar
+// The entire navigation works in IE10+
+// The value 'unset' on any property does not work in IE11-
 
 .nav {
 
-  @include media-breakpoint($lg) {
-    font-size: $nav-font-size;
-    font-weight: $nav-font-weight;
-    line-height: 60px;
-    margin-bottom: $spacer-default;
-    width: 100%;
-    background: $nav-bg;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1); // sass-lint:disable-line no-color-literals
+  // Mobile First
+  // ====================================================================== //
 
-    .nav-toggler {
-      display: none;
-      float: left;
-      margin-left: $spacer-default;
+  background: $nav-bg;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1); // sass-lint:disable-line no-color-literals
+  color: $nav-color;
+  font-size: $nav-font-size;
+  font-weight: $nav-font-weight;
+  line-height: $nav-line-height;
+  margin-bottom: $spacer-default;
+  width: 100%;
 
-      .nav-icon {
-        line-height: 0;
-        margin-bottom: 5px;
-      }
+  .nav-logo {
+    color: $nav-logo-color;
+    font-size: 1.3rem;
+    font-weight: $nav-logo-font-weight;
+    line-height: 0;
+    margin-left: $spacer-default;
+    margin-right: $spacer-default;
+    text-decoration: none;
+
+    img {
+      height: 40px;
+      margin-right: $spacer-default;
+      //margin-bottom: 3px;
+    }
+  }
+
+  .nav-toggler {
+    cursor: pointer;
+    float: right;
+    margin-right: $spacer-default;
+
+    .nav-icon {
+      //background: $sasha-black;
+      margin-top: 15px;
     }
 
-    .nav-logo {
-      color: $nav-logo-color;
-      float: left;
-      font-size: 1.3rem;
-      //margin-left: $spacer-default;
-      //margin-right: $spacer-default;
-      text-decoration: none;
+    &:hover {
+      color: $nav-color-hover;
+    }
 
-      img {
-        height: 30px;
-      }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-menu {
+    display: none;
+    max-height: 350px; //350px
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+
+  .nav-menu > li > a {
+    color: $nav-color;
+    display: block;
+    padding: 0 15px;
+    text-decoration: none;
+    transition: box-shadow .25s, color .15s;
+
+    &:hover,
+    &.active {
+      background: $nav-bg-hover;
+      //box-shadow: inset 0 -4px 0 $nav-color-hover;
+      //color: $nav-color-hover;
+    }
+  }
+
+  .nav-dropdown {
+
+    // The caret/triangle symbol pointing down
+    & > a::after,
+    & > a:after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 8px;
+      margin-bottom: 4px;
+      font-weight: bold;
+      content: '';
+      border-top: 4px solid;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid lighten($sasha-darkest, 5%);
+      margin: 5px 0;
+    }
+  }
+
+  .nav-dropdown.active {
+
+    & > a {
+      background: $nav-bg-hover;
+      //box-shadow: inset 0 -4px 0 $nav-color-hover;
+      //color: $nav-color-hover;
+    }
+
+    // The caret/triangle symbol pointing up
+    & > a::after,
+    & > a:after {
+      border-top: 0;
+      border-bottom: 4px solid;
     }
 
     ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .nav-dropdown ul {
+    background: $nav-bg;
+    display: none;
+
+    //@include clearfix;
+  }
+
+  .nav-dropdown ul li a {
+    color: $nav-color;
+    display: block;
+    font-weight: $font-weight-default;
+    padding: 0 $spacer-default 0 $spacer-default * 2;
+    text-decoration: none;
+
+    &:hover {
+      background: $nav-bg-hover;
+      //box-shadow: inset 0 -4px 0 $nav-color-hover;
+      //transition: box-shadow .25s, color .15s;
+    }
+  }
+
+  & .container {
+    padding: 0;
+  }
+
+  // Large Screens Last
+  // ====================================================================== //
+
+  @include media-breakpoint($lg) {
+
+    .nav-toggler {
+      display: none;
     }
 
     .nav-menu {
+      display: block;
       float: right;
+      max-height: none;
+      overflow: visible;
     }
 
     .nav-menu > li {
@@ -52,56 +171,38 @@
     }
 
     .nav-menu > li > a {
-      color: $nav-color;
-      display: block;
-      padding: 0 15px;
-      text-decoration: none;
-      transition: box-shadow .25s, color .15s;
 
       &:hover {
-        //background: $nav-bg-hover;
         //box-shadow: inset 0 -4px 0 $nav-color-hover;
         color: $nav-color-hover;
+      }
+
+      &:hover:not(.active) {
+        background: none;
       }
     }
 
     .nav-dropdown {
 
-      & > a {
-        &::after,
-        &:after {
-          display: inline-block;
-          width: 0;
-          height: 0;
-          margin-left: 6px;
-          margin-bottom: 4px;
-          //vertical-align: middle;
-          content: '';
-          border-top: 4px solid;
-          border-right: 4px solid transparent;
-          border-left: 4px solid transparent;
-        }
-      }
+      // TODO: Get rid of Sasha Greys
 
       hr {
-        border: 0;
-        border-top: 1px solid $sasha-grey;
-        margin: 5px 0;
+        border-color: $sasha-grey;
       }
     }
 
-    .nav-dropdown.active  {
+    .nav-dropdown.active {
 
       & > a {
-        //background: $nav-bg-hover;
         //box-shadow: inset 0 -4px 0 $nav-color-hover;
+        background: none;
         color: $nav-color-hover;
       }
 
       & > a::after,
       & > a:after {
-        //border-top: 4px solid transparent;
-        //border-bottom: 4px solid;
+        border-top: 4px solid;
+        border-bottom: 0;
       }
 
       ul {
@@ -116,7 +217,6 @@
           timing-function: cubic-bezier(.92, -0.23, .13, 1.36);
           fill-mode: forwards;
         }
-
       }
     }
 
@@ -130,6 +230,7 @@
       visibility: hidden; // IE screws it up with display // IE10+
       z-index: 1;
 
+      // The triangle pinpoint
       &::before,
       &:before {
         content: '';
@@ -146,33 +247,31 @@
         //transform-origin: 0 0;
         transform: rotate(135deg);
 
-        // box-shadow: -3px 3px 10px 0 rgba(0, 0, 0, 0.15);
+        //box-shadow: -3px 3px 10px 0 rgba(0, 0, 0, 0.15);
       }
     }
 
     .nav-dropdown ul li a {
-      color: $body-color;
+      color: $nav-dropdown-color;
       display: block;
       font-weight: $font-weight-default;
       line-height: 40px;
-      padding: 0 15px;
-      text-decoration: none;
       min-width: 200px;
       max-width: 250px;
       overflow: hidden;
+      padding: 0 15px;
+      text-decoration: none;
 
       &:hover {
         background: $nav-dropdown-bg-hover;
-        //box-shadow: inset 0 -4px 0 $nav-color-hover;
-        //transition: box-shadow .25s, color .15s;
       }
     }
 
-  }
+    & .container {
+      padding-left: $spacer-default;
+      padding-right: $spacer-default;
+    }
 
-  & .container {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 
   @include clearfix;

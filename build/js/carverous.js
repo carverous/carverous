@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.1.0 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.1.2 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -8,37 +8,70 @@
 
 // Alert
 
-// Navicons
-// This is how simple it is to toggle in JS! (IE9+)
-// It is even possible to toggle using just the checkbox in CSS3! (Maybe next time?)
+// Navigation Icons
 
-var navIcons = document.querySelectorAll('.nav-icon');
+function navIcon() {
 
-for (var i = 0; i < navIcons.length; i++) {
-  var navIcon = navIcons[i];
+  var navIcons = document.querySelectorAll('.nav-icon');
 
-  navIcon.addEventListener('click', function () {
-    this.classList.toggle('active');
+  document.addEventListener('click', function (event) {
+
+    for (var i = 0, n = navIcons.length; i < n; i++) {
+
+      var isInsideNavIcon = navIcons[i].contains(event.target);
+
+      if (isInsideNavIcon) {
+        navIcons[i].classList.toggle('active');
+      }
+    }
   });
 }
 
-// Nav
-// IE10+ for the toggle
+// Navigation
+// The entire navigation works in IE10+
 
-var navDropdowns = document.querySelectorAll('.nav-dropdown > a');
+function nav() {
 
-document.addEventListener('click', function (event) {
-  // console.log(event.target);
+  navIcon();
 
-  for (var _i = 0; _i < navDropdowns.length; _i++) {
+  var navTogglers = document.querySelectorAll('.nav-toggler');
+  var navMenus = document.querySelectorAll('.nav-menu');
+  var navDropdowns = document.querySelectorAll('.nav-dropdown > a');
 
-    var navDropdown = navDropdowns[_i];
+  var lg = 768;
 
-    if (event.target === navDropdown) {
-      event.preventDefault();
-      navDropdown.parentElement.classList.toggle('active');
-    } else {
-      navDropdown.parentElement.classList.remove('active');
+  document.addEventListener('click', function (event) {
+    // console.log(event.target);
+
+    for (var i = 0, n = navTogglers.length; i < n; i++) {
+
+      var _navIcon = navTogglers[i].querySelector('.nav-icon');
+
+      var isInsideNavToggler = navTogglers[i].contains(event.target);
+      var isInsideNavMenu = navMenus[i].contains(event.target);
+
+      if (!isInsideNavMenu && !isInsideNavToggler) {
+        if (_navIcon) _navIcon.classList.remove('active');
+        navMenus[i].classList.remove('active');
+      }
+
+      if (isInsideNavToggler) {
+        navMenus[i].classList.toggle('active');
+      }
     }
-  }
-});
+
+    for (var _i = 0, _n = navDropdowns.length; _i < _n; _i++) {
+
+      var navDropdown = navDropdowns[_i];
+
+      if (event.target === navDropdown) {
+        event.preventDefault();
+        navDropdown.parentElement.classList.toggle('active');
+      } else {
+        if (document.body.clientWidth >= lg) {
+          navDropdown.parentElement.classList.remove('active');
+        }
+      }
+    }
+  });
+}

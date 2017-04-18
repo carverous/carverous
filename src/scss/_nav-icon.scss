@@ -4,7 +4,7 @@
 .nav-icon {
   cursor: pointer;
   border-radius: $border-radius-sm;
-  display: inline-block;
+  // display: block; //inline-block
   padding: $nav-icon-padding-x $nav-icon-padding-y;
 
   transition-property: opacity, filter;
