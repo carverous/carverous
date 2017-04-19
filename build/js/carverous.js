@@ -69,7 +69,7 @@ function nav() {
         navDropdown.parentElement.classList.toggle('active');
       } else {
         if (document.body.clientWidth >= lg) {
-          navDropdown.parentElement.classList.remove('active');
+          navDropdown.parentElement.classList.remove("active");
         }
       }
     }
