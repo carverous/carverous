@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.1.2 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.1.3 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -38,10 +38,10 @@ function nav() {
   var navMenus = document.querySelectorAll('.nav-menu');
   var navDropdowns = document.querySelectorAll('.nav-dropdown > a');
 
-  var lg = 768;
+  var lg = 767;
 
   document.addEventListener('click', function (event) {
-    // console.log(event.target);
+    // console.log(event.target); // debugging
 
     for (var i = 0, n = navTogglers.length; i < n; i++) {
 
@@ -51,11 +51,17 @@ function nav() {
       var isInsideNavMenu = navMenus[i].contains(event.target);
 
       if (!isInsideNavMenu && !isInsideNavToggler) {
-        if (_navIcon) _navIcon.classList.remove('active');
+        if (_navIcon) {
+          _navIcon.classList.remove('active');
+        }
         navMenus[i].classList.remove('active');
       }
 
       if (isInsideNavToggler) {
+        event.preventDefault();
+        if (event.target === navTogglers[i] && _navIcon) {
+          _navIcon.classList.toggle('active');
+        }
         navMenus[i].classList.toggle('active');
       }
     }
@@ -68,8 +74,9 @@ function nav() {
         event.preventDefault();
         navDropdown.parentElement.classList.toggle('active');
       } else {
-        if (document.body.clientWidth >= lg) {
-          navDropdown.parentElement.classList.remove("active");
+        // document.body.clientWidth
+        if (window.innerWidth >= lg) {
+          navDropdown.parentElement.classList.remove('active');
         }
       }
     }

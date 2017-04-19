@@ -4,7 +4,8 @@
 .nav-icon {
   cursor: pointer;
   border-radius: $border-radius-sm;
-  // display: block; //inline-block
+  display: inline-block; //inline-block
+  opacity: $nav-icon-opacity;
   padding: $nav-icon-padding-x $nav-icon-padding-y;
 
   transition-property: opacity, filter;
@@ -23,11 +24,11 @@
   overflow: visible;
 
   &:hover {
-    @if $navicon-hover-use-filter {
-      filter: $navicon-hover-filter;
+    @if $nav-icon-hover-use-filter {
+      filter: $nav-icon-hover-filter;
     }
     @else {
-      opacity: $nav-icon-hover-opacity;
+      opacity: $nav-icon-opacity-hover;
     }
   }
 

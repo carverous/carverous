@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.1.2 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.1.3 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -1688,6 +1688,8 @@ h6 {
 .nav-icon {
   cursor: pointer;
   border-radius: 2px;
+  display: inline-block;
+  opacity: 0.8;
   padding: 5px 4px;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -1703,7 +1705,7 @@ h6 {
 }
 
 .nav-icon:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .nav-icon-box {
@@ -1934,7 +1936,7 @@ h6 {
 }
 
 .nav-icon-spin .nav-icon-rod::before, .nav-icon-spin-r .nav-icon-rod::before {
-  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
 }
 
 .nav-icon-spin .nav-icon-rod::after, .nav-icon-spin-r .nav-icon-rod::after {
@@ -1950,7 +1952,7 @@ h6 {
 .nav-icon-spin.active .nav-icon-rod::before {
   top: 0;
   opacity: 0;
-  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
 .nav-icon-spin.active .nav-icon-rod::after {
@@ -1968,7 +1970,7 @@ h6 {
 .nav-icon-spin-r.active .nav-icon-rod::before {
   top: 0;
   opacity: 0;
-  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
 .nav-icon-spin-r.active .nav-icon-rod::after {
@@ -1988,33 +1990,49 @@ h6 {
   width: 100%;
 }
 
+.nav .nav-toggler {
+  cursor: pointer;
+}
+
+.nav .nav-toggler .nav-icon {
+  margin-top: -4px;
+}
+
+.nav .nav-toggler-word {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.nav .nav-toggler:hover a,
+.nav .nav-toggler:hover .nav-icon {
+  color: #fff;
+  opacity: 1;
+}
+
+.nav .nav-toggler-l {
+  float: left;
+  margin-left: 15px;
+}
+
+.nav .nav-toggler-r {
+  float: right;
+  margin-right: 15px;
+}
+
 .nav .nav-logo {
   color: #f7f9fa;
+  float: left;
   font-size: 1.3rem;
   font-weight: 400;
-  line-height: 0;
+  line-height: 60px;
   margin-left: 15px;
   margin-right: 15px;
   text-decoration: none;
 }
 
 .nav .nav-logo img {
-  height: 40px;
-  margin-right: 15px;
-}
-
-.nav .nav-toggler {
-  cursor: pointer;
-  float: right;
-  margin-right: 15px;
-}
-
-.nav .nav-toggler .nav-icon {
-  margin-top: 15px;
-}
-
-.nav .nav-toggler:hover {
-  color: #fff;
+  height: 30px;
+  margin-right: 7.5px;
 }
 
 .nav ul {
@@ -2027,6 +2045,7 @@ h6 {
   display: none;
   max-height: 350px;
   overflow-y: auto;
+  clear: both;
 }
 
 .nav .nav-menu.active {
@@ -2038,7 +2057,6 @@ h6 {
   display: block;
   padding: 0 15px;
   text-decoration: none;
-  transition: box-shadow .25s, color .15s;
 }
 
 .nav .nav-menu > li > a:hover, .nav .nav-menu > li > a.active {
@@ -2052,7 +2070,6 @@ h6 {
   height: 0;
   margin-left: 8px;
   margin-bottom: 4px;
-  font-weight: bold;
   content: '';
   border-top: 4px solid;
   border-right: 4px solid transparent;
@@ -2106,10 +2123,13 @@ h6 {
     display: none;
   }
   .nav .nav-menu {
+    clear: none;
     display: block;
-    float: right;
     max-height: none;
     overflow: visible;
+  }
+  .nav .nav-menu-r {
+    float: right;
   }
   .nav .nav-menu > li {
     float: left;
@@ -2135,8 +2155,7 @@ h6 {
   }
   .nav .nav-dropdown.active ul {
     visibility: visible;
-    padding: 5px 0;
-    transform-origin: right top;
+    transform-origin: top right;
     animation-name: showDropdown;
     animation-duration: 250ms;
     animation-timing-function: cubic-bezier(0.92, -0.23, 0.13, 1.36);
@@ -2172,13 +2191,10 @@ h6 {
     overflow: hidden;
     padding: 0 15px;
     text-decoration: none;
+    text-overflow: ellipsis;
   }
   .nav .nav-dropdown ul li a:hover {
     background: #eceeef;
-  }
-  .nav .container {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -2195,6 +2211,10 @@ h6 {
 
 #wrapper {
   padding-top: 75px;
+}
+
+.container .nav {
+  border-radius: 2px;
 }
 
 @keyframes showDropdown {

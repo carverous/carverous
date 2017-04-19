@@ -16,36 +16,49 @@
   margin-bottom: $spacer-default;
   width: 100%;
 
+  .nav-toggler {
+    cursor: pointer;
+
+    .nav-icon {
+      margin-top: -4px;
+    }
+
+    &-word {
+      color: $nav-color;
+      text-decoration: none;
+    }
+
+    &:hover a,
+    &:hover .nav-icon {
+      color: $nav-color-hover;
+      opacity: 1;
+    }
+
+    &-l {
+      float: left;
+      margin-left: $spacer-default;
+    }
+
+    &-r {
+      float: right;
+      margin-right: $spacer-default;
+    }
+  }
+
   .nav-logo {
     color: $nav-logo-color;
-    font-size: 1.3rem;
+    float: left;
+    font-size: $nav-logo-font-size;
     font-weight: $nav-logo-font-weight;
-    line-height: 0;
+    line-height: $nav-logo-line-height;
     margin-left: $spacer-default;
     margin-right: $spacer-default;
     text-decoration: none;
 
     img {
-      height: 40px;
-      margin-right: $spacer-default;
-      //margin-bottom: 3px;
+      height: $nav-img-height;
+      margin-right: $spacer-default / 2;
     }
-  }
-
-  .nav-toggler {
-    cursor: pointer;
-    float: right;
-    margin-right: $spacer-default;
-
-    .nav-icon {
-      //background: $sasha-black;
-      margin-top: 15px;
-    }
-
-    &:hover {
-      color: $nav-color-hover;
-    }
-
   }
 
   ul {
@@ -56,32 +69,30 @@
 
   .nav-menu {
     display: none;
-    max-height: 350px; //350px
+    max-height: $nav-menu-max-height;
     overflow-y: auto;
-  }
+    clear: both;
 
-  .nav-menu.active {
-    display: block;
-  }
-
-  .nav-menu > li > a {
-    color: $nav-color;
-    display: block;
-    padding: 0 15px;
-    text-decoration: none;
-    transition: box-shadow .25s, color .15s;
-
-    &:hover,
     &.active {
-      background: $nav-bg-hover;
-      //box-shadow: inset 0 -4px 0 $nav-color-hover;
-      //color: $nav-color-hover;
+      display: block;
+    }
+
+    & > li > a {
+      color: $nav-color;
+      display: block;
+      padding: 0 $spacer-default;
+      text-decoration: none;
+
+      &:hover,
+      &.active {
+        background: $nav-bg-hover;
+      }
     }
   }
 
   .nav-dropdown {
 
-    // The caret/triangle symbol pointing down
+    // The caret/triangle symbol pointing downwards
     & > a::after,
     & > a:after {
       display: inline-block;
@@ -89,16 +100,15 @@
       height: 0;
       margin-left: 8px;
       margin-bottom: 4px;
-      font-weight: bold;
       content: '';
-      border-top: 4px solid;
-      border-right: 4px solid transparent;
-      border-left: 4px solid transparent;
+      border-top: $nav-dropdown-caret-size solid;
+      border-right: $nav-dropdown-caret-size solid transparent;
+      border-left: $nav-dropdown-caret-size solid transparent;
     }
 
     hr {
       border: 0;
-      border-top: 1px solid lighten($sasha-darkest, 5%);
+      border-top: 1px solid $nav-hr-border-color-sm;
       margin: 5px 0;
     }
   }
@@ -107,41 +117,35 @@
 
     & > a {
       background: $nav-bg-hover;
-      //box-shadow: inset 0 -4px 0 $nav-color-hover;
-      //color: $nav-color-hover;
     }
 
-    // The caret/triangle symbol pointing up
+    // The caret/triangle symbol pointing upwards
     & > a::after,
     & > a:after {
       border-top: 0;
-      border-bottom: 4px solid;
+      border-bottom: $nav-dropdown-caret-size solid;
     }
 
     ul {
       display: block;
-      padding: 5px 0;
+      padding: $nav-dropdown-ul-gutter 0;
     }
   }
 
   .nav-dropdown ul {
     background: $nav-bg;
     display: none;
-
-    //@include clearfix;
   }
 
   .nav-dropdown ul li a {
     color: $nav-color;
     display: block;
-    font-weight: $font-weight-default;
-    padding: 0 $spacer-default 0 $spacer-default * 2;
+    font-weight: $nav-font-weight;
+    padding: 0 $spacer-default 0 $spacer-default * 2; // Clever moves
     text-decoration: none;
 
     &:hover {
       background: $nav-bg-hover;
-      //box-shadow: inset 0 -4px 0 $nav-color-hover;
-      //transition: box-shadow .25s, color .15s;
     }
   }
 
@@ -159,21 +163,27 @@
     }
 
     .nav-menu {
+      clear: none; // Reset
       display: block;
-      float: right;
-      max-height: none;
-      overflow: visible;
+      max-height: none; // Reset
+      overflow: visible; // Reset
+
+      &-r {
+        float: right;
+      }
     }
 
     .nav-menu > li {
       float: left;
-      position: relative;
+      position: relative; // So the absolute nav-dropdown will work fine
     }
 
     .nav-menu > li > a {
 
+      //transition: box-shadow .25s, color .15s; // Do not delete yet
+
       &:hover {
-        //box-shadow: inset 0 -4px 0 $nav-color-hover;
+        //box-shadow: inset 0 -4px 0 $nav-color-hover; // Do not delete yet
         color: $nav-color-hover;
       }
 
@@ -183,38 +193,33 @@
     }
 
     .nav-dropdown {
-
-      // TODO: Get rid of Sasha Greys
-
       hr {
-        border-color: $sasha-grey;
+        border-color: $nav-hr-border-color;
       }
     }
 
     .nav-dropdown.active {
 
       & > a {
-        //box-shadow: inset 0 -4px 0 $nav-color-hover;
         background: none;
         color: $nav-color-hover;
       }
 
       & > a::after,
       & > a:after {
-        border-top: 4px solid;
+        border-top: $nav-dropdown-caret-size solid; // Force the caret to point downwards
         border-bottom: 0;
       }
 
       ul {
-        //display: inline;
-        visibility: visible; // IE screws it up with display // IE10+
-        padding: 5px 0;
-        transform-origin: right top;
+        visibility: visible; // IE screws it up with display property // IE10+
+        //padding: $nav-dropdown-ul-gutter 0;
+        transform-origin: top right; // Appear from the corner!
 
         animation: {
           name: showDropdown;
           duration: 250ms;
-          timing-function: cubic-bezier(.92, -0.23, .13, 1.36);
+          timing-function: cubic-bezier(.92, -0.23, .13, 1.36); // Bounce effect!
           fill-mode: forwards;
         }
       }
@@ -226,8 +231,7 @@
       position: absolute;
       top: $nav-line-height - 5;
       right: 0;
-      //display: none;
-      visibility: hidden; // IE screws it up with display // IE10+
+      visibility: hidden; // IE screws it up with display property // IE10+
       z-index: 1;
 
       // The triangle pinpoint
@@ -244,7 +248,6 @@
         border: 8px solid $nav-dropdown-bg;
         border-color: transparent transparent $nav-dropdown-bg $nav-dropdown-bg;
 
-        //transform-origin: 0 0;
         transform: rotate(135deg);
 
         //box-shadow: -3px 3px 10px 0 rgba(0, 0, 0, 0.15);
@@ -254,22 +257,18 @@
     .nav-dropdown ul li a {
       color: $nav-dropdown-color;
       display: block;
-      font-weight: $font-weight-default;
-      line-height: 40px;
-      min-width: 200px;
-      max-width: 250px;
+      font-weight: $nav-font-weight;
+      line-height: $nav-dropdown-line-height;
+      min-width: $nav-dropdown-min-width;
+      max-width: $nav-dropdown-max-width;
       overflow: hidden;
-      padding: 0 15px;
+      padding: 0 $spacer-default;
       text-decoration: none;
+      text-overflow: ellipsis;
 
       &:hover {
         background: $nav-dropdown-bg-hover;
       }
-    }
-
-    & .container {
-      padding-left: $spacer-default;
-      padding-right: $spacer-default;
     }
 
   }
@@ -286,11 +285,13 @@
   padding-top: 75px;
 }
 
-
+.container .nav {
+  @include border-radius($border-radius-sm);
+}
 
 
 // Keyframes should be outside of media-query!
-// I spent hours figuring this one out!
+// I spent hours figuring this one out for IE!
 // See: http://stackoverflow.com/questions/2040790/
 // defining-keyframe-animations-inside-media-queries
 

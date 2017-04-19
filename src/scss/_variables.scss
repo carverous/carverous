@@ -1,9 +1,9 @@
 // Variables
 // A place to put all the variables together for a more maintainable code.
 
-@import 'color'; // Separate the colors file to make the code cleaner;
+@import 'color'; // Separate the color file to make the code cleaner;
 
-// Options
+// Option
 $enable-rounded: true !default;
 
 // Body
@@ -11,20 +11,20 @@ $body-bg: $sasha-white !default;
 $body-color: #545454 !default;
 $body-color-muted: $sasha-dark !default;
 
-// Links
+// Link
 $link-color: lighten($primary, 20%) !default;
 $link-color-hover: #f00 !default; // Debugger
 $link-decoration: none !default;
 $link-decoration-hover: underline !default;
 
-// Fonts
+// Font
 $font-family-alt: 'Roboto', sans-serif !default;
 $font-family-default: 'Open Sans', sans-serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 
-$font-size-sm: 12px !default; // 12px
+$font-size-sm: 12px !default;
 $font-size-default: 16px !default;
-$font-size-lg: 24px !default; // 24px
+$font-size-lg: 24px !default;
 
 $font-size-h1: 3.5rem !default;
 $font-size-h2: 3rem !default;
@@ -48,8 +48,6 @@ $font-weight-black: 900 !default;
 $font-default: $font-weight-default $font-size-default $font-family-default !default;
 
 // TODO: Change the formatting of this. Ex: 'thin': 100
-// Disabling linters on the Sass/SCSS source files via special
-// comments works for me except for a file where I store all my variables.
 
 // sass-lint:disable indentation, no-color-keywords
 $font-weights: (thin, 100),
@@ -75,24 +73,24 @@ $spacer-sm: 2px !default;
 $spacer-default: 15px !default;
 $spacer-lg: 35px !default;
 
-// Alerts
+// Alert
 $alert-margin-y: $spacer-default !default;
 $alert-padding: $spacer-default !default;
 $alert-link-font-weight: $font-weight-bold !default;
 
-// Badges
+// Badge
 $badge-border-radius: $border-radius-sm !default;
 $badge-font-size: .8em !default;
 $badge-font-weight: $font-weight-default !default;
 $badge-margin-top: -0.3em !default;
 $badge-padding: 0 8px 1px !default;
 
-// Banners
+// Banner
 $banner-bg: $sasha-grey !default;
 $banner-margin-bottom: $spacer-default !default;
 $banner-padding: $spacer-lg !default;
 
-//Blockquotes
+//Blockquote
 $blockquote-background: $sasha-light !default;
 $blockquote-border-color: $primary !default;
 $blockquote-border-width: 3px !default;
@@ -100,14 +98,14 @@ $blockquote-font-size: 1rem !default;
 $blockquote-footer-color: $body-color !default;
 $blockquote-padding: $spacer-default !default;
 
-// Breadcrumbs
+// Breadcrumb
 $breadcrumb-color: $sasha-dark !default;
 $breadcrumb-color-active: $sasha-dark !default;
 $breadcrumb-divider: '/' !default;
 $breadcrumb-font-size: .9em !default;
 $breadcrumb-font-weight-active: $font-weight-bold !default;
 
-// Breakpoints
+// Breakpoint & Grid
 $sm: 0 !default; // 576
 $md: 576px !default; // 768
 $lg: 768px !default; // 992
@@ -118,7 +116,7 @@ $grid-col-max: 12 !default;
 $container-max-width: 1024px !default;
 
 // TODO: Change btn-padding format ($btn-padding-default: x x x x;)
-// Buttons
+// Button
 $btn-block-margin-y: $spacer-default !default;
 
 $btn-border-width: 2px !default;
@@ -141,7 +139,7 @@ $btn-padding-y-lg: 14px !default;
 $btn-padding-x-lg: 24px !default;
 
 
-// Codes, Keyboards, & Pres
+// Code, Keyboard, & Pre
 $code-color: #3363bd !default; // bd4147
 $code-bg: lighten($code-color, 40%) !default;
 $code-font-size: $font-size-default !default;
@@ -158,12 +156,15 @@ $close-color: $sasha-black !default;
 $close-font-size: $font-size-lg !default;
 $close-font-weight: $font-weight-bold !default;
 
-// Images
+// Dropdown
+$dropdown-caret-size: 4px !default;
+
+// Image
 $figure-img-border-bottom: $spacer-default / 2 !default;
 $figure-caption-font-size: .9em !default;
 $figure-caption-color: $sasha-darker !default;
 
-// Inputs
+// Input
 $input-bg: $sasha-white !default;
 $input-bg-disabled: $sasha-grey !default;
 $input-bg-focus: $input-bg !default;
@@ -191,34 +192,42 @@ $nav-bg-hover: darken($nav-bg, 3%) !default;
 $nav-color: $sasha-dark !default;
 $nav-color-hover: $sasha-white;
 
-$nav-dropdown-bg: $sasha-white;
-$nav-dropdown-bg-hover: $sasha-grey;
-
-$nav-dropdown-color: $body-color;
+$nav-dropdown-bg: $sasha-white !default;
+$nav-dropdown-bg-hover: $sasha-grey !default;
+$nav-dropdown-caret-size: $dropdown-caret-size !default;
+$nav-dropdown-color: $body-color !default;
+$nav-dropdown-line-height: 40px !default;
+$nav-dropdown-max-width: 250px !default;
+$nav-dropdown-min-width: 200px !default;
+$nav-dropdown-ul-gutter: 5px !default;
 
 $nav-font-size: 1rem !default;
 $nav-font-size-sm: .9rem !default;
 $nav-font-weight: $font-weight-default !default;
 
+$nav-hr-border-color: $sasha-grey !default;
+$nav-hr-border-color-sm: lighten($sasha-darkest, 5%) !default;
+
+$nav-img-height: 30px !default;
+
 $nav-item-padding-left: 20px !default;
 $nav-item-padding-right: 20px !default;
 
-$nav-height: 60px !default;
-
 $nav-line-height: 60px !default;
-$nav-line-height-sm: 50px !default;
 
 $nav-logo-color: $sasha-light !default;
+$nav-logo-font-size: 1.3rem !default;
 $nav-logo-font-weight: $font-weight-default !default;
+$nav-logo-line-height: 60px !default;
+$nav-logo-line-height-lg: 56px !default;
 
-$nav-padding-x: $spacer-default;
-$nav-padding-y: $spacer-default;
+$nav-menu-max-height: 350px !default;
 
-
-// Nav Icons
-$nav-icon-hover-opacity: 0.8 !default;
+// Nav Icon
 $nav-icon-hover-transition-duration: 0.15s !default; // 0.15s
 $nav-icon-hover-transition-timing-function: ease-in-out !default;
+$nav-icon-opacity: 0.8 !default;
+$nav-icon-opacity-hover: 1 !default; // 0.8
 $nav-icon-padding-x: 5px !default;
 $nav-icon-padding-y: 4px !default;
 $nav-icon-rod-border-radius: 4px !default;
@@ -227,8 +236,8 @@ $nav-icon-rod-height: 2px !default;
 $nav-icon-rod-width: 26px !default;
 $nav-icon-rod-spacing: 6px !default;
 
-$navicon-hover-use-filter: false !default;
-$navicon-hover-filter: opacity(50%) !default;
+$nav-icon-hover-use-filter: false !default;
+$nav-icon-hover-filter: opacity(50%) !default;
 
 //Pagination
 $pagination-bg: $sasha-grey !default;
@@ -264,7 +273,7 @@ $progress-font-size: 0.9rem !default;
 $progress-height: 1.5rem !default;
 $progress-margin-y: $spacer-default !default;
 
-// Tables and Data
+// Table and Data
 $dt-font-weight: $font-weight-bold !default;
 $table-bg: $sasha-white !default;
 $table-border-width: 1px !default;
@@ -274,6 +283,6 @@ $table-cell-padding-sm: .3rem .75rem !default;
 $table-hover-bg: $sasha-grey !default;
 $table-stripe-bg: $sasha-light !default;
 
-// Texts
+// Text
 $mark-bg: #fcf6cf !default;
 $mark-padding: $spacer-sm !default;

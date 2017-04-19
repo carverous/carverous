@@ -15,16 +15,20 @@
 
   <div class="container">
 
-    <a href="#" class="nav-logo"><img src="https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/cartman.svg" alt="">Carverous</a>
-
-    <div class="nav-toggler">
-      <!--<span class="nav-toggler-word">MENU</span>-->
-      <div class="nav-icon nav-icon-slide">
+    <div class="nav-toggler nav-toggler-r">
+      <a href="#" class="nav-icon nav-icon-slide">
+        <span class="sr-only">Toggle navigation</span>
         <div class="nav-icon-box">
           <div class="nav-icon-rod"></div>
         </div>
-      </div>
+      </a>
     </div>
+
+    <a href="#" class="nav-logo"><img
+      src="http://vignette3.wikia.nocookie.net/nickfanon/images/8/81/309px-Patrick_Star.svg.png" alt="">
+      Carverous
+    </a>
+
 
     <ul class="nav-menu">
       <li><a class="active" href="#">Home</a></li>
@@ -75,23 +79,109 @@
     <br>
 
     <p class="">
-      <a href="#" class="btn btn-success btn-lg">Amazing!</a>
+      <a href="#" class="btn btn-secondary btn-lg">Amazing!</a>
     </p>
   </div>
 
   <nav class="nav">
-    <div class="nav-toggler">
-      <span class="nav-toggler-word">MENU</span>
-      <!--<div class="nav-icon nav-icon-slide">-->
-        <!--<div class="nav-icon-box">-->
-          <!--<div class="nav-icon-rod"></div>-->
-        <!--</div>-->
-      <!--</div>-->
+    <div class="nav-toggler nav-toggler-r">
+      <a href="#" class="nav-toggler-word">MENU</a>
     </div>
 
     <a href="#" class="nav-logo">
-      <img src="https://media.freepik.com/accounts/img/badges/you_are_on_top.svg" alt="">
-      CARVEROUS
+      <img src="https://bower.io/img/bower-logo.png" alt="">CARVEROUS
+    </a>
+
+    <ul class="nav-menu nav-menu-r">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li class="nav-dropdown">
+        <a href="https://craftedin.co">Projects</a>
+        <ul>
+          <li>
+            <a href="https://facebook.com">Facebook</a>
+          </li>
+          <li>
+            <a href="https://twitter.com">Twitter</a>
+          </li>
+          <li>
+            <a href="https://google.com">Google</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="#">Blog</a>
+        <ul>
+          <li>
+            <a href="https://facebook.com">Facebook</a>
+          </li>
+          <li>
+            <a href="https://twitter.com">Twitter</a>
+          </li>
+          <li>
+            <a href="https://google.com">Google</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav">
+
+    <div class="nav-toggler nav-toggler-l">
+      <a href="#" class="nav-icon nav-icon-slide">
+        <span class="sr-only">Toggle navigation</span>
+        <div class="nav-icon-box">
+          <div class="nav-icon-rod"></div>
+        </div>
+      </a>
+    </div>
+
+    <a href="#" class="nav-logo"><img
+      src="http://vignette3.wikia.nocookie.net/nickfanon/images/8/81/309px-Patrick_Star.svg.png" alt="">CARVEROUS</a>
+
+    <ul class="nav-menu">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Projects</a>
+        <ul>
+          <li>
+            <a href="#">Web Design</a>
+          </li>
+          <li>
+            <a href="#">Web Development</a>
+          </li>
+          <li>
+            <a href="#">Graphic Design</a>
+          </li>
+
+          <hr>
+
+          <li>
+            <a href="#">Web Design</a>
+          </li>
+          <li>
+            <a href="#">Web Development</a>
+          </li>
+          <li>
+            <a href="#">Graphic Design</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact <span class="badge badge-danger pill" style="line-height: 1rem;">3</span></a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav">
+    <div class="nav-toggler nav-toggler-l">
+      <a href="#" class="nav-toggler-word">&#9660;</a>
+    </div>
+
+    <a href="#" class="nav-logo">
+      <img src="https://bower.io/img/bower-logo.png" alt="">CARVEROUS
     </a>
 
     <ul class="nav-menu">
@@ -305,7 +395,7 @@
 
 <script src="../build/js/carverous.js"></script>
 <script>
-  window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
     nav();
   });
 </script>
