@@ -34,7 +34,7 @@
       background-color: $pagination-bg-active;
       border-color: $pagination-border-active;
       color: $pagination-color-active;
-      z-index: 2;
+      z-index: $pagination-z-index;
     }
 
     &.disabled .page-link {

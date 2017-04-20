@@ -8,7 +8,7 @@
   // ====================================================================== //
 
   background: $nav-bg;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .1); // sass-lint:disable-line no-color-literals
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
   color: $nav-color;
   font-size: $nav-font-size;
   font-weight: $nav-font-weight;
@@ -77,7 +77,8 @@
       display: block;
     }
 
-    & > li > a {
+    & > li > a,
+    &-extra-r > li > a {
       color: $nav-color;
       display: block;
       padding: 0 $spacer-default;
@@ -88,6 +89,7 @@
         background: $nav-bg-hover;
       }
     }
+
   }
 
   .nav-dropdown {
@@ -173,12 +175,14 @@
       }
     }
 
-    .nav-menu > li {
+    .nav-menu > li,
+    .nav-menu-extra-r > li {
       float: left;
       position: relative; // So the absolute nav-dropdown will work fine
     }
 
-    .nav-menu > li > a {
+    .nav-menu > li > a,
+    .nav-menu-extra-r > li > a {
 
       //transition: box-shadow .25s, color .15s; // Do not delete yet
 
@@ -190,6 +194,10 @@
       &:hover:not(.active) {
         background: none;
       }
+    }
+
+    .nav-menu-extra-r {
+      float: right;
     }
 
     .nav-dropdown {
@@ -227,30 +235,29 @@
 
     .nav-dropdown ul {
       background: $nav-dropdown-bg;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
       position: absolute;
       top: $nav-line-height - 5;
       right: 0;
       visibility: hidden; // IE screws it up with display property // IE10+
-      z-index: 1;
+      z-index: $nav-dropdown-ul-z-index;
 
-      // The triangle pinpoint
+      // The triangle dropdown pin
       &::before,
       &:before {
+        border: 8px solid $nav-dropdown-bg;
+        //box-sizing: border-box;
+        border-color: transparent transparent $nav-dropdown-bg $nav-dropdown-bg;
+        box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
         content: '';
-        width: 0;
         height: 0;
         position: absolute;
-        top: -8px;
         right: 12px;
-        //box-sizing: border-box;
-
-        border: 8px solid $nav-dropdown-bg;
-        border-color: transparent transparent $nav-dropdown-bg $nav-dropdown-bg;
-
+        top: -8px;
         transform: rotate(135deg);
+        width: 0;
 
-        //box-shadow: -3px 3px 10px 0 rgba(0, 0, 0, 0.15);
+        z-index: $nav-dropdown-pin-z-index;
       }
     }
 
@@ -276,17 +283,105 @@
   @include clearfix;
 }
 
-.nav-fixed {
-  position: fixed;
-  z-index: 2;
+.nav-white {
+  background: $nav-white-bg;
+  color: $nav-white-color;
+
+  .nav-toggler {
+
+    .nav-icon-rod {
+      &,
+      &::before,
+      &:before,
+      &::after,
+      &:after {
+        background: $nav-white-color;
+      }
+    }
+
+    &-word {
+      color: $nav-white-color;
+    }
+
+    &:hover a,
+    &:hover .nav-icon {
+      color: $nav-white-color-hover;
+    }
+  }
+
+  .nav-logo {
+    color: $nav-white-logo-color;
+  }
+
+  .nav-menu {
+    & > li > a,
+    &-extra-r > li > a {
+      color: $nav-white-color;
+
+      &:hover,
+      &.active {
+        background: $nav-white-bg-hover;
+      }
+    }
+  }
+
+  .nav-dropdown {
+    hr {
+      border-color: $nav-white-hr-border-color-sm;
+    }
+  }
+
+  .nav-dropdown.active {
+    & > a {
+      background: $nav-white-bg-hover;
+    }
+  }
+
+  .nav-dropdown ul {
+    background: $nav-white-bg;
+  }
+
+  .nav-dropdown ul li a {
+    color: $nav-white-color;
+
+    &:hover {
+      background: $nav-white-bg-hover;
+    }
+  }
+
+  @include media-breakpoint($lg) {
+
+    .nav-menu > li > a,
+    .nav-menu-extra-r > li > a {
+
+      //transition: box-shadow .25s, color .15s; // Do not delete yet
+
+      &:hover {
+        //box-shadow: inset 0 -4px 0 $nav-color-hover; // Do not delete yet
+        color: $nav-white-color-hover;
+      }
+    }
+
+    .nav-dropdown.active {
+      & > a {
+        background: none;
+        color: $nav-white-color-hover;
+      }
+    }
+  }
 }
 
-#wrapper {
-  padding-top: 75px;
+.nav-fixed {
+  position: fixed;
+  z-index: $nav-fixed-z-index;
 }
 
 .container .nav {
   @include border-radius($border-radius-sm);
+}
+
+#wrapper {
+  padding-top: 75px;
 }
 
 

@@ -223,6 +223,17 @@ $nav-logo-line-height-lg: 56px !default;
 
 $nav-menu-max-height: 350px !default;
 
+// Navigation White
+$nav-white-bg: $sasha-white !default;
+$nav-white-bg-hover: $sasha-grey !default;
+
+$nav-white-hr-border-color-sm: $nav-hr-border-color !default;
+
+$nav-white-color: $sasha-darker !default;
+$nav-white-color-hover: $sasha-darkest !default;
+
+$nav-white-logo-color: $sasha-darker !default;
+
 // Nav Icon
 $nav-icon-hover-transition-duration: 0.15s !default; // 0.15s
 $nav-icon-hover-transition-timing-function: ease-in-out !default;
@@ -286,3 +297,9 @@ $table-stripe-bg: $sasha-light !default;
 // Text
 $mark-bg: #fcf6cf !default;
 $mark-padding: $spacer-sm !default;
+
+// Z-index
+$nav-dropdown-ul-z-index: 2 !default;
+$nav-dropdown-pin-z-index: 1 !default;
+$nav-fixed-z-index: 3 !default;
+$pagination-z-index: 2 !default;

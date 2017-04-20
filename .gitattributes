@@ -1,4 +1,4 @@
-# Declare files that will always have CRLF line endings on checkout.
+# Declare files that will always have LF line endings on checkout.
 
 *.html text eol=lf
 *.scss text eol=lf
