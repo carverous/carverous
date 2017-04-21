@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.1.3 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.1.4 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -38,7 +38,7 @@ function nav() {
   var navMenus = document.querySelectorAll('.nav-menu');
   var navDropdowns = document.querySelectorAll('.nav-dropdown > a');
 
-  var lg = 767;
+  var lg = 767; // Size of the screen - lg
 
   document.addEventListener('click', function (event) {
     // console.log(event.target); // debugging
@@ -69,8 +69,9 @@ function nav() {
     for (var _i = 0, _n = navDropdowns.length; _i < _n; _i++) {
 
       var navDropdown = navDropdowns[_i];
+      var isInsideNavDropwon = navDropdown.contains(event.target);
 
-      if (event.target === navDropdown) {
+      if (isInsideNavDropwon) {
         event.preventDefault();
         navDropdown.parentElement.classList.toggle('active');
       } else {

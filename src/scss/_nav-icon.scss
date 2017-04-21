@@ -1,5 +1,5 @@
-// Navicons
-// Animating hamburger icons
+// Nav Icon
+// Hamburger icons that animate to 'X' or arrows.
 
 .nav-icon {
   cursor: pointer;
@@ -8,32 +8,16 @@
   opacity: $nav-icon-opacity;
   padding: $nav-icon-padding-x $nav-icon-padding-y;
 
-  transition-property: opacity, filter;
-  transition-duration: $nav-icon-hover-transition-duration;
-  transition-timing-function: $nav-icon-hover-transition-timing-function;
-
   vertical-align: middle; // wtf! this is the solution for the nav problem!
 
-  // Normalize (<button>)
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-
   &:hover {
-    @if $nav-icon-hover-use-filter {
-      filter: $nav-icon-hover-filter;
-    }
-    @else {
-      opacity: $nav-icon-opacity-hover;
-    }
+    opacity: $nav-icon-opacity-hover;
   }
 
   &-box {
-    display: block; // inline-block is always the culprit for the spacing underneath
+    // The inline-block's space on the bottom is given to the descender height
+    // of letters like a lowercase y or g. It's not appropriate here.
+    display: block;
     height: $nav-icon-rod-height * 3 + $nav-icon-rod-spacing * 2;
     width: $nav-icon-rod-width;
     position: relative;
@@ -70,6 +54,14 @@
     &::after {
       bottom: ($nav-icon-rod-spacing + $nav-icon-rod-height) * -1;
     }
+  }
+}
+
+.nav-white .nav-icon-rod{
+  &,
+  &::before,
+  &::after {
+    background: $nav-white-color;
   }
 }
 

@@ -9,7 +9,7 @@ function nav() {
   let navMenus = document.querySelectorAll('.nav-menu');
   let navDropdowns = document.querySelectorAll('.nav-dropdown > a');
 
-  let lg = 767;
+  let lg = 767; // Size of the screen - lg
 
   document.addEventListener('click', function(event) {
     // console.log(event.target); // debugging
@@ -40,8 +40,9 @@ function nav() {
     for (let i = 0, n = navDropdowns.length; i < n; i++) {
 
       let navDropdown = navDropdowns[i];
+      let isInsideNavDropwon = navDropdown.contains(event.target);
 
-      if (event.target === navDropdown) {
+      if (isInsideNavDropwon) {
         event.preventDefault();
         navDropdown.parentElement.classList.toggle('active');
       }
@@ -55,5 +56,4 @@ function nav() {
     }
 
   });
-
 }

@@ -187,7 +187,7 @@ $input-padding-x: .75rem !default;
 
 // Navigation
 $nav-bg: $sasha-darkest !default;
-$nav-bg-hover: darken($nav-bg, 3%) !default;
+$nav-bg-hover: rgba(0, 0, 0, .3) !default;
 
 $nav-color: $sasha-dark !default;
 $nav-color-hover: $sasha-white;
@@ -202,35 +202,30 @@ $nav-dropdown-min-width: 200px !default;
 $nav-dropdown-ul-gutter: 5px !default;
 
 $nav-font-size: 1rem !default;
-$nav-font-size-sm: .9rem !default;
 $nav-font-weight: $font-weight-default !default;
 
 $nav-hr-border-color: $sasha-grey !default;
-$nav-hr-border-color-sm: lighten($sasha-darkest, 5%) !default;
+$nav-hr-border-color-sm: lighten($sasha-darkest, 10%) !default;
 
 $nav-img-height: 30px !default;
-
-$nav-item-padding-left: 20px !default;
-$nav-item-padding-right: 20px !default;
 
 $nav-line-height: 60px !default;
 
 $nav-logo-color: $sasha-light !default;
-$nav-logo-font-size: 1.3rem !default;
+$nav-logo-font-size: 1.5rem !default;
 $nav-logo-font-weight: $font-weight-default !default;
-$nav-logo-line-height: 60px !default;
-$nav-logo-line-height-lg: 56px !default;
+$nav-logo-line-height: $nav-line-height !default;
 
 $nav-menu-max-height: 350px !default;
 
 // Navigation White
 $nav-white-bg: $sasha-white !default;
-$nav-white-bg-hover: $sasha-grey !default;
+$nav-white-bg-hover: rgba(0, 0, 0, .05) !default;
 
 $nav-white-hr-border-color-sm: $nav-hr-border-color !default;
 
-$nav-white-color: $sasha-darker !default;
-$nav-white-color-hover: $sasha-darkest !default;
+$nav-white-color: lighten($body-color, 25%) !default;
+$nav-white-color-hover: darken($nav-white-color, 25%) !default;
 
 $nav-white-logo-color: $sasha-darker !default;
 
@@ -246,9 +241,6 @@ $nav-icon-rod-color: $sasha-white !default;
 $nav-icon-rod-height: 2px !default;
 $nav-icon-rod-width: 26px !default;
 $nav-icon-rod-spacing: 6px !default;
-
-$nav-icon-hover-use-filter: false !default;
-$nav-icon-hover-filter: opacity(50%) !default;
 
 //Pagination
 $pagination-bg: $sasha-grey !default;
