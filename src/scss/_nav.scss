@@ -6,7 +6,6 @@
 
   // Mobile First
   // ====================================================================== //
-
   background: $nav-bg;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
   color: $nav-color;
@@ -31,7 +30,7 @@
     &:hover a,
     &:hover .nav-icon {
       color: $nav-color-hover;
-      opacity: 1;
+      opacity: 1; // The nav-icon highlights as long as the nav-toggler is hovered over
     }
 
     &-l {
@@ -77,8 +76,7 @@
       display: block;
     }
 
-    & > li > a,
-    &-extra-r > li > a {
+    & > ul > li > a {
       color: $nav-color;
       display: block;
       padding: 0 $spacer-default;
@@ -89,14 +87,12 @@
         background: $nav-bg-hover;
       }
     }
-
   }
 
   .nav-dropdown {
 
     // The caret/triangle symbol pointing downwards
-    & > a::after,
-    & > a:after {
+    & > a::after {
       display: inline-block;
       width: 0;
       height: 0;
@@ -170,19 +166,21 @@
       max-height: none; // Reset
       overflow: visible; // Reset
 
+      &-l {
+        float: left;
+      }
+
       &-r {
         float: right;
       }
     }
 
-    .nav-menu > li,
-    .nav-menu-extra-r > li {
+    .nav-menu > ul > li {
       float: left;
       position: relative; // So the absolute nav-dropdown will work fine
     }
 
-    .nav-menu > li > a,
-    .nav-menu-extra-r > li > a {
+    .nav-menu > ul > li > a {
 
       //transition: box-shadow .25s, color .15s; // Do not delete yet
 
@@ -194,10 +192,6 @@
       &:hover:not(.active) {
         background: none;
       }
-    }
-
-    .nav-menu-extra-r {
-      float: right;
     }
 
     .nav-dropdown {
@@ -277,7 +271,6 @@
         background: $nav-dropdown-bg-hover;
       }
     }
-
   }
 
   @include clearfix;
@@ -288,16 +281,6 @@
   color: $nav-white-color;
 
   .nav-toggler {
-
-    .nav-icon-rod {
-      &,
-      &::before,
-      &:before,
-      &::after,
-      &:after {
-        background: $nav-white-color;
-      }
-    }
 
     &-word {
       color: $nav-white-color;
@@ -313,15 +296,12 @@
     color: $nav-white-logo-color;
   }
 
-  .nav-menu {
-    & > li > a,
-    &-extra-r > li > a {
-      color: $nav-white-color;
+  .nav-menu > ul > li > a {
+    color: $nav-white-color;
 
-      &:hover,
-      &.active {
-        background: $nav-white-bg-hover;
-      }
+    &:hover,
+    &.active {
+      background: $nav-white-bg-hover;
     }
   }
 
@@ -351,9 +331,7 @@
 
   @include media-breakpoint($lg) {
 
-    .nav-menu > li > a,
-    .nav-menu-extra-r > li > a {
-
+    .nav-menu > ul > li > a {
       //transition: box-shadow .25s, color .15s; // Do not delete yet
 
       &:hover {
@@ -367,6 +345,10 @@
         background: none;
         color: $nav-white-color-hover;
       }
+    }
+
+    .nav-dropdown ul li a {
+      color: $nav-dropdown-color;
     }
   }
 }
@@ -383,7 +365,6 @@
 #wrapper {
   padding-top: 75px;
 }
-
 
 // Keyframes should be outside of media-query!
 // I spent hours figuring this one out for IE!
