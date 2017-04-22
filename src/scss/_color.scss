@@ -1,8 +1,7 @@
-// Colors
+// Colors (American English)
 
 // theme-colors - core of the theme
-// theme-extra  - additional colors added when necessary
-// theme-sasha  - typically used for text colors and accents
+// theme-sasha  - shades of grey
 
 // theme-colors
 $danger: #ea4858 !default; // ef5350 EA4858
@@ -12,38 +11,47 @@ $secondary: #699 !default; // 4DD0E1 F48FB1 4DB6AC 2BBBAD 669999
 $success: #81c784 !default; // 9CCC65 02B875 4BC883 81C784
 $warning: #ffb74d !default;
 
-// sass-lint:disable indentation
-$theme-colors:
-  (danger, $danger),
-  (info, $info),
-  (primary, $primary),
-  (secondary, $secondary),
-  (success, $success),
-  (warning, $warning) !default;
+$theme-colors: (
+  danger: $danger,
+  info: $info,
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  warning: $warning
+) !default;
 
 // theme-extra
-$default: #e0e0e0 !default; // 90A4AE
+$default: #ebedee !default; // 90A4AE
 $inverse: #fff !default;
 
-$theme-extra:
-                (default, $default),
-                (inverse, $inverse) !default;
+$theme-extra: (
+  default: $default,
+  inverse: $inverse
+) !default;
 
 // theme-sasha
-// Shades of Grey
 $sasha-white: #fff !default;
-$sasha-light: #f7f9fa !default; // fafafa
-$sasha-grey: #eceeef !default; // ECEEEF f1f1f1
-$sasha-dark: #bbb !default;
-$sasha-darker: #757575 !default;
-$sasha-darkest: #2a2a2a !default;
+$sasha-grey: #f7f9fa !default;
+$sasha-greyer: #f1f3f4 !default; // eceeef
+$sasha-greyest: #ebedee !default; // f3f5f6
+$sasha-dark: #bbbbbe !default; // bbb
+$sasha-darker: #757578 !default; // 757575
+$sasha-darkest: #21252a !default;
 $sasha-black: #000 !default;
 
-$theme-sasha:
-                (sasha-white, $sasha-white),
-                (sasha-light, $sasha-light),
-                (sasha-grey, $sasha-grey),
-                (sasha-dark, $sasha-dark),
-                (sasha-darker, $sasha-darker),
-                (sasha-darkest, $sasha-darkest),
-                (sasha-black, $sasha-black) !default;
+$theme-sasha: (
+  sasha-white: $sasha-white,
+  sasha-grey: $sasha-grey,
+  sasha-greyer: $sasha-greyer,
+  sasha-greyest: $sasha-greyest,
+  sasha-dark: $sasha-dark,
+  sasha-darker: $sasha-darker,
+  sasha-darkest: $sasha-darkest,
+  sasha-black: $sasha-black
+) !default;
+
+$theme-sasha-btn: (
+  sasha-white: $sasha-white,
+  sasha-greyest: $sasha-greyest,
+  sasha-darkest: $sasha-darkest,
+) !default;

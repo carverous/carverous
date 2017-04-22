@@ -3,12 +3,15 @@
 
 @import 'color'; // Separate the color file to make the code cleaner;
 
-// Option
+// Enable Option
+$enable-btn-o: true !default; // Outline Buttons
+$enable-btn-t: true !default; // Transparent Buttons
+$enable-btn-sasha: true !default; // Sasha-themed Buttons
 $enable-rounded: true !default;
 
 // Body
 $body-bg: $sasha-white !default;
-$body-color: #545454 !default;
+$body-color: #545454 !default; // 545454
 $body-color-muted: $sasha-dark !default;
 
 // Link
@@ -20,7 +23,7 @@ $link-decoration-hover: underline !default;
 // Font
 $font-family-alt: 'Roboto', sans-serif !default;
 $font-family-default: 'Open Sans', sans-serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 
 $font-size-sm: 12px !default;
 $font-size-default: 16px !default;
@@ -47,19 +50,16 @@ $font-weight-black: 900 !default;
 
 $font-default: $font-weight-default $font-size-default $font-family-default !default;
 
-// TODO: Change the formatting of this. Ex: 'thin': 100
-
-// sass-lint:disable indentation, no-color-keywords
-$font-weights: (thin, 100),
-  (light, 300),
-  (normal, 400),
-  (medium, 600),
-  (bold, 700),
-  (black, 900) !default;
-// sass-lint:enable indentation, no-color-keywords
+$font-weights: (
+  thin: 100,
+  light: 300,
+  normal: 400,
+  medium: 600,
+  bold: 700,
+  black: 900 // sass-lint:disable-line no-color-keywords
+) !default;
 
 $line-height-default: 1.5 !default;
-
 
 // Border Radius
 $border-radius-sm: 2px !default;
@@ -86,13 +86,13 @@ $badge-margin-top: -0.3em !default;
 $badge-padding: 0 8px 1px !default;
 
 // Banner
-$banner-bg: $sasha-grey !default;
+$banner-bg: $sasha-greyer !default;
 $banner-margin-bottom: $spacer-default !default;
 $banner-padding: $spacer-lg !default;
 
 //Blockquote
-$blockquote-background: $sasha-light !default;
-$blockquote-border-color: $primary !default;
+$blockquote-background: $sasha-grey !default;
+$blockquote-border-color: $sasha-greyer !default;
 $blockquote-border-width: 3px !default;
 $blockquote-font-size: 1rem !default;
 $blockquote-footer-color: $body-color !default;
@@ -138,7 +138,6 @@ $btn-padding-x-default: 16px !default;
 $btn-padding-y-lg: 14px !default;
 $btn-padding-x-lg: 24px !default;
 
-
 // Code, Keyboard, & Pre
 $code-color: #3363bd !default; // bd4147
 $code-bg: lighten($code-color, 40%) !default;
@@ -166,7 +165,7 @@ $figure-caption-color: $sasha-darker !default;
 
 // Input
 $input-bg: $sasha-white !default;
-$input-bg-disabled: $sasha-grey !default;
+$input-bg-disabled: $sasha-greyer !default;
 $input-bg-focus: $input-bg !default;
 
 $input-border-color: $sasha-dark !default;
@@ -193,7 +192,7 @@ $nav-color: $sasha-dark !default;
 $nav-color-hover: $sasha-white;
 
 $nav-dropdown-bg: $sasha-white !default;
-$nav-dropdown-bg-hover: $sasha-grey !default;
+$nav-dropdown-bg-hover: $sasha-greyer !default;
 $nav-dropdown-caret-size: $dropdown-caret-size !default;
 $nav-dropdown-color: $body-color !default;
 $nav-dropdown-line-height: 40px !default;
@@ -204,14 +203,14 @@ $nav-dropdown-ul-gutter: 5px !default;
 $nav-font-size: 1rem !default;
 $nav-font-weight: $font-weight-default !default;
 
-$nav-hr-border-color: $sasha-grey !default;
+$nav-hr-border-color: $sasha-greyer !default;
 $nav-hr-border-color-sm: lighten($sasha-darkest, 10%) !default;
 
 $nav-img-height: 30px !default;
 
 $nav-line-height: 60px !default;
 
-$nav-logo-color: $sasha-light !default;
+$nav-logo-color: $sasha-grey !default;
 $nav-logo-font-size: 1.5rem !default;
 $nav-logo-font-weight: $font-weight-default !default;
 $nav-logo-line-height: $nav-line-height !default;
@@ -243,9 +242,9 @@ $nav-icon-rod-width: 26px !default;
 $nav-icon-rod-spacing: 6px !default;
 
 //Pagination
-$pagination-bg: $sasha-grey !default;
+$pagination-bg: $sasha-greyer !default;
 $pagination-bg-active: $primary !default;
-$pagination-bg-disabled: $sasha-grey !default;
+$pagination-bg-disabled: $sasha-greyer !default;
 $pagination-bg-hover: $primary !default;
 
 $pagination-border-active: none !default;
@@ -280,11 +279,11 @@ $progress-margin-y: $spacer-default !default;
 $dt-font-weight: $font-weight-bold !default;
 $table-bg: $sasha-white !default;
 $table-border-width: 1px !default;
-$table-border-color: $sasha-grey;
+$table-border-color: $sasha-greyer;
 $table-cell-padding: .75rem 1rem !default;
 $table-cell-padding-sm: .3rem .75rem !default;
-$table-hover-bg: $sasha-grey !default;
-$table-stripe-bg: $sasha-light !default;
+$table-hover-bg: $sasha-greyer !default;
+$table-stripe-bg: $sasha-grey !default;
 
 // Text
 $mark-bg: #fcf6cf !default;

@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.1.4 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.1.5 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -33,7 +33,7 @@
 
 .col-demo,
 .col-flex-demo {
-  background: #eceeef;
+  background: #f1f3f4;
   border: 1px solid #fff;
   padding: 15px;
 }
