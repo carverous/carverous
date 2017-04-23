@@ -1,6 +1,6 @@
 // Alerts
 
-@mixin alert-mix($theme) {
+@mixin alert($theme) {
   background-color: lighten($theme, 10%);
   color: contrast-color($theme);
 
@@ -13,18 +13,18 @@
 .alert {
   padding: $alert-padding;
 
-  @each $name, $value in $theme-colors {
-    &-#{$name} {
-      @include alert-mix($value);
+  @each $key, $value in $theme-colors {
+    &-#{$key} {
+      @include alert($value);
     }
   }
 
-  // It doesn't make sense adding the default and inverse in alerts
-
+  // Add margin each succeeding alert
   & + & {
     margin-top: $alert-margin-y;
   }
 
+  // Only add a radius when inside .container
   .container & {
     @include border-radius($border-radius-sm);
   }

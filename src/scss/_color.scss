@@ -20,15 +20,6 @@ $theme-colors: (
   warning: $warning
 ) !default;
 
-// theme-extra
-$default: #ebedee !default; // 90A4AE
-$inverse: #fff !default;
-
-$theme-extra: (
-  default: $default,
-  inverse: $inverse
-) !default;
-
 // theme-sasha
 $sasha-white: #fff !default;
 $sasha-grey: #f7f9fa !default;
@@ -50,7 +41,7 @@ $theme-sasha: (
   sasha-black: $sasha-black
 ) !default;
 
-$theme-sasha-btn: (
+$theme-sasha-custom: (
   sasha-white: $sasha-white,
   sasha-greyest: $sasha-greyest,
   sasha-darkest: $sasha-darkest,

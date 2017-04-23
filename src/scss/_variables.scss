@@ -6,7 +6,7 @@
 // Enable Option
 $enable-btn-o: true !default; // Outline Buttons
 $enable-btn-t: true !default; // Transparent Buttons
-$enable-btn-sasha: true !default; // Sasha-themed Buttons
+$enable-sasha-custom: true !default; // Sasha-themed Buttons
 $enable-rounded: true !default;
 
 // Body
@@ -71,7 +71,7 @@ $border-radius-pill: 500px !default;
 // Margin and Padding
 $spacer-sm: 2px !default;
 $spacer-default: 15px !default;
-$spacer-lg: 35px !default;
+$spacer-lg: 30px !default;
 
 // Alert
 $alert-margin-y: $spacer-default !default;
@@ -88,7 +88,9 @@ $badge-padding: 0 8px 1px !default;
 // Banner
 $banner-bg: $sasha-greyer !default;
 $banner-margin-bottom: $spacer-default !default;
-$banner-padding: $spacer-lg !default;
+$banner-padding-x: $spacer-default !default;
+$banner-padding-y: $spacer-lg !default;
+
 
 //Blockquote
 $blockquote-background: $sasha-grey !default;

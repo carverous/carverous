@@ -1,13 +1,13 @@
 // Badges
 
-@mixin badge-mix($name, $theme) {
-  background: $theme;
-  color: if($name == 'default' or $name == 'inverse', $body-color, $sasha-white);
+@mixin badge($bg, $color) {
+  background: $bg;
+  color: $color;
 
   &[href]:hover {
-    background-color: darken($theme, 5%);
-    color: if($name == 'default' or $name == 'inverse', $body-color, $sasha-white);
+    background: darken($bg, 5%);
     text-decoration: none;
+    color: $color; // Prevent the default link colors from affecting this
   }
 }
 
@@ -20,15 +20,19 @@
   padding: $badge-padding;
   vertical-align: middle;
 
-  @each $name, $value in $theme-colors {
-    &-#{$name} {
-      @include badge-mix($name, $value);
+  @each $key, $value in $theme-colors {
+    &-#{$key} {
+      $color: $sasha-white;
+      @include badge($value, $color);
     }
   }
 
-  @each $name, $value in $theme-extra {
-    &-#{$name} {
-      @include badge-mix($name, $value);
+  @each $key, $value in $theme-sasha-custom {
+    @if ($enable-sasha-custom) {
+      &-#{$key} {
+        $color: if($key == sasha-white or $key == sasha-greyest, lighten($sasha-darkest, 25%), $sasha-white);
+        @include badge($value, $color);
+      }
     }
   }
 }

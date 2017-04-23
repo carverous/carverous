@@ -1,7 +1,6 @@
 // Buttons
-// bugfix - transition: background, border, box-shadow .25s linear;
-
-// TODO: Add tintable grey buttons
+// TODO: Darkening the btn-sasha-white-o when hovered over is not acceptable
+// TODO: Hover effect is too light. Fix it!
 
 @mixin btn-mix($background, $border-color, $color) {
   background: $background;
@@ -39,16 +38,16 @@
 }
 
 .btn {
-  // display: inline-block;
+  display: inline-block; // Align the buttons with the rest of the components !important
   cursor: pointer;
   font-weight: $btn-font-weight;
   outline: none;
   text-align: center;
   text-transform: uppercase;
   transition: background .25s, border .25s, box-shadow .25s, color .25s;
-  user-select: none; // To prevent highlighting the text inside the buttons
+  user-select: none; // Prevent highlighting the text inside the buttons
   vertical-align: middle;
-  white-space: nowrap; // To prevent from wrapping or placing text on a new line
+  white-space: nowrap; // Prevent from wrapping or placing text on a new line
 
   @include border-radius($border-radius-sm);
   @include btn-size($btn-font-size-default, $btn-padding-y-default, $btn-padding-x-default);
@@ -85,7 +84,7 @@
   }
 
   // theme-sasha-btn
-  @each $key, $value in $theme-sasha-btn {
+  @each $key, $value in $theme-sasha-custom {
 
     $bg: if($key == sasha-darkest, lighten($value, 10%), darken($value, 5%));
     $color: if($key == sasha-darkest, $sasha-greyest, lighten($sasha-darkest, 25%));
@@ -130,7 +129,7 @@
     box-sizing: border-box;
   }
 
-  // To give space to multiple block buttons
+  // Give space to multiple block buttons
   &-block + &-block {
     margin-top: $btn-block-margin-y;
   }

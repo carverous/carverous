@@ -1,17 +1,16 @@
 // Banners
-// Works like a cover banner / jumbotron
+// Works as a huge page banner / jumbotron
 
 .banner {
+
+  // Mobile First
+  // ====================================================================== //
+
   background: $banner-bg;
   margin-bottom: $banner-margin-bottom;
-  padding: $banner-padding;
-  @include border-radius($border-radius-default);
+  padding: $banner-padding-y $banner-padding-x;
+  @include border-radius($border-radius-lg);
 
-  //@include media-breakpoint-up(sm) {
-  //  padding: $banner-padding;
-  //}
-
-  // This 3D-look is an experimental feature
   &-hr {
     border: 0;
     border-top: 1px solid darken($banner-bg, 10%);
@@ -19,8 +18,28 @@
   }
 
   &-fluid {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 0;
     @include border-radius(0);
+
+    .container {
+      padding: $banner-padding-y $banner-padding-x;
+    }
+  }
+
+  // Large Screens Last
+  // ====================================================================== //
+
+  @include media-breakpoint($lg) {
+    padding: ($banner-padding-y * 2) ($banner-padding-x * 2);
+
+    &-fluid {
+      padding: 0;
+
+      .container {
+        padding: ($banner-padding-y * 2) $banner-padding-x;
+      }
+    }
   }
 }
+
+
