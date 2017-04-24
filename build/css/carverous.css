@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.1.5 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.1.6 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -570,7 +570,6 @@ template {
 }
 
 .alert-danger .alert-link {
-  font-weight: 700;
   color: #b71525;
 }
 
@@ -580,7 +579,6 @@ template {
 }
 
 .alert-info .alert-link {
-  font-weight: 700;
   color: #2f9cf4;
 }
 
@@ -590,7 +588,6 @@ template {
 }
 
 .alert-primary .alert-link {
-  font-weight: 700;
   color: #c7d8ea;
 }
 
@@ -600,7 +597,6 @@ template {
 }
 
 .alert-secondary .alert-link {
-  font-weight: 700;
   color: #3d5c5c;
 }
 
@@ -610,7 +606,6 @@ template {
 }
 
 .alert-success .alert-link {
-  font-weight: 700;
   color: #469c49;
 }
 
@@ -620,8 +615,18 @@ template {
 }
 
 .alert-warning .alert-link {
-  font-weight: 700;
   color: #e68900;
+}
+
+.alert .close {
+  position: relative;
+  top: -15px;
+  right: -15px;
+  padding: 15px;
+}
+
+.alert-link {
+  font-weight: 700;
 }
 
 .alert + .alert {
@@ -1488,19 +1493,19 @@ pre code {
   float: right;
   font-size: 24px;
   font-weight: 700;
-  line-height: .85;
+  line-height: 1;
   color: #000;
-  opacity: .3;
+  opacity: 0.3;
 }
 
-.close:hover {
-  opacity: .5;
+.close:hover, .close:focus {
+  opacity: 0.6;
   cursor: pointer;
 }
 
 button.close {
   padding: 0;
-  background: transparent;
+  background: none;
   border: 0;
 }
 
@@ -1947,7 +1952,6 @@ h6 {
 
 .nav {
   background: #21252a;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
   color: #bbbbbe;
   font-size: 1rem;
   font-weight: 400;
@@ -2177,6 +2181,7 @@ h6 {
 
 .nav-white {
   background: #fff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
   color: #949494;
 }
 

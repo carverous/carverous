@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.1.5 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.1.6 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -7,6 +7,53 @@
 'use strict';
 
 // Alert
+// Use getAttribute() instead of dataset for IE10+
+
+function alertClose() {
+  var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+
+  var alerts = document.querySelectorAll('.alert');
+
+  var _loop = function _loop(i, n) {
+
+    alerts[i].addEventListener('click', function (event) {
+
+      if (alerts[i].querySelector('[data-close]')) {
+
+        var closer = alerts[i].querySelector('[data-close]');
+        var isCloserClicked = closer.contains(event.target);
+
+        if (isCloserClicked && closer.getAttribute('data-close') === 'alert') {
+
+          alerts[i].style.transition = 'all ' + duration + 's';
+          alerts[i].style.opacity = '0';
+
+          setTimeout(function () {
+            alerts[i].style.display = 'none';
+          }, duration * 1000);
+        }
+      }
+    });
+  };
+
+  for (var i = 0, n = alerts.length; i < n; i++) {
+    _loop(i, n);
+  }
+}
+
+function alertShow(el) {
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+
+  el.style.transition = 'all ' + duration + 's';
+  el.style.opacity = '0';
+  el.style.display = 'block';
+
+  setTimeout(function () {
+    el.style.opacity = '1';
+  }, 250);
+}
 
 // Button
 

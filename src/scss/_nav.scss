@@ -9,7 +9,6 @@
   // Mobile First
   // ====================================================================== //
   background: $nav-bg;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
   color: $nav-color;
   font-size: $nav-font-size;
   font-weight: $nav-font-weight;
@@ -281,6 +280,7 @@
 
 .nav-white {
   background: $nav-white-bg;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
   color: $nav-white-color;
 
   .nav-toggler {

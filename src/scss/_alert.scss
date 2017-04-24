@@ -1,22 +1,29 @@
 // Alerts
-
-@mixin alert($theme) {
-  background-color: lighten($theme, 10%);
-  color: contrast-color($theme);
-
-  .alert-link {
-    font-weight: $alert-link-font-weight;
-    color: contrast-color($theme);
-  }
-}
+// IE10+
 
 .alert {
   padding: $alert-padding;
 
   @each $key, $value in $theme-colors {
     &-#{$key} {
-      @include alert($value);
+      background-color: lighten($value, 10%);
+      color: contrast-color($value);
+
+      .alert-link {
+        color: contrast-color($value);
+      }
     }
+  }
+
+  .close {
+    position: relative;
+    top: -$alert-padding;
+    right: -$alert-padding;
+    padding: $alert-padding;
+  }
+
+  &-link {
+    font-weight: $alert-link-font-weight;
   }
 
   // Add margin each succeeding alert

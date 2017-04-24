@@ -4,19 +4,20 @@
   float: right;
   font-size: $close-font-size;
   font-weight: $close-font-weight;
-  line-height: .85;
+  line-height: $close-line-height;
   color: $close-color;
-  opacity: .3;
+  opacity: $close-opacity;
 
-  &:hover {
-    opacity: .5;
+  &:hover,
+  &:focus {
+    opacity: $close-opacity-hover;
     cursor: pointer;
   }
 }
 
 button.close {
   padding: 0;
-  background: transparent;
+  background: none;
   border: 0;
   //-webkit-appearance: none;
 }

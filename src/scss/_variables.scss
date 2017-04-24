@@ -156,6 +156,9 @@ $pre-color: $body-color !default;
 $close-color: $sasha-black !default;
 $close-font-size: $font-size-lg !default;
 $close-font-weight: $font-weight-bold !default;
+$close-line-height: 1 !default;
+$close-opacity: .3 !default;
+$close-opacity-hover: .6 !default;
 
 // Dropdown
 $dropdown-caret-size: 4px !default;
@@ -292,6 +295,7 @@ $mark-bg: #fcf6cf !default;
 $mark-padding: $spacer-sm !default;
 
 // Z-index
+$alert-z-index: 4;
 $nav-dropdown-ul-z-index: 2 !default;
 $nav-dropdown-pin-z-index: 1 !default;
 $nav-fixed-z-index: 3 !default;

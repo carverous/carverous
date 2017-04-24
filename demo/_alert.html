@@ -11,71 +11,87 @@
   <script src="live.js"></script>
 </head>
 <body>
+
 <div class="container">
-  <h3>Alerts</h3>
-  <h4>Normal Alerts</h4>
-  <div class="alert alert-primary" role="alert">
-    <strong>Primary.</strong> You are seeing the primary color. Sweet.
-  </div>
-  <div class="alert alert-secondary" role="alert">
-    <strong>Secondary.</strong> Still undecided what color this should be. But it's okay. You are using Sass anyway!
-  </div>
-  <div class="alert alert-danger" role="alert">
-    <strong>Danger!</strong> The beginning is near! Everybody knows there's a party at the end of the world.
-  </div>
-  <div class="alert alert-info" role="alert">
-    <strong>Info.</strong> You are seeing the coolest design ever! This alert needs your attention, but it's not super
-    important.
-  </div>
-  <div class="alert alert-success" role="alert">
-    <strong>Success!</strong> You have successfully realised that you should work hard in silence. Let your success be
-    your noise.
-  </div>
-  <div class="alert alert-warning" role="alert">
-    <strong>Warning!</strong> Nuke deployed.
+
+
+  <h1>Alert</h1>
+
+  <button type="button" id="showAlertSample" class="btn btn-sasha-darkest">Show A Sample Alert</button>
+  <br><br>
+
+  <div id="alertSample" class="alert alert-info" role="alert">
+    <h4>Nice!</h4>
+    <p>
+      This is an experimental feature. Only one of the buttons inside can close the alert.
+      If you can contribute on making this more robust, that would be awesome!
+    </p>
+    <a href="https://github.com/cefjoeii/carverous" target="_blank" class="btn btn-success">Contribute</a>
+    <button type="button" class="btn btn-sasha-darkest" data-close="alert">Close</button>
   </div>
 
-  <h4>Alert Links</h4>
+  <h2>Examples</h2>
+
   <div class="alert alert-primary" role="alert">
-    <strong>Primary.</strong> You are seeing the <a href="#" class="alert-link">primary</a> color. Sweet.
+    <strong>Primary.</strong> You are seeing the primary color.
+    A close button is not placed on purpose.
   </div>
+
   <div class="alert alert-secondary" role="alert">
-    <strong>Secondary.</strong> Still undecided what <a href="#" class="alert-link">color</a> this should be.
-    But it's okay. You are using Sass anyway!
+    <strong>Secondary.</strong> Alerts can contain <a href="#" class="alert-link">links</a>.
   </div>
+
   <div class="alert alert-danger" role="alert">
+    <button type="button" class="close" data-close="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <strong>Danger!</strong> The beginning is <a href="#" class="alert-link">near</a>! Everybody knows there's a party
     at the
     <a href="#" class="alert-link">end</a> of the world.
   </div>
+
   <div class="alert alert-info" role="alert">
+    <button type="button" class="close" data-close="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <strong>Info.</strong> You are seeing the <a href="#" class="alert-link">coolest</a> design ever!
     This alert needs your attention, but it's not super important.
   </div>
-  <div class="alert alert-success" role="alert">
+
+  <div class="alert alert-success" data-close="alert" role="alert">
+    <button type="button" class="close" data-close="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <strong>Success!</strong> You have successfully realised that you should work hard in silence.
     Let your <a href="#" class="alert-link">success</a> be your noise.
   </div>
+
   <div class="alert alert-warning" role="alert">
+    <button type="button" class="close" data-close="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <strong>Warning!</strong> <a href="#" class="alert-link">Nuke</a> deployed.
   </div>
 
-  <h4>Alert Headings</h4>
+  <br>
+
+  <h2>Prettier Alert</h2>
+
   <div class="alert alert-primary" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <h4 class="alert-heading">Primary!</h4>
+    <h4>Primary!</h4>
     <p>
       Make your work consistent but not predictable. Never let your guard down by
       thinking you’re good enough. Dedicate yourself to <strong>lifelong</strong> learning.
       A good composition is the result of a hierarchy consisting of clearly contrasting
       elements set with distinct alignments containing irregular intervals of negative space.
     </p>
-    <a href="#" class="btn btn-primary">What?</a>
-    <a href="#" class="btn btn-success">Got It</a>
+    <button type="button" class="btn btn-success" data-close="alert">Got It</button>
   </div>
+
   <div class="alert alert-secondary" role="alert">
+    <button type="button" class="close" data-close="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <h4 class="alert-heading">Secondary.</h4>
     <p class="no-margin-bottom">
       Dedicate yourself to lifelong learning. <strong>Intuition</strong> is important.
@@ -84,6 +100,7 @@
       “When you make something no one hates, no one loves it.”
     </p>
   </div>
+
   <div class="alert alert-danger" role="alert">
     <h4 class="alert-heading">Danger!</h4>
     <p>
@@ -92,9 +109,10 @@
       possibilities. Design as if your life depended on it. A good
       composition is the result of a hierarchy consisting...
     </p>
-    <a href="#" class="btn btn-danger">What?</a>
-    <a href="#" class="btn btn-sasha-darkest">I Agree</a>
+    <button type="button" class="btn btn-danger">What?</button>
+    <button type="button" class="btn btn-sasha-darkest" data-close="alert">I Agree</button>
   </div>
+
   <div class="alert alert-info" role="alert">
     <h4 class="alert-heading">Info.</h4>
     <p class="no-margin-bottom">
@@ -104,6 +122,7 @@
       Practice won’t get you anywhere if you mindlessly...
     </p>
   </div>
+
   <div class="alert alert-success" role="alert">
     <h4 class="alert-heading">Success!</h4>
     <p class="no-margin-bottom">
@@ -113,6 +132,7 @@
       What’s important is the drive to see a...
     </p>
   </div>
+
   <div class="alert alert-warning" role="alert">
     <h4 class="alert-heading">Warning!</h4>
     <p class="no-margin-bottom">
@@ -122,48 +142,25 @@
       <strong>Never let your guard down</strong>.
     </p>
   </div>
-
-  <h4>Dismissible Alerts</h4>
-  <div class="alert alert-primary alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <strong>Primary.</strong> You are seeing the primary color. Sweet.
-  </div>
-  <div class="alert alert-secondary alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <strong>Secondary.</strong> Still undecided what color this should be. But it's okay. You are using Sass anyway!
-  </div>
-  <div class="alert alert-danger alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <strong>Danger!</strong> The beginning is near! Everybody knows there's a party at the end of the world.
-  </div>
-  <div class="alert alert-info alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <strong>Info.</strong> You are seeing the coolest design ever! This alert needs your attention, but it's not super
-    important.
-  </div>
-  <div class="alert alert-success alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <strong>Success!</strong> You have successfully realised that you should work hard in silence. Let your success be
-    your noise.
-  </div>
-  <div class="alert alert-warning alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <strong>Warning!</strong> Nuke deployed.
-  </div>
 </div>
 
 <script src="../build/js/carverous.js"></script>
+<script>
+
+  // Use 'var' because IE10 doesn't support 'let'
+  var alertSample = document.querySelector('#alertSample');
+  alertSample.style.display = 'none';
+
+  window.addEventListener('load', function() {
+
+    alertClose(.25);
+
+    document.querySelector('#showAlertSample').addEventListener('click', function() {
+      alertShow(alertSample, .25);
+    });
+
+  });
+
+</script>
 </body>
 </html>
