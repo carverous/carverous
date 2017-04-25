@@ -63,10 +63,12 @@ body {
 // 2. Show the overflow in Edge and IE.
 
 hr {
+  border: 0;
   box-sizing: content-box; // 1
-  height: 0; // 1
+  height: 1px; // 1
   overflow: visible; // 2
   margin: $spacer-default 0;
+  background: linear-gradient(to left, $sasha-grey, darken($sasha-greyest, 5%), $sasha-grey);
 }
 
 

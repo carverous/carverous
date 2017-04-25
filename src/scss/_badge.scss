@@ -1,11 +1,11 @@
 // Badges
 
-@mixin badge($bg, $color) {
+@mixin badge-mix($bg, $color) {
   background: $bg;
   color: $color;
 
   &[href]:hover {
-    background: darken($bg, 5%);
+    background: darken($bg, 10%);
     text-decoration: none;
     color: $color; // Prevent the default link colors from affecting this
   }
@@ -23,7 +23,7 @@
   @each $key, $value in $theme-colors {
     &-#{$key} {
       $color: $sasha-white;
-      @include badge($value, $color);
+      @include badge-mix($value, $color);
     }
   }
 
@@ -31,8 +31,15 @@
     @if ($enable-sasha-custom) {
       &-#{$key} {
         $color: if($key == sasha-white or $key == sasha-greyest, lighten($sasha-darkest, 25%), $sasha-white);
-        @include badge($value, $color);
+        @include badge-mix($value, $color);
       }
     }
+  }
+
+  &-pin {
+    height: $badge-pin-size;
+    padding: 0;
+    width: $badge-pin-size;
+    @include border-radius(50%);
   }
 }

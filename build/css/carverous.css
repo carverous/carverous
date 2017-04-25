@@ -39,10 +39,12 @@ body {
 }
 
 hr {
+  border: 0;
   box-sizing: content-box;
-  height: 0;
+  height: 1px;
   overflow: visible;
   margin: 15px 0;
+  background: linear-gradient(to left, #f7f9fa, #dde1e2, #f7f9fa);
 }
 
 p {
@@ -565,7 +567,7 @@ template {
 }
 
 .alert-danger {
-  background-color: #ef7682;
+  background: #ef7682;
   color: #b71525;
 }
 
@@ -574,7 +576,7 @@ template {
 }
 
 .alert-info {
-  background-color: #c0e1fc;
+  background: #c0e1fc;
   color: #2f9cf4;
 }
 
@@ -583,7 +585,7 @@ template {
 }
 
 .alert-primary {
-  background-color: #3e70a7;
+  background: #3e70a7;
   color: #c7d8ea;
 }
 
@@ -592,7 +594,7 @@ template {
 }
 
 .alert-secondary {
-  background-color: #85adad;
+  background: #85adad;
   color: #3d5c5c;
 }
 
@@ -601,7 +603,7 @@ template {
 }
 
 .alert-success {
-  background-color: #a4d7a6;
+  background: #a4d7a6;
   color: #469c49;
 }
 
@@ -610,7 +612,7 @@ template {
 }
 
 .alert-warning {
-  background-color: #ffcc80;
+  background: #ffcc80;
   color: #e68900;
 }
 
@@ -653,7 +655,7 @@ template {
 }
 
 .badge-danger[href]:hover {
-  background: #e73143;
+  background: #e51a2e;
   text-decoration: none;
   color: #fff;
 }
@@ -664,7 +666,7 @@ template {
 }
 
 .badge-info[href]:hover {
-  background: #78bef8;
+  background: #60b3f6;
   text-decoration: none;
   color: #fff;
 }
@@ -675,7 +677,7 @@ template {
 }
 
 .badge-primary[href]:hover {
-  background: #294b6f;
+  background: #223e5d;
   text-decoration: none;
   color: #fff;
 }
@@ -686,7 +688,7 @@ template {
 }
 
 .badge-secondary[href]:hover {
-  background: #5c8a8a;
+  background: #527a7a;
   text-decoration: none;
   color: #fff;
 }
@@ -697,7 +699,7 @@ template {
 }
 
 .badge-success[href]:hover {
-  background: #6fbf73;
+  background: #5eb762;
   text-decoration: none;
   color: #fff;
 }
@@ -708,7 +710,7 @@ template {
 }
 
 .badge-warning[href]:hover {
-  background: #ffad34;
+  background: #ffa21a;
   text-decoration: none;
   color: #fff;
 }
@@ -719,7 +721,7 @@ template {
 }
 
 .badge-sasha-white[href]:hover {
-  background: #f2f2f2;
+  background: #e6e6e6;
   text-decoration: none;
   color: #596471;
 }
@@ -730,7 +732,7 @@ template {
 }
 
 .badge-sasha-greyest[href]:hover {
-  background: #dde1e2;
+  background: #cfd4d7;
   text-decoration: none;
   color: #596471;
 }
@@ -741,9 +743,16 @@ template {
 }
 
 .badge-sasha-darkest[href]:hover {
-  background: #16181c;
+  background: #0b0c0d;
   text-decoration: none;
   color: #fff;
+}
+
+.badge-pin {
+  height: 10px;
+  padding: 0;
+  width: 10px;
+  border-radius: 50%;
 }
 
 .banner {
@@ -2081,6 +2090,10 @@ h6 {
 
 .nav .nav-dropdown ul li a:hover {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.nav .badge {
+  line-height: 1.3rem;
 }
 
 .nav .container {

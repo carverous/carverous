@@ -1,17 +1,22 @@
 // Alerts
 // IE10+
 
+@mixin alert-mix($theme) {
+  background: lighten($theme, 10%);
+  color: contrast-color($theme);
+
+  // Forcibly change the color of the links inside alert
+  .alert-link {
+    color: contrast-color($theme);
+  }
+}
+
 .alert {
   padding: $alert-padding;
 
   @each $key, $value in $theme-colors {
     &-#{$key} {
-      background-color: lighten($value, 10%);
-      color: contrast-color($value);
-
-      .alert-link {
-        color: contrast-color($value);
-      }
+      @include alert-mix($value);
     }
   }
 
