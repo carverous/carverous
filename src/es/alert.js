@@ -1,5 +1,6 @@
 // Alert
 // Use getAttribute() instead of dataset for IE10+
+// Use 'this' instead of the array name
 
 function alertClose(duration = 0) {
 

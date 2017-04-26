@@ -17,17 +17,17 @@
 
   <h1>Alert</h1>
 
-  <button type="button" id="showAlertSample" class="btn btn-sasha-darkest">Show A Sample Alert</button>
+  <button type="button" id="showAlertSample" class="btn btn-sasha-greyest">Show A Sample Alert</button>
   <br><br>
 
-  <div id="alertSample" class="alert alert-info" role="alert">
+  <div id="alertSample" class="alert alert-success" role="alert">
     <h4>Nice!</h4>
     <p>
       This is an experimental feature. Only one of the buttons inside can close the alert.
       If you can contribute on making this more robust, that would be awesome!
     </p>
-    <a href="https://github.com/cefjoeii/carverous" target="_blank" class="btn btn-success">Contribute</a>
-    <button type="button" class="btn btn-sasha-darkest" data-close="alert">Close</button>
+    <a href="https://github.com/cefjoeii/carverous" target="_blank" class="btn btn-sasha-darkest">Contribute</a>
+    <button type="button" class="btn btn-sasha-greyest" data-close="alert">Close</button>
   </div>
 
   <h2>Examples</h2>
@@ -94,7 +94,7 @@
       <span aria-hidden="true">&times;</span>
     </button>
     <h4 class="alert-heading">Secondary.</h4>
-    <p class="no-margin-bottom">
+    <p>
       Dedicate yourself to lifelong learning. <strong>Intuition</strong> is important.
       Nothing of value comes to you without working at it. This design is brilliant.
       While having drinks with Tibor Kalman one night, he told me,
@@ -116,7 +116,7 @@
 
   <div class="alert alert-info" role="alert">
     <h4 class="alert-heading">Info.</h4>
-    <p class="no-margin-bottom">
+    <p>
       Think about all the possibilities. Your rapidograph pens are dried up,
       the x-acto blades in your bag are rusty, and your mind is dull. <strong>Stop</strong> clicking your mouse,
       get messy, go back to the basics and make something original.
@@ -126,7 +126,7 @@
 
   <div class="alert alert-success" role="alert">
     <h4 class="alert-heading">Success!</h4>
-    <p class="no-margin-bottom">
+    <p>
       <strong>Someday</strong> is not a day of the week. To go partway is easy, but mastering anything
       requires hard <strong>work</strong>. If you give up, you will achieve nothing.
       The details are not the details. They make the design.
@@ -136,7 +136,7 @@
 
   <div class="alert alert-warning" role="alert">
     <h4 class="alert-heading">Warning!</h4>
-    <p class="no-margin-bottom">
+    <p>
       Intuition is important. Sometimes it is appropriate to place various typographic
       elements on the outside of the left margin of text to maintain a strong vertical axis.
       This practice is referred to as exdenting and is most often used with bullets and quotations.
@@ -155,6 +155,7 @@
   window.addEventListener('load', function() {
 
     alertClose(.25);
+    buttonFocus();
 
     document.querySelector('#showAlertSample').addEventListener('click', function() {
       alertShow(alertSample, .25);

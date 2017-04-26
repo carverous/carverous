@@ -5,14 +5,16 @@
 
 // Enable Option
 $enable-btn-o: true !default; // Outline Buttons
-$enable-btn-t: true !default; // Transparent Buttons
-$enable-sasha-custom: true !default; // Sasha-themed Buttons
+$enable-sasha-custom: true !default; // Cherry-picked Shades of Sasha Grey
 $enable-rounded: true !default;
 
 // Body
 $body-bg: $sasha-white !default;
 $body-color: #545454 !default; // 545454
 $body-color-muted: $sasha-dark !default;
+
+// HR
+$hr-color: darken($sasha-grey, 5%);
 
 // Link
 $link-color: lighten($primary, 20%) !default;
@@ -96,8 +98,8 @@ $banner-padding-y: $spacer-lg !default;
 
 //Blockquote
 $blockquote-background: $sasha-grey !default;
-$blockquote-border-color: $sasha-greyer !default;
-$blockquote-border-width: 3px !default;
+$blockquote-border-color: $sasha-greyest !default;
+$blockquote-border-width: 4px !default;
 $blockquote-font-size: 1rem !default;
 $blockquote-footer-color: $body-color !default;
 $blockquote-padding: $spacer-default !default;
@@ -106,7 +108,7 @@ $blockquote-padding: $spacer-default !default;
 $breadcrumb-color: $sasha-dark !default;
 $breadcrumb-color-active: $sasha-dark !default;
 $breadcrumb-divider: '/' !default;
-$breadcrumb-font-size: .9em !default;
+$breadcrumb-font-size: .9rem !default;
 $breadcrumb-font-weight-active: $font-weight-bold !default;
 
 // Breakpoint & Grid

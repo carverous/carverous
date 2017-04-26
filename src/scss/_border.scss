@@ -1,16 +1,15 @@
 // Borders
-// They are set to !important to give them super power.
+// They are set to !important to give them a super power.
 
-// How 'bout a
 .no {
 
   &-border {
     border: 0 !important;
 
-    &-top { border-top: 0 !important; }
-    &-right { border-right: 0 !important; }
-    &-bottom { border-bottom: 0 !important; }
-    &-left { border-left: 0 !important; }
+    &-t { border-top: 0 !important; }
+    &-r { border-right: 0 !important; }
+    &-b { border-bottom: 0 !important; }
+    &-l { border-left: 0 !important; }
 
     &-radius { border-radius: 0 !important; }
   }
@@ -20,20 +19,20 @@
   @include border-radius($border-radius-default);
 }
 
-.rounded-top {
-  @include border-top-radius($border-radius-default);
+.rounded-t {
+  @include border-t-radius($border-radius-default);
 }
 
-.rounded-right {
-  @include border-right-radius($border-radius-default);
+.rounded-r {
+  @include border-r-radius($border-radius-default);
 }
 
-.rounded-bottom {
-  @include border-bottom-radius($border-radius-default);
+.rounded-b {
+  @include border-b-radius($border-radius-default);
 }
 
-.rounded-left {
-  @include border-left-radius($border-radius-default);
+.rounded-l {
+  @include border-l-radius($border-radius-default);
 }
 
 .rounded-circle {

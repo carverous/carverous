@@ -8,6 +8,7 @@
 
 // Alert
 // Use getAttribute() instead of dataset for IE10+
+// Use 'this' instead of the array name
 
 function alertClose() {
   var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
@@ -56,6 +57,23 @@ function alertShow(el) {
 }
 
 // Button
+
+function button() {
+  var buttons = document.querySelectorAll('.btn');
+
+  for (var i = 0, n = buttons.length; i < n; i++) {
+
+    /* See: https://www.w3schools.com/jquery/tryit.asp
+     ?filename=tryjquery_event_mouseenter_mouseover */
+    buttons[i].addEventListener('mouseenter', unfocus);
+    buttons[i].addEventListener('mouseup', unfocus);
+    buttons[i].addEventListener('touchend', unfocus);
+  }
+
+  function unfocus() {
+    this.blur();
+  }
+}
 
 // Navigation Icons
 

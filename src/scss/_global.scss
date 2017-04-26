@@ -64,11 +64,12 @@ body {
 
 hr {
   border: 0;
+  border-top: 1px solid $hr-color;
   box-sizing: content-box; // 1
-  height: 1px; // 1
+  height: 0; // 1
   overflow: visible; // 2
   margin: $spacer-default 0;
-  background: linear-gradient(to left, $sasha-grey, darken($sasha-greyest, 5%), $sasha-grey);
+  //background: linear-gradient(to left, $sasha-grey, $hr-color, $sasha-grey); // Pointed hr
 }
 
 
