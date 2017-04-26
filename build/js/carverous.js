@@ -10,36 +10,33 @@
 // Use getAttribute() instead of dataset for IE10+
 // Use 'this' instead of the array name
 
-function alertClose() {
+function alertHide() {
   var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 
 
   var alerts = document.querySelectorAll('.alert');
 
-  var _loop = function _loop(i, n) {
+  for (var i = 0, n = alerts.length; i < n; i++) {
 
     alerts[i].addEventListener('click', function (event) {
+      var _this = this;
 
-      if (alerts[i].querySelector('[data-close]')) {
+      if (this.querySelector('[data-close]')) {
 
-        var closer = alerts[i].querySelector('[data-close]');
+        var closer = this.querySelector('[data-close]');
         var isCloserClicked = closer.contains(event.target);
 
         if (isCloserClicked && closer.getAttribute('data-close') === 'alert') {
 
-          alerts[i].style.transition = 'all ' + duration + 's';
-          alerts[i].style.opacity = '0';
+          this.style.transition = 'all ' + duration + 's';
+          this.style.opacity = '0';
 
           setTimeout(function () {
-            alerts[i].style.display = 'none';
+            _this.style.display = 'none';
           }, duration * 1000);
         }
       }
     });
-  };
-
-  for (var i = 0, n = alerts.length; i < n; i++) {
-    _loop(i, n);
   }
 }
 

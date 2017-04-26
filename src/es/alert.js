@@ -2,7 +2,7 @@
 // Use getAttribute() instead of dataset for IE10+
 // Use 'this' instead of the array name
 
-function alertClose(duration = 0) {
+function alertHide(duration = 0) {
 
   let alerts = document.querySelectorAll('.alert');
 
@@ -10,18 +10,18 @@ function alertClose(duration = 0) {
 
     alerts[i].addEventListener('click', function(event) {
 
-      if (alerts[i].querySelector('[data-close]')) {
+      if (this.querySelector('[data-close]')) {
 
-        let closer = alerts[i].querySelector('[data-close]');
+        let closer = this.querySelector('[data-close]');
         let isCloserClicked = closer.contains(event.target);
 
         if (isCloserClicked && closer.getAttribute('data-close') === 'alert') {
 
-          alerts[i].style.transition = 'all ' + duration + 's';
-          alerts[i].style.opacity = '0';
+          this.style.transition = 'all ' + duration + 's';
+          this.style.opacity = '0';
 
-          setTimeout(function() {
-            alerts[i].style.display = 'none';
+          setTimeout(() => {
+            this.style.display = 'none';
           }, duration * 1000);
         }
       }
