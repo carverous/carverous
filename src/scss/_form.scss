@@ -3,7 +3,7 @@
 @mixin form-control-focus {
   &:focus {
     color: $input-color-focus;
-    background-color: $input-bg-focus;
+    background: $input-bg-focus;
     border-color: $input-border-color-focus;
     outline: none;
   }
@@ -28,7 +28,7 @@
   // sass-lint:disable no-vendor-prefixes
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
-    background-color: transparent;
+    background: transparent;
     border: 0;
   }
   // sass-lint:enable no-vendor-prefixes
@@ -43,7 +43,7 @@
 
   &:disabled,
   &[readonly] {
-    background-color: $input-bg-disabled;
+    background: $input-bg-disabled;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
   }

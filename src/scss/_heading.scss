@@ -12,53 +12,37 @@ h5,
 h6 {
   font-weight: $font-weight-default;
   margin-top: 0;
-  //margin-bottom: .5rem;
-  margin-bottom: $spacer-default;
+  margin-bottom: $spacer-default / 2;
 }
 
-h1 {
-  font-size: $font-size-h1;
+// Mobile First
+// ====================================================================== //
+@each $key, $value in $h-font-sizes {
+  #{$key} {
+    font-size: $value / 1.25;
+  }
 }
 
-h2 {
-  font-size: $font-size-h2;
+@each $key, $value in $txt-lg-font-sizes {
+  .#{$key} {
+    font-size: $value / 1.5;
+  }
 }
 
-h3 {
-  font-size: $font-size-h3;
-}
+// Large Screens Last
+// ====================================================================== //
+@include media-breakpoint($lg) {
+  @each $key, $value in $h-font-sizes {
+    #{$key} {
+      font-size: $value;
+    }
+  }
 
-h4 {
-  font-size: $font-size-h4;
-}
-
-h5 {
-  font-size: $font-size-h5;
-}
-
-h6 {
-  font-size: $font-size-h6;
-}
-
-// Larger sizes for headings
-.font-size-lg-1 {
-  font-size: $font-size-lg-1;
-  //font-weight: $font-weight-light;
-}
-
-.font-size-lg-2 {
-  font-size: $font-size-lg-2;
-  //font-weight: $font-weight-light;
-}
-
-.font-size-lg-3 {
-  font-size: $font-size-lg-3;
-  //font-weight: $font-weight-light;
-}
-
-.font-size-lg-4 {
-  font-size: $font-size-lg-4;
-  //font-weight: $font-weight-light;
+  @each $key, $value in $txt-lg-font-sizes {
+    .#{$key} {
+      font-size: $value;
+    }
+  }
 }
 
 // Weights

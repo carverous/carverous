@@ -4,7 +4,7 @@
   &.active,
   .nav-white &.active {
     .nav-icon-rod {
-      background-color: transparent;
+      background: transparent;
       transform: $value;
 
       &::before {
@@ -25,7 +25,7 @@
 
   .nav-icon-rod {
     transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), // 0.15s
-    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 
     &::before,
     &::after {

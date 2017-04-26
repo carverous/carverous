@@ -31,14 +31,14 @@
   .page-item {
 
     &.active .page-link {
-      background-color: $pagination-bg-active;
+      background: $pagination-bg-active;
       border-color: $pagination-border-active;
       color: $pagination-color-active;
       z-index: $pagination-z-index;
     }
 
     &.disabled .page-link {
-      background-color: $pagination-bg-disabled;
+      background: $pagination-bg-disabled;
       border-color: $pagination-border-disabled;
       color: $pagination-color-disabled;
       pointer-events: none;
