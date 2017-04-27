@@ -266,26 +266,20 @@ $nav-icon-rod-width: 26px !default;
 $nav-icon-rod-spacing: 6px !default;
 
 //Pagination
-$pagination-bg: $sasha-greyer !default;
+$pagination-bg: none !default; // $sasha-greyer
 $pagination-bg-active: $primary !default;
-$pagination-bg-disabled: $sasha-greyer !default;
+$pagination-bg-disabled: none !default; // $sasha-greyer
 $pagination-bg-hover: $primary !default;
-
-$pagination-border-active: none !default;
-$pagination-border-color: $sasha-dark !default;
-$pagination-border-disabled: none !default;
-$pagination-border-hover: none !default;
-$pagination-border-width: 0 !default;
 
 $pagination-color: $body-color !default;
 $pagination-color-active: $sasha-white !default;
 $pagination-color-disabled: $sasha-dark !default;
 $pagination-color-hover: $sasha-white !default;
 
-$pagination-font-size: 1em !default;
-$pagination-font-size-sm: .9em !default;
+$pagination-font-size: 1rem !default;
+$pagination-font-size-sm: .9rem !default;
 
-$pagination-line-height: 1.25em !default;
+$pagination-line-height: 1.25rem !default;
 
 $pagination-padding-y: 6px !default;
 $pagination-padding-x: 14px !default;

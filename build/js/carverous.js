@@ -147,3 +147,45 @@ function nav() {
     }
   });
 }
+
+// Pagination
+// Experimental
+
+function pagination() {
+  var max = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 4;
+
+
+  var paginations = document.querySelectorAll('.pagination');
+
+  for (var i = 0, n = paginations.length; i < n; i++) {
+
+    var pageItems = paginations[i].querySelectorAll('.page-item');
+
+    if (pageItems.length - 2 >= max) {
+      for (var j = 0, m = pageItems.length; j < m; j++) {
+
+        if (pageItems[j].classList.contains('active') || j === 0 || j === m - 1) {
+          continue;
+          //console.log(pageItems[j]);
+        }
+        //createEllipsis(pageItems[j]);
+        pageItems[j].style.display = 'none';
+      }
+    }
+  }
+
+  function createEllipsis(el) {
+    var ellipsisA = document.createElement('a');
+    ellipsisA.href = '#';
+    ellipsisA.innerHTML = 'of';
+    ellipsisA.classList.add('page-link');
+
+    var ellipsisLI = document.createElement('li');
+    ellipsisLI.classList.add('page-item');
+    ellipsisLI.classList.add('disabled');
+
+    ellipsisLI.appendChild(ellipsisA);
+
+    el.parentNode.insertBefore(ellipsisLI, el.nextElementSibling);
+  }
+}
