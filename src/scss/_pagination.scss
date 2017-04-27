@@ -1,71 +1,59 @@
 // Pagination
 
-@mixin pagination-size($padding-y, $padding-x, $font-size, $border-radius) {
+@mixin pagination-size($padding-y, $padding-x, $font-size) {
   .page-link {
     padding: $padding-y $padding-x;
     font-size: $font-size;
   }
-
-  .page-item {
-    &:first-child {
-      .page-link {
-        @include border-left-radius($border-radius);
-      }
-    }
-
-    &:last-child {
-      .page-link {
-        @include border-right-radius($border-radius);
-      }
-    }
-  }
 }
 
 .pagination {
-  display: flex;
+
   list-style-type: none;
-  padding-left: 0;
-  //@include border-radius(0);
-  @include pagination-size($pagination-padding-y, $pagination-padding-x, $pagination-font-size, $border-radius-sm);
+  padding-left: 0; // Remove the padding of the ul
+  @include pagination-size($pagination-padding-y, $pagination-padding-x, $pagination-font-size);
 
   .page-item {
 
+    float: left;
+
+    .page-link {
+      background: $pagination-bg;
+      color: $pagination-color;
+      display: block;
+      position: relative;
+    }
+
+    .page-link:hover {
+      color: $pagination-color-hover;
+      text-decoration: none;
+      background: $pagination-bg-hover;
+    }
+
+    &:first-child .page-link {
+      @include border-l-radius($border-radius-sm);
+    }
+
+    &:last-child .page-link {
+      @include border-r-radius($border-radius-sm);
+    }
+
     &.active .page-link {
-      background-color: $pagination-bg-active;
-      border-color: $pagination-border-active;
+      background: $pagination-bg-active;
       color: $pagination-color-active;
       z-index: $pagination-z-index;
     }
 
     &.disabled .page-link {
-      background-color: $pagination-bg-disabled;
-      border-color: $pagination-border-disabled;
+      background: $pagination-bg-disabled;
       color: $pagination-color-disabled;
       pointer-events: none;
     }
-
-    .page-link {
-      //font-size: $pagination-font-size;
-      //padding: $pagination-padding-y $pagination-padding-x;
-      //margin-left: -1px;
-      //line-height: $pagination-line-height;
-
-      background: $pagination-bg;
-      border: $pagination-border-width solid $pagination-border-color;
-      color: $pagination-color;
-      display: block;
-      position: relative;
-
-      &:hover {
-        color: $pagination-color-hover;
-        text-decoration: none;
-        background: $pagination-bg-hover;
-        border: $pagination-border-hover;
-      }
-    }
   }
 
+  @include clearfix;
+
   &-sm {
-    @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $pagination-font-size-sm, $border-radius-sm);
+    @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $pagination-font-size-sm);
   }
 }

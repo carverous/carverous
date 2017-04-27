@@ -1,63 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Carverous Banner Demo</title>
-    <link rel="stylesheet" href="../build/css/carverous.css">
-    <link rel="stylesheet" href="../build/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Carverous Banner Demo</title>
+  <link rel="stylesheet" href="../build/css/carverous.css">
+  <link rel="stylesheet" href="../build/css/font-awesome.min.css">
 
-    <script src="live.js"></script>
+  <script src="js/live.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h3>Banners</h3>
-        <p class="lead">Large banners to call attention.</p>
+<nav class="nav nav-fixed">
+
+  <div class="container">
+
+    <div class="nav-toggler nav-toggler-r">
+      <a href="#" class="nav-icon nav-icon-slide">
+        <span class="sr-only">Toggle navigation</span>
+        <div class="nav-icon-box">
+          <div class="nav-icon-rod"></div>
+        </div>
+      </a>
     </div>
 
-    <div class="banner banner-fluid">
-        <div class="container">
-            <h1 class="font-size-lg-3">Fluid Banner</h1>
-            <p class="lead">
-                Don’t let your past learning stop you from learning new things.
-                It’s a simple trap because when we learn new things, the brain tries
-                to associate them with familiar things (i.e. stuff you already know)
-                and when the new concepts are too different or in contradiction with
-                what you already know, this may lead to frustration. - Alex Ewerlöf
-            </p>
-        </div>
+    <a href="#" class="nav-logo"><img
+      src="https://static.mailchimp.com/web/brand-assets/mc_freddie_color_web.png"
+      alt="">BRAND</a>
+
+    <div class="nav-menu">
+      <ul class="nav-menu-l">
+        <li><a class="active" href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+        <li><a href="#"><i class="fa fa-smile-o"></i> Friends</a></li>
+        <li><a href="#"><i class="fa fa-comment"></i> Messages</a></li>
+      </ul>
+
+      <ul class="nav-menu-r">
+        <li class="nav-dropdown">
+          <a href="#"><i class="fa fa-gear"></i></a>
+          <ul>
+            <li>
+              <a href="https://facebook.com">About</a>
+            </li>
+
+            <hr>
+
+            <li>
+              <a href="https://twitter.com">General</a>
+            </li>
+            <li>
+              <a href="https://youtube.com">Privacy</a>
+            </li>
+            <li>
+              <a href="https://google.com">Security</a>
+            </li>
+          </ul>
+        </li>
+        <li><a class="active" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <div class="container">
-        <div class="banner">
-            <h1 class="font-size-lg-3">Banner</h1>
-            <hr class="banner-hr">
-            <p class="lead">
-                Ordinary people seek entertainment. Extraordinary people seek education and learning.
-            </p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">View More</a>
-            </p>
-        </div>
+<div class="banner banner-fluid text-sasha-white" style="background: url('images/banner1.jpg'); background-position: center; background-size: cover; margin-top: 60px;">
+  <div class="container">
+    <h1 class="font-size-lg-4">Hello, friend.</h1>
+    <p class="lead">
+      Don’t let your past learning stop you from learning new things.
+      It’s a simple trap because when we learn new things, the brain tries
+      to associate them with familiar things (i.e. stuff you already know)
+      and when the new concepts are too different or in contradiction with
+      what you already know, this may lead to frustration. - Alex Ewerlöf
+    </p>
+    <p>
+      <a class="btn btn-sasha-white-o btn-lg" href="#" role="button">View More</a>
+    </p>
+  </div>
+</div>
 
-        <div class="banner">
-            <h1 class="font-size-lg-3">Hello, world!</h1>
-            <p class="lead">
-                A positive attitude causes a chain reaction of positive thoughts, events and outcomes.
-                It is a catalyst and it sparks extraordinary results.
-            </p>
-            <hr class="banner-hr">
-            <p>
-                Haters are gonna hate, but in nature, the creatures that adapt survive.
-            </p>
-            <p class="lead">
-                <a class="btn btn-info btn-lg" href="#" role="button">Learn More</a>
-            </p>
-        </div>
-    </div>
+<div class="container">
+  <h1>Banners</h1>
+  <h2>Large banners to call attention.</h2>
+</div>
 
-    <script src="../build/js/carverous.js"></script>
+<div class="banner banner-fluid">
+  <div class="container">
+    <h1 class="font-size-lg-3">Banner with no button</h1>
+    <p class="lead no-margin-bottom">
+      Don’t let your past learning stop you from learning new things.
+      It’s a simple trap because when we learn new things, the brain tries
+      to associate them with familiar things (i.e. stuff you already know)
+      and when the new concepts are too different or in contradiction with
+      what you already know, this may lead to frustration. - Alex Ewerlöf
+    </p>
+  </div>
+</div>
+
+<div class="banner banner-fluid">
+  <div class="container">
+    <h1 class="font-size-lg-3">Banner with a button</h1>
+    <p class="lead">
+      Don’t let your past learning stop you from learning new things.
+      It’s a simple trap because when we learn new things, the brain tries
+      to associate them with familiar things (i.e. stuff you already know)
+      and when the new concepts are too different or in contradiction with
+      what you already know, this may lead to frustration. - Alex Ewerlöf
+    </p>
+    <a class="btn btn-success btn-lg" href="#" role="button">View More</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="banner">
+    <h1 class="font-size-lg-3">Banner</h1>
+    <hr class="banner-hr">
+    <p class="lead">
+      Ordinary people seek entertainment. Extraordinary people seek education and learning.
+    </p>
+    <p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">View More</a>
+    </p>
+  </div>
+
+  <div class="banner">
+    <h1 class="font-size-lg-3">Hello, world!</h1>
+    <p class="lead">
+      A positive attitude causes a chain reaction of positive thoughts, events and outcomes.
+      It is a catalyst and it sparks extraordinary results.
+    </p>
+    <hr class="banner-hr">
+    <p>
+      Haters are gonna hate, but in nature, the creatures that adapt survive.
+    </p>
+    <p>
+      <a class="btn btn-info btn-lg" href="#" role="button">Learn More</a>
+    </p>
+  </div>
+
+  <p class="lead">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Esse facilis, harum nam nesciunt pariatur voluptates.
+    Corporis culpa ea facere harum id magnam, maxime natus non
+    perferendis quam quo recusandae voluptatum!
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Esse facilis, harum nam nesciunt pariatur voluptates.
+    Corporis culpa ea facere harum id magnam, maxime natus non
+    perferendis quam quo recusandae voluptatum!
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Esse facilis, harum nam nesciunt pariatur voluptates.
+    Corporis culpa ea facere harum id magnam, maxime natus non
+    perferendis quam quo recusandae voluptatum!
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Esse facilis, harum nam nesciunt pariatur voluptates.
+    Corporis culpa ea facere harum id magnam, maxime natus non
+    perferendis quam quo recusandae voluptatum!
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Esse facilis, harum nam nesciunt pariatur voluptates.
+    Corporis culpa ea facere harum id magnam, maxime natus non
+    perferendis quam quo recusandae voluptatum!
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Esse facilis, harum nam nesciunt pariatur voluptates.
+    Corporis culpa ea facere harum id magnam, maxime natus non
+    perferendis quam quo recusandae voluptatum!
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Esse facilis, harum nam nesciunt pariatur voluptates.
+    Corporis culpa ea facere harum id magnam, maxime natus non
+    perferendis quam quo recusandae voluptatum!
+  </p>
+</div>
+
+<script src="../build/js/carverous.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    nav();
+  });
+</script>
 </body>
 </html>

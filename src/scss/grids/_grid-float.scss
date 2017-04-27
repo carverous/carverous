@@ -2,12 +2,10 @@
 // Create a grid based on the traditional float method
 
 .row {
-  //background: $secondary; // debug
-  //border: 5px solid red; // debug
   @include clearfix;
 }
 
-// Phones (small)
+// Mobile (small)
 @media only screen and (min-width: $sm) {
   .row {
     .col-sm {

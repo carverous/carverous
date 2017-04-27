@@ -11,7 +11,7 @@
 .breadcrumb-item {
   float: left;
 
-  // The separator between each breadcrumb item (by default, a forward-slash: "/")
+  // The separator between each breadcrumb item (by default, a forward-slash: '/')
   + .breadcrumb-item::before {
     color: $breadcrumb-color;
     display: inline-block;

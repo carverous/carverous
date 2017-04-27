@@ -1,12 +1,13 @@
-// Texts
+// Text
 
-// Text Colors
-.text {
+.txt {
+
   @each $name, $value in $theme-colors {
     &-#{$name} {
       color: $value;
     }
   }
+
   @each $name, $value in $theme-sasha {
     &-#{$name} {
       color: $value;
@@ -19,14 +20,16 @@
   &-right { text-align: right; }
 }
 
-// Enlarge the text in <p> elements by calling this class
 .lead {
-  font-size: 1.25em;
-  //font-weight: $font-weight-light;
+  font-size: $lead-font-size;
 }
 
 mark,
 .mark {
   background: $mark-bg;
   padding: $mark-padding;
+}
+
+small {
+  font-size: $small-font-size;
 }

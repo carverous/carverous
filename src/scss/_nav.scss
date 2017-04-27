@@ -2,12 +2,13 @@
 // The entire navigation works in IE10+
 // The value 'unset' on any property does not work in IE11-
 
+// TODO: clean up the padding-right of .nav-menu and margin-left of .nav-logo?
+
 .nav {
 
   // Mobile First
   // ====================================================================== //
   background: $nav-bg;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
   color: $nav-color;
   font-size: $nav-font-size;
   font-weight: $nav-font-weight;
@@ -147,7 +148,11 @@
     }
   }
 
-  & .container {
+  .badge {
+    line-height: 1.3rem;
+  }
+
+  .container {
     padding: 0;
   }
 
@@ -163,6 +168,7 @@
     .nav-menu {
       clear: none; // Reset
       display: block;
+      padding-right: $spacer-default;
       max-height: none; // Reset
       overflow: visible; // Reset
 
@@ -278,6 +284,7 @@
 
 .nav-white {
   background: $nav-white-bg;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
   color: $nav-white-color;
 
   .nav-toggler {
@@ -355,6 +362,7 @@
 
 .nav-fixed {
   position: fixed;
+  top: 0;
   z-index: $nav-fixed-z-index;
 }
 
@@ -363,7 +371,7 @@
 }
 
 #wrapper {
-  padding-top: 75px;
+  margin-top: 75px;
 }
 
 // Keyframes should be outside of media-query!

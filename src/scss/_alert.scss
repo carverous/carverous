@@ -1,11 +1,12 @@
 // Alerts
+// IE10+
 
 @mixin alert-mix($theme) {
-  background-color: lighten($theme, 10%);
+  background: lighten($theme, 10%);
   color: contrast-color($theme);
 
+  // Forcibly change the color of the links inside alert
   .alert-link {
-    font-weight: $alert-link-font-weight;
     color: contrast-color($theme);
   }
 }
@@ -13,18 +14,29 @@
 .alert {
   padding: $alert-padding;
 
-  @each $name, $value in $theme-colors {
-    &-#{$name} {
+  @each $key, $value in $theme-colors {
+    &-#{$key} {
       @include alert-mix($value);
     }
   }
 
-  // It doesn't make sense adding the default and inverse in alerts
+  .close {
+    position: relative;
+    top: -$alert-padding;
+    right: -$alert-padding;
+    padding: $alert-padding;
+  }
 
+  &-link {
+    font-weight: $alert-link-font-weight;
+  }
+
+  // Add margin each succeeding alert
   & + & {
     margin-top: $alert-margin-y;
   }
 
+  // Only add a radius when inside .container
   .container & {
     @include border-radius($border-radius-sm);
   }

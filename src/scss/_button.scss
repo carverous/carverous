@@ -1,105 +1,103 @@
 // Buttons
-// bugfix - transition: background, border, box-shadow .25s linear;
+// TODO: Darkening the btn-sasha-white-o when hovered over is not acceptable
 
-@mixin btn-mix($background, $border-color, $color) {
-  background: $background;
+@mixin btn-mix($bg, $border-color, $color) {
+  background: $bg;
   border: $btn-border-width solid $border-color;
   color: $color;
 }
 
-@mixin btn-hover($background, $border-color, $color) {
+@mixin btn-hover($bg, $border-color, $color) {
   &:not(.disabled):not([disabled]):hover {
-    background: $background;
+    background: $bg;
     border-color: $border-color;
     color: $color;
-    cursor: pointer;
-    text-decoration: none;
+    text-decoration: none; // Inside hover to disable underline on <a> tags
   }
 }
 
-@mixin btn-active($background, $border-color) {
+@mixin btn-active($bg, $border-color) {
   &:not(.disabled):not([disabled]):active {
-    background: $background;
+    background: $bg;
     border-color: $border-color;
   }
 }
 
-@mixin btn-focus($theme) {
+@mixin btn-focus($outline) {
   &:not(.disabled):not([disabled]):focus {
-    box-shadow: 0 0 0 2px lighten($theme, 15%);
+    box-shadow: 0 0 0 2px $outline;
   }
 }
 
 @mixin btn-size($font-size, $padding-y, $padding-x) {
   font-size: $font-size;
   font-weight: $btn-font-weight;
-  //line-height: $btn-line-height;
   padding: $padding-y $padding-x;
 }
 
 .btn {
-  @include border-radius($border-radius-sm);
-  @include btn-size($btn-font-size-default, $btn-padding-y-default, $btn-padding-x-default);
-  display: inline-block;
+  display: inline-block; // Align the buttons with the rest of the components !important
+  cursor: pointer;
   font-weight: $btn-font-weight;
   outline: none;
+
+  // In case of material ripple effect feature
+  overflow: hidden;
+  position: relative;
+
   text-align: center;
   text-transform: uppercase;
-  transition: background .25s, border .25s, box-shadow .25s;
-  user-select: none; // To prevent highlighting the text inside the buttons
+  transition: background .25s, border .25s, box-shadow .25s, color .25s;
+  user-select: none; // Prevent highlighting the text inside the buttons
   vertical-align: middle;
-  white-space: nowrap; // To prevent from wrapping or placing text on a new line
+  white-space: nowrap; // Prevent from wrapping or placing text on a new line
 
+  @include border-radius($border-radius-sm);
+  @include btn-size($btn-font-size-default, $btn-padding-y-default, $btn-padding-x-default);
 
   // theme-colors
-  @each $name, $value in $theme-colors {
-    &-#{$name} {
-      $color: #fff;
+  @each $key, $value in $theme-colors {
+
+    $color: $sasha-white;
+
+    &-#{$key} {
       @include btn-mix($value, $value, $color);
       @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color);
-      @include btn-active(darken($value, 5%), darken($value, 5%));
-      @include btn-focus($value);
+      @include btn-active(darken($value, 10%), darken($value, 10%));
+      @include btn-focus(lighten($value, 10%));
     }
 
-    &-#{$name}-outline {
-      $color: #fff;
-      @include btn-mix(none, $value, $value);
-      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color);
-      @include btn-active(darken($value, 5%), darken($value, 5%));
-      @include btn-focus($value);
-    }
-
-    &-#{$name}-transparent {
-      @include btn-mix(none, rgba($value, 0), $value);
-      @include btn-hover(rgba($value, .3), rgba($value, 0), $value);
-      @include btn-active(rgba($value, .5), rgba($value, 0));
-      @include btn-focus($value);
+    @if ($enable-btn-o) {
+      &-#{$key}-o {
+        @include btn-mix(none, $value, $value);
+        @include btn-hover($value, $value, $color);
+        @include btn-active(darken($value, 10%), darken($value, 10%));
+        @include btn-focus(lighten($value, 10%));
+      }
     }
   }
 
-  // theme-extra
-  // We're adding the default and inverse buttons cause it makes sense
-  @each $name, $value in $theme-extra {
-    &-#{$name} {
-      @include btn-mix($value, $value, $body-color);
-      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $body-color);
+  // theme-sasha-btn
+  @each $key, $value in $theme-sasha-custom {
+
+    $bg-hover: if($key == sasha-darkest, lighten($value, 10%), darken($value, 10%));
+    $color: if($key == sasha-darkest, $sasha-greyest, $sasha-darker);
+    $outline: if($key == sasha-darkest, lighten($value, 10%), darken($value, 10%));
+
+    &-#{$key} {
+      @include btn-mix($value, $value, $color);
+      @include btn-hover($bg-hover, $bg-hover, $color);
       @include btn-active(darken($value, 5%), darken($value, 5%));
-      @include btn-focus($value);
+      @include btn-focus($outline);
     }
 
-    &-#{$name}-outline {
-      @include btn-mix(none, $value, $value);
-      @include btn-hover(lighten($value, 5%), lighten($value, 5%), $body-color);
-      @include btn-active(darken($value, 5%), darken($value, 5%));
-      @include btn-focus($value);
-    }
-
-    &-#{$name}-transparent {
-      $color: if($name == 'default', $body-color, $value);
-      @include btn-mix(none, rgba($value, 0), $color);
-      @include btn-hover($value, rgba($value, 0), $body-color);
-      @include btn-active(rgba($value, .5), rgba($value, 0));
-      @include btn-focus($value);
+    @if ($enable-btn-o) {
+      &-#{$key}-o {
+        @include btn-mix(none, $value, $value);
+        @include btn-hover($value, $value, $color);
+        @include btn-active(darken($value, 5%), darken($value, 5%));
+        @include btn-focus($outline);
+      }
     }
   }
 
@@ -117,7 +115,7 @@
     box-sizing: border-box;
   }
 
-  // To give space to multiple block buttons
+  // Give space to multiple block buttons
   &-block + &-block {
     margin-top: $btn-block-margin-y;
   }

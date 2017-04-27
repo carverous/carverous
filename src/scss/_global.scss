@@ -39,7 +39,7 @@ html {
 // Body
 // ====================================================================== //
 // 1. Remove the margin in all browsers.
-// 2. As a best practice, apply a default `background-color`.
+// 2. As a best practice, apply a default `background`.
 
 body {
   background: $body-bg; // 2
@@ -63,10 +63,13 @@ body {
 // 2. Show the overflow in Edge and IE.
 
 hr {
+  border: 0;
+  border-top: 1px solid $hr-color;
   box-sizing: content-box; // 1
   height: 0; // 1
   overflow: visible; // 2
   margin: $spacer-default 0;
+  //background: linear-gradient(to left, $sasha-grey, $hr-color, $sasha-grey); // Pointed hr
 }
 
 
@@ -138,7 +141,7 @@ sup {
 // ====================================================================== //
 
 a {
-  background-color: transparent; // Remove the gray background on active links in IE 10.
+  background: transparent; // Remove the gray background on active links in IE 10.
   color: $link-color;
   text-decoration: $link-decoration;
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
@@ -238,7 +241,7 @@ textarea {
 table {
   border-collapse: collapse; // Prevent double borders
   margin-top: 0;
-  margin-bottom: $spacer-default;
+  margin-bottom: 0;
 }
 
 caption {

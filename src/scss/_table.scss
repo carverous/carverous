@@ -1,5 +1,21 @@
 // Tables
 
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: $table-margin-bottom;
+
+  &::-webkit-scrollbar { // sass-lint:disable-line no-vendor-prefixes
+    width: $table-scroll-size;
+    height: $table-scroll-size;
+  }
+
+  &::-webkit-scrollbar-thumb { // sass-lint:disable-line no-vendor-prefixes
+    border-radius: 8px;
+    background-color: $table-scroll-bg;
+  }
+}
+
 .table {
   background: $table-bg;
   border-collapse: collapse;
@@ -60,7 +76,7 @@
   // Striped Tables
   &-striped {
     tbody tr:nth-of-type(odd) {
-      background-color: $table-stripe-bg;
+      background: $table-stripe-bg;
     }
   }
 
