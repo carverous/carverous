@@ -37,5 +37,4 @@ function pagination(max = 4) {
 
     el.parentNode.insertBefore(ellipsisLI, el.nextElementSibling);
   }
-
 }

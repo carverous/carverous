@@ -2,12 +2,13 @@
 
 .progress-container {
   background: $progress-container-bg;
-  @include border-radius($border-radius-sm);
   display: flex;
   font-size: $progress-font-size;
   line-height: $progress-height;
   overflow: hidden;
   text-align: center;
+
+  @include border-radius($border-radius-sm);
 
   .progress-bar {
 
@@ -17,8 +18,6 @@
         color: contrast-color($value);
       }
     }
-
-    // It doesn't make sense adding the default and inverse in progress
 
     height: $progress-height;
     line-height: $progress-height;

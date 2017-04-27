@@ -287,20 +287,23 @@ $pagination-padding-y-sm: 3px !default;
 $pagination-padding-x-sm: 10px !default;
 
 // Progress
-$progress-container-bg: $sasha-grey !default;
+$progress-container-bg: $sasha-greyer !default;
 $progress-bar-bg: $primary !default;
 $progress-font-size: 0.9rem !default;
-$progress-height: 1.5rem !default;
+$progress-height: 1.25rem !default;
 $progress-margin-y: $spacer-default !default;
 
 // Table and Data
 $dt-font-weight: $font-weight-bold !default;
 $table-bg: $sasha-white !default;
 $table-border-width: 1px !default;
-$table-border-color: $sasha-greyer;
+$table-border-color: $sasha-greyest;
 $table-cell-padding: .75rem 1rem !default;
 $table-cell-padding-sm: .3rem .75rem !default;
 $table-hover-bg: $sasha-greyer !default;
+$table-margin-bottom: $spacer-default !default;
+$table-scroll-bg: rgba($sasha-dark, .75) !default;
+$table-scroll-size: $spacer-default / 1.75 !default;
 $table-stripe-bg: $sasha-grey !default;
 
 // Text
