@@ -2,19 +2,21 @@
 // The entire navigation works in IE10+
 // The value 'unset' on any property does not work in IE11-
 
-// TODO: clean up the padding-right of .nav-menu and margin-left of .nav-logo?
-
 .nav {
 
   // Mobile First
   // ====================================================================== //
-  background: $nav-bg;
-  color: $nav-color;
+
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
   font-size: $nav-font-size;
   font-weight: $nav-font-weight;
   line-height: $nav-line-height;
   margin-bottom: $spacer-default;
   width: 100%;
+
+  .nav-hr {
+    margin: 5px 0;
+  }
 
   .nav-toggler {
     cursor: pointer;
@@ -24,13 +26,11 @@
     }
 
     &-word {
-      color: $nav-color;
       text-decoration: none;
     }
 
     &:hover a,
     &:hover .nav-icon {
-      color: $nav-color-hover;
       opacity: 1; // The nav-icon highlights as long as the nav-toggler is hovered over
     }
 
@@ -46,7 +46,6 @@
   }
 
   .nav-logo {
-    color: $nav-logo-color;
     float: left;
     font-size: $nav-logo-font-size;
     font-weight: $nav-logo-font-weight;
@@ -78,73 +77,9 @@
     }
 
     & > ul > li > a {
-      color: $nav-color;
       display: block;
       padding: 0 $spacer-default;
       text-decoration: none;
-
-      &:hover,
-      &.active {
-        background: $nav-bg-hover;
-      }
-    }
-  }
-
-  .nav-dropdown {
-
-    // The caret/triangle symbol pointing downwards
-    & > a::after {
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: 8px;
-      margin-bottom: 4px;
-      content: '';
-      border-top: $nav-dropdown-caret-size solid;
-      border-right: $nav-dropdown-caret-size solid transparent;
-      border-left: $nav-dropdown-caret-size solid transparent;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px solid $nav-hr-border-color-sm;
-      margin: 5px 0;
-    }
-  }
-
-  .nav-dropdown.active {
-
-    & > a {
-      background: $nav-bg-hover;
-    }
-
-    // The caret/triangle symbol pointing upwards
-    & > a::after,
-    & > a:after {
-      border-top: 0;
-      border-bottom: $nav-dropdown-caret-size solid;
-    }
-
-    ul {
-      display: block;
-      padding: $nav-dropdown-ul-gutter 0;
-    }
-  }
-
-  .nav-dropdown ul {
-    background: $nav-bg;
-    display: none;
-  }
-
-  .nav-dropdown ul li a {
-    color: $nav-color;
-    display: block;
-    font-weight: $nav-font-weight;
-    padding: 0 $spacer-default 0 $spacer-default * 2; // Clever moves
-    text-decoration: none;
-
-    &:hover {
-      background: $nav-bg-hover;
     }
   }
 
@@ -187,177 +122,13 @@
     }
 
     .nav-menu > ul > li > a {
-
-      //transition: box-shadow .25s, color .15s; // Do not delete yet
-
-      &:hover {
-        //box-shadow: inset 0 -4px 0 $nav-color-hover; // Do not delete yet
-        color: $nav-color-hover;
-      }
-
       &:hover:not(.active) {
         background: none;
-      }
-    }
-
-    .nav-dropdown {
-      hr {
-        border-color: $nav-hr-border-color;
-      }
-    }
-
-    .nav-dropdown.active {
-
-      & > a {
-        background: none;
-        color: $nav-color-hover;
-      }
-
-      & > a::after,
-      & > a:after {
-        border-top: $nav-dropdown-caret-size solid; // Force the caret to point downwards
-        border-bottom: 0;
-      }
-
-      ul {
-        visibility: visible; // IE screws it up with display property // IE10+
-        //padding: $nav-dropdown-ul-gutter 0;
-        transform-origin: top right; // Appear from the corner!
-
-        animation: {
-          name: showDropdown;
-          duration: 250ms;
-          timing-function: cubic-bezier(.92, -0.23, .13, 1.36); // Bounce effect!
-          fill-mode: forwards;
-        }
-      }
-    }
-
-    .nav-dropdown ul {
-      background: $nav-dropdown-bg;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
-      position: absolute;
-      top: $nav-line-height - 5;
-      right: 0;
-      visibility: hidden; // IE screws it up with display property // IE10+
-      z-index: $nav-dropdown-ul-z-index;
-
-      // The triangle dropdown pin
-      &::before,
-      &:before {
-        border: 8px solid $nav-dropdown-bg;
-        //box-sizing: border-box;
-        border-color: transparent transparent $nav-dropdown-bg $nav-dropdown-bg;
-        box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
-        content: '';
-        height: 0;
-        position: absolute;
-        right: 12px;
-        top: -8px;
-        transform: rotate(135deg);
-        width: 0;
-
-        z-index: $nav-dropdown-pin-z-index;
-      }
-    }
-
-    .nav-dropdown ul li a {
-      color: $nav-dropdown-color;
-      display: block;
-      font-weight: $nav-font-weight;
-      line-height: $nav-dropdown-line-height;
-      min-width: $nav-dropdown-min-width;
-      max-width: $nav-dropdown-max-width;
-      overflow: hidden;
-      padding: 0 $spacer-default;
-      text-decoration: none;
-      text-overflow: ellipsis;
-
-      &:hover {
-        background: $nav-dropdown-bg-hover;
       }
     }
   }
 
   @include clearfix;
-}
-
-.nav-white {
-  background: $nav-white-bg;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
-  color: $nav-white-color;
-
-  .nav-toggler {
-
-    &-word {
-      color: $nav-white-color;
-    }
-
-    &:hover a,
-    &:hover .nav-icon {
-      color: $nav-white-color-hover;
-    }
-  }
-
-  .nav-logo {
-    color: $nav-white-logo-color;
-  }
-
-  .nav-menu > ul > li > a {
-    color: $nav-white-color;
-
-    &:hover,
-    &.active {
-      background: $nav-white-bg-hover;
-    }
-  }
-
-  .nav-dropdown {
-    hr {
-      border-color: $nav-white-hr-border-color-sm;
-    }
-  }
-
-  .nav-dropdown.active {
-    & > a {
-      background: $nav-white-bg-hover;
-    }
-  }
-
-  .nav-dropdown ul {
-    background: $nav-white-bg;
-  }
-
-  .nav-dropdown ul li a {
-    color: $nav-white-color;
-
-    &:hover {
-      background: $nav-white-bg-hover;
-    }
-  }
-
-  @include media-breakpoint($lg) {
-
-    .nav-menu > ul > li > a {
-      //transition: box-shadow .25s, color .15s; // Do not delete yet
-
-      &:hover {
-        //box-shadow: inset 0 -4px 0 $nav-color-hover; // Do not delete yet
-        color: $nav-white-color-hover;
-      }
-    }
-
-    .nav-dropdown.active {
-      & > a {
-        background: none;
-        color: $nav-white-color-hover;
-      }
-    }
-
-    .nav-dropdown ul li a {
-      color: $nav-dropdown-color;
-    }
-  }
 }
 
 .nav-fixed {
@@ -370,27 +141,5 @@
   @include border-radius($border-radius-sm);
 }
 
-#wrapper {
-  margin-top: 75px;
-}
-
-// Keyframes should be outside of media-query!
-// I spent hours figuring this one out for IE!
-// See: http://stackoverflow.com/questions/2040790/
-// defining-keyframe-animations-inside-media-queries
-
-@keyframes showDropdown {
-  0% {
-    opacity: 0;
-    transform: scale(.3);
-  }
-
-  10% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+@import 'navs/sasha-darkest';
+@import 'navs/sasha-white';

@@ -1,0 +1,151 @@
+// Navigation Dropdown
+
+.nav {
+
+  // Mobile First
+  // Nav Dropdown is free to be styled on mobile
+  // ====================================================================== //
+
+  .nav-dropdown {
+
+    // The caret/triangle symbol pointing downwards
+    & > a::after {
+      border-top: $nav-dropdown-caret-size solid;
+      border-right: $nav-dropdown-caret-size solid transparent;
+      border-left: $nav-dropdown-caret-size solid transparent;
+      content: '';
+      display: inline-block;
+      height: 0;
+      margin-left: 8px;
+      margin-bottom: 4px;
+      width: 0;
+
+      //transition: transform .25s; // optional
+    }
+  }
+
+  .nav-dropdown.active {
+
+    // The caret/triangle symbol pointing upwards
+    & > a::after,
+    & > a:after {
+      transform: rotate(-180deg);
+    }
+
+    ul {
+      display: block;
+      padding: $nav-dropdown-ul-spacer 0;
+    }
+  }
+
+  .nav-dropdown ul {
+    display: none;
+  }
+
+  .nav-dropdown ul li a {
+    display: block;
+    font-weight: $nav-font-weight;
+    padding: 0 $spacer-default 0 $spacer-default * 2; // Clever moves
+    text-decoration: none;
+  }
+
+  // Large Screens Last
+  // Nav Dropdown has a strict styling on the desktop
+  // ====================================================================== //
+
+  @include media-breakpoint($lg) {
+
+    .nav-dropdown {
+      .nav-hr {
+        border-top: 1px solid $nav-dropdown-hr-color;
+        border-bottom: 0;
+      }
+    }
+
+    .nav-dropdown.active {
+
+      & > a::after,
+      & > a:after {
+        transform: rotate(0deg); // Force the caret to point downwards
+      }
+
+      ul {
+        visibility: visible; // IE screws it up with display property // IE10+
+        transform-origin: top right; // Appear from the corner!
+
+        animation: {
+          name: showDropdown;
+          duration: 250ms;
+          timing-function: cubic-bezier(.92, -0.23, .13, 1.36); // Bounce effect!
+          fill-mode: forwards;
+        }
+      }
+    }
+
+    .nav-dropdown ul {
+      background: $nav-dropdown-bg;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
+      position: absolute;
+      top: $nav-line-height - 5;
+      right: 0;
+      visibility: hidden; // IE screws it up with display property // IE10+
+      z-index: $nav-dropdown-ul-z-index;
+
+      // The triangle dropdown pin
+      &::before,
+      &:before {
+        border-width: $hav-dropdown-pin-size;
+        border-style: solid;
+        border-color: transparent transparent $nav-dropdown-bg $nav-dropdown-bg;
+        box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, 0.15); // sass-lint:disable-line no-color-literals
+        content: '';
+        height: 0;
+        position: absolute;
+        right: 12px;
+        top: -8px;
+        transform: rotate(135deg);
+        width: 0;
+
+        z-index: $nav-dropdown-pin-z-index;
+      }
+    }
+
+    .nav-dropdown ul li a {
+      color: $nav-dropdown-color;
+      display: block;
+      font-weight: $nav-font-weight;
+      line-height: $nav-dropdown-line-height;
+      min-width: $nav-dropdown-min-width;
+      max-width: $nav-dropdown-max-width;
+      overflow: hidden;
+      padding: 0 $spacer-default;
+      text-decoration: none;
+      text-overflow: ellipsis;
+
+      &:hover {
+        background: $nav-dropdown-bg-hover;
+      }
+    }
+  }
+}
+
+// Keyframes should be outside of media-query!
+// I spent hours figuring this one out for IE!
+// See: http://stackoverflow.com/questions/2040790/
+// defining-keyframe-animations-inside-media-queries
+
+@keyframes showDropdown {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

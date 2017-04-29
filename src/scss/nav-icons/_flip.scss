@@ -2,7 +2,7 @@
 
 @mixin flip-active($value) {
   &.active,
-  .nav-white &.active {
+  .nav-sasha-white &.active {
     .nav-icon-rod {
       background: transparent;
       transform: $value;

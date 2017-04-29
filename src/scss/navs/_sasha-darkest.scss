@@ -1,0 +1,84 @@
+// Navigation Sasha Darkest
+
+@mixin nav-sasha-darkest($bg) {
+
+  // Mobile First
+  // ====================================================================== //
+
+  background: $bg;
+  color: $nav-sasha-darkest-color;
+
+  .nav-hr {
+    border-top: 1px solid $nav-sasha-darkest-hr-color-top;
+    border-bottom: 1px solid $nav-sasha-darkest-hr-color-bottom;
+  }
+
+  .nav-toggler {
+    &-word {
+      color: $nav-sasha-darkest-color;
+    }
+
+    &:hover a,
+    &:hover .nav-icon {
+      color: $nav-sasha-darkest-color-hover;
+    }
+  }
+
+  .nav-logo {
+    color: $nav-sasha-darkest-logo-color;
+  }
+
+  .nav-menu {
+    & > ul > li > a {
+      color: $nav-sasha-darkest-color;
+
+      &:hover,
+      &.active {
+        background: $nav-sasha-darkest-bg-hover;
+      }
+    }
+  }
+
+  .nav-dropdown.active {
+    & > a {
+      background: $nav-sasha-darkest-bg-hover;
+    }
+  }
+
+  .nav-dropdown ul li a {
+    color: $nav-sasha-darkest-color;
+
+    &:hover {
+      background: $nav-sasha-darkest-bg-hover;
+    }
+  }
+
+  // Large Screens Last
+  // ====================================================================== //
+
+  @include media-breakpoint($lg) {
+
+    .nav-menu > ul > li > a {
+      &:hover {
+        color: $nav-sasha-darkest-color-hover;
+      }
+    }
+
+    .nav-dropdown.active {
+      & > a {
+        background: none;
+        color: $nav-sasha-darkest-color-hover;
+      }
+    }
+  }
+}
+
+.nav-sasha-darkest {
+  @include nav-sasha-darkest($nav-sasha-darkest-bg);
+}
+
+@if ($enabled-nav-sasha-darkest-t) {
+  .nav-sasha-darkest-t {
+    @include nav-sasha-darkest(rgba($nav-sasha-darkest-bg, .9));
+  }
+}

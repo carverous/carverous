@@ -1,0 +1,84 @@
+// Navigation Sasha White
+
+@mixin nav-sasha-white($bg) {
+
+  // Mobile First
+  // ====================================================================== //
+
+  background: $bg;
+  color: $nav-sasha-white-color;
+
+  .nav-hr {
+    border-top: 1px solid $nav-sasha-white-hr-color-top;
+    border-bottom: 1px solid $nav-sasha-white-hr-color-bottom;
+  }
+
+  .nav-toggler {
+    &-word {
+      color: $nav-sasha-white-color;
+    }
+
+    &:hover a,
+    &:hover .nav-icon {
+      color: $nav-sasha-white-color-hover;
+    }
+  }
+
+  .nav-logo {
+    color: $nav-sasha-white-logo-color;
+  }
+
+  .nav-menu {
+    & > ul > li > a {
+      color: $nav-sasha-white-color;
+
+      &:hover,
+      &.active {
+        background: $nav-sasha-white-bg-hover;
+      }
+    }
+  }
+
+  .nav-dropdown.active {
+    & > a {
+      background: $nav-sasha-white-bg-hover;
+    }
+  }
+
+  .nav-dropdown ul li a {
+    color: $nav-sasha-white-color;
+
+    &:hover {
+      background: $nav-sasha-white-bg-hover;
+    }
+  }
+
+  // Large Screens Last
+  // ====================================================================== //
+
+  @include media-breakpoint($lg) {
+
+    .nav-menu > ul > li > a {
+      &:hover {
+        color: $nav-sasha-white-color-hover;
+      }
+    }
+
+    .nav-dropdown.active {
+      & > a {
+        background: none;
+        color: $nav-sasha-white-color-hover;
+      }
+    }
+  }
+}
+
+.nav-sasha-white {
+  @include nav-sasha-white($nav-sasha-white-bg);
+}
+
+@if ($enabled-nav-sasha-white-t) {
+  .nav-sasha-white-t {
+    @include nav-sasha-white(rgba($nav-sasha-white-bg, .9));
+  }
+}
