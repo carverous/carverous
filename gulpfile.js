@@ -53,32 +53,32 @@ gulp.task('scss', function () {
     .pipe(sass({outputStyle: 'expanded'})
     .on('error', sass.logError))
     .pipe(flatten())
-    .pipe(gulp.dest('build/css/'));
+    .pipe(gulp.dest('dist/css/'));
 });
 
 // Add Vendor Prefixes
 gulp.task('css:autoprefix', function () {
   return gulp.src([
-    'build/css/**/*.css',
-    '!build/css/**/*.min.css', // Except .min.css files
-    '!build/css/**/font-awesome*'
+    'dist/css/**/*.css',
+    '!dist/css/**/*.min.css', // Except .min.css files
+    '!dist/css/**/font-awesome*'
   ])
     .pipe(postCSS([autoprefixer({browsers: ['last 2 versions']})]))
     .on('error', handleError)
     .pipe(insert.prepend(banner))
-    .pipe(gulp.dest('build/css/'));
+    .pipe(gulp.dest('dist/css/'));
 });
 
 // Minify the prepended and autoprefix-ed versions of css
 gulp.task('css:minify', function () {
   return gulp.src([
-    'build/css/**/*.css',
-    '!build/css/**/*.min.css' // Don't minify the minified files!
+    'dist/css/**/*.css',
+    '!dist/css/**/*.min.css' // Don't minify the minified files!
   ])
     .pipe(cleanCSS({keepSpecialComments: 1}))
     .on('error', handleError)
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('build/css/'));
+    .pipe(gulp.dest('dist/css/'));
 });
 
 // Bundle js files into a single file
@@ -93,21 +93,21 @@ gulp.task('es:bundle', function () {
     .pipe(babelJS())
     .on('error', handleError)
     .pipe(insert.prepend(banner))
-    .pipe(gulp.dest('build/js/'));
+    .pipe(gulp.dest('dist/js/'));
 });
 
 // Minify the prepended bundled js file
 gulp.task('js:minify', function () {
-  return gulp.src('build/js/' + pkg.name + '.js')
+  return gulp.src('dist/js/' + pkg.name + '.js')
     .pipe(uglifyJS({q:1}))
     .on('error', handleError)
     .pipe(insert.prepend(banner))
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('build/js/'));
+    .pipe(gulp.dest('dist/js/'));
 });
 
 // Take control of the build tasks while we create awesome things!
-gulp.task('watch', function (w) {
+gulp.task('watch', function (w) {git
 
   gulp.watch(
     ['src/scss/**/*.s+(a|c)ss'],
