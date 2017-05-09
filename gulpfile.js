@@ -107,7 +107,7 @@ gulp.task('js:minify', function () {
 });
 
 // Take control of the build tasks while we create awesome things!
-gulp.task('watch', function (w) {git
+gulp.task('watch', function (w) {
 
   gulp.watch(
     ['src/scss/**/*.s+(a|c)ss'],

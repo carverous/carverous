@@ -5,11 +5,12 @@
 
 
 ## Overview
-A responsive front-end framework I started off from scratch.
+A responsive front-end framework I started off from scratch for my web portfolio.
+Some useful implementations are added along the way.
 It is developed having a mobile first approach in mind,
 meaning the code is designed to prioritise mobile devices first
 and then adjust the components as the screen scales up.
-It doesn't require any third-party JS library such as jQuery. The scripts are written in ES6 and are transpiled using Babel.
+It doesn't require any third-party JS library such as jQuery.
 
 ## Browser Support
 
@@ -18,7 +19,30 @@ It doesn't require any third-party JS library such as jQuery. The scripts are wr
 | IE10, IE11, Edge| last 2 versions| last 2 versions
 
 ## Documentation
-Under construction.
+Coming soon...
 
-## Contributing
-Under construction.
+## Contribute
+Make sure that Git, NodeJS, and npm are installed.
+```
+git clone https://github.com/cefjoeii/carverous.git
+npm install
+```
+Run the default task in the gulpfile.js
+```
+gulp
+```
+
+## Credits
+* Manually forked and merged
+[Normalize.css](https://github.com/necolas/normalize.css) &
+[Reboot](https://github.com/twbs/bootstrap) (Bootstrap).<br>
+* Borrowed some [Form](https://github.com/twbs/bootstrap) class names (Bootstrap).<br>
+* Re-implemented [Hamburgers](https://github.com/jonsuh/hamburgers) to avoid code repetition & modified the values to blend with the nav.
+
+* Books
+  * [You Don't Know JS series](https://www.goodreads.com/series/139311-you-don-t-know-js)
+  * [Learning JavaScript: Add Sparkle and Life to Your Web Pages](http://www.goodreads.com/book/show/27806241-learning-javascript)
+
+<!---
+The scripts are written in ES6 and are transpiled using Babel.
+--->

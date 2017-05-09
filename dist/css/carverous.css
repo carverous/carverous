@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.1.9 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.3 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -173,7 +173,7 @@ table {
 caption {
   padding-top: 0.75rem 1rem;
   padding-bottom: 0.75rem 1rem;
-  color: #bbbbbe;
+  color: #a1a1a1;
   text-align: left;
   caption-side: bottom;
 }
@@ -904,7 +904,6 @@ template {
   overflow: hidden;
   position: relative;
   text-align: center;
-  text-transform: uppercase;
   transition: background .25s, border .25s, box-shadow .25s, color .25s;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -913,9 +912,11 @@ template {
   vertical-align: middle;
   white-space: nowrap;
   border-radius: 2px;
-  font-size: 0.9rem;
+  font-size: 16px;
   font-weight: 400;
-  padding: 7px 16px;
+  line-height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .btn-danger {
@@ -1317,13 +1318,17 @@ template {
 .btn-sm {
   font-size: 0.8rem;
   font-weight: 400;
-  padding: 4px 8px;
+  line-height: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .btn-lg {
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 400;
-  padding: 14px 24px;
+  line-height: 3.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .btn-block {
@@ -1421,49 +1426,150 @@ button.close {
 }
 
 .form-control {
+  border-radius: 2px;
+  font-size: 16px;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
   background: #fff;
-  background-image: none;
-  background-clip: padding-box;
   border: 1px solid #bbbbbe;
   color: #545454;
   display: block;
-  font-size: 16px;
-  line-height: 1.25rem;
-  padding: 0.5rem 0.75rem;
+  vertical-align: middle;
   width: 100%;
-  border-radius: 2px;
-}
-
-.form-control::-ms-expand {
-  background: transparent;
-  border: 0;
+  background-image: none;
+  background-clip: padding-box;
 }
 
 .form-control:focus {
-  color: #545454;
   background: #fff;
-  border-color: #376395;
+  border-color: #457cba;
+  box-shadow: 0 0 0 1px #457cba;
+  color: #545454;
   outline: none;
 }
 
+.form-control:not(textarea) {
+  height: calc(2.5rem + 6px);
+}
+
+.form-control-file {
+  background: #fff;
+  border: 1px solid #bbbbbe;
+  display: block;
+  max-width: 100%;
+  padding: 0.7rem;
+}
+
+.form-control-file-custom [type='file'] {
+  position: fixed;
+  top: -999999px;
+}
+
+.form-control[type='date']::-webkit-inner-spin-button, .form-control[type='date']::-webkit-clear-button, .form-control[type='datetime-local']::-webkit-inner-spin-button, .form-control[type='datetime-local']::-webkit-clear-button, .form-control[type='time']::-webkit-inner-spin-button, .form-control[type='time']::-webkit-clear-button, .form-control[type='month']::-webkit-inner-spin-button, .form-control[type='month']::-webkit-clear-button, .form-control[type='week']::-webkit-inner-spin-button, .form-control[type='week']::-webkit-clear-button {
+  -webkit-appearance: none;
+}
+
+.form-control::-ms-clear {
+  display: none;
+}
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
 .form-control::-webkit-input-placeholder {
-  color: #757578;
+  color: #a1a1a1;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-  color: #757578;
+  color: #a1a1a1;
   opacity: 1;
 }
 
 .form-control::placeholder {
-  color: #757578;
+  color: #a1a1a1;
   opacity: 1;
 }
 
 .form-control:disabled, .form-control[readonly] {
-  background: #f1f3f4;
+  background-color: #f1f3f4;
   opacity: 1;
+}
+
+.form-control-sm {
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.form-control-sm:not(textarea) {
+  height: calc(1.5rem + 6px);
+}
+
+.form-control-lg {
+  font-size: 1.1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.form-control-lg:not(textarea) {
+  height: calc(3.5rem + 6px);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-check {
+  display: block;
+  position: relative;
+}
+
+.form-check.disabled .form-check-label {
+  color: #a1a1a1;
+}
+
+.form-check-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+select.form-control:focus::-ms-value {
+  color: #545454;
+  background-color: #fff;
+}
+
+textarea.form-control {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.col-form-label {
+  font-size: 16px;
+  height: calc(2.5rem + 6px);
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.col-form-label-sm {
+  font-size: 0.8rem;
+  height: calc(1.5rem + 6px);
+}
+
+.col-form-label-lg {
+  font-size: 1.1rem;
+  height: calc(3.5rem + 6px);
 }
 
 h1,
@@ -2469,6 +2575,10 @@ h6 {
 
 .txt-sasha-black {
   color: #000;
+}
+
+.txt-muted {
+  color: #a1a1a1;
 }
 
 .txt-left {

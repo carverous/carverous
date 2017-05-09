@@ -5,15 +5,15 @@
 
 // Enable Option
 $enable-btn-o: true !default; // Outline Buttons
-$enabled-nav-sasha-darkest-t: false !default;
-$enabled-nav-sasha-white-t: false !default;
+$enabled-nav-sasha-darkest-t: false !default; // Transparent Nav
+$enabled-nav-sasha-white-t: false !default; // Transparent Nav
 $enable-sasha-custom: true !default; // Cherry-picked Shades of Sasha Grey
 $enable-rounded: true !default;
 
 // Body
 $body-bg: $sasha-white !default;
 $body-color: #545454 !default; // 545454
-$body-color-muted: $sasha-dark !default;
+$body-color-muted: lighten($body-color, 30%) !default;
 
 // HR
 $hr-color: $sasha-greyest;
@@ -109,28 +109,28 @@ $grid-col-max: 12 !default;
 
 $container-max-width: 1024px !default;
 
-// TODO: Change btn-padding format ($btn-padding-default: x x x x;)
 // Button
 $btn-block-margin-y: $spacer-default !default;
 
 $btn-border-width: 2px !default;
 
 $btn-font-size-sm: .8rem !default;
-$btn-font-size-default: .9rem !default;
-$btn-font-size-lg: 16px !default;
+$btn-font-size-default: $font-size-default !default;
+$btn-font-size-lg: 1.1rem !default;
 
 $btn-font-weight: $font-weight-default !default;
 
-//$btn-line-height: 1.5rem;
+$btn-height-sm: 1.5rem;
+$btn-height: 2.5rem;
+$btn-height-lg: 3.5rem;
 
-$btn-padding-y-sm: 4px !default;
-$btn-padding-x-sm: 8px !default;
 
-$btn-padding-y-default: 7px !default;
-$btn-padding-x-default: 16px !default;
-
-$btn-padding-y-lg: 14px !default;
-$btn-padding-x-lg: 24px !default;
+//$btn-padding-y-sm: .25rem !default;
+$btn-padding-x-sm: .5rem !default;
+//$btn-padding-y: .5rem !default;
+$btn-padding-x: 1rem !default;
+//$btn-padding-y-lg: 1rem !default;
+$btn-padding-x-lg: 1.25rem !default;
 
 // Code, Keyboard, & Pre
 $code-color: #3363bd !default; // 3363bd
@@ -189,27 +189,38 @@ $figure-img-border-bottom: $spacer-default / 2 !default;
 $figure-caption-font-size: .9em !default;
 $figure-caption-color: $sasha-darker !default;
 
-// Input
+// Form, Input
+$form-check-input-padding-x: .5rem !default;
+$form-check-label-margin-y: .5rem !default;
+$form-check-input-margin-y: .5rem !default;
+
+$form-group-margin-b: $spacer-default !default;
+$form-text-margin-top: .25rem !default;
+
 $input-bg: $sasha-white !default;
 $input-bg-disabled: $sasha-greyer !default;
 $input-bg-focus: $input-bg !default;
 
 $input-border-color: $sasha-dark !default;
-$input-border-color-focus: lighten($primary, 5%) !default;
+$input-border-color-focus: lighten($primary, 15%) !default;
 
 $input-border-width: 1px !default;
 
 $input-color: $body-color !default;
 $input-color-focus: $input-color !default;
-$input-color-placeholder: $sasha-darker !default;
+$input-color-placeholder: $body-color-muted !default;
 
-$input-font-size: $font-size-default !default;
+$input-font-size-sm: $btn-font-size-sm !default;
+$input-font-size: $btn-font-size-default !default;
+$input-font-size-lg: $btn-font-size-lg !default;
 
-$input-line-height: 1.25rem !default;
+$input-padding-x-sm: $btn-padding-x-sm !default;
+$input-padding-x: .7rem !default;
+$input-padding-x-lg: $btn-padding-x-lg !default;
 
-$input-padding-y: .5rem !default;
-$input-padding-x: .75rem !default;
-
+$input-height-sm: calc(#{$btn-height-sm} + 6px) !default;
+$input-height: calc(#{$btn-height} + 6px) !default;
+$input-height-lg: calc(#{$btn-height-lg} + 6px) !default;
 
 // Navigation
 $nav-font-size: 1rem !default;

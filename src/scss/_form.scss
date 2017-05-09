@@ -1,50 +1,197 @@
-// Forms
+// Form
+// Borrowed some class names from Bootstrap's Form
+// Started from scratch because Bootstrap's is a bit messy
+// Bootstrap is licensed under MIT (https://github.com/twbs/bootstrap)
+
+// sass-lint:disable no-vendor-prefixes
+
+// Mixin
+// ====================================================================== //
 
 @mixin form-control-focus {
   &:focus {
-    color: $input-color-focus;
     background: $input-bg-focus;
     border-color: $input-border-color-focus;
+    box-shadow: 0 0 0 1px $input-border-color-focus;
+    color: $input-color-focus;
     outline: none;
   }
 }
 
+@mixin form-control-size($height, $font-size, $padding-x) {
+  &:not(textarea) {
+    height: $height;
+  }
+
+  font-size: $font-size;
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+}
+
+@mixin col-form-label-size($height, $font-size) {
+  font-size: $font-size;
+  height: $height;
+}
+
+// Form Control
+// ====================================================================== //
+
 .form-control {
+
+  @include border-radius($border-radius-sm);
+  @include form-control-focus;
+  @include form-control-size($input-height, $input-font-size, $input-padding-x);
+
   background: $input-bg;
-  background-image: none; // Reset unusual Firefox-on-Android default style
-  background-clip: padding-box; // Reset unusual Firefox-on-Android default style
   border: $input-border-width solid $input-border-color;
   color: $input-color;
   display: block;
-  font-size: $input-font-size;
-  // height: $input-height; // Make inputs at least the height of their button counterpart
-  line-height: $input-line-height;
-  padding: $input-padding-y $input-padding-x;
+  vertical-align: middle;
   width: 100%;
 
-  // No effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  @include border-radius($border-radius-sm);
 
-  // sass-lint:disable no-vendor-prefixes
+  // File Input Type
+  // ====================================================================== //
+
+  &-file {
+    background: $input-bg;
+    border: $input-border-width solid $input-border-color;
+    display: block;
+    max-width: 100%;
+    padding: $input-padding-x;
+  }
+
+  &-file-custom {
+    [type='file'] {
+      position: fixed;
+      top: -999999px;
+    }
+  }
+
+  // Webkit Appearance & MS
+  // Disable annoying up/down carets inside some of the inputs
+  // ====================================================================== //
+
+  &[type='date'],
+  &[type='datetime-local'],
+  &[type='time'],
+  &[type='month'],
+  &[type='week'] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-clear-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &::-ms-clear {
+    display: none; // Hide the 'X' from the input
+  }
+
+  // Miscellaneous
+  // Extra styling to avoid any other annoying bugs
+  // ====================================================================== //
+
+  // Reset unusual Firefox-on-Android default style;
+  // See https://github.com/necolas/normalize.css/issues/214.
+  background-image: none;
+  background-clip: padding-box;
+
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
-    background: transparent;
+    background-color: transparent;
     border: 0;
   }
-  // sass-lint:enable no-vendor-prefixes
 
-
-  @include form-control-focus;
-
+  // Placeholder
   &::placeholder {
     color: $input-color-placeholder;
-    opacity: 1; // Override Firefox's unusual default opacity.
-  }
-
-  &:disabled,
-  &[readonly] {
-    background: $input-bg-disabled;
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    // Override Firefox's unusual default opacity;
     opacity: 1;
   }
+
+  // Disabled & Readonly
+  &:disabled,
+  &[readonly] {
+    background-color: $input-bg-disabled;
+    // iOS fix for unreadable disabled content;
+    // See https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+
+  // Form Control Sizing
+  // ====================================================================== //
+
+  &-sm {
+    @include form-control-size($input-height-sm, $input-font-size-sm, $input-padding-x-sm);
+  }
+
+  &-lg {
+    @include form-control-size($input-height-lg, $input-font-size-lg, $input-padding-x-lg);
+  }
 }
+
+// Form Stuff
+// ====================================================================== //
+
+.form-group {
+  margin-bottom: $form-group-margin-b;
+}
+
+.form-check {
+  display: block;
+  position: relative;
+
+  &.disabled {
+    .form-check-label {
+      color: $body-color-muted;
+    }
+  }
+}
+
+.form-check-label {
+  margin-bottom: $form-check-label-margin-y; // Override default `<label>` bottom margin
+}
+
+.form-text {
+  display: block;
+  margin-top: $form-text-margin-top;
+}
+
+select.form-control {
+  &:focus::-ms-value {
+    // Suppress the nested default white text on blue background highlight given to
+    // the selected option text when the (still closed) <select> receives focus
+    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // match the appearance of the native widget.
+    color: $input-color;
+    background-color: $input-bg;
+  }
+}
+
+textarea.form-control {
+  padding-top: $input-padding-x;
+  padding-bottom: $input-padding-x;
+}
+
+
+// Form Control Label Inside Col
+// ====================================================================== //
+
+.col-form-label {
+  @include col-form-label-size($input-height, $input-font-size);
+
+  align-items: center;
+  display: flex;
+  margin-bottom: 0; // Override the `<label>` default
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &-sm {
+    @include col-form-label-size($input-height-sm, $input-font-size-sm);
+  }
+
+  &-lg {
+    @include col-form-label-size($input-height-lg, $input-font-size-lg);
+  }
+}
+
