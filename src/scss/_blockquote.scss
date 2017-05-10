@@ -1,11 +1,11 @@
-// Blockquotes
+// Blockquote
 // Used for famous quotes by famous people
 
 .blockquote {
-  background: $blockquote-background;
+  background: $blockquote-bg;
   border-left: $blockquote-border-width solid $blockquote-border-color;
   font-size: $blockquote-font-size;
-  margin: 0 0 $spacer-default; // Reset the margin and only add below
+  margin: 0 0 $spacer; // Reset the margin and only add below
   padding: $blockquote-padding;
 
   &-footer {

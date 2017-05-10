@@ -1,7 +1,6 @@
 // Spacing
 // Includes Margin, Padding, and etc.
-// They are set to !important to give them super power.
-// TODO: Refactor. Ex: .no-margin-top -> .no-margin-t
+// They are set to !important to give them a super power.
 
 // How 'bout a
 .no {
@@ -26,17 +25,17 @@
 }
 
 .margin-spacer {
-  margin: $spacer-default !important;
-  &-t { margin-top: $spacer-default !important; }
-  &-r { margin-right: $spacer-default !important; }
-  &-b { margin-bottom: $spacer-default !important; }
-  &-l {  margin-left: $spacer-default !important; }
+  margin: $spacer !important;
+  &-t { margin-top: $spacer !important; }
+  &-r { margin-right: $spacer !important; }
+  &-b { margin-bottom: $spacer !important; }
+  &-l {  margin-left: $spacer !important; }
 }
 
 .padding-spacer {
-  padding: $spacer-default !important;
-  &-t { padding-top: $spacer-default !important; }
-  &-r { padding-right: $spacer-default !important; }
-  &-b { padding-bottom: $spacer-default !important; }
-  &-l { padding-left: $spacer-default !important; }
+  padding: $spacer !important;
+  &-t { padding-top: $spacer !important; }
+  &-r { padding-right: $spacer !important; }
+  &-b { padding-bottom: $spacer !important; }
+  &-l { padding-left: $spacer !important; }
 }

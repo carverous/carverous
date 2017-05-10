@@ -1,5 +1,4 @@
-// Banners
-// Works as a huge page banner / cover
+// Banner
 
 .banner {
 
@@ -7,7 +6,7 @@
   // ====================================================================== //
 
   background: $banner-bg;
-  margin-bottom: $banner-margin-bottom;
+  margin-bottom: $banner-margin-b;
   padding: $banner-padding-y $banner-padding-x;
   @include border-radius($border-radius-lg);
 

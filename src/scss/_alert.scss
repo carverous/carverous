@@ -1,4 +1,4 @@
-// Alerts
+// Alert
 // IE10+
 
 @mixin alert-mix($theme) {
@@ -38,6 +38,6 @@
 
   // Only add a radius when inside .container
   .container & {
-    @include border-radius($border-radius-sm);
+    @include border-radius($border-radius);
   }
 }

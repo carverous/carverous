@@ -3,7 +3,6 @@
 [![npm](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/cefjoeii/carverous/blob/master/LICENSE) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)
 
 
-
 ## Overview
 A responsive front-end framework I started off from scratch for my web portfolio.
 Some useful implementations are added along the way.
@@ -18,16 +17,13 @@ It doesn't require any third-party JS library such as jQuery.
 | --------- | --------- | --------- |
 | IE10, IE11, Edge| last 2 versions| last 2 versions
 
-## Documentation
-Coming soon...
-
 ## Contribute
-Make sure that Git, NodeJS, and npm are installed.
+Make sure that Git, NodeJS, and npm are installed. In the terminal:
 ```
 git clone https://github.com/cefjoeii/carverous.git
 npm install
 ```
-Run the default task in the gulpfile.js
+Run the default task from the gulpfile.js . Simply run in the terminal:
 ```
 gulp
 ```

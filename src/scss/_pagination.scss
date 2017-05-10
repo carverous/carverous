@@ -31,11 +31,11 @@
     }
 
     &:first-child .page-link {
-      @include border-l-radius($border-radius-sm);
+      @include border-l-radius($border-radius);
     }
 
     &:last-child .page-link {
-      @include border-r-radius($border-radius-sm);
+      @include border-r-radius($border-radius);
     }
 
     &.active .page-link {

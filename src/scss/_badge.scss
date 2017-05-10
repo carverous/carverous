@@ -1,4 +1,4 @@
-// Badges
+// Badge
 
 @mixin badge-mix($bg, $color) {
   background: $bg;
@@ -12,11 +12,11 @@
 }
 
 .badge {
-  @include border-radius($border-radius-sm);
+  @include border-radius($border-radius);
   display: inline-block;
   font-size: $badge-font-size;
   font-weight: $badge-font-weight;
-  margin-top: $badge-margin-top;
+  margin-top: $badge-margin-t; // Move it up a little bit
   padding: $badge-padding;
   vertical-align: middle;
 

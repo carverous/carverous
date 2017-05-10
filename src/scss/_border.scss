@@ -1,4 +1,4 @@
-// Borders
+// Border
 // They are set to !important to give them a super power.
 
 .no {
@@ -16,23 +16,23 @@
 }
 
 .rounded {
-  @include border-radius($border-radius-default);
+  @include border-radius($border-radius);
 }
 
 .rounded-t {
-  @include border-t-radius($border-radius-default);
+  @include border-t-radius($border-radius);
 }
 
 .rounded-r {
-  @include border-r-radius($border-radius-default);
+  @include border-r-radius($border-radius);
 }
 
 .rounded-b {
-  @include border-b-radius($border-radius-default);
+  @include border-b-radius($border-radius);
 }
 
 .rounded-l {
-  @include border-l-radius($border-radius-default);
+  @include border-l-radius($border-radius);
 }
 
 .rounded-circle {

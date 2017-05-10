@@ -8,7 +8,7 @@ $enable-btn-o: true !default; // Outline Buttons
 $enabled-nav-sasha-darkest-t: false !default; // Transparent Nav
 $enabled-nav-sasha-white-t: false !default; // Transparent Nav
 $enable-sasha-custom: true !default; // Cherry-picked Shades of Sasha Grey
-$enable-rounded: true !default;
+$enable-rounded: true !default; // Turn rounded corners on or off
 
 // Body
 $body-bg: $sasha-white !default;
@@ -19,26 +19,30 @@ $body-color-muted: lighten($body-color, 30%) !default;
 $hr-color: $sasha-greyest;
 
 // Link
-$link-color: lighten($primary, 20%) !default;
-$link-color-hover: #f00 !default; // Debugger
+$link-color: #2778bd !default;
+$link-color-hover: $link-color !default;
 $link-decoration: none !default;
 $link-decoration-hover: underline !default;
 
+// Selection
+$selection-bg: lighten($primary, 30%) !default;
+$selection-color: $sasha-black !default;
+
 // Font
+$font-family: 'Open Sans', sans-serif !default;
 $font-family-alt: 'Roboto', sans-serif !default;
-$font-family-default: 'Open Sans', sans-serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 
-$font-size-default: 16px !default;
+$font-size: 16px !default;
 
 $font-weight-thin: 100 !default;
 $font-weight-light: 300 !default;
-$font-weight-default: 400 !default;
+$font-weight: 400 !default;
 $font-weight-medium: 600 !default;
 $font-weight-bold: 700 !default;
 $font-weight-black: 900 !default;
 
-$font-default: $font-weight-default $font-size-default $font-family-default !default;
+$font: $font-weight $font-size $font-family !default;
 
 $font-weights: (
   thin: 100,
@@ -49,48 +53,44 @@ $font-weights: (
   black: 900 // sass-lint:disable-line no-color-keywords
 ) !default;
 
-$line-height-default: 1.5 !default;
+$line-height: 1.5 !default;
 
 // Border Radius
-$border-radius-sm: 2px !default;
-$border-radius-default: 6px !default;
+$border-radius: 2px !default;
 $border-radius-lg: 15px !default;
+$border-radius-pill: 500px !default; // It works and we don't know why
 
-$border-radius-pill: 500px !default;
-
-// Margin and Padding
+// Margin and Padding Spacer
 $spacer-sm: 2px !default;
-$spacer-default: 15px !default;
-$spacer-lg: 30px !default;
+$spacer: 15px !default;
+$spacer-lg: 25px !default;
 
 // Alert
-$alert-margin-y: $spacer-default !default;
-$alert-padding: $spacer-default !default;
+$alert-margin-y: $spacer !default;
+$alert-padding: $spacer !default;
 $alert-link-font-weight: $font-weight-bold !default;
 
 // Badge
-$badge-border-radius: $border-radius-sm !default;
+$badge-border-radius: $border-radius !default;
 $badge-font-size: .8em !default;
-$badge-font-weight: $font-weight-default !default;
-$badge-margin-top: -0.3em !default;
+$badge-font-weight: $font-weight !default;
+$badge-margin-t: -0.3em !default;
 $badge-padding: 0 8px 1px !default;
-$badge-pin-size: 10px;
-
+$badge-pin-size: 10px !default;
 
 // Banner
 $banner-bg: $sasha-greyer !default;
-$banner-margin-bottom: $spacer-default !default;
-$banner-padding-x: $spacer-default !default;
+$banner-margin-b: $spacer !default;
+$banner-padding-x: $spacer !default;
 $banner-padding-y: $spacer-lg !default;
 
-
 //Blockquote
-$blockquote-background: $sasha-grey !default;
+$blockquote-bg: $sasha-grey !default;
 $blockquote-border-color: $sasha-greyest !default;
 $blockquote-border-width: 4px !default;
-$blockquote-font-size: 1rem !default;
+$blockquote-font-size: $font-size !default;
 $blockquote-footer-color: $body-color !default;
-$blockquote-padding: $spacer-default !default;
+$blockquote-padding: $spacer !default;
 
 // Breadcrumb
 $breadcrumb-color: $sasha-dark !default;
@@ -110,19 +110,19 @@ $grid-col-max: 12 !default;
 $container-max-width: 1024px !default;
 
 // Button
-$btn-block-margin-y: $spacer-default !default;
+$btn-block-margin-y: $spacer !default;
 
 $btn-border-width: 2px !default;
 
 $btn-font-size-sm: .8rem !default;
-$btn-font-size-default: $font-size-default !default;
+$btn-font-size: $font-size !default;
 $btn-font-size-lg: 1.1rem !default;
 
-$btn-font-weight: $font-weight-default !default;
+$btn-font-weight: $font-weight !default;
 
-$btn-height-sm: 1.5rem;
-$btn-height: 2.5rem;
-$btn-height-lg: 3.5rem;
+$btn-height-sm: 1.5rem !default;
+$btn-height: 2.5rem !default;
+$btn-height-lg: 3.5rem !default;
 
 
 //$btn-padding-y-sm: .25rem !default;
@@ -142,7 +142,7 @@ $kbd-color: $sasha-white !default;
 $kbd-border-radius: 4px !default;
 $kbd-nested-font-weight: $font-weight-bold !default;
 $pre-color: $body-color !default;
-$pre-margin-bottom: $spacer-default !default;
+$pre-margin-b: $spacer !default;
 
 // Close
 $close-color: $sasha-black !default;
@@ -156,46 +156,32 @@ $close-opacity-hover: .6 !default;
 $dropdown-caret-size: 4px !default;
 
 // Heading
-$h1-font-size: 3.5rem !default;
-$h2-font-size: 3rem !default;
-$h3-font-size: 2.5rem !default;
-$h4-font-size: 2rem !default;
-$h5-font-size: 1.5rem !default;
-$h6-font-size: 1rem !default;
-
 $h-font-sizes: (
-  h1: $h1-font-size,
-  h2: $h2-font-size,
-  h3: $h3-font-size,
-  h4: $h4-font-size,
-  h5: $h5-font-size,
-  h6: $h6-font-size,
+  h1: 3.5rem,
+  h2: 3rem,
+  h3: 2.5rem,
+  h4: 2rem,
+  h5: 1.5rem,
+  h6: 1rem,
 ) !default;
 
-$txt-lg-1-font-size: 6rem !default;
-$txt-lg-2-font-size: 5.5rem !default;
-$txt-lg-3-font-size: 4.5rem !default;
-$txt-lg-4-font-size: 4rem !default;
-
 $txt-lg-font-sizes: (
-  txt-lg-1: $txt-lg-1-font-size,
-  txt-lg-2: $txt-lg-2-font-size,
-  txt-lg-3: $txt-lg-3-font-size,
-  txt-lg-4: $txt-lg-4-font-size,
+  txt-lg-1: 6rem,
+  txt-lg-2: 5.5rem,
+  txt-lg-3: 4.5rem,
+  txt-lg-4: 4rem,
 ) !default;
 
 // Image
-$figure-img-border-bottom: $spacer-default / 2 !default;
+$figure-img-border-b: $spacer / 2 !default;
 $figure-caption-font-size: .9em !default;
-$figure-caption-color: $sasha-darker !default;
+$figure-caption-color: $body-color-muted !default;
 
-// Form, Input
-$form-check-input-padding-x: .5rem !default;
+// Form & Input
 $form-check-label-margin-y: .5rem !default;
-$form-check-input-margin-y: .5rem !default;
 
-$form-group-margin-b: $spacer-default !default;
-$form-text-margin-top: .25rem !default;
+$form-group-margin-b: $spacer !default;
+$form-text-margin-t: .25rem !default;
 
 $input-bg: $sasha-white !default;
 $input-bg-disabled: $sasha-greyer !default;
@@ -211,7 +197,7 @@ $input-color-focus: $input-color !default;
 $input-color-placeholder: $body-color-muted !default;
 
 $input-font-size-sm: $btn-font-size-sm !default;
-$input-font-size: $btn-font-size-default !default;
+$input-font-size: $btn-font-size !default;
 $input-font-size-lg: $btn-font-size-lg !default;
 
 $input-padding-x-sm: $btn-padding-x-sm !default;
@@ -224,11 +210,11 @@ $input-height-lg: calc(#{$btn-height-lg} + 6px) !default;
 
 // Navigation
 $nav-font-size: 1rem !default;
-$nav-font-weight: $font-weight-default !default;
+$nav-font-weight: $font-weight !default;
 $nav-img-height: 30px !default;
 $nav-line-height: 60px !default;
 $nav-logo-font-size: 1.5rem !default;
-$nav-logo-font-weight: $font-weight-default !default;
+$nav-logo-font-weight: $font-weight !default;
 $nav-logo-line-height: $nav-line-height !default;
 $nav-menu-max-height: 350px !default;
 
@@ -237,10 +223,10 @@ $nav-sasha-darkest-bg: $sasha-darkest !default;
 $nav-sasha-darkest-bg-hover: rgba(0, 0, 0, .5) !default;
 
 $nav-sasha-darkest-color: $sasha-dark !default;
-$nav-sasha-darkest-color-hover: $sasha-white;
+$nav-sasha-darkest-color-hover: $sasha-white !default;
 
-$nav-sasha-darkest-hr-color-top: darken($sasha-darkest, 10%) !default;
-$nav-sasha-darkest-hr-color-bottom: lighten($sasha-darkest, 10%) !default;
+$nav-sasha-darkest-hr-color-t: darken($sasha-darkest, 10%) !default;
+$nav-sasha-darkest-hr-color-b: lighten($sasha-darkest, 10%) !default;
 
 $nav-sasha-darkest-logo-color: $sasha-grey !default;
 
@@ -248,8 +234,8 @@ $nav-sasha-darkest-logo-color: $sasha-grey !default;
 $nav-sasha-white-bg: $sasha-white !default;
 $nav-sasha-white-bg-hover: rgba(0, 30, 40, .08) !default;
 
-$nav-sasha-white-hr-color-top: $sasha-greyer !default;
-$nav-sasha-white-hr-color-bottom: $sasha-grey !default;
+$nav-sasha-white-hr-color-t: $sasha-greyer !default;
+$nav-sasha-white-hr-color-b: $sasha-grey !default;
 
 $nav-sasha-white-color: lighten($body-color, 20%) !default;
 $nav-sasha-white-color-hover: darken($nav-sasha-white-color, 25%) !default;
@@ -268,7 +254,6 @@ $nav-dropdown-min-width: 200px !default;
 $hav-dropdown-pin-size: 8px !default;
 $nav-dropdown-ul-spacer: 5px !default;
 
-
 // Nav Icon
 $nav-icon-hover-transition-duration: 0.15s !default; // 0.15s
 $nav-icon-hover-transition-timing-function: ease-in-out !default;
@@ -283,9 +268,9 @@ $nav-icon-rod-width: 26px !default;
 $nav-icon-rod-spacing: 6px !default;
 
 //Pagination
-$pagination-bg: none !default; // $sasha-greyer
+$pagination-bg: $sasha-greyer !default; // $sasha-greyer none
 $pagination-bg-active: $primary !default;
-$pagination-bg-disabled: none !default; // $sasha-greyer
+$pagination-bg-disabled: $sasha-greyer !default; // $sasha-greyer none
 $pagination-bg-hover: $primary !default;
 
 $pagination-color: $body-color !default;
@@ -308,7 +293,7 @@ $progress-container-bg: $sasha-greyer !default;
 $progress-bar-bg: $primary !default;
 $progress-font-size: 0.9rem !default;
 $progress-height: 1.25rem !default;
-$progress-margin-y: $spacer-default !default;
+$progress-margin-y: $spacer !default;
 
 // Table and Data
 $dt-font-weight: $font-weight-bold !default;
@@ -318,16 +303,16 @@ $table-border-color: $sasha-greyest;
 $table-cell-padding: .75rem 1rem !default;
 $table-cell-padding-sm: .3rem .75rem !default;
 $table-hover-bg: $sasha-greyer !default;
-$table-margin-bottom: $spacer-default !default;
+$table-margin-b: $spacer !default;
 $table-scroll-bg: rgba($sasha-dark, .75) !default;
-$table-scroll-size: $spacer-default / 1.75 !default;
+$table-scroll-size: $spacer / 1.75 !default;
 $table-stripe-bg: $sasha-grey !default;
 
 // Text
-$lead-font-size: 1.25rem;
+$lead-font-size: 1.25rem !default;
 $mark-bg: #fcf6cf !default;
 $mark-padding: $spacer-sm !default;
-$small-font-size: .8rem;
+$small-font-size: .8rem !default;
 
 // Z-index
 $alert-z-index: 4;

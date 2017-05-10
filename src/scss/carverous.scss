@@ -1,18 +1,18 @@
 // NOTES:
 // American English is mostly used for the naming convention.
 // Customizing the default tags directly breaks lots of third-party widgets
-// and affects the browser's performance in general.
+// and might affect the browser's performance in general.
 // Most are designed to be opt-in, meaning the original elements are not
 // changed unless you explicitly invoke a class on the html.
 // Most property-value pairs are arranged alphabetically unless alteration is needed.
-// The margin-bottom for h's, p's, & etc. was chosen over margin-top. (opinionated)
+// The margin-bottom for <h*>'s, <p>'s, & etc. was chosen over margin-top. (opinionated)
 
 // Do stuff now! Refactor later.
 // Set your IDE to always add a trailing new line each time you save even if this is not C.
 // See: http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file
 
 // TODO: Use the offline fonts once done with most of the stuff
-// Fonts
+
 // sass-lint:disable no-url-protocols
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
@@ -46,10 +46,9 @@
 @import 'table';
 @import 'text';
 
-// These go below to override others' properties
+// Place below to override others' properties
 @import 'border';
 @import 'spacing';
+@import 'float';
 
-
-// TODO: Pending...
-//@import "selection";
+@import 'selection';

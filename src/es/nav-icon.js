@@ -1,4 +1,4 @@
-// Navigation Icons
+// Navigation Icon
 
 function navIcon() {
 

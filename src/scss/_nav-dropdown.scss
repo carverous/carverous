@@ -45,7 +45,7 @@
   .nav-dropdown ul li a {
     display: block;
     font-weight: $nav-font-weight;
-    padding: 0 $spacer-default 0 $spacer-default * 2; // Clever moves
+    padding: 0 $spacer 0 $spacer * 2; // Clever moves
     text-decoration: none;
   }
 
@@ -118,7 +118,7 @@
       min-width: $nav-dropdown-min-width;
       max-width: $nav-dropdown-max-width;
       overflow: hidden;
-      padding: 0 $spacer-default;
+      padding: 0 $spacer;
       text-decoration: none;
       text-overflow: ellipsis;
 

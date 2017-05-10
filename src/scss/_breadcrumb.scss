@@ -1,4 +1,4 @@
-// Breadcrumbs
+// Breadcrumb
 
 .breadcrumb {
   font-size: $breadcrumb-font-size;
@@ -15,7 +15,7 @@
   + .breadcrumb-item::before {
     color: $breadcrumb-color;
     display: inline-block;
-    font-weight: $font-weight-default;
+    font-weight: $font-weight;
     padding-right: 5px;
     padding-left: 5px;
     content: '#{$breadcrumb-divider}';

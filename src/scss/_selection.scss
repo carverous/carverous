@@ -1,6 +1,6 @@
 @mixin selection {
-  background: lighten($primary, 50%);
-  color: $sasha-black;
+  background: $selection-bg;
+  color: $selection-color;
 }
 
 ::selection {

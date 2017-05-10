@@ -1,5 +1,6 @@
-// Buttons
-// TODO: Darkening the btn-sasha-white-o when hovered over is not acceptable
+// Button
+
+// TODO: Get rid of the line-height and use padding instead! Mind the form-control
 
 @mixin btn-mix($bg, $border-color, $color) {
   background: $bg;
@@ -33,8 +34,7 @@
   font-size: $font-size;
   font-weight: $btn-font-weight;
   line-height: $line-height;
-  padding-left: $padding-x;
-  padding-right: $padding-x;
+  padding: 0 $padding-x;
 }
 
 .btn {
@@ -54,8 +54,8 @@
   vertical-align: middle;
   white-space: nowrap; // Prevent from wrapping or placing text on a new line
 
-  @include border-radius($border-radius-sm);
-  @include btn-size($btn-font-size-default, $btn-height, $btn-padding-x);
+  @include border-radius($border-radius);
+  @include btn-size($btn-font-size, $btn-height, $btn-padding-x);
 
   // theme-colors
   @each $key, $value in $theme-colors {

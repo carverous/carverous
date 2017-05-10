@@ -3,7 +3,7 @@
 .table-container {
   width: 100%;
   overflow-x: auto;
-  margin-bottom: $table-margin-bottom;
+  margin-bottom: $table-margin-b;
 
   &::-webkit-scrollbar { // sass-lint:disable-line no-vendor-prefixes
     width: $table-scroll-size;
@@ -45,7 +45,7 @@
   }
 
   .table {
-    background: $body-bg; // TODO: Figure out if this is really a must
+    background: $body-bg;
   }
 
   // Condensed Table

@@ -2,6 +2,8 @@
 // The entire navigation works in IE10+
 // The value 'unset' on any property does not work in IE11-
 
+// TODO: Test the button and form-control inside nav!
+
 .nav {
 
   // Mobile First
@@ -11,7 +13,7 @@
   font-size: $nav-font-size;
   font-weight: $nav-font-weight;
   line-height: $nav-line-height;
-  margin-bottom: $spacer-default;
+  margin-bottom: $spacer;
   width: 100%;
 
   .nav-hr {
@@ -36,12 +38,12 @@
 
     &-l {
       float: left;
-      margin-left: $spacer-default;
+      margin-left: $spacer;
     }
 
     &-r {
       float: right;
-      margin-right: $spacer-default;
+      margin-right: $spacer;
     }
   }
 
@@ -50,13 +52,13 @@
     font-size: $nav-logo-font-size;
     font-weight: $nav-logo-font-weight;
     line-height: $nav-logo-line-height;
-    margin-left: $spacer-default;
-    margin-right: $spacer-default;
+    margin-left: $spacer;
+    margin-right: $spacer;
     text-decoration: none;
 
     img {
       height: $nav-img-height;
-      margin-right: $spacer-default / 2;
+      margin-right: $spacer / 2;
     }
   }
 
@@ -78,7 +80,7 @@
 
     & > ul > li > a {
       display: block;
-      padding: 0 $spacer-default;
+      padding: 0 $spacer;
       text-decoration: none;
     }
   }
@@ -103,7 +105,7 @@
     .nav-menu {
       clear: none; // Reset
       display: block;
-      padding-right: $spacer-default;
+      padding-right: $spacer;
       max-height: none; // Reset
       overflow: visible; // Reset
 
@@ -138,7 +140,7 @@
 }
 
 .container .nav {
-  @include border-radius($border-radius-sm);
+  @include border-radius($border-radius);
 }
 
 @import 'navs/sasha-darkest';

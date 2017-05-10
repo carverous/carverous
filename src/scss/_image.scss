@@ -1,6 +1,6 @@
 // Images
 
-// Stop scaling beyond the width of their parent elemnent
+// Stop scaling beyond the width of their parent element
 @mixin img-fluid {
   height: auto;
   max-width: 100%;
@@ -11,18 +11,13 @@
   @include img-fluid;
 }
 
-// TODO: Create image thumbnails based on ceferinojoseii.com's thumbnails
-//.img-thumbnail {
-//
-//}
-
 // Figures
 .figure {
   display: inline-block; // Align the caption with the image
 }
 
 .figure-img {
-  margin-bottom: $figure-img-border-bottom;
+  margin-bottom: $figure-img-border-b;
 }
 
 // The default alignment for the caption is center (opinionated)

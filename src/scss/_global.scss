@@ -44,8 +44,8 @@ html {
 body {
   background: $body-bg; // 2
   color: $body-color;
-  font: $font-default;
-  line-height: $line-height-default;
+  font: $font;
+  line-height: $line-height;
   margin: 0; // 1
 }
 
@@ -68,7 +68,7 @@ hr {
   box-sizing: content-box; // 1
   height: 0; // 1
   overflow: visible; // 2
-  margin: $spacer-default 0;
+  margin: $spacer 0;
   //background: linear-gradient(to left, $sasha-grey, $hr-color, $sasha-grey); // Pointed hr
 }
 

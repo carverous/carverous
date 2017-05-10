@@ -10,14 +10,14 @@
 .container {
   margin: 0 auto;
   max-width: $container-max-width;
-  padding: $spacer-default;
+  padding: $spacer;
 
   // Dirty trick to remove .container's padding when using col-
   // Only remove them if inside .container
   .row,
   [class='row-flex'] {
-    margin-left: -1 * $spacer-default;
-    margin-right: -1 * $spacer-default;
+    margin-left: -1 * $spacer;
+    margin-right: -1 * $spacer;
   }
 }
 
@@ -28,8 +28,8 @@
 // LOL! I tried to only use 'col' and it affected other elements
 // This selector is risky
 [class*='col-'] {
-  padding-left: $spacer-default;
-  padding-right: $spacer-default;
+  padding-left: $spacer;
+  padding-right: $spacer;
 }
 
 @import 'grids/grid-flexbox';

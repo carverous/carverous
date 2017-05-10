@@ -1,5 +1,6 @@
 // Pagination
 // Experimental
+// Inactive at the moment
 
 function pagination(max = 4) {
 

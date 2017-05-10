@@ -1,4 +1,6 @@
+// Code, Keyboard, & Pre
 // Inline and block code styles
+
 code,
 kbd,
 pre,
@@ -11,7 +13,7 @@ code {
   color: $code-color;
   background: $code-bg;
   padding: $code-padding-y $code-padding-x;
-  @include border-radius($border-radius-sm);
+  @include border-radius($border-radius);
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
@@ -40,7 +42,7 @@ pre {
   color: $pre-color;
   display: block;
   margin-top: 0;
-  margin-bottom: $pre-margin-bottom;
+  margin-bottom: $pre-margin-b;
 
   // Account for some code outputs that place code tags in pre tags
   code {

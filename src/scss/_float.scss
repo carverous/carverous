@@ -1,0 +1,16 @@
+// Float
+// They are set to !important to give them a super power.
+
+.float {
+  &-l {
+    float: left !important;
+  }
+
+  &-r {
+    float: right !important;
+  }
+
+  &-none {
+    float: none !important;
+  }
+}

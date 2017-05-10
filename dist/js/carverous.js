@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.3 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.4 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -72,7 +72,7 @@ function button() {
   }
 }
 
-// Navigation Icons
+// Navigation Icon
 
 function navIcon() {
 
@@ -150,6 +150,7 @@ function nav() {
 
 // Pagination
 // Experimental
+// Inactive at the moment
 
 function pagination() {
   var max = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 4;

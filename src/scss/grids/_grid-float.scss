@@ -1,6 +1,8 @@
 // Float Grid
 // Create a grid based on the traditional float method
 
+// TODO: Fix the margin and padding implementation of this!
+
 .row {
   @include clearfix;
 }

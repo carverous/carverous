@@ -20,14 +20,17 @@
   <button type="button" id="showAlertSample" class="btn btn-sasha-greyest">Show A Sample Alert</button>
   <br><br>
 
-  <div id="alertSample" class="alert alert-success" role="alert">
+  <div id="alertSample" class="alert alert-info" role="alert">
     <h4>Nice!</h4>
     <p>
       This is an experimental feature. Only one of the buttons inside can close the alert.
       If you can contribute on making this more robust, that would be awesome!
     </p>
-    <a href="https://github.com/cefjoeii/carverous" target="_blank" class="btn btn-sasha-darkest">Contribute</a>
-    <button type="button" class="btn btn-sasha-greyest" data-close="alert">Close</button>
+    <div class="float-r">
+      <button type="button" class="btn btn-primary" data-close="alert">Close</button>
+      <a href="https://github.com/cefjoeii/carverous" target="_blank" class="btn btn-success">Contribute</a>
+    </div>
+    <div class="clearfix"></div>
   </div>
 
   <h2>Examples</h2>
@@ -45,7 +48,7 @@
     <strong>Danger!</strong> The beginning is <a href="#" class="alert-link">near</a>!
     Everybody knows there's a party at the
     <a href="#" class="alert-link">end</a> of the world.
-    <button type="button" class="btn btn-sasha-darkest" data-close="alert" style="float: right;">Ok</button>
+    <button type="button" class="btn btn-sasha-darkest float-r" data-close="alert">Ok</button>
     <div class="clearfix"></div>
   </div>
 

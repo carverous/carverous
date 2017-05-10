@@ -1,5 +1,4 @@
-// Headings
-
+// Heading
 
 // Remove top margins from headings
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
@@ -10,9 +9,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $font-weight-default;
+  font-weight: $font-weight;
   margin-top: 0;
-  margin-bottom: $spacer-default / 2;
+  margin-bottom: $spacer / 2;
 }
 
 // Mobile First
