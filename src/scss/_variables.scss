@@ -120,16 +120,11 @@ $btn-font-size-lg: 1.1rem !default;
 
 $btn-font-weight: $font-weight !default;
 
-$btn-height-sm: 1.5rem !default;
-$btn-height: 2.5rem !default;
-$btn-height-lg: 3.5rem !default;
-
-
-//$btn-padding-y-sm: .25rem !default;
+$btn-padding-y-sm: .25rem !default;
 $btn-padding-x-sm: .5rem !default;
-//$btn-padding-y: .5rem !default;
+$btn-padding-y: .5rem !default;
 $btn-padding-x: 1rem !default;
-//$btn-padding-y-lg: 1rem !default;
+$btn-padding-y-lg: 1rem !default;
 $btn-padding-x-lg: 1.25rem !default;
 
 // Code, Keyboard, & Pre
@@ -204,9 +199,9 @@ $input-padding-x-sm: $btn-padding-x-sm !default;
 $input-padding-x: .7rem !default;
 $input-padding-x-lg: $btn-padding-x-lg !default;
 
-$input-height-sm: calc(#{$btn-height-sm} + 6px) !default;
-$input-height: calc(#{$btn-height} + 6px) !default;
-$input-height-lg: calc(#{$btn-height-lg} + 6px) !default;
+$input-height-sm: calc(1.6rem + 6px) !default;
+$input-height: calc(2.5rem + 4px) !default;
+$input-height-lg: calc(3.5rem + 6px) !default;
 
 // Navigation
 $nav-font-size: 1rem !default;

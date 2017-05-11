@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.4 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.4.5 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -55,7 +55,7 @@ function alertShow(el) {
 
 // Button
 
-function button() {
+(function () {
   var buttons = document.querySelectorAll('.btn');
 
   for (var i = 0, n = buttons.length; i < n; i++) {
@@ -70,7 +70,7 @@ function button() {
   function unfocus() {
     this.blur();
   }
-}
+})();
 
 // Navigation Icon
 

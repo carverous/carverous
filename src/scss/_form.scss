@@ -3,7 +3,8 @@
 // Started from scratch because Bootstrap's is a bit messy
 // Bootstrap is licensed under MIT (https://github.com/twbs/bootstrap)
 
-// TODO: Make the button and form-control cooperate on the height thing!
+// TODO: Chrome Mobile Bug (Minor): Input date and such are moved a little to the top!
+// TODO: Fix the 1px input height bug in Firefox!
 
 // sass-lint:disable no-vendor-prefixes
 
@@ -23,6 +24,7 @@
 @mixin form-control-size($height, $font-size, $padding-x) {
   &:not(textarea) {
     height: $height;
+    line-height: $height; // experimental
   }
 
   font-size: $font-size;
@@ -50,6 +52,10 @@
   vertical-align: middle;
   width: 100%;
 
+  &-inline {
+    display: inline-block;
+    width: auto;
+  }
 
   // File Input Type
   // ====================================================================== //
@@ -78,6 +84,9 @@
   &[type='time'],
   &[type='month'],
   &[type='week'] {
+
+    //line-height: $input-height;
+
     &::-webkit-inner-spin-button,
     &::-webkit-clear-button {
       -webkit-appearance: none;
@@ -199,4 +208,3 @@ textarea.form-control {
     @include col-form-label-size($input-height-lg, $input-font-size-lg);
   }
 }
-

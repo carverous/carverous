@@ -1,0 +1,35 @@
+// Input Group
+
+// TODO: Fix the rounded corners!
+
+.input-group {
+  display: flex;
+  width: 100%;
+
+  // Reset the border-radius
+  // ====================================================================== //
+
+  .form-control:first-child,
+  .input-group-btn:first-child > .btn {
+    @include border-r-radius(0);
+  }
+
+  .form-control:last-child,
+  .input-group-btn:last-child > .btn {
+    @include border-l-radius(0);
+  }
+
+  // Negative margin to only have a single, shared border between the two
+  // ====================================================================== //
+
+  .input-group-btn:not(:last-child) {
+    > .btn {
+      margin-right: -$btn-border-width;
+    }
+  }
+
+  .form-control:not(:last-child) {
+    margin-right: -$input-border-width;
+  }
+
+}

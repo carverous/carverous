@@ -1,6 +1,6 @@
 // Button
 
-function button() {
+(function() {
   let buttons = document.querySelectorAll('.btn');
 
   for (let i = 0, n = buttons.length; i < n; i++) {
@@ -15,4 +15,4 @@ function button() {
   function unfocus() {
     this.blur();
   }
-}
+})();

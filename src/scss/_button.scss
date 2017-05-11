@@ -30,11 +30,10 @@
   }
 }
 
-@mixin btn-size($font-size, $line-height, $padding-x) {
+@mixin btn-size($font-size, $padding-y, $padding-x) {
   font-size: $font-size;
   font-weight: $btn-font-weight;
-  line-height: $line-height;
-  padding: 0 $padding-x;
+  padding: $padding-y $padding-x;
 }
 
 .btn {
@@ -55,7 +54,7 @@
   white-space: nowrap; // Prevent from wrapping or placing text on a new line
 
   @include border-radius($border-radius);
-  @include btn-size($btn-font-size, $btn-height, $btn-padding-x);
+  @include btn-size($btn-font-size, $btn-padding-y, $btn-padding-x);
 
   // theme-colors
   @each $key, $value in $theme-colors {
@@ -66,7 +65,7 @@
       @include btn-mix($value, $value, $color);
       @include btn-hover(lighten($value, 5%), lighten($value, 5%), $color);
       @include btn-active(darken($value, 10%), darken($value, 10%));
-      @include btn-focus(lighten($value, 10%));
+      @include btn-focus(lighten($value, 15%));
     }
 
     @if ($enable-btn-o) {
@@ -74,7 +73,7 @@
         @include btn-mix(none, $value, $value);
         @include btn-hover($value, $value, $color);
         @include btn-active(darken($value, 10%), darken($value, 10%));
-        @include btn-focus(lighten($value, 10%));
+        @include btn-focus(lighten($value, 15%));
       }
     }
   }
@@ -104,11 +103,11 @@
   }
 
   &-sm {
-    @include btn-size($btn-font-size-sm, $btn-height-sm, $btn-padding-x-sm);
+    @include btn-size($btn-font-size-sm, $btn-padding-y-sm, $btn-padding-x-sm);
   }
 
   &-lg {
-    @include btn-size($btn-font-size-lg, $btn-height-lg, $btn-padding-x-lg);
+    @include btn-size($btn-font-size-lg, $btn-padding-y-lg, $btn-padding-x-lg);
   }
 
   &-block {

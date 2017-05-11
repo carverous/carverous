@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.4 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.4.5 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -914,8 +914,7 @@ template {
   border-radius: 2px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 2.5rem;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .btn-danger {
@@ -937,7 +936,7 @@ template {
 }
 
 .btn-danger:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #ef7682;
+  box-shadow: 0 0 0 2px #f28d97;
 }
 
 .btn-danger-o {
@@ -959,7 +958,7 @@ template {
 }
 
 .btn-danger-o:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #ef7682;
+  box-shadow: 0 0 0 2px #f28d97;
 }
 
 .btn-info {
@@ -981,7 +980,7 @@ template {
 }
 
 .btn-info:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #c0e1fc;
+  box-shadow: 0 0 0 2px #d9edfd;
 }
 
 .btn-info-o {
@@ -1003,7 +1002,7 @@ template {
 }
 
 .btn-info-o:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #c0e1fc;
+  box-shadow: 0 0 0 2px #d9edfd;
 }
 
 .btn-primary {
@@ -1025,7 +1024,7 @@ template {
 }
 
 .btn-primary:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #3e70a7;
+  box-shadow: 0 0 0 2px #457cba;
 }
 
 .btn-primary-o {
@@ -1047,7 +1046,7 @@ template {
 }
 
 .btn-primary-o:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #3e70a7;
+  box-shadow: 0 0 0 2px #457cba;
 }
 
 .btn-secondary {
@@ -1069,7 +1068,7 @@ template {
 }
 
 .btn-secondary:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #85adad;
+  box-shadow: 0 0 0 2px #94b8b8;
 }
 
 .btn-secondary-o {
@@ -1091,7 +1090,7 @@ template {
 }
 
 .btn-secondary-o:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #85adad;
+  box-shadow: 0 0 0 2px #94b8b8;
 }
 
 .btn-success {
@@ -1113,7 +1112,7 @@ template {
 }
 
 .btn-success:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #a4d7a6;
+  box-shadow: 0 0 0 2px #b6dfb8;
 }
 
 .btn-success-o {
@@ -1135,7 +1134,7 @@ template {
 }
 
 .btn-success-o:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #a4d7a6;
+  box-shadow: 0 0 0 2px #b6dfb8;
 }
 
 .btn-warning {
@@ -1157,7 +1156,7 @@ template {
 }
 
 .btn-warning:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #ffcc80;
+  box-shadow: 0 0 0 2px #ffd69a;
 }
 
 .btn-warning-o {
@@ -1179,7 +1178,7 @@ template {
 }
 
 .btn-warning-o:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #ffcc80;
+  box-shadow: 0 0 0 2px #ffd69a;
 }
 
 .btn-sasha-white {
@@ -1317,15 +1316,13 @@ template {
 .btn-sm {
   font-size: 0.8rem;
   font-weight: 400;
-  line-height: 1.5rem;
-  padding: 0 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .btn-lg {
   font-size: 1.1rem;
   font-weight: 400;
-  line-height: 3.5rem;
-  padding: 0 1.25rem;
+  padding: 1rem 1.25rem;
 }
 
 .btn-block {
@@ -1445,7 +1442,13 @@ button.close {
 }
 
 .form-control:not(textarea) {
-  height: calc(2.5rem + 6px);
+  height: calc(2.5rem + 4px);
+  line-height: calc(2.5rem + 4px);
+}
+
+.form-control-inline {
+  display: inline-block;
+  width: auto;
 }
 
 .form-control-file {
@@ -1500,7 +1503,8 @@ button.close {
 }
 
 .form-control-sm:not(textarea) {
-  height: calc(1.5rem + 6px);
+  height: calc(1.6rem + 6px);
+  line-height: calc(1.6rem + 6px);
 }
 
 .form-control-lg {
@@ -1510,6 +1514,7 @@ button.close {
 
 .form-control-lg:not(textarea) {
   height: calc(3.5rem + 6px);
+  line-height: calc(3.5rem + 6px);
 }
 
 .form-group {
@@ -1546,7 +1551,7 @@ textarea.form-control {
 
 .col-form-label {
   font-size: 16px;
-  height: calc(2.5rem + 6px);
+  height: calc(2.5rem + 4px);
   -ms-flex-align: center;
       align-items: center;
   display: -ms-flexbox;
@@ -1558,7 +1563,7 @@ textarea.form-control {
 
 .col-form-label-sm {
   font-size: 0.8rem;
-  height: calc(1.5rem + 6px);
+  height: calc(1.6rem + 6px);
 }
 
 .col-form-label-lg {
@@ -1672,6 +1677,32 @@ h6 {
 
 .font-weight-black {
   font-weight: 900;
+}
+
+.input-group {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.input-group .form-control:first-child,
+.input-group .input-group-btn:first-child > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.input-group .form-control:last-child,
+.input-group .input-group-btn:last-child > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.input-group .input-group-btn:not(:last-child) > .btn {
+  margin-right: -2px;
+}
+
+.input-group .form-control:not(:last-child) {
+  margin-right: -1px;
 }
 
 .img-fluid {
