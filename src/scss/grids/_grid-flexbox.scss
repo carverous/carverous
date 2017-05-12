@@ -1,10 +1,7 @@
 // Flexbox Grid
 // Create a grid based on flexbox technology (No support for dinosaurs).
 
-// TODO: Fix the margin and padding implementation of this!
-
 [class*='row-flex'] {
-  // background: $primary; // debug
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,7 +13,7 @@
   // See: http://stackoverflow.com/questions/20122661/flexbox-columns-and-ie
   // flex: 1 0 auto;
 
-  // The trick instead is use media query and set the display back to block;
+  // The trick instead is use media-query and set the display back to block;
   flex: 1;
 }
 

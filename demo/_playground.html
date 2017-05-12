@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Carverous Playground</title>
+  <link rel="stylesheet" href="../dist/css/carverous.css">
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+
+  <script src="js/live.js"></script>
+</head>
+<body>
+
+<nav class="nav nav-sasha-white nav-fixed">
+
+  <div class="container">
+
+    <div class="nav-toggler nav-toggler-r">
+      <a href="#" class="nav-icon nav-icon-slide">
+        <span class="sr-only">Toggle navigation</span>
+        <div class="nav-icon-box">
+          <div class="nav-icon-rod"></div>
+        </div>
+      </a>
+    </div>
+
+    <a href="#" class="nav-logo"><img
+      src="https://static.mailchimp.com/web/brand-assets/mc_freddie_color_web.png"
+      alt="">EXAMPLE</a>
+
+    <div class="nav-menu">
+      <ul class="nav-menu-r">
+        <li><a class="active" href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-user-circle"></i> About</a></li>
+        <li><a href="#"><i class="fa fa-rocket"></i> Projects</a></li>
+        <li><a href="#"><i class="fa fa-heart"></i> Blog</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="banner banner-fluid txt-sasha-white txt-center" style="background: url('images/banner1.jpg'); background-position: center; background-size: cover; margin-top: 60px;">
+  <div class="container">
+    <h1 class="txt-lg-3">Welcome to the playground.</h1>
+    <p class="lead">
+      This is a page to play around and experiment on the code.
+    </p>
+    <p>
+      <a class="btn btn-success btn-lg" href="#" role="button">Just A Button</a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+
+  <h1>Using the grid in <code>.container-fluid</code></h1>
+  <p class="lead">
+    You can use <code>.no-padding</code> in each column since they have a left & right padding.
+    <br>
+    Minor glitches might appear if the images don't have the same exact sizes.
+  </p>
+  <!---------------------------------------------------------------------->
+  <!--<br>-->
+  <!--<hr>-->
+
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4 col-md-6 no-padding">
+      <img class="img-fluid" src="images/image1.jpg" alt="">
+    </div>
+    <div class="col-lg-4 col-md-6 no-padding">
+      <img class="img-fluid" src="images/image2.jpg" alt="">
+    </div>
+    <div class="col-lg-4 col-md-6 no-padding">
+      <img class="img-fluid" src="images/image3.jpg" alt="">
+    </div>
+    <div class="col-lg-4 col-md-6 no-padding">
+      <img class="img-fluid" src="images/image9.jpg" alt="">
+    </div>
+    <div class="col-lg-4 col-md-6 no-padding">
+      <img class="img-fluid" src="images/image5.jpg" alt="">
+    </div>
+    <div class="col-lg-4 col-md-6 no-padding">
+      <img class="img-fluid" src="images/image6.jpg" alt="">
+    </div>
+
+  </div> <!-- end of .row -->
+</div>
+
+
+<script src="../dist/js/carverous.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    nav();
+  });
+</script>
+</body>
+</html>

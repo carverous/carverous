@@ -59,6 +59,8 @@
     img {
       height: $nav-img-height;
       margin-right: $spacer / 2;
+      position: relative; // Enable image reposition
+      top: -.2rem; // Move the image a little bit to the top
     }
   }
 

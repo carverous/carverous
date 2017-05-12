@@ -14,11 +14,11 @@
 
   // Dirty trick to remove .container's padding when using col-
   // Only remove them if inside .container
-  .row,
-  [class='row-flex'] {
-    margin-left: -1 * $spacer;
-    margin-right: -1 * $spacer;
-  }
+  //.row,
+  //[class='row-flex'] {
+  //  margin-left: -$spacer;
+  //  margin-right: -$spacer;
+  //}
 }
 
 .container-fluid {
