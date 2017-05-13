@@ -1,7 +1,5 @@
 // Button
 
-// TODO: Get rid of the line-height and use padding instead! Mind the form-control
-
 @mixin btn-mix($bg, $border-color, $color) {
   background: $bg;
   border: $btn-border-width solid $border-color;

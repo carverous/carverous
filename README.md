@@ -34,6 +34,7 @@ gulp
 [Reboot](https://github.com/twbs/bootstrap) (Bootstrap).<br>
 * Borrowed some [Form](https://github.com/twbs/bootstrap) class names (Bootstrap).<br>
 * Re-implemented [Hamburgers](https://github.com/jonsuh/hamburgers) to avoid code repetition & modified the values to blend with the nav.
+* You can freely use [FontAwesome](http://fontawesome.io/) or any other font icons out there.
 
 * Books
   * [You Don't Know JS series](https://www.goodreads.com/series/139311-you-don-t-know-js)

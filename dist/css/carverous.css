@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.4.8 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.5 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -1803,6 +1803,22 @@ h6 {
   line-height: 1.3rem;
 }
 
+.nav .nav-form {
+  padding: 7.5px 15px;
+  width: 100%;
+}
+
+.nav .btn,
+.nav .form-control {
+  line-height: calc(16px + 0.5rem);
+  position: relative;
+  top: -.125rem;
+}
+
+.nav .form-control {
+  width: 100%;
+}
+
 .nav .container {
   padding: 0;
 }
@@ -1830,6 +1846,13 @@ h6 {
   }
   .nav .nav-menu > ul > li > a:hover:not(.active) {
     background: none;
+  }
+  .nav .nav-form {
+    padding: 0 0 0 15px;
+    width: auto;
+  }
+  .nav .form-control {
+    width: auto;
   }
 }
 

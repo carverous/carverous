@@ -2,8 +2,6 @@
 // The entire navigation works in IE10+
 // The value 'unset' on any property does not work in IE11-
 
-// TODO: Test the button and form-control inside nav!
-
 .nav {
 
   // Mobile First
@@ -87,8 +85,27 @@
     }
   }
 
+  // Preserve badge's line-height inside nav
   .badge {
     line-height: 1.3rem;
+  }
+
+  // Style form inside nav
+  .nav-form {
+    padding: $spacer / 2 $spacer;
+    width: 100%;
+  }
+
+  // Preserve button & form-control's line-height inside nav
+  .btn,
+  .form-control {
+    line-height: calc(#{$btn-font-size} + #{$btn-padding-y}); // It works and I don't know why
+    position: relative; // Enable image reposition
+    top: -.125rem; // Move the image a little bit to the top
+  }
+
+  .form-control {
+    width: 100%;
   }
 
   .container {
@@ -129,6 +146,15 @@
       &:hover:not(.active) {
         background: none;
       }
+    }
+
+    .nav-form {
+      padding: 0 0 0 $spacer;
+      width: auto;
+    }
+
+    .form-control {
+      width: auto;
     }
   }
 
