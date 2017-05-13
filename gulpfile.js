@@ -106,6 +106,9 @@ gulp.task('js:minify', function () {
     .pipe(gulp.dest('dist/js/'));
 });
 
+// Minify both CSS & JS sequentially
+gulp.task('minify', sequence(['css:minify', 'js:minify']));
+
 // Take control of the build tasks while we create awesome things!
 gulp.task('watch', function (w) {
 

@@ -299,8 +299,8 @@ $table-cell-padding: .75rem 1rem !default;
 $table-cell-padding-sm: .3rem .75rem !default;
 $table-hover-bg: $sasha-greyer !default;
 $table-margin-b: $spacer !default;
-$table-scroll-bg: rgba($sasha-dark, .75) !default;
-$table-scroll-size: $spacer / 1.75 !default;
+$table-scroll-bg: rgba($sasha-dark, .25) !default;
+$table-scroll-size: $spacer / 2 !default;
 $table-stripe-bg: $sasha-grey !default;
 
 // Text

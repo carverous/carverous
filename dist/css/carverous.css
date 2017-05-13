@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.5 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.5.1 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -2499,13 +2499,13 @@ h6 {
 }
 
 .table-container::-webkit-scrollbar {
-  width: 8.57143px;
-  height: 8.57143px;
+  width: 7.5px;
+  height: 7.5px;
 }
 
 .table-container::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: rgba(187, 187, 190, 0.75);
+  background-color: rgba(187, 187, 190, 0.25);
 }
 
 .table {
