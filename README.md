@@ -1,4 +1,4 @@
-![Carverous Logo](demo/images/carverous-banner.svg)
+![Carverous Logo](demo/images/carverous-banner.png)
 
 ## Overview
 A responsive front-end framework I started off from scratch for my web portfolio.
