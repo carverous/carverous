@@ -24,6 +24,8 @@ LICENSE text eol=lf
 *.jpeg binary
 *.gif binary
 *.bmp binary
+*.ai binary
+*.psd binary
 
 *.otf binary
 *.eot binary

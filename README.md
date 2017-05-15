@@ -1,7 +1,4 @@
-# Carverous
-
-[![npm](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/cefjoeii/carverous/blob/master/LICENSE) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)
-
+![Carverous Logo](demo/images/carverous-banner.svg)
 
 ## Overview
 A responsive front-end framework I started off from scratch for my web portfolio.
@@ -10,6 +7,8 @@ It is developed having a mobile first approach in mind,
 meaning the code is designed to prioritise mobile devices first
 and then adjust the components as the screen scales up.
 It doesn't require any third-party JS library such as jQuery.
+
+[![npm](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/cefjoeii/carverous/blob/master/LICENSE) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)
 
 ## Browser Support
 
@@ -27,13 +26,23 @@ Run the default task from the gulpfile.js . Simply run in the terminal:
 ```
 gulp
 ```
+Make sure your commit messages are in present tense.
+<br>
+Example:
+<br>
+`git commit -m "Update buttons"`
+<br>
+Instead of:
+<br>
+`git commit -m "Updated buttons"`
+
 
 ## Credits
 * Manually forked and merged
 [Normalize.css](https://github.com/necolas/normalize.css) &
 [Reboot](https://github.com/twbs/bootstrap) (Bootstrap).<br>
-* Borrowed some [Form](https://github.com/twbs/bootstrap) class names (Bootstrap).<br>
-* Re-implemented [Hamburgers](https://github.com/jonsuh/hamburgers) to avoid code repetition & modified the values to blend with the nav.
+* Borrowed some handy class names from Bootstrap.<br>
+* Re-implemented [Hamburgers](https://github.com/jonsuh/hamburgers) to avoid code repetition & modified the values to blend with our nav.
 * You can freely use [FontAwesome](http://fontawesome.io/) or any other font icons out there.
 
 * Books
