@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.5.1 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.5.2 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -7,7 +7,7 @@
 'use strict';
 
 // Alert
-// Use getAttribute() instead of dataset for IE10+
+// Use getAttribute() instead of dataset for it to work in IE10+
 // Use 'this' instead of the array name
 
 function alertHide() {
@@ -105,7 +105,7 @@ function nav() {
   var lg = 767; // Size of the screen - lg
 
   document.addEventListener('click', function (event) {
-    // console.log(event.target); // debugging
+    // console.log(event.target); // debug
 
     for (var i = 0, n = navTogglers.length; i < n; i++) {
 

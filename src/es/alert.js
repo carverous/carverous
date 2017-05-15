@@ -1,5 +1,5 @@
 // Alert
-// Use getAttribute() instead of dataset for IE10+
+// Use getAttribute() instead of dataset for it to work in IE10+
 // Use 'this' instead of the array name
 
 function alertHide(duration = 0) {

@@ -12,7 +12,7 @@ function nav() {
   let lg = 767; // Size of the screen - lg
 
   document.addEventListener('click', function(event) {
-    // console.log(event.target); // debugging
+    // console.log(event.target); // debug
 
     for (let i = 0, n = navTogglers.length; i < n; i++) {
 

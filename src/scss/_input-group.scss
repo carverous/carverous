@@ -1,6 +1,10 @@
 // Input Group
+// Note that there must be at least two components inside .input-group
 
-// TODO: Fix the rounded corners!
+//.form-control,
+//.btn {
+//  @include border-radius($border-radius-pill); // debug
+//}
 
 .input-group {
   display: flex;
@@ -9,11 +13,25 @@
   // Reset the border-radius
   // ====================================================================== //
 
+  // If not the first child under .input-group, remove the left border-radius
+  .form-control:not(:first-child),
+  .input-group-btn:not(:first-child) > .btn {
+    @include border-l-radius(0);
+  }
+
+  // If not the last child under .input-group, remove the right border-radius
+  .form-control:not(:last-child),
+  .input-group-btn:not(:last-child) > .btn {
+    @include border-r-radius(0);
+  }
+
+  // If first child child under .input-group, remove the right border-radius
   .form-control:first-child,
   .input-group-btn:first-child > .btn {
     @include border-r-radius(0);
   }
 
+  // If first child child under .input-group, remove the left border-radius
   .form-control:last-child,
   .input-group-btn:last-child > .btn {
     @include border-l-radius(0);

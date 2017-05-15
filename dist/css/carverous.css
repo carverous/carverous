@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.5.1 (https://github.com/cefjoeii/carverous)
+ * Carverous 0.5.2 (https://github.com/cefjoeii/carverous)
  * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
  */
@@ -1679,6 +1679,18 @@ h6 {
   width: 100%;
 }
 
+.input-group .form-control:not(:first-child),
+.input-group .input-group-btn:not(:first-child) > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.input-group .form-control:not(:last-child),
+.input-group .input-group-btn:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .input-group .form-control:first-child,
 .input-group .input-group-btn:first-child > .btn {
   border-bottom-right-radius: 0;
@@ -2796,11 +2808,11 @@ small {
 }
 
 ::-moz-selection {
-  background: #7ca3cf;
+  background: #a2bedc;
   color: #000;
 }
 
 ::selection {
-  background: #7ca3cf;
+  background: #a2bedc;
   color: #000;
 }
