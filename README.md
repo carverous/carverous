@@ -16,7 +16,7 @@ It doesn't require any third-party JS library such as jQuery.
 | --------- | --------- | --------- | --------- |
 | IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions
 
-##Usage
+## Usage
 Inside the *dist* folder, you will find the compiled and minified files.
 You will see a directory structure like this:
 ```
