@@ -2,9 +2,9 @@
   "name": "carverous",
   "version": "0.5.2",
   "description": "A Responsive Front-End Framework Made With Love",
-  "author": "Ceferino Jose II",
+  "author": "Ceferino C. Jose II",
   "license": "MIT",
-  "licensepage": "https://github.com/cefjoeii/carverous/blob/master/LICENSE",
+  "licensepage": "https://github.com/carverous/carverous-framework/blob/master/LICENSE",
   "main": "gulpfile.js",
   "keywords": [
     "css",
@@ -20,12 +20,12 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cefjoeii/carverous.git"
+    "url": "https://github.com/carverous/carverous-framework.git"
   },
   "bugs": {
-    "url": "https://github.com/cefjoeii/carverous/issues"
+    "url": "https://github.com/carverous/carverous-framework/issues"
   },
-  "homepage": "https://github.com/cefjoeii/carverous",
+  "homepage": "https://github.com/carverous/carverous-framework",
   "devDependencies": {
     "autoprefixer": "^6.7.4",
     "babel-preset-es2015": "^6.24.1",

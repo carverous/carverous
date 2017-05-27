@@ -1,8 +1,8 @@
 /*!
  * Carverous's Gulpfile
- * https://github.com/cefjoeii/carverous
- * Copyright (c) 2017 Ceferino Jose II
- * Licensed under MIT (https://github.com/cefjoeii/carverous/blob/master/LICENSE)
+ * https://github.com/carverous/carverous-framework
+ * Copyright (c) 2017 Ceferino C. Jose II
+ * Licensed under MIT (https://github.com/carverous/carverous-framework/blob/master/LICENSE)
  */
 
 // Gulp is a toolkit for automating painful or time-consuming tasks in your
