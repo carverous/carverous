@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.5.2 (https://github.com/carverous/carverous-framework)
+ * Carverous 0.5.3 (https://github.com/carverous/carverous-framework)
  * Copyright (c) 2017 Ceferino C. Jose II
  * Licensed under MIT (https://github.com/carverous/carverous-framework/blob/master/LICENSE)
  */
@@ -740,40 +740,6 @@ template {
   padding: 0;
   width: 10px;
   border-radius: 50%;
-}
-
-.banner {
-  background: #f1f3f4;
-  margin-bottom: 15px;
-  padding: 25px 15px;
-  border-radius: 15px;
-}
-
-.banner-hr {
-  border: 0;
-  border-top: 1px solid #d4dbde;
-  border-bottom: 1px solid #fff;
-}
-
-.banner-fluid {
-  padding: 0;
-  border-radius: 0;
-}
-
-.banner-fluid .container {
-  padding: 25px 15px;
-}
-
-@media only screen and (min-width: 768px) {
-  .banner {
-    padding: 50px 30px;
-  }
-  .banner-fluid {
-    padding: 0;
-  }
-  .banner-fluid .container {
-    padding: 50px 15px;
-  }
 }
 
 .bg-danger {
@@ -1671,6 +1637,40 @@ h6 {
 
 .font-weight-black {
   font-weight: 900;
+}
+
+.hero {
+  background: #f1f3f4;
+  margin-bottom: 15px;
+  padding: 25px 15px;
+  border-radius: 15px;
+}
+
+.hero-hr {
+  border: 0;
+  border-top: 1px solid #d4dbde;
+  border-bottom: 1px solid #fff;
+}
+
+.hero-fluid {
+  padding: 0;
+  border-radius: 0;
+}
+
+.hero-fluid .container {
+  padding: 25px 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 50px 30px;
+  }
+  .hero-fluid {
+    padding: 0;
+  }
+  .hero-fluid .container {
+    padding: 50px 15px;
+  }
 }
 
 .input-group {

@@ -78,12 +78,6 @@ $badge-margin-t: -0.3em !default;
 $badge-padding: 0 8px 1px !default;
 $badge-pin-size: 10px !default;
 
-// Banner
-$banner-bg: $sasha-greyer !default;
-$banner-margin-b: $spacer !default;
-$banner-padding-x: $spacer !default;
-$banner-padding-y: $spacer-lg !default;
-
 //Blockquote
 $blockquote-bg: $sasha-grey !default;
 $blockquote-border-color: $sasha-greyest !default;
@@ -166,6 +160,12 @@ $txt-lg-font-sizes: (
   txt-lg-3: 4.5rem,
   txt-lg-4: 4rem,
 ) !default;
+
+// Hero
+$hero-bg: $sasha-greyer !default;
+$hero-margin-b: $spacer !default;
+$hero-padding-x: $spacer !default;
+$hero-padding-y: $spacer-lg !default;
 
 // Image
 $figure-img-border-b: $spacer / 2 !default;

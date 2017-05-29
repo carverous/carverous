@@ -56,9 +56,9 @@ Feel free to help out.
 American English is used all across the entire project for consistency.
 Make sure your commit messages are in present tense.
 <br>
-This: `git commit -m "Update button colors."`
+This: `git commit -m "Fix bugs and update button colors."`
 <br>
-Not this: `git commit -m "Updated button colours."`
+Not this: `git commit -m "Fixed bugs and updated button colours."`
 <br>
 
 

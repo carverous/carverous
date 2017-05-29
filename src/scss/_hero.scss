@@ -1,18 +1,18 @@
-// Banner
+// Hero
 
-.banner {
+.hero {
 
   // Mobile First
   // ====================================================================== //
 
-  background: $banner-bg;
-  margin-bottom: $banner-margin-b;
-  padding: $banner-padding-y $banner-padding-x;
+  background: $hero-bg;
+  margin-bottom: $hero-margin-b;
+  padding: $hero-padding-y $hero-padding-x;
   @include border-radius($border-radius-lg);
 
   &-hr {
     border: 0;
-    border-top: 1px solid darken($banner-bg, 10%);
+    border-top: 1px solid darken($hero-bg, 10%);
     border-bottom: 1px solid $sasha-white;
   }
 
@@ -21,7 +21,7 @@
     @include border-radius(0);
 
     .container {
-      padding: $banner-padding-y $banner-padding-x;
+      padding: $hero-padding-y $hero-padding-x;
     }
   }
 
@@ -29,13 +29,13 @@
   // ====================================================================== //
 
   @include media-breakpoint($lg) {
-    padding: ($banner-padding-y * 2) ($banner-padding-x * 2);
+    padding: ($hero-padding-y * 2) ($hero-padding-x * 2);
 
     &-fluid {
       padding: 0;
 
       .container {
-        padding: ($banner-padding-y * 2) $banner-padding-x;
+        padding: ($hero-padding-y * 2) $hero-padding-x;
       }
     }
   }

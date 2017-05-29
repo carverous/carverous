@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.5.2 (https://github.com/carverous/carverous-framework)
+ * Carverous 0.5.3 (https://github.com/carverous/carverous-framework)
  * Copyright (c) 2017 Ceferino C. Jose II
  * Licensed under MIT (https://github.com/carverous/carverous-framework/blob/master/LICENSE)
  */
