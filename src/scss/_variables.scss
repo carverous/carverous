@@ -232,8 +232,8 @@ $nav-sasha-white-bg-hover: rgba(0, 30, 40, .08) !default;
 $nav-sasha-white-hr-color-t: $sasha-greyer !default;
 $nav-sasha-white-hr-color-b: $sasha-grey !default;
 
-$nav-sasha-white-color: lighten($body-color, 20%) !default;
-$nav-sasha-white-color-hover: darken($nav-sasha-white-color, 25%) !default;
+$nav-sasha-white-color: $body-color !default;
+$nav-sasha-white-color-hover: lighten($primary, 10%) !default;
 
 $nav-sasha-white-logo-color: $sasha-darker !default;
 
