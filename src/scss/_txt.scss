@@ -1,0 +1,52 @@
+// Text
+// Use .txt-*
+
+.txt {
+
+  // Change color based on $theme-colors
+  @each $name, $value in $theme-colors {
+    &-#{$name} {
+      color: $value;
+    }
+  }
+
+  // Change color based on $theme-sasha
+  @each $name, $value in $theme-sasha {
+    &-#{$name} {
+      color: $value;
+    }
+  }
+
+  // Change color to a faded one
+  &-muted {
+    color: $body-color-muted;
+  }
+
+  // Change font-weight based on $font-weights
+  @each $name, $value in $font-weights {
+    &-#{$name} {
+      font-weight: $value;
+    }
+  }
+
+  // Change text alignment
+  &-l { text-align: left; }
+  &-c { text-align: center; }
+  &-r { text-align: right; }
+
+  // Change font-size to a slightly larger one
+  &-lead {
+    font-size: $lead-font-size;
+  }
+
+}
+
+mark,
+.mark {
+  background: $mark-bg;
+  padding: $mark-padding;
+}
+
+small {
+  font-size: $small-font-size;
+}

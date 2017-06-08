@@ -1,6 +1,6 @@
 // Alert
-// Use getAttribute() instead of dataset for it to work in IE10+
-// Use 'this' instead of the array name
+// Allow the users of this framework need to invoke these functions explicitly.
+// Use getAttribute('data-close') instead of dataset.close for it to work in IE10+.
 
 function alertHide(duration = 0) {
 

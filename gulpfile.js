@@ -12,8 +12,8 @@
 const gulp = require('gulp');
 const sequence = require('gulp-sequence'); // To run the tasks sequentially instead of asynchronously
 const insert = require('gulp-insert');
-const rename = require("gulp-rename");
-const flatten = require("gulp-flatten"); // To place all the output files in the same single directory
+const rename = require('gulp-rename');
+const flatten = require('gulp-flatten'); // To place all the output files in the same single directory
 const sasslint = require('gulp-sass-lint'); // To ensure our Sass/SCSS code is clean and consistent
 const sass = require('gulp-sass');
 const postCSS = require('gulp-postcss');
@@ -41,7 +41,7 @@ function handleError(err) {
 }
 
 // Transpile Sass/SCSS to CSS
-gulp.task('scss', function () {
+gulp.task('scss', function() {
   return gulp.src('src/scss/**/*.s+(a|c)ss')
     .pipe(sasslint({
       options: {
@@ -57,7 +57,7 @@ gulp.task('scss', function () {
 });
 
 // Add Vendor Prefixes
-gulp.task('css:autoprefix', function () {
+gulp.task('css:autoprefix', function() {
   return gulp.src([
     'dist/css/**/*.css',
     '!dist/css/**/*.min.css', // Except .min.css files
@@ -70,7 +70,7 @@ gulp.task('css:autoprefix', function () {
 });
 
 // Minify the prepended and autoprefix-ed versions of css
-gulp.task('css:minify', function () {
+gulp.task('css:minify', function() {
   return gulp.src([
     'dist/css/**/*.css',
     '!dist/css/**/*.min.css' // Don't minify the minified files!
@@ -82,7 +82,7 @@ gulp.task('css:minify', function () {
 });
 
 // Bundle js files into a single file
-gulp.task('es:bundle', function () {
+gulp.task('es:bundle', function() {
   return gulp.src([
     'src/es/**/*.js',
     '!node_modules/**'
@@ -97,7 +97,7 @@ gulp.task('es:bundle', function () {
 });
 
 // Minify the prepended bundled js file
-gulp.task('js:minify', function () {
+gulp.task('js:minify', function() {
   return gulp.src('dist/js/' + pkg.name + '.js')
     .pipe(uglifyJS({q:1}))
     .on('error', handleError)
@@ -110,25 +110,25 @@ gulp.task('js:minify', function () {
 gulp.task('minify', sequence(['css:minify', 'js:minify']));
 
 // Take control of the build tasks while we create awesome things!
-gulp.task('watch', function (w) {
+gulp.task('watch', function(w) {
 
   gulp.watch(
     ['src/scss/**/*.s+(a|c)ss'],
     {cwd: './'},
-    function (event) {
-      sequence('scss', 'css:autoprefix')(function (err) {
+    function(event) {
+      sequence('scss', 'css:autoprefix')(function(err) {
         if (err) console.log(err)
-      })
+      });
     }
   );
 
   gulp.watch(
     ['src/es/**/*.js',],
     {cwd: './'},
-    function (event) {
-      sequence('es:bundle')(function (err) {
-        if (err) console.log(err)
-      })
+    function(event) {
+      sequence('es:bundle')(function(err) {
+        if (err) console.log(err);
+      });
     }
   );
 

@@ -1,10 +1,9 @@
 /*!
- * Carverous 0.5.3 (https://github.com/carverous/carverous-framework)
+ * Carverous 0.5.5 (https://github.com/carverous/carverous-framework)
  * Copyright (c) 2017 Ceferino C. Jose II
  * Licensed under MIT (https://github.com/carverous/carverous-framework/blob/master/LICENSE)
  */
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 html {
   box-sizing: border-box;
@@ -1615,30 +1614,6 @@ h6 {
   }
 }
 
-.font-weight-thin {
-  font-weight: 100;
-}
-
-.font-weight-light {
-  font-weight: 300;
-}
-
-.font-weight-normal {
-  font-weight: 400;
-}
-
-.font-weight-medium {
-  font-weight: 600;
-}
-
-.font-weight-bold {
-  font-weight: 700;
-}
-
-.font-weight-black {
-  font-weight: 900;
-}
-
 .hero {
   background: #f1f3f4;
   margin-bottom: 15px;
@@ -1957,7 +1932,7 @@ h6 {
 }
 
 .nav-sasha-white .nav-logo {
-  color: #757578;
+  color: #545454;
 }
 
 .nav-sasha-white .nav-menu > ul > li > a {
@@ -2637,11 +2612,31 @@ h6 {
   color: #a1a1a1;
 }
 
+.txt-light {
+  font-weight: 300;
+}
+
+.txt-normal {
+  font-weight: 400;
+}
+
+.txt-medium {
+  font-weight: 600;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.txt-black {
+  font-weight: 900;
+}
+
 .txt-l {
   text-align: left;
 }
 
-.txt-center {
+.txt-c {
   text-align: center;
 }
 
@@ -2649,7 +2644,7 @@ h6 {
   text-align: right;
 }
 
-.lead {
+.txt-lead {
   font-size: 1.25rem;
 }
 
