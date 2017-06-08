@@ -1,5 +1,5 @@
 // Navigation
-// The entire navigation works in IE10+
+// The entire navigation works in IE10+.
 
 function nav() {
 

@@ -1,4 +1,5 @@
 // Navigation Icon
+// Animate the hamburger-looking icons.
 
 function navIcon() {
 

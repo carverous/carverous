@@ -1,5 +1,5 @@
 /*!
- * Carverous 0.5.3 (https://github.com/carverous/carverous-framework)
+ * Carverous 0.5.5 (https://github.com/carverous/carverous-framework)
  * Copyright (c) 2017 Ceferino C. Jose II
  * Licensed under MIT (https://github.com/carverous/carverous-framework/blob/master/LICENSE)
  */
@@ -7,8 +7,8 @@
 'use strict';
 
 // Alert
-// Use getAttribute() instead of dataset for it to work in IE10+
-// Use 'this' instead of the array name
+// Allow the users of this framework need to invoke these functions explicitly.
+// Use getAttribute('data-close') instead of dataset.close for it to work in IE10+.
 
 function alertHide() {
   var duration = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
@@ -54,25 +54,28 @@ function alertShow(el) {
 }
 
 // Button
+// Remove the ugly outlines around the buttons automatically.
 
-(function () {
-  var buttons = document.querySelectorAll('.btn');
+function button() {
+  var btns = document.querySelectorAll('.btn');
 
-  for (var i = 0, n = buttons.length; i < n; i++) {
+  for (var i = 0, n = btns.length; i < n; i++) {
 
     /* See: https://www.w3schools.com/jquery/tryit.asp
-     ?filename=tryjquery_event_mouseenter_mouseover */
-    buttons[i].addEventListener('mouseenter', unfocus);
-    buttons[i].addEventListener('mouseup', unfocus);
-    buttons[i].addEventListener('touchend', unfocus);
+    ?filename=tryjquery_event_mouseenter_mouseover */
+
+    btns[i].addEventListener('mouseenter', unfocus);
+    btns[i].addEventListener('mouseup', unfocus);
+    btns[i].addEventListener('touchend', unfocus);
   }
 
   function unfocus() {
     this.blur();
   }
-})();
+}
 
 // Navigation Icon
+// Animate the hamburger-looking icons.
 
 function navIcon() {
 
@@ -92,7 +95,7 @@ function navIcon() {
 }
 
 // Navigation
-// The entire navigation works in IE10+
+// The entire navigation works in IE10+.
 
 function nav() {
 
@@ -149,8 +152,8 @@ function nav() {
 }
 
 // Pagination
-// Experimental
-// Inactive at the moment
+// Make the pagination items dynamically listed.
+// Experimental. Inactive at the moment.
 
 function pagination() {
   var max = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 4;
@@ -190,3 +193,13 @@ function pagination() {
     el.parentNode.insertBefore(ellipsisLI, el.nextElementSibling);
   }
 }
+
+// DOM
+// Avoid the users of this framework from having to do these manually.
+// Wait for the DOM to load, then call these functions.
+// IIFE works but is risky for DOM manipulation.
+
+document.addEventListener('DOMContentLoaded', function () {
+  button();
+  nav();
+});

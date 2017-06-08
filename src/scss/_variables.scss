@@ -30,12 +30,10 @@ $selection-color: $sasha-black !default;
 
 // Font
 $font-family: 'Open Sans', sans-serif !default;
-$font-family-alt: 'Roboto', sans-serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 
 $font-size: 16px !default;
 
-$font-weight-thin: 100 !default;
 $font-weight-light: 300 !default;
 $font-weight: 400 !default;
 $font-weight-medium: 600 !default;
@@ -45,7 +43,6 @@ $font-weight-black: 900 !default;
 $font: $font-weight $font-size $font-family !default;
 
 $font-weights: (
-  thin: 100,
   light: 300,
   normal: 400,
   medium: 600,
@@ -232,10 +229,10 @@ $nav-sasha-white-bg-hover: rgba(0, 30, 40, .08) !default;
 $nav-sasha-white-hr-color-t: $sasha-greyer !default;
 $nav-sasha-white-hr-color-b: $sasha-grey !default;
 
-$nav-sasha-white-color: lighten($body-color, 20%) !default;
-$nav-sasha-white-color-hover: darken($nav-sasha-white-color, 25%) !default;
+$nav-sasha-white-color: $body-color !default;
+$nav-sasha-white-color-hover: lighten($primary, 10%) !default;
 
-$nav-sasha-white-logo-color: $sasha-darker !default;
+$nav-sasha-white-logo-color: $nav-sasha-white-color !default;
 
 // Navigation Dropdown
 $nav-dropdown-bg: $sasha-white !default;
@@ -310,8 +307,8 @@ $mark-padding: $spacer-sm !default;
 $small-font-size: .8rem !default;
 
 // Z-index
-$alert-z-index: 4;
-$nav-dropdown-ul-z-index: 2 !default;
-$nav-dropdown-pin-z-index: 1 !default;
-$nav-fixed-z-index: 3 !default;
-$pagination-z-index: 2 !default;
+$z-index-alert: 4;
+$z-index-nav-dropdown-ul: 2 !default;
+$z-index-nav-dropdown-pin: 1 !default;
+$z-index-nav-fixed: 3 !default;
+$z-index-pagination: 2 !default;

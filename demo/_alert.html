@@ -28,7 +28,7 @@
     </p>
     <div class="float-r">
       <button type="button" class="btn btn-primary" data-close="alert">Close</button>
-      <a href="https://github.com/cefjoeii/carverous" target="_blank" class="btn btn-success">Contribute</a>
+      <a href="https://github.com/carverous/carverous-framework" target="_blank" class="btn btn-sasha-darkest">Contribute</a>
     </div>
     <div class="clearfix"></div>
   </div>
@@ -37,7 +37,7 @@
 
   <div class="alert alert-primary" role="alert">
     <strong>Primary.</strong> You are seeing the primary color.
-    A close button is not placed on purpose.
+    A close button can be omitted.
   </div>
 
   <div class="alert alert-secondary" role="alert">
@@ -155,10 +155,9 @@
   var alertSample = document.querySelector('#alertSample');
   alertSample.style.display = 'none';
 
-  window.addEventListener('load', function() {
+  document.addEventListener('DOMContentLoaded', function() {
 
     alertHide(.25);
-    // button();
 
     document.querySelector('#showAlertSample').addEventListener('click', function() {
       alertShow(alertSample, .25);

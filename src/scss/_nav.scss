@@ -164,7 +164,7 @@
 .nav-fixed {
   position: fixed;
   top: 0;
-  z-index: $nav-fixed-z-index;
+  z-index: $z-index-nav-fixed;
 }
 
 .container .nav {

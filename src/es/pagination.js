@@ -1,6 +1,6 @@
 // Pagination
-// Experimental
-// Inactive at the moment
+// Make the pagination items dynamically listed.
+// Experimental. Inactive at the moment.
 
 function pagination(max = 4) {
 

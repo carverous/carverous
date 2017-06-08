@@ -89,7 +89,7 @@
       top: $nav-line-height - 5;
       right: 0;
       visibility: hidden; // IE screws it up with display property // IE10+
-      z-index: $nav-dropdown-ul-z-index;
+      z-index: $z-index-nav-dropdown-ul;
 
       // The triangle dropdown pin
       &::before,
@@ -106,7 +106,7 @@
         transform: rotate(135deg);
         width: 0;
 
-        z-index: $nav-dropdown-pin-z-index;
+        z-index: $z-index-nav-dropdown-pin;
       }
     }
 

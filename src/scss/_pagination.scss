@@ -41,7 +41,7 @@
     &.active .page-link {
       background: $pagination-bg-active;
       color: $pagination-color-active;
-      z-index: $pagination-z-index;
+      z-index: $z-index-pagination;
     }
 
     &.disabled .page-link {
