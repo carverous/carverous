@@ -1,7 +1,7 @@
 /*!
- * Carverous 0.5.5 (https://github.com/carverous/carverous-framework)
+ * Carverous 0.5.6 (https://github.com/carverous/carverous)
  * Copyright (c) 2017 Ceferino C. Jose II
- * Licensed under MIT (https://github.com/carverous/carverous-framework/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/carverous/carverous/blob/master/LICENSE)
  */
 
 'use strict';
@@ -195,9 +195,9 @@ function pagination() {
 }
 
 // DOM
-// Avoid the users of this framework from having to do these manually.
 // Wait for the DOM to load, then call these functions.
-// IIFE works but is risky for DOM manipulation.
+// IIFE works but might be risky for DOM manipulation.
+// Avoid the users of this framework from having to do these manually.
 
 document.addEventListener('DOMContentLoaded', function () {
   button();

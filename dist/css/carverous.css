@@ -1,7 +1,7 @@
 /*!
- * Carverous 0.5.5 (https://github.com/carverous/carverous-framework)
+ * Carverous 0.5.6 (https://github.com/carverous/carverous)
  * Copyright (c) 2017 Ceferino C. Jose II
- * Licensed under MIT (https://github.com/carverous/carverous-framework/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/carverous/carverous/blob/master/LICENSE)
  */
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
@@ -1318,8 +1318,8 @@ samp {
 }
 
 code {
-  color: #3363bd;
-  background: #cbd8f1;
+  color: #3779bd;
+  background: #cfe0f1;
   padding: 2px 2px;
   border-radius: 2px;
 }
@@ -1565,22 +1565,6 @@ h6 {
   font-size: 0.8rem;
 }
 
-.txt-lg-1 {
-  font-size: 4rem;
-}
-
-.txt-lg-2 {
-  font-size: 3.66667rem;
-}
-
-.txt-lg-3 {
-  font-size: 3rem;
-}
-
-.txt-lg-4 {
-  font-size: 2.66667rem;
-}
-
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 3.5rem;
@@ -1599,18 +1583,6 @@ h6 {
   }
   h6 {
     font-size: 1rem;
-  }
-  .txt-lg-1 {
-    font-size: 6rem;
-  }
-  .txt-lg-2 {
-    font-size: 5.5rem;
-  }
-  .txt-lg-3 {
-    font-size: 4.5rem;
-  }
-  .txt-lg-4 {
-    font-size: 4rem;
   }
 }
 
@@ -1701,7 +1673,7 @@ h6 {
 }
 
 .figure-caption {
-  color: #a1a1a1;
+  color: #545454;
   font-size: 0.9em;
   text-align: center;
 }
@@ -2552,99 +2524,115 @@ h6 {
   background: #f1f3f4;
 }
 
-.txt-danger {
+.txt-color-danger {
   color: #cf4647;
 }
 
-.txt-info {
+.txt-color-info {
   color: #80c1f9;
 }
 
-.txt-primary {
+.txt-color-primary {
   color: #325d88;
 }
 
-.txt-secondary {
+.txt-color-secondary {
   color: #699;
 }
 
-.txt-success {
+.txt-color-success {
   color: #81c784;
 }
 
-.txt-warning {
+.txt-color-warning {
   color: #ffb74d;
 }
 
-.txt-sasha-white {
+.txt-color-sasha-white {
   color: #fff;
 }
 
-.txt-sasha-grey {
+.txt-color-sasha-grey {
   color: #f7f9fa;
 }
 
-.txt-sasha-greyer {
+.txt-color-sasha-greyer {
   color: #f1f3f4;
 }
 
-.txt-sasha-greyest {
+.txt-color-sasha-greyest {
   color: #ebedee;
 }
 
-.txt-sasha-dark {
+.txt-color-sasha-dark {
   color: #bbbbbe;
 }
 
-.txt-sasha-darker {
+.txt-color-sasha-darker {
   color: #757578;
 }
 
-.txt-sasha-darkest {
+.txt-color-sasha-darkest {
   color: #21252a;
 }
 
-.txt-sasha-black {
+.txt-color-sasha-black {
   color: #000;
 }
 
-.txt-muted {
+.txt-color-muted {
   color: #a1a1a1;
 }
 
-.txt-light {
+.txt-weight-light {
   font-weight: 300;
 }
 
-.txt-normal {
+.txt-weight-normal {
   font-weight: 400;
 }
 
-.txt-medium {
+.txt-weight-medium {
   font-weight: 600;
 }
 
-.txt-bold {
+.txt-weight-bold {
   font-weight: 700;
 }
 
-.txt-black {
+.txt-weight-black {
   font-weight: 900;
 }
 
-.txt-l {
+.txt-align-l {
   text-align: left;
 }
 
-.txt-c {
+.txt-align-c {
   text-align: center;
 }
 
-.txt-r {
+.txt-align-r {
   text-align: right;
 }
 
-.txt-lead {
+.txt-size-lg-1 {
+  font-size: 4rem;
+}
+
+.txt-size-lg-2 {
+  font-size: 3.66667rem;
+}
+
+.txt-size-lg-3 {
+  font-size: 3rem;
+}
+
+.txt-size-lg-4 {
+  font-size: 2.66667rem;
+}
+
+.txt-size-lead {
   font-size: 1.25rem;
 }
 
@@ -2656,6 +2644,21 @@ mark,
 
 small {
   font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .txt-size-lg-1 {
+    font-size: 6rem;
+  }
+  .txt-size-lg-2 {
+    font-size: 5.5rem;
+  }
+  .txt-size-lg-3 {
+    font-size: 4.5rem;
+  }
+  .txt-size-lg-4 {
+    font-size: 4rem;
+  }
 }
 
 .no-border {

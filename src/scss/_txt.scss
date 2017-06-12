@@ -4,39 +4,46 @@
 .txt {
 
   // Change color based on $theme-colors
-  @each $name, $value in $theme-colors {
-    &-#{$name} {
+  @each $key, $value in $theme-colors {
+    &-color-#{$key} {
       color: $value;
     }
   }
 
   // Change color based on $theme-sasha
-  @each $name, $value in $theme-sasha {
-    &-#{$name} {
+  @each $key, $value in $theme-sasha {
+    &-color-#{$key} {
       color: $value;
     }
   }
 
   // Change color to a faded one
-  &-muted {
-    color: $body-color-muted;
+  &-color-muted {
+    color: $txt-color-muted;
   }
 
   // Change font-weight based on $font-weights
-  @each $name, $value in $font-weights {
-    &-#{$name} {
+  @each $key, $value in $font-weights {
+    &-weight-#{$key} {
       font-weight: $value;
     }
   }
 
   // Change text alignment
-  &-l { text-align: left; }
-  &-c { text-align: center; }
-  &-r { text-align: right; }
+  &-align-l { text-align: left; }
+  &-align-c { text-align: center; }
+  &-align-r { text-align: right; }
+
+  // Change font-size based on $txt-size-lg-font-sizes
+  @each $key, $value in $txt-size-lg-font-sizes {
+    &-size-#{$key} {
+      font-size: $value / 1.5;
+    }
+  }
 
   // Change font-size to a slightly larger one
-  &-lead {
-    font-size: $lead-font-size;
+  &-size-lead {
+    font-size: $txt-lead-font-size;
   }
 
 }
@@ -49,4 +56,12 @@ mark,
 
 small {
   font-size: $small-font-size;
+}
+
+@include media-breakpoint($lg) {
+  @each $key, $value in $txt-size-lg-font-sizes {
+    .txt-size-#{$key} {
+      font-size: $value;
+    }
+  }
 }

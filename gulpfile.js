@@ -24,7 +24,7 @@ const concatJS = require('gulp-concat'); // To bundle all js files into a single
 const babelJS = require('gulp-babel'); // To transpile ES6 to ES5
 const uglifyJS = require('gulp-uglify'); // To minify JS files
 
-let fs = require('fs'); // To re-read the file and parse it each time the task is executed
+let fs = require('fs'); // To call a function that reads a file
 let pkg = JSON.parse(fs.readFileSync('./package.json')); // My alternative to Grunt's readJSON.
 
 // Prepend author's banner on top of the main css and js files

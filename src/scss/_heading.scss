@@ -22,23 +22,11 @@ h6 {
   }
 }
 
-@each $key, $value in $txt-lg-font-sizes {
-  .#{$key} {
-    font-size: $value / 1.5;
-  }
-}
-
 // Large Screens Last
 // ====================================================================== //
 @include media-breakpoint($lg) {
   @each $key, $value in $h-font-sizes {
     #{$key} {
-      font-size: $value;
-    }
-  }
-
-  @each $key, $value in $txt-lg-font-sizes {
-    .#{$key} {
       font-size: $value;
     }
   }

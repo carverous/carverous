@@ -43,7 +43,7 @@ html {
 
 body {
   background: $body-bg; // 2
-  color: $body-color;
+  color: $txt-color;
   font: $font;
   line-height: $line-height;
   margin: 0; // 1
@@ -247,7 +247,7 @@ table {
 caption {
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;
-  color: $body-color-muted;
+  color: $txt-color-muted;
   text-align: left;
   caption-side: bottom;
 }
