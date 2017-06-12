@@ -589,21 +589,21 @@ template {
 }
 
 .alert-success {
-  background: #a4d7a6;
-  color: #469c49;
+  background: #a2d099;
+  color: #4e8e42;
 }
 
 .alert-success .alert-link {
-  color: #469c49;
+  color: #4e8e42;
 }
 
 .alert-warning {
-  background: #ffcc80;
-  color: #e68900;
+  background: #fbc78b;
+  color: #e57e08;
 }
 
 .alert-warning .alert-link {
-  color: #e68900;
+  color: #e57e08;
 }
 
 .alert .close {
@@ -680,23 +680,23 @@ template {
 }
 
 .badge-success {
-  background: #81c784;
+  background: #82c076;
   color: #fff;
 }
 
 .badge-success[href]:hover {
-  background: #5eb762;
+  background: #62b053;
   text-decoration: none;
   color: #fff;
 }
 
 .badge-warning {
-  background: #ffb74d;
+  background: #f9af5a;
   color: #fff;
 }
 
 .badge-warning[href]:hover {
-  background: #ffa21a;
+  background: #f79729;
   text-decoration: none;
   color: #fff;
 }
@@ -758,11 +758,11 @@ template {
 }
 
 .bg-success {
-  background: #81c784 !important;
+  background: #82c076 !important;
 }
 
 .bg-warning {
-  background: #ffb74d !important;
+  background: #f9af5a !important;
 }
 
 .bg-sasha-white {
@@ -1053,91 +1053,91 @@ template {
 }
 
 .btn-success {
-  background: #81c784;
-  border: 2px solid #81c784;
+  background: #82c076;
+  border: 2px solid #82c076;
   color: #fff;
 }
 
 .btn-success:not(.disabled):not([disabled]):hover {
-  background: #93cf95;
-  border-color: #93cf95;
+  background: #92c887;
+  border-color: #92c887;
   color: #fff;
   text-decoration: none;
 }
 
 .btn-success:not(.disabled):not([disabled]):active {
-  background: #5eb762;
-  border-color: #5eb762;
+  background: #62b053;
+  border-color: #62b053;
 }
 
 .btn-success:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #b6dfb8;
+  box-shadow: 0 0 0 2px #b2d8aa;
 }
 
 .btn-success-o {
   background: none;
-  border: 2px solid #81c784;
-  color: #81c784;
+  border: 2px solid #82c076;
+  color: #82c076;
 }
 
 .btn-success-o:not(.disabled):not([disabled]):hover {
-  background: #81c784;
-  border-color: #81c784;
+  background: #82c076;
+  border-color: #82c076;
   color: #fff;
   text-decoration: none;
 }
 
 .btn-success-o:not(.disabled):not([disabled]):active {
-  background: #5eb762;
-  border-color: #5eb762;
+  background: #62b053;
+  border-color: #62b053;
 }
 
 .btn-success-o:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #b6dfb8;
+  box-shadow: 0 0 0 2px #b2d8aa;
 }
 
 .btn-warning {
-  background: #ffb74d;
-  border: 2px solid #ffb74d;
+  background: #f9af5a;
+  border: 2px solid #f9af5a;
   color: #fff;
 }
 
 .btn-warning:not(.disabled):not([disabled]):hover {
-  background: #ffc167;
-  border-color: #ffc167;
+  background: #fabb73;
+  border-color: #fabb73;
   color: #fff;
   text-decoration: none;
 }
 
 .btn-warning:not(.disabled):not([disabled]):active {
-  background: #ffa21a;
-  border-color: #ffa21a;
+  background: #f79729;
+  border-color: #f79729;
 }
 
 .btn-warning:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #ffd69a;
+  box-shadow: 0 0 0 2px #fcd3a4;
 }
 
 .btn-warning-o {
   background: none;
-  border: 2px solid #ffb74d;
-  color: #ffb74d;
+  border: 2px solid #f9af5a;
+  color: #f9af5a;
 }
 
 .btn-warning-o:not(.disabled):not([disabled]):hover {
-  background: #ffb74d;
-  border-color: #ffb74d;
+  background: #f9af5a;
+  border-color: #f9af5a;
   color: #fff;
   text-decoration: none;
 }
 
 .btn-warning-o:not(.disabled):not([disabled]):active {
-  background: #ffa21a;
-  border-color: #ffa21a;
+  background: #f79729;
+  border-color: #f79729;
 }
 
 .btn-warning-o:not(.disabled):not([disabled]):focus {
-  box-shadow: 0 0 0 2px #ffd69a;
+  box-shadow: 0 0 0 2px #fcd3a4;
 }
 
 .btn-sasha-white {
@@ -2438,13 +2438,13 @@ h6 {
 }
 
 .progress-container .progress-bar-success {
-  background: #93cf95;
-  color: #469c49;
+  background: #92c887;
+  color: #4e8e42;
 }
 
 .progress-container .progress-bar-warning {
-  background: #ffc167;
-  color: #e68900;
+  background: #fabb73;
+  color: #e57e08;
 }
 
 .progress-container + .progress-container {
@@ -2541,11 +2541,11 @@ h6 {
 }
 
 .txt-color-success {
-  color: #81c784;
+  color: #82c076;
 }
 
 .txt-color-warning {
-  color: #ffb74d;
+  color: #f9af5a;
 }
 
 .txt-color-sasha-white {

@@ -1,11 +1,11 @@
-![Carverous Logo](demo/images/carverous-banner.png)
+![Carverous - Responsive CSS Framework With Plain JS](demo/images/carverous-banner.png)
 
 ## Overview
 A responsive front-end framework that was started off from scratch
-for simple web layout projects. It is developed having a mobile first
+for simple web layout projects. It doesn't require any third-party JS library such as jQuery. It is developed having a mobile first
 approach in mind, meaning the code is designed to prioritize mobile
 devices first and then adjust the components as the screen scales up.
-It doesn't require any third-party JS library such as jQuery.
+
 
 [![npm](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/cefjoeii/carverous/blob/master/LICENSE) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)
 
@@ -42,7 +42,8 @@ Above the closing body tag, put `<script src="js/carverous.min.js"></script>`
 All the Sass/SCSS & ES6 code are located inside the *src* folder.
 Make sure that Git, Node.js, and npm are installed. In the terminal:
 ```
-git clone https://github.com/carverous/carverous-framework.git
+git clone https://github.com/carverous/carverous.git
+cd carverous
 npm install
 npm install gulp-cli -g
 ```
