@@ -3,7 +3,7 @@
 // IIFE works but might be risky for DOM manipulation.
 // Avoid the users of this framework from having to do these manually.
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   button();
   nav();
 });

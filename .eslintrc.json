@@ -28,8 +28,11 @@
       "always"
     ],
     "space-before-function-paren": [
-      "warn",
-      "never"
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
     ],
     "brace-style": [
       "error",

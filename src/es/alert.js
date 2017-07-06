@@ -8,7 +8,7 @@ function alertHide(duration = 0) {
 
   for (let i = 0, n = alerts.length; i < n; i++) {
 
-    alerts[i].addEventListener('click', function(event) {
+    alerts[i].addEventListener('click', function (event) {
 
       if (this.querySelector('[data-close]')) {
 
@@ -35,7 +35,7 @@ function alertShow(el, duration = 0) {
   el.style.opacity = '0';
   el.style.display = 'block';
 
-  setTimeout(function() {
+  setTimeout(function () {
     el.style.opacity = '1';
   }, 250);
 }

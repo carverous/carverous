@@ -5,7 +5,7 @@ function navIcon() {
 
   let navIcons = document.querySelectorAll('.nav-icon');
 
-  document.addEventListener('click', function(event) {
+  document.addEventListener('click', function (event) {
 
     for (let i = 0, n = navIcons.length; i < n; i++) {
 
