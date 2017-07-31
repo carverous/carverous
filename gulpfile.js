@@ -1,7 +1,7 @@
 /*!
  * Carverous's Gulpfile
  * https://github.com/carverous/carverous
- * Copyright (c) 2017 Ceferino C. Jose II
+ * Copyright (c) 2017 Ceferino Jose II
  * Licensed under MIT (https://github.com/carverous/carverous/blob/master/LICENSE)
  */
 
@@ -25,7 +25,7 @@ const babelJS = require('gulp-babel'); // To transpile ES6 to ES5
 const uglifyJS = require('gulp-uglify'); // To minify JS files
 
 let fs = require('fs'); // To call a function that reads a file
-let pkg = JSON.parse(fs.readFileSync('./package.json')); // My alternative to Grunt's readJSON.
+let pkg = JSON.parse(fs.readFileSync('./package.json')); // Read the package.json file
 
 // Prepend author's banner on top of the main css and js files
 // ES6 interpolation baby!
@@ -35,13 +35,13 @@ let banner = `/*!
  * Licensed under ${pkg.license} (${pkg.licensepage})
  */\n\n`;
 
-function handleError(err) {
+handleError = (err) => {
   console.log(err.toString());
   this.emit('end');
-}
+};
 
 // Transpile Sass/SCSS to CSS
-gulp.task('scss', function() {
+gulp.task('scss', () => {
   return gulp.src('src/scss/**/*.s+(a|c)ss')
     .pipe(sasslint({
       options: {
@@ -57,7 +57,7 @@ gulp.task('scss', function() {
 });
 
 // Add Vendor Prefixes
-gulp.task('css:autoprefix', function() {
+gulp.task('css:autoprefix', () => {
   return gulp.src([
     'dist/css/**/*.css',
     '!dist/css/**/*.min.css', // Except .min.css files
@@ -69,8 +69,8 @@ gulp.task('css:autoprefix', function() {
     .pipe(gulp.dest('dist/css/'));
 });
 
-// Minify the prepended and autoprefix-ed versions of css
-gulp.task('css:minify', function() {
+// Minify the prepended and autoprefixed versions of css
+gulp.task('css:minify', () => {
   return gulp.src([
     'dist/css/**/*.css',
     '!dist/css/**/*.min.css' // Don't minify the minified files!
@@ -82,7 +82,7 @@ gulp.task('css:minify', function() {
 });
 
 // Bundle js files into a single file
-gulp.task('es:bundle', function() {
+gulp.task('es:bundle', () => {
   return gulp.src([
     'src/es/**/*.js',
     '!node_modules/**'
@@ -97,7 +97,7 @@ gulp.task('es:bundle', function() {
 });
 
 // Minify the prepended bundled js file
-gulp.task('js:minify', function() {
+gulp.task('js:minify', () => {
   return gulp.src('dist/js/' + pkg.name + '.js')
     .pipe(uglifyJS({q:1}))
     .on('error', handleError)
@@ -110,14 +110,14 @@ gulp.task('js:minify', function() {
 gulp.task('minify', sequence(['css:minify', 'js:minify']));
 
 // Take control of the build tasks while we create awesome things!
-gulp.task('watch', function(w) {
+gulp.task('watch', () => {
 
   gulp.watch(
     ['src/scss/**/*.s+(a|c)ss'],
     {cwd: './'},
-    function(event) {
-      sequence('scss', 'css:autoprefix')(function(err) {
-        if (err) console.log(err)
+    (event) => {
+      sequence('scss', 'css:autoprefix')((err) => {
+        if (err) console.log(err);
       });
     }
   );
@@ -125,8 +125,8 @@ gulp.task('watch', function(w) {
   gulp.watch(
     ['src/es/**/*.js',],
     {cwd: './'},
-    function(event) {
-      sequence('es:bundle')(function(err) {
+    (event) => {
+      sequence('es:bundle')((err) => {
         if (err) console.log(err);
       });
     }

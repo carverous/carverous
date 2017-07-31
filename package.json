@@ -2,7 +2,7 @@
   "name": "carverous",
   "version": "0.5.6",
   "description": "A responsive CSS framework with plain JS",
-  "author": "Ceferino C. Jose II",
+  "author": "Ceferino Jose II",
   "license": "MIT",
   "licensepage": "https://github.com/carverous/carverous/blob/master/LICENSE",
   "main": "gulpfile.js",
