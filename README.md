@@ -16,8 +16,8 @@ devices first and then adjust the components as the screen scales up.
 | IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions
 
 ## Usage
-Inside the *dist* folder, you will find the compiled and minified files.
-You will see a directory structure like this:
+Download or clone. Inside the *dist* folder, you will find the compiled and minified files. You will see a directory structure like this:
+
 ```
 dist/
 ├── css/
@@ -39,10 +39,11 @@ Inside the head tag, put `<link rel="stylesheet" href="css/carverous.min.css">`
 Above the closing body tag, put `<script src="js/carverous.min.js"></script>`
 
 ## Contributing
-All the Sass/SCSS & ES6 code are located inside the *src* folder.
-Make sure that Git, Node.js, and npm are installed. In the terminal:
+Make sure that Git, Node.js, and npm are installed. Fork the repository.
+
+Then in the terminal:
 ```
-git clone https://github.com/carverous/carverous.git
+git clone <your-forked-repo-url>
 cd carverous
 npm install
 npm install gulp-cli -g
@@ -52,16 +53,17 @@ Run the default task from the gulpfile.js . Simply run in the terminal:
 gulp
 ```
 
-Feel free to help out.
-American English is used all across the entire project for consistency.
-Make sure your commit messages are in present tense.
-<br>
+All the Sass/SCSS & JavaScript code are located inside the *src* folder. Feel free to help out. American English is used all across the entire project for consistency. Make sure your commit messages are in present tense.
+
 This: `git commit -m "Fix bugs and update button colors."`
 <br>
 Not this: `git commit -m "Fixed bugs and updated button colours."`
 <br>
 
+Push your changes and make a pull request. I will verify and do the code minification and versioning.
 
+## To Do
+- [ ] Documentation
 
 ## Credits
 * Manually forked and merged
@@ -76,5 +78,5 @@ Not this: `git commit -m "Fixed bugs and updated button colours."`
   * [Learning JavaScript: Add Sparkle and Life to Your Web Pages](http://www.goodreads.com/book/show/27806241-learning-javascript)
 
 <!---
-The scripts are written in ES6 and are transpiled using Babel.
+The scripts are written in ES6+ and are transpiled using Babel.
 --->
