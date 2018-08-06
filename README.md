@@ -1,4 +1,4 @@
-![Carverous - Responsive CSS Framework With Plain JS](demo/images/carverous-banner.png)
+![Carverous - Responsive CSS Framework Without jQuery](demo/images/carverous-banner.png)
 
 ## Overview
 A responsive front-end framework that was started off from scratch
