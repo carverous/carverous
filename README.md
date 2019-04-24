@@ -1,14 +1,19 @@
 ![Carverous - Responsive CSS Framework Without jQuery](demo/images/carverous-banner.png)
 
 ## Overview
-A responsive front-end framework that was started off from scratch
-for simple web layout projects. It doesn't require any third-party JS library such as jQuery. It is developed having a mobile first
-approach in mind, meaning the code is designed to prioritize mobile
-devices first and then adjust the components as the screen scales up.
+A responsive front-end framework that was started off from scratch for simple web layout projects. It doesn't require any third-party JS library such as jQuery. It is developed having a mobile first approach in mind, meaning the code is designed to prioritize mobile devices first and then adjust the components as the screen scales up.
 
+[![npm](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/carverous/carverous/blob/master/LICENSE) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg) ![Language: American English](https://img.shields.io/badge/language-american%20english-red.svg)
 
-[![npm](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/cefjoeii/carverous/blob/master/LICENSE) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg) ![Language: American English](https://img.shields.io/badge/language-american%20english-red.svg)
+## Show Some :heart: :wave:
+[![GitHub Stars](https://img.shields.io/github/stars/carverous/carverous.svg?style=social&label=Star)](https://github.com/carverous/carverous)
+[![GitHub Forks](https://img.shields.io/github/forks/carverous/carverous.svg?style=social&label=Fork)](https://github.com/carverous/carverous/fork)
+[![GitHub Watchers](https://img.shields.io/github/watchers/carverous/carverous.svg?style=social&label=Watch)](https://github.com/carverous/carverous)
 
+[![Follow on GitHub](https://img.shields.io/github/followers/cefjoeii.svg?style=social&label=Follow)](https://github.com/cefjoeii)
+[![Follow on Facebook](https://img.shields.io/badge/Follow%20%40cefjoeii%20on-Facebook-%233C5A99.svg)](https://facebook.com/cefjoeii)
+[![Follow on Instagram](https://img.shields.io/badge/Follow%20%40cefjoeii%20on-Instagram-C13584.svg)](https://instagram.com/cefjoeii)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/cefjoeii.svg?style=social)](https://twitter.com/cefjoeii)
 
 ## Browsers Support
 | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/edge.png" alt="IE / Edge" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/firefox.png" alt="Firefox" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/chrome.png" alt="Chrome" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/opera.png" alt="Opera" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
